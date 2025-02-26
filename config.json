@@ -1,0 +1,124 @@
+{
+  "basePath": "/techradar",
+  "baseUrl": "https://shraddha-bajare.github.io/techradar",
+  "editUrl": "https://github.dev/shraddha-bajare/techradar/blob/main/radar/{release}/{id}.md",
+  "logoFile": "logo.svg",
+  "jsFile": "",
+  "toggles": {
+    "showChart": true,
+    "showTagFilter": true,
+    "showQuadrantList": true,
+    "showEmptyRings": false
+  },
+  "sections": ["radar", "tags", "list"],
+  "colors": {
+    "foreground": "#000000",
+    "background": "#FFFFFF",
+    "highlight": "#029df7",
+    "content": "#000000",
+    "text": "#575757",
+    "link": "#029df7",
+    "border": "rgba(255, 255, 255, 0.1)",
+    "tag": "rgba(255, 255, 255, 0.1)"
+  },
+  "quadrants": [
+    {
+      "id": "source-code-management",
+      "title": "Source Code Management",
+      "description": "This quadrant includes Source code management (SCM) tools related software development, using this developers can track and manage changes to software code over time.",
+      "color": "#84BFA4"
+    },
+    {
+      "id": "fairness",
+      "title": "FAIRness",
+      "description": "This quadrant covers Tools and services to help with software FAIRness evalution and improvement.",
+      "color": "#248EA6"
+    },
+    {
+      "id": "platforms-and-services",
+      "title": "Platforms & Services",
+      "description": "This quadrant clusters technologies focused on the operation of software, related platforms, tools, infrastructure, and services.",
+      "color": "#F25244"
+    },
+    {
+      "id": "documentation",
+      "title": "Documentation",
+      "description": "This quadrant features a variety of tools, helps to document the software.",
+      "color": "#F2A25C"
+    }
+  ],
+  "rings": [
+    {
+      "id": "research software infra",
+      "title": "Research software infra",
+      "description": "This involves software that captures broadly accepted ideas, methods and models for use in research, warranting close researcher involvement in their development. This tier represents broadly applicable research software, often with a large and possibly distributed development team.",
+      "color": "#5cb449",
+      "radius": 0.45,
+      "strokeWidth": 3
+    },
+    {
+      "id": "prototype tools",
+      "title": "Prototype tools",
+      "description": "This refers to research software that demonstrates a new idea, method or model for use beyond the project in which it originated, often as a substantive intellectual contribution or proof of concept. These tools are designed to answer multiple research questions and are typically developed and used by more than one person.",
+      "color": "#faa03d",
+      "radius": 0.75,
+      "strokeWidth": 2
+    },
+    {
+      "id": "analysis code",
+      "title": "Analysis code",
+      "description": "This involves software that captures broadly accepted ideas, methods and models for use in research, warranting close researcher involvement in their development. This tier represents broadly applicable research software, often with a large and possibly distributed development team.",
+      "color": "#029df7",
+      "radius": 1,
+      "strokeWidth": 1
+    }
+  ],
+  "flags": {
+    "new": {
+      "color": "#f1235a",
+      "title": "New",
+      "titleShort": "N",
+      "description": "New in this version"
+    },
+    "changed": {
+      "color": "#40a7d1",
+      "title": "Changed",
+      "titleShort": "C",
+      "description": "Recently changed"
+    },
+    "default": {
+      "description": "Unchanged"
+    }
+  },
+  "chart": {
+    "size": 800,
+    "blipSize": 12
+  },
+  "social": [
+    {
+      "href": "www.linkedin.com/in/shraddha-bajare-28076a1b4",
+      "icon": "linkedIn"
+    },
+    {
+      "href": "https://github.com/shraddha-bajare",
+      "icon": "github"
+    }
+  ],
+  "imprint": "https://www.aoe.com/en/imprint.html",
+  "labels": {
+    "title": "EVERSE Technology Watch",
+    "imprint": "Legal Information",
+    "quadrant": "Quadrant",
+    "quadrantOverview": "Quadrant Overview",
+    "zoomIn": "Zoom in",
+    "filterByTag": "Filter by Tag",
+    "footer": "Technology Watch(TW), developed as part of EVERSE project, contains a collection of software quality tools and their metadata in terms of quality indicators and quality dimentions. It contains all the tools for research software quality that align, adapt, and extend to the specific needs of various research communities.",
+    "notUpdated": "This item was not updated in last three versions of the Radar. Should it have appeared in one of the more recent editions, there is a good chance it remains pertinent. However, if the item dates back further, its relevance may have diminished and our current evaluation could vary. Regrettably, our capacity to consistently revisit items from past Radar editions is limited.",
+    "notFound": "404 - Page not found",
+    "pageAbout": "How to use EVERSE Technology Watch?",
+    "pageOverview": "Technologies Overview",
+    "pageSearch": "Search",
+    "searchPlaceholder": "What are you looking for?",
+    "metaDescription": "Stay at the forefront of web dev software and trends with EVERSE Technology Watch. Explore insights on sode code management, methods, platforms and more."
+  }
+}
