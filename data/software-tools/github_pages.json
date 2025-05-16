@@ -8,8 +8,8 @@
     "schema:name": "GitHub Pages",
     "schema:description": "A static site hosting service by GitHub that allows users to publish websites directly from a GitHub repository.",
     "schema:url": "https://pages.github.com/",
-    "schema:applicationCategory": { "id": "rs:AnalysisCode", "type": "@id"},
-    "schema:isAccessibleForFree": "free",
+    "schema:applicationCategory": { "id": "rs:ResearchInfrastructureSoftware", "type": "@id"},
+    "schema:isAccessibleForFree": true,
     "rs:hasQualityDimension": {
       "@id": "rs:Documentation",
       "@type": "@id"
