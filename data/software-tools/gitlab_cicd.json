@@ -1,18 +1,18 @@
 {
-    "@context": {
-      "schema": "http://schema.org/",
-      "rs": "https://w3id.org/everse/rs#"
-    },
-    "@id": "https://w3id.org/everse/tools/gitlab_cicd",
-    "@type": "schema:SoftwareApplication",
-    "schema:name": "GitLab CICD",
-    "schema:description": "A platform for Integration, Delivery and Deployment.",
-    "schema:url": "https://docs.gitlab.com/ee/ci/pipelines/",
-    "schema:isAccessibleForFree": "paid",
-    "rs:hasQualityDimension": {
-      "@id": "rs:Sustainalibity",
-      "@type": "@id"
-    },
-    "rs:howToUse": ["CI/CD", "command-line", "online-service"]
-  }
-  
+  "@context": {
+    "schema": "http://schema.org/",
+    "rs": "https://w3id.org/everse/rs#"
+  },
+  "@id": "https://w3id.org/everse/tools/gitlab_cicd",
+  "@type": "schema:SoftwareApplication",
+  "schema:name": "GitLab CICD",
+  "schema:description": "A platform for Integration, Delivery and Deployment.",
+  "schema:applicationCategory": { "id": "rs:ResearchInfrastructureSoftware", "type": "@id"},
+  "schema:url": "https://docs.gitlab.com/ci/",
+  "schema:isAccessibleForFree": false,
+  "rs:hasQualityDimension": {
+    "@id": "rs:Sustainalibity",
+    "@type": "@id"
+  },
+  "rs:howToUse": ["CI/CD", "command-line", "online-service"]
+}

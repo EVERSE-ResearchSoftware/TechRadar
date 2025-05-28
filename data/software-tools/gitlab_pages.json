@@ -1,19 +1,18 @@
 {
-    "@context": {
-      "schema": "http://schema.org/",
-      "rs": "https://w3id.org/everse/rs#"
-    },
-    "@id": "https://w3id.org/everse/tools/gitlab_pages",
-    "@type": "schema:SoftwareApplication",
-    "schema:name": "GitLab Pages",
-    "schema:description": "A feature of GitLab that allows users to publish static websites directly from their Git repositories.",
-    "schema:url": "https://about.gitlab.com/stages-devops-lifecycle/pages/",
-    "schema:applicationCategory": { "@id": "rs:AnalysisCode", "@type": "@id"},
-    "schema:isAccessibleForFree": "free",
-    "rs:hasQualityDimension": {
-      "@id": "rs:Documentation",
-      "@type": "@id"
-    },
-    "rs:howToUse": ["CI/CD", "command-line", "online-service"]
-  }
-  
+  "@context": {
+    "schema": "http://schema.org/",
+    "rs": "https://w3id.org/everse/rs#"
+  },
+  "@id": "https://w3id.org/everse/tools/gitlab_pages",
+  "@type": "schema:SoftwareApplication",
+  "schema:name": "GitLab Pages",
+  "schema:description": "GitLab Pages is a feature of GitLab that allows users to publish static websites directly from their Git repositories.",
+  "schema:url": "https://docs.gitlab.com/user/project/pages/",
+  "schema:applicationCategory": { "@id": "rs:AnalysisCode", "@type": "@id"},
+  "schema:isAccessibleForFree": false,
+  "rs:hasQualityDimension": {
+    "@id": "rs:Sustainability",
+    "@type": "@id"
+  },
+  "rs:howToUse": ["CI/CD", "command-line", "online-service"]
+}
