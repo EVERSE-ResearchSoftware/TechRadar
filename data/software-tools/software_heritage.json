@@ -8,7 +8,7 @@
     "schema:name": "Software Heritage",
     "schema:description": "Collects, preserves, curates and makes available software in source code form as cultural heritage",
     "schema:url": "https://www.softwareheritage.org",
-    "schema:isAccessibleForFree": "free",
+    "schema:isAccessibleForFree": true,
     "rs:hasQualityDimension": {"@id":"rs:Sustainability", "@type": "@id"},
     "rs:howToUse": ["CI/CD","command-line"]
   }

@@ -9,7 +9,7 @@
     "schema:description": "Documentation generator from reStructuredText files primarily for Python, but also supports other languages - C++, C, JavaScript.",
     "schema:url": "https://www.sphinx-doc.org",
     "schema:applicationCategory": {"@id":"rs:AnalysisCode", "@type": "@id"}, 
-    "schema:isAccessibleForFree": "free",
+    "schema:isAccessibleForFree": true,
     "rs:hasQualityDimension": {"@id":"rs:Documentation", "@type": "@id"},
     "rs:howToUse": ["online-service"],
     "schema:license": { "@id": "https://spdx.org/licenses/BSD-2-Clause.html", "@type": "@id"}

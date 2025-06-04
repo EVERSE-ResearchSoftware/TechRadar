@@ -8,7 +8,7 @@
     "schema:name": "CFFINIT Generator",
     "schema:description": "Generate software citation metadata files with ease. CITATION.cff files are plain text files with human- and machine-readable citation information for software (and datasets).",
     "schema:url": "https://citation-file-format.github.io/cff-initializer-javascript/#/",
-    "schema:isAccessibleForFree": "free",
+    "schema:isAccessibleForFree": true,
     "rs:hasQualityDimension": {"@id":"rs:Documentation", "@type": "@id"},
     "rs:howToUse": ["CI/CD", "command-line"],
     "schema:license": { "@id": "https://spdx.org/licenses/Apache-2.0.html", "@type": "@id"}

@@ -8,7 +8,7 @@
     "schema:name": "Hermes Workflows",
     "schema:description": "The HERMES workflow enables automated publication of rich research software metadata and artifacts to publication repositories using open source tooling.",
     "schema:url": "https://www.oracle.com/java/technologies/javase/javadoc-tool.html",
-    "schema:isAccessibleForFree": "free",
+    "schema:isAccessibleForFree": true,
     "rs:hasQualityDimension": {"@id":"rs:Documentation", "@type": "@id"},
     "rs:howToUse": ["online-service"],
     "schema:license": { "@id": "https://spdx.org/licenses/Apache-2.0.html", "@type": "@id"}

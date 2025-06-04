@@ -9,7 +9,7 @@
     "schema:description": "Command line tool to analyze a GitHub or GitLab repository's compliance with the fair-software.eu recommendations",
     "schema:url": "https://github.com/fair-software/howfairis",
     "schema:applicationCategory": {"@id": "rs:AnalysisCode", "@type": "@id"},
-    "schema:isAccessibleForFree": "free",
+    "schema:isAccessibleForFree": true,
     "rs:hasQualityDimension": {"@id":"rs:FAIRness", "@type": "@id"},
     "rs:howToUse": ["CI/CD","command-line"],
     "schema:license": { "@id": "https://spdx.org/licenses/Apache-2.0.html", "@type": "@id"}
