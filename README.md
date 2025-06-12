@@ -1,7 +1,14 @@
 
 # EVERSE TechRadar
 
-This is preliminary work done as part of [EVERSE project](https://everse.software/) Technology Watch. It contains a collection of _tools and services for research software quality_ designed to assess, measure, and improve the quality of software developed for research purposes. These tools incorporate features that address the unique requirements of research software, including (but not limited to):
+This is preliminary work done as part of [EVERSE project](https://everse.software/) Technology Watch. 
+
+It contains a [catalog of of _tools and services for research software quality_](#research-quality-tools-and-services-catalog) designed to assess, measure, and improve the quality of software developed for research purposes and the [TechRadar](#technology-radar-dashboard), a visual dashboard to display the catalog.
+
+
+## Research Quality Tools and Services Catalog
+
+The present catalog includes tools and services that incorporate features that address the unique requirements of research software, including (but not limited to):
 
 - Analysis of source code to identify potential issues, vulnerabilities, and adherence to coding standards specific to research contexts.
 
@@ -16,18 +23,37 @@ This is preliminary work done as part of [EVERSE project](https://everse.softwar
 
 These tools aim to enhance the overall quality, reliability, and reusability of research software, ultimately contributing to the reproducibility and impact of scientific research.
 
+
+### Content contributions
+
+We welcome content contributions to the catalog (see our [contribution guidelines](CONTRIBUTING.md) in the form of JSON files describing tools and services for research software quality.
+
+### Publication process
+
+After review, the entry is added to our catalog as JSON file.
+
+A new version of the TechRadar will be published regularly.
+
+## Technology Radar dashboard
+
 The catalog of tools and services is presented in a visual dashboard at https://github.com/EVERSE-ResearchSoftware/TechRadar.
 
 
-## Contributing
+### Technical contribution
 
-We welcome both technical and content contributions.
+Our TechRadar is based on the [AOE technology radar](https://github.com/AOEpeople/aoe_technology_radar/). 
+If you want to improve it or report a bug, you may consider contributing to the original one. If your contribution is specific to our version, you may either:
+
+- [report an issue](https://github.com/EVERSE-ResearchSoftware/TechRadar/issues/new/choose)
+
+- [open a pull request]
+
 
 Please see our [contribution guidelines](CONTRIBUTING.md) and consider joining the team if you want to add new tools and services in the TechRadar.
 
-## Development
+### Development
 
-### Build the TechRadar
+#### Build the TechRadar
 ```
 npm i
 npm run serve
@@ -35,7 +61,7 @@ npm run serve
 
 Then open here: http://localhost:3000/techradar
 
-### Build with static files
+#### Build with static files
 ```
 npm i
 npm run build
