@@ -9,7 +9,7 @@
     "schema:description": "A static site generator written in Python, designed for building content-focused websites.",
     "schema:url": "https://blog.getpelican.com/",
     "schema:applicationCategory": {"@id": "rs:AnalysisCode", "@type": "@id"},
-    "schema:isAccessibleForFree": "free",
+    "schema:isAccessibleForFree": true,
     "rs:hasQualityDimension": {
       "@id": "rs:Documentation",
       "@type": "@id"

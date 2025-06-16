@@ -1,0 +1,32 @@
+name: Validate
+on:
+  push:
+    branches: ["main", "intermidiate_branch_with_reviewed_tools"]
+  pull_request:
+    branches: ["main", "intermidiate_branch_with_reviewed_tools"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Dependencies
+        run: |
+          python -m pip install -r tests/requirements.txt
+      - name: List files for debugging
+        run: |
+          echo "GITHUB_WORKSPACE:" ${GITHUB_WORKSPACE}
+          echo "PWD:" ${PWD}
+          ls -al
+          tree .
+      - name: Run validation tests
+        run: |
+          python -m pytest -v --capture=no tests/

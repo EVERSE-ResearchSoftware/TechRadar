@@ -8,7 +8,7 @@
     "schema:name": "Playwright",
     "schema:description": "Framework for Web testing and automation, allowing testing using Chromium, Firefox and WebKit with a single API",
     "schema:url": "https://playwright.dev/docs/intro",
-    "schema:isAccessibleForFree": "free",
+    "schema:isAccessibleForFree": true,
     "rs:hasQualityDimension": {"@id":"rs:Sustainability", "@type": "@id"},
     "rs:howToUse": ["online-service"],
     "schema:license": { "@id": "https://opensource.org/licenses/Apache-2.0", "@type": "@id"}

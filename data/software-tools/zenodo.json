@@ -8,7 +8,7 @@
     "schema:name": "zenodo",
     "schema:description": "Open repository for EU-funded research outputs from Horizon Europe, Euratom, and earlier Framework Programmes.",
     "schema:url": "https://zenodo.org/",
-    "schema:isAccessibleForFree": "free",
+    "schema:isAccessibleForFree": true,
     "rs:hasQualityDimension": {"@id":"rs:Documentation", "@type": "@id"},
     "rs:howToUse": ["CI/CD", "command-line"]
   }

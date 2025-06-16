@@ -9,7 +9,7 @@
     "schema:description": "A feature of GitLab that allows users to publish static websites directly from their Git repositories.",
     "schema:url": "https://about.gitlab.com/stages-devops-lifecycle/pages/",
     "schema:applicationCategory": { "@id": "rs:AnalysisCode", "@type": "@id"},
-    "schema:isAccessibleForFree": "free",
+    "schema:isAccessibleForFree": true,
     "rs:hasQualityDimension": {
       "@id": "rs:Documentation",
       "@type": "@id"

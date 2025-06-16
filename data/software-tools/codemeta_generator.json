@@ -8,7 +8,7 @@
     "schema:name": "CodeMeta Generator",
     "schema:description": "A free, open-source project that creates a minimal metadata schema for research software and code.",
     "schema:url": "https://codemeta.github.io/codemeta-generator",
-    "schema:isAccessibleForFree": "free",
+    "schema:isAccessibleForFree": true,
     "rs:hasQualityDimension": {"@id":"rs:Sustainability", "@type": "@id"},
     "rs:howToUse": ["CI/CD","command-line"],
     "schema:license": { "@id": "https://www.gnu.org/licenses/agpl-3.0.html", "@type": "@id"}

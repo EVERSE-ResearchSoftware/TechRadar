@@ -8,10 +8,10 @@
     "schema:name": "javadoc",
     "schema:description": "Documentation generator for Java used to generate API documentation in HTML format from Java source code",
     "schema:url": "https://www.oracle.com/java/technologies/javase/javadoc-tool.html",
-    "schema:applicationCategory": {"@id": "rs:AnalysisCode", "@type": "@id"},
-    "schema:isAccessibleForFree": "free",
-    "rs:hasQualityDimension": {"@id":"rs:Documentation", "@type": "@id"},
+    "schema:applicationCategory": ["AnalysisCode"],
+    "schema:isAccessibleForFree": true,
+    "rs:hasQualityDimension": ["Maintainability"],
     "rs:howToUse": ["CI/CD", "command-line", "online-service"],
-    "schema:license": { "@id": "", "@type": "@id"}
+    "schema:license": ["MIT"]
       
   }

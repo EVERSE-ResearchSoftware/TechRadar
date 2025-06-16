@@ -7,12 +7,13 @@
     "@type": "schema:SoftwareApplication",
     "schema:name": "GitHub",
     "schema:description": "A platform for version control and collaboration, allowing developers to manage and store their code repositories, track changes, and collaborate with others.",
+    "schema:applicationCategory": { "id": "rs:ResearchInfrastructureSoftware", "type": "@id"},
     "schema:url": "https://github.com/",
-    "schema:isAccessibleForFree": "free",
+    "schema:isAccessibleForFree": true,
     "rs:hasQualityDimension": {
       "@id": "rs:FAIRness",
       "@type": "@id"
     },
-    "rs:howToUse": ["CI/CD", "command-line"]
+    "rs:howToUse": ["online-service", "CI/CD", "command-line"]
   }
   
