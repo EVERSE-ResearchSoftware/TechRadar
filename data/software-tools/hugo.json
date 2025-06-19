@@ -8,13 +8,13 @@
     "schema:name": "Hugo",
     "schema:description": "A fast and flexible static site generator written in Go, known for its speed and flexibility in creating websites.",
     "schema:url": "https://gohugo.io/",
-    "schema:applicationCategory": {"@id": "rs:AnalysisCode", "@type": "@id"},
+    "schema:applicationCategory": { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id"},
     "schema:isAccessibleForFree": true,
     "rs:hasQualityDimension": {
-      "@id": "rs:Documentation",
+      "@id": "rs:Sustainability",
       "@type": "@id"
     },
-    "rs:howToUse": ["CI/CD", "command-line", "online-service"],
+    "rs:howToUse": ["CI/CD", "command-line"],
     "schema:license": {
       "@id": "https://opensource.org/licenses/Apache-2.0",
       "@type": "@id"

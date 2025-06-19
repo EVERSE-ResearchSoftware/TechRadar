@@ -8,13 +8,13 @@
     "schema:name": "Pelican",
     "schema:description": "A static site generator written in Python, designed for building content-focused websites.",
     "schema:url": "https://blog.getpelican.com/",
-    "schema:applicationCategory": {"@id": "rs:AnalysisCode", "@type": "@id"},
+    "schema:applicationCategory": { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id"},
     "schema:isAccessibleForFree": true,
     "rs:hasQualityDimension": {
-      "@id": "rs:Documentation",
+      "@id": "rs:Sustainability",
       "@type": "@id"
     },
-    "rs:howToUse": ["CI/CD", "command-line", "online-service"],
+    "rs:howToUse": ["CI/CD", "command-line"],
     "schema:license": {
       "@id": "https://www.gnu.org/licenses/agpl-3.0.html",
       "@type": "@id"

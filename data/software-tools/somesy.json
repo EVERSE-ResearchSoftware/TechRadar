@@ -10,7 +10,8 @@
     "schema:url": "https://github.com/Materials-Data-Science-and-Informatics/somesy",
     "schema:isAccessibleForFree": true,
     "rs:hasQualityDimension": {"@id":"rs:Sustainability", "@type": "@id"},
-    "rs:howToUse": ["CI/CD","online-service"],
+    "schema:applicationCategory": { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id"},
+    "rs:howToUse": ["CI/CD","command-line"],
     "schema:license": { "@id": "https://spdx.org/licenses/MIT.html", "@type": "@id"}
       
   }

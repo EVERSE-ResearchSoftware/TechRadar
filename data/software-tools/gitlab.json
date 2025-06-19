@@ -8,9 +8,11 @@
     "schema:name": "GitLab",
     "schema:description": "A platform for version control and collaboration, allowing developers to manage and store their code repositories, track changes, and collaborate with others.",
     "schema:url": "https://gitlab.com/",
-    "schema:isAccessibleForFree": true,
-    "rs:hasQualityDimension": [
-      "FAIRness"
-    ],
-    "rs:howToUse": ["CI/CD", "command-line", "online-service"]
-  }
+    "schema:isAccessibleForFree": false,
+    "schema:applicationCategory": { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id"},
+    "rs:hasQualityDimension": {
+      "@id": "rs:FAIRness",
+      "@type": "@id"
+    },
+    "schema:license": { "@id": "MIT", "@type": "@id"}
+}

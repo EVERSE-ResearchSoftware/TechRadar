@@ -9,6 +9,9 @@
     "schema:description": "Open repository for EU-funded research outputs from Horizon Europe, Euratom, and earlier Framework Programmes.",
     "schema:url": "https://zenodo.org/",
     "schema:isAccessibleForFree": true,
-    "rs:hasQualityDimension": {"@id":"rs:Documentation", "@type": "@id"},
-    "rs:howToUse": ["CI/CD", "command-line"]
+    "schema:applicationCategory": { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id"},
+    "rs:hasQualityDimension": {"@id":"rs:Sustainability", "@type": "@id"},
+    "rs:howToUse": ["CI/CD", "command-line", "online-service"],
+    "rs:usedBy": ["ENVRI", "ESCAPE", "EOSC-Life", "PaNOSC", "SSHOC"],
+    "schema:license": {"@id": " https://ohwr.org/cernohl/", "@type": "@id"}
   }

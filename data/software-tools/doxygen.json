@@ -12,5 +12,6 @@
     "schema:isAccessibleForFree": true,
     "rs:hasQualityDimension": {"@id":"rs:Documentation", "@type": "@id"},
     "rs:howToUse": ["CI/CD","command-line"],
+    "rs:appliesToProgrammingLanguage": ["C++", "C", "Python", "PHP", "Java", "C#", "Objective-C", "Fortran", "VHDL", "Splice", "IDL", "Lex"],
     "schema:license": { "@id": "https://spdx.org/licenses/GPL-2.0-only.html", "@type": "@id"}      
   }

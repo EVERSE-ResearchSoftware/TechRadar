@@ -10,6 +10,7 @@
     "schema:url": "https://citation-file-format.github.io/cff-initializer-javascript/#/",
     "schema:isAccessibleForFree": true,
     "rs:hasQualityDimension": {"@id":"rs:Documentation", "@type": "@id"},
+    "schema:applicationCategory": { "id": "rs:ResearchInfrastructureSoftware", "type": "@id"},
     "rs:howToUse": ["CI/CD", "command-line"],
     "schema:license": { "@id": "https://spdx.org/licenses/Apache-2.0.html", "@type": "@id"}
       

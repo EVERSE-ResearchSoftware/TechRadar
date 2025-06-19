@@ -12,5 +12,6 @@
   "schema:isAccessibleForFree": true,
   "rs:hasQualityDimension": {"@id":"rs:Sustainability", "@type": "@id"},
   "rs:howToUse": ["CI/CD","command-line","online-service"],
+  "rs:appliesToProgrammingLanguage": ["Python"],
   "schema:license": { "@id": "https://spdx.org/licenses/MIT.html", "@type": "@id"} 
 }

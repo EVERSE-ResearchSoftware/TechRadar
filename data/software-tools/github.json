@@ -14,6 +14,8 @@
       "@id": "rs:FAIRness",
       "@type": "@id"
     },
-    "rs:howToUse": ["online-service", "CI/CD", "command-line"]
+    "rs:howToUse": ["online-service", "CI/CD", "command-line"], 
+    "rs:usedBy": ["ENVRI", "ESCAPE", "EOSC-Life", "PaNOSC", "SSHOC"],
+    "schema:license": { "@id": "MIT", "@type": "@id"}
   }
   

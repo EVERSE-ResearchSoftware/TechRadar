@@ -116,7 +116,7 @@
       "type": ["string", "array"],
       "items": {
         "type": "string",
-        "enum": ["ENVRI", "ESCAPE", "LS-RI", "PaNOSC", "SSHOC"]
+        "enum": ["ENVRI", "ESCAPE", "LS-RI", "PaNOSC", "SSHOC", "EOSC-Life"]
       }
     },
     "rs:appliesToProgrammingLanguage": {
@@ -134,7 +134,7 @@
     "schema:license",
     "schema:url",
     "schema:applicationCategory",
-    "schema:hasQualityDimension"
+    "rs:hasQualityDimension"
   ],
   "additionalProperties": false
 }
