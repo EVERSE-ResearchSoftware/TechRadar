@@ -1,0 +1,12 @@
+{
+  "@id": "https://w3id.org/everse/tools/rpm",
+  "@type": "schema:SoftwareApplication",
+  "schema:name": "RPM Package Manager",
+  "schema:description": "Package management system used to install, update, and remove software on Linux distributions.",
+  "schema:url": "http://rpm.org/",
+  "schema:applicationCategory": { "id": "rs:ResearchInfrastructureSoftware", "type": "@id" },
+  "schema:isAccessibleForFree": true,
+  "rs:hasQualityDimension": ["rs:Performance Efficiency", "rs:Maintainability"],
+  "rs:howToUse": ["command-line"],
+  "schema:license": { "@id": "https://spdx.org/licenses/GPL-2.0-only.html", "@type": "@id" }
+}

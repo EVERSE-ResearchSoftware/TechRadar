@@ -134,7 +134,7 @@
     "schema:license",
     "schema:url",
     "schema:applicationCategory",
-    "schema:hasQualityDimension"
+    "rs:hasQualityDimension"
   ],
   "additionalProperties": false
 }

@@ -8,7 +8,7 @@
     "schema:name": "javadoc",
     "schema:description": "Documentation generator for Java used to generate API documentation in HTML format from Java source code",
     "schema:url": "https://www.oracle.com/java/technologies/javase/javadoc-tool.html",
-    "schema:applicationCategory": ["AnalysisCode"],
+    "schema:applicationCategory": ["rs:AnalysisCode"],
     "schema:isAccessibleForFree": true,
     "rs:hasQualityDimension": ["Maintainability"],
     "rs:howToUse": ["CI/CD", "command-line", "online-service"],

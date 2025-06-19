@@ -1,0 +1,12 @@
+{
+  "@id": "https://w3id.org/everse/tools/cmake",
+  "@type": "schema:SoftwareApplication",
+  "schema:name": "CMake",
+  "schema:description": "Cross-platform build system generator used to control software compilation processes.",
+  "schema:url": "https://cmake.org/",
+  "schema:applicationCategory": { "id": "rs:ResearchInfrastructureSoftware", "type": "@id" },
+  "schema:isAccessibleForFree": true,
+  "rs:hasQualityDimension": { "@id": "rs:Maintainability", "@type": "@id" },
+  "rs:howToUse": ["command-line"],
+  "schema:license": { "@id": "https://spdx.org/licenses/BSD-3-Clause.html", "@type": "@id" }
+}

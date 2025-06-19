@@ -1,0 +1,12 @@
+{
+  "@id": "https://w3id.org/everse/tools/nix",
+  "@type": "schema:SoftwareApplication",
+  "schema:name": "Nix",
+  "schema:description": "Tool for reproducible builds and declarative system configuration using the Nix language.",
+  "schema:url": "https://nixos.org/",
+  "schema:applicationCategory": { "id": "rs:ResearchInfrastructureSoftware", "type": "@id" },
+  "schema:isAccessibleForFree": true,
+  "rs:hasQualityDimension": ["rs:Performance Efficiency", "rs:Flexibility", "rs:Security"],
+  "rs:howToUse": ["command-line"],
+  "schema:license": { "@id": "https://spdx.org/licenses/LGPL-2.1-or-later.html", "@type": "@id" }
+}
