@@ -1,0 +1,17 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rs" : "https://w3id.org/everse/rs#"
+  },
+      "@id": "https://w3id.org/everse/tools/intellijidea",
+      "@type": "schema:SoftwareApplication",
+  "schema:name": "intellijidea",
+  "schema:description": "Integrated development environment (IDE) written in Java",
+  "schema:url": "https://www.jetbrains.com/fr-fr/idea/",
+  "schema:isAccessibleForFree": "depends",
+  "schema:applicationCategory": { "id": "rs:", "type": "@id"},
+  "rs:hasQualityDimension": {"@id":"rs:CodeAnalysis","Maintainability", "@type": "@id"},
+  "rs:howToUse": ["CI/CD","command-line","online-service"],
+  "schema:license": { "@id": "@type": "@id"}
+    
+}

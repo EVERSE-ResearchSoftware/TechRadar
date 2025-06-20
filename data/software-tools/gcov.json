@@ -1,0 +1,17 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rs" : "https://w3id.org/everse/rs#"
+  },
+      "@id": "https://w3id.org/everse/tools/gcov",
+      "@type": "schema:SoftwareApplication",
+  "schema:name": "pypi",
+  "schema:description": "Code coverage analysis - which lines are actually executed and how often",
+  "schema:url": "https://gcc.gnu.org/onlinedocs/gcc/Gcov.html",
+  "schema:isAccessibleForFree": "true",
+  "schema:applicationCategory": { "id": "rs:AnalysisCode","PrototypeTool","ResearchInfrastructureSoftware", "type": "@id"},
+  "rs:hasQualityDimension": {"@id":"rs:ResourceEfficiency","CodeAnalysis", "@type": "@id"},
+  "rs:howToUse": ["CI/CD","command-line"],
+  "schema:license": { "@id": "GPL", "@type": "@id"}
+    
+}
