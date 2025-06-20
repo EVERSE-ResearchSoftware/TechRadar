@@ -3,7 +3,7 @@
       "schema": "http://schema.org/",
       "rs" : "https://w3id.org/everse/rs#"
     },
-    "@id": "https://pypi.org/project/eossr/",
+    "@id": "https://escape-ossr.gitlab.io/eossr",
     "@type": "schema:SoftwareApplication",
     "schema:name": "eOSSR",
     "schema:description": "The eOSSR is the Python library to programmatically manage the ESCAPE OSSR. It also includes CodeMeta generator and validator.",
