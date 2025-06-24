@@ -16,5 +16,6 @@
     "schema:isAccessibleForFree": true,
     "rs:hasQualityDimension": {"@id":"rs:FAIRness", "@type": "@id"},
     "rs:howToUse": ["CI/CD","command-line","online-service"],
+    "rs:usedBy": ["ESCAPE"],
     "schema:license": { "@id": "https://opensource.org/licenses/MIT", "@type": "@id"}      
   }
