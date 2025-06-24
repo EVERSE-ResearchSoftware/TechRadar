@@ -8,10 +8,11 @@
   "schema:name": "resqui",
   "schema:description": "A command line tool to check a bunch of indicators related to research software quality.",
   "schema:url": "https://github.com/EVERSE-ResearchSoftware/resqui",
-  "schema:applicationCategory": {
-    "@id": "rs:ResearchInfrastructureSoftware",
-    "@type": "@id"
-  },
+  "schema:applicationCategory": [
+  { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" },
+  { "@id": "rs:AnalysisCode", "@type": "@id" },
+  { "@id": "rs:PrototypeTool", "@type": "@id" }
+],
   "schema:isAccessibleForFree": true,
   "rs:hasQualityDimension": [
   { "@id": "rs:Compatibility", "@type": "@id" },
