@@ -14,9 +14,18 @@
   },
   "schema:isAccessibleForFree": true,
   "rs:hasQualityDimension": [
-    { "@id": "rs:Maintainability", "@type": "@id" },
-    { "@id": "rs:PerformanceEfficiency", "@type": "@id" }
-  ],
+  { "@id": "rs:Compatibility", "@type": "@id" },
+  { "@id": "rs:FAIRness", "@type": "@id" },
+  { "@id": "rs:Flexibility", "@type": "@id" },
+  { "@id": "rs:FunctionalSuitability", "@type": "@id" },
+  { "@id": "rs:InteractionCapability", "@type": "@id" },
+  { "@id": "rs:Maintainability", "@type": "@id" },
+  { "@id": "rs:PerformanceEfficiency", "@type": "@id" },
+  { "@id": "rs:Reliability", "@type": "@id" },
+  { "@id": "rs:Safety", "@type": "@id" },
+  { "@id": "rs:Security", "@type": "@id" },
+  { "@id": "rs:Sustainability", "@type": "@id" }
+],
   "rs:hasQualityIndicator": [
     { "@id": "https://w3id.org/everse/i/indicators/software_has_license", "@type": "@id" },
     { "@id": "https://w3id.org/everse/i/indicators/software_has_citation", "@type": "@id" },
