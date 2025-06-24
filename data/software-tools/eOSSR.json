@@ -1,0 +1,21 @@
+{
+    "@context": {
+      "schema": "http://schema.org/",
+      "rs" : "https://w3id.org/everse/rs#"
+    },
+    "@id": "https://escape-ossr.gitlab.io/eossr",
+    "@type": "schema:SoftwareApplication",
+    "schema:name": "eOSSR",
+    "schema:description": "The eOSSR is the Python library to programmatically manage the ESCAPE OSSR. It also includes CodeMeta generator and validator.",
+    "schema:url": "https://gitlab.com/escape-ossr/eossr",
+    "schema:applicationCategory": [
+    { "@id": "rs:PrototypeTool", "@type": "@id" },
+    { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" },
+    { "@id": "rs:AnalysisCode", "@type": "@id" }  
+  ],
+    "schema:isAccessibleForFree": true,
+    "rs:hasQualityDimension": {"@id":"rs:FAIRness", "@type": "@id"},
+    "rs:howToUse": ["CI/CD","command-line","online-service"],
+    "rs:usedBy": ["ESCAPE"],
+    "schema:license": { "@id": "https://opensource.org/licenses/MIT", "@type": "@id"}      
+  }

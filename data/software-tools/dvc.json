@@ -7,7 +7,7 @@
     "@type": "schema:SoftwareApplication",
     "schema:name": "DVC",
     "schema:description": "Manage and version images, audio, video, and text files in storage and organize your ML modeling process into a reproducible workflow.",
-    "schema:url": "https://dvc.org/",
+    "schema:url": "https://github.com/iterative/dvc",
     "schema:applicationCategory": [
     { "@id": "rs:PrototypeTool", "@type": "@id" },
     { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" }
