@@ -6,7 +6,7 @@
     "@id": "https://claude.ai/",
     "@type": "schema:SoftwareApplication",
     "schema:name": "Claude",
-    "schema:description": "A generative artificial intelligence chatbot developed by Anthropic and able to produce code or answer questions on code",
+    "schema:description": "A generative artificial intelligence chatbot developed by Anthropic and trained to produce code or answer questions on your code",
     "schema:url": "https://claude.ai/",
     "schema:applicationCategory": [
     { "@id": "rs:PrototypeTool", "@type": "@id" },
