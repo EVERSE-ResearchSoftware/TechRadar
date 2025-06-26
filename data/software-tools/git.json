@@ -1,16 +1,13 @@
 {
-  "@context": {
-    "schema": "http://schema.org/",
-    "rs": "https://w3id.org/everse/rs#"
-  },
+  "@context": "https://w3id.org/everse/rs#",
   "@id": "https://w3id.org/everse/tools/git",
-  "@type": "schema:SoftwareApplication",
-  "schema:name": "Git",
-  "schema:description": "Distributed version control system for tracking changes in source code.",
-  "schema:url": "https://git-scm.com/",
-  "schema:applicationCategory": { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" },
-  "schema:isAccessibleForFree": true,
-  "rs:hasQualityDimension": { "@id": "rs:Maintainability", "@type": "@id" },
-  "rs:howToUse": ["command-line", "online-service"],
-  "schema:license": { "@id": "https://spdx.org/licenses/GPL-2.0-only", "@type": "@id" }
+  "@type": "SoftwareApplication",
+  "name": "Git",
+  "description": "Distributed version control system for tracking changes in source code.",
+  "url": "https://git-scm.com/",
+  "applicationCategory": "ResearchInfrastructureSoftware",
+  "isAccessibleForFree": true,
+  "hasQualityDimension": "Maintainability",
+  "howToUse": [ "command-line", "online-service" ],
+  "license": "https://spdx.org/licenses/GPL-2.0-only"
 }

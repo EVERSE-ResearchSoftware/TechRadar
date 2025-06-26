@@ -1,16 +1,13 @@
 {
-  "@context": {
-    "schema": "http://schema.org/",
-    "rs": "https://w3id.org/everse/rs#"
-  },
+  "@context": "https://w3id.org/everse/rs#",
   "@id": "https://w3id.org/everse/tools/cffinit",
-  "@type": "schema:SoftwareApplication",
-  "schema:name": "cffinit",
-  "schema:description": "A web application to create CITATION.cff files",
-  "schema:url": "https://citation-file-format.github.io/cffinit",
-  "schema:isAccessibleForFree": true,
-  "rs:hasQualityDimension": { "@id": "rs:FAIRness", "@type": "@id" },
-  "rs:howToUse": [ "online-service" ],
-  "schema:license": { "@id": "https://spdx.org/licenses/Apache-2.0", "@type": "@id" },
-  "schema:applicationCategory": { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" }
+  "@type": "SoftwareApplication",
+  "name": "cffinit",
+  "description": "A web application to create CITATION.cff files",
+  "url": "https://citation-file-format.github.io/cffinit",
+  "isAccessibleForFree": true,
+  "hasQualityDimension": "FAIRness",
+  "howToUse": [ "online-service" ],
+  "license": "https://spdx.org/licenses/Apache-2.0",
+  "applicationCategory": "ResearchInfrastructureSoftware"
 }
