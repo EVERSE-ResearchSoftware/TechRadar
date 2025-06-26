@@ -1,0 +1,43 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rs": "https://w3id.org/everse/rs#"
+  },
+  "@id": "https://w3id.org/everse/tools/resqui",
+  "@type": "schema:SoftwareApplication",
+  "schema:name": "resqui",
+  "schema:description": "A command line tool to check a bunch of indicators related to research software quality.",
+  "schema:url": "https://github.com/EVERSE-ResearchSoftware/resqui",
+  "schema:applicationCategory": [
+  { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" },
+  { "@id": "rs:AnalysisCode", "@type": "@id" },
+  { "@id": "rs:PrototypeTool", "@type": "@id" }
+],
+  "schema:isAccessibleForFree": true,
+  "rs:hasQualityDimension": [
+  { "@id": "rs:Compatibility", "@type": "@id" },
+  { "@id": "rs:FAIRness", "@type": "@id" },
+  { "@id": "rs:Flexibility", "@type": "@id" },
+  { "@id": "rs:FunctionalSuitability", "@type": "@id" },
+  { "@id": "rs:InteractionCapability", "@type": "@id" },
+  { "@id": "rs:Maintainability", "@type": "@id" },
+  { "@id": "rs:PerformanceEfficiency", "@type": "@id" },
+  { "@id": "rs:Reliability", "@type": "@id" },
+  { "@id": "rs:Safety", "@type": "@id" },
+  { "@id": "rs:Security", "@type": "@id" },
+  { "@id": "rs:Sustainability", "@type": "@id" }
+],
+  "rs:hasQualityIndicator": [
+    { "@id": "https://w3id.org/everse/i/indicators/software_has_license", "@type": "@id" },
+    { "@id": "https://w3id.org/everse/i/indicators/software_has_citation", "@type": "@id" },
+    { "@id": "https://w3id.org/everse/i/indicators/software_has_ci_tests", "@type": "@id" },
+    { "@id": "https://w3id.org/everse/i/indicators/software_human_code_review_requirement", "@type": "@id" },
+    { "@id": "https://w3id.org/everse/i/indicators/software_has_published_package", "@type": "@id" },
+    { "@id": "https://w3id.org/everse/i/indicators/software_has_no_security_leak", "@type": "@id" }
+  ],
+  "rs:howToUse": ["command-line"],
+  "schema:license": {
+    "@id": "https://opensource.org/licenses/MIT",
+    "@type": "@id"
+  }
+}
