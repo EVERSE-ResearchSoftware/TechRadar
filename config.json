@@ -49,7 +49,7 @@
   ],
   "rings": [
     {
-      "id": "research software infra",
+      "id": "ResearchInfrastructureSoftware",
       "title": "Research software infra",
       "description": "This involves software that captures broadly accepted ideas, methods and models for use in research, warranting close researcher involvement in their development. This tier represents broadly applicable research software, often with a large and possibly distributed development team.",
       "color": "#5cb449",
@@ -65,7 +65,7 @@
       "strokeWidth": 2
     },
     {
-      "id": "analysis code",
+      "id": "AnalysisCode",
       "title": "Analysis code",
       "description": "This involves software that captures broadly accepted ideas, methods and models for use in research, warranting close researcher involvement in their development. This tier represents broadly applicable research software, often with a large and possibly distributed development team.",
       "color": "#029df7",
