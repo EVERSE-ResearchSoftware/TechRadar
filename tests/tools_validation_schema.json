@@ -52,9 +52,9 @@
     },
     "schema:applicationCategory": {
       "description": "The category of the application",
-      "type": ["array", "object"],
+      "type": ["string", "array", "object"],
       "items": {
-        "type": "string",
+        "type": ["array", "object"],
         "enum": [
           "rs:AnalysisCode", 
           "rs:PrototypeTool", 
@@ -78,9 +78,9 @@
     },
     "rs:hasQualityDimension": {
       "description": "Quality dimensions addressed by the tool",
-      "type": ["array", "object"],
+      "type": ["string", "array", "object"],
       "items": {
-        "type": "string",
+        "type": ["array", "object"],
         "enum": [
           "rs:Compatibility",
           "rs:FAIRness",
