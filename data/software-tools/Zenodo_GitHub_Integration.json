@@ -1,0 +1,18 @@
+{
+    "@context": {
+      "schema": "http://schema.org/",
+      "rs" : "https://w3id.org/everse/rs#"
+    },
+    "@id": "https://w3id.org/everse/tools/somesy",
+    "@type": "schema:SoftwareApplication",
+    "schema:name": "Zenodo GitHub Integration",
+    "schema:description": "Zenodo archives your repository and issues a new DOI each time you create a new GitHub release",
+    "schema:url": "https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content",
+    "schema:isAccessibleForFree": true,
+    "rs:hasQualityDimension": {"@id":"rs:Sustainability", "@type": "@id"},
+    "schema:license": null    
+    "rs:howToUse": ["CI/CD","online-service"],
+    "schema:applicationCategory": [
+    { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" },
+    { "@id": "rs:PrototypeTool", "@type": "@id" } ]
+}
