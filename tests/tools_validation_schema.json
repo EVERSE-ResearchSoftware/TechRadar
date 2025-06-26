@@ -3,6 +3,46 @@
   "title": "EVERSE Research Software (RS) Tools Validation Schema",
   "description": "Schema for validating software tool entries in the EVERSE Research Software context",
   "type": "object",
+  "definitions": {
+    "applicationCategoryObject": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string",
+          "description": "Identifier for the application category",
+          "enum": [
+            "rs:AnalysisCode",
+            "rs:PrototypeTool",
+            "rs:ResearchInfrastructureSoftware"
+          ]
+        }
+      },
+      "required": ["@id"]
+    },
+    "qualityDimensionObject": {
+      "type": "object",
+      "properties": {
+        "@id": {
+          "type": "string",
+          "description": "Identifier for the quality dimension",
+          "enum": [
+            "rs:Compatibility",
+            "rs:FAIRness",
+            "rs:Flexibility",
+            "rs:Functional suitability",
+            "rs:Interaction Capability",
+            "rs:Maintainability",
+            "rs:Performance Efficiency",
+            "rs:Reliability",
+            "rs:Safety",
+            "rs:Security",
+            "rs:Sustainability"
+          ]
+        }
+      },
+      "required": ["@id"]
+    }
+  },
   "properties": {
     "@context": {
       "description": "The JSON-LD context for term definitions",
@@ -52,15 +92,13 @@
     },
     "schema:applicationCategory": {
       "description": "The category of the application",
-      "type": ["string", "array", "object"],
-      "items": {
-        "type": "string",
-        "enum": [
-          "rs:AnalysisCode", 
-          "rs:PrototypeTool", 
-          "rs:ResearchInfrastructureSoftware"
-        ]
-      }
+      "oneOf": [
+        { "$ref": "#/definitions/applicationCategoryObject" },
+        {
+          "type": "array",
+          "items": { "$ref": "#/definitions/applicationCategoryObject" }
+        }
+      ]
     },
     "schema:author": {
       "description": "The author(s) of the software",
@@ -78,23 +116,13 @@
     },
     "rs:hasQualityDimension": {
       "description": "Quality dimensions addressed by the tool",
-      "type": ["string", "array", "object"],
-      "items": {
-        "type": "string",
-        "enum": [
-          "rs:Compatibility",
-          "rs:FAIRness",
-          "rs:Flexibility",
-          "rs:Functional suitability",
-          "rs:Interaction Capability",
-          "rs:Maintainability",
-          "rs:Performance Efficiency",
-          "rs:Reliability",
-          "rs:Safety",
-          "rs:Security",
-          "rs:Sustainability"
-        ]
-      }
+      "oneOf": [
+        { "$ref": "#/definitions/qualityDimensionObject" },
+        {
+          "type": "array",
+          "items": { "$ref": "#/definitions/qualityDimensionObject" }
+        }
+      ]
     },
     "rs:hasQualityIndicator": {
       "description": "Quality indicators addressed by the tool",
