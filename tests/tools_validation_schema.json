@@ -52,7 +52,7 @@
     },
     "schema:applicationCategory": {
       "description": "The category of the application",
-      "type": ["string", "array", "object"],
+      "type": ["array", "object"],
       "items": {
         "type": "string",
         "enum": [
@@ -78,7 +78,7 @@
     },
     "rs:hasQualityDimension": {
       "description": "Quality dimensions addressed by the tool",
-      "type": ["string", "array", "object"],
+      "type": ["array", "object"],
       "items": {
         "type": "string",
         "enum": [
