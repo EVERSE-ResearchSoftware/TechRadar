@@ -27,32 +27,59 @@ invalid_tools = [
         "schema:applicationCategory": {"@id": "rs:AnalysisCode"},
         "rs:hasQualityDimension": {"@id": "rs:FAIRness"}
     },
-    # Invalid applicationCategory
+    # Missing required property: schema:description
     {
         "@id": "https://example.com/tool/invalid2",
+        "schema:name": "Tool without description",
+        "schema:url": "https://example.com/tool/invalid2",
+        "schema:license": "https://opensource.org/licenses/MIT",
+        "schema:applicationCategory": {"@id": "rs:AnalysisCode"},
+        "rs:hasQualityDimension": {"@id": "rs:FAIRness"}
+    },
+    # Missing required property: schema:license
+    {
+        "@id": "https://example.com/tool/invalid3",
+        "schema:name": "Tool without license",
+        "schema:description": "This tool is missing a license.",
+        "schema:url": "https://example.com/tool/invalid3",
+        "schema:applicationCategory": {"@id": "rs:AnalysisCode"},
+        "rs:hasQualityDimension": {"@id": "rs:FAIRness"}
+    },
+    # Missing required property: schema:url
+    {
+        "@id": "https://example.com/tool/invalid4",
+        "schema:name": "Tool without url",
+        "schema:description": "This tool is missing a url.",
+        "schema:license": "https://opensource.org/licenses/MIT",
+        "schema:applicationCategory": {"@id": "rs:AnalysisCode"},
+        "rs:hasQualityDimension": {"@id": "rs:FAIRness"}
+    },
+    # Invalid applicationCategory
+    {
+        "@id": "https://example.com/tool/invalid5",
         "schema:name": "Invalid Category Tool",
         "schema:description": "This tool has an invalid application category.",
-        "schema:url": "https://example.com/tool/invalid2",
+        "schema:url": "https://example.com/tool/invalid5",
         "schema:license": "https://opensource.org/licenses/MIT",
         "schema:applicationCategory": {"@id": "rs:InvalidCategory"},
         "rs:hasQualityDimension": {"@id": "rs:FAIRness"}
     },
     # Invalid quality dimension as a string
     {
-        "@id": "https://example.com/tool/invalid3",
+        "@id": "https://example.com/tool/invalid6",
         "schema:name": "Invalid Quality Dimension",
         "schema:description": "This tool has an invalid quality dimension.",
-        "schema:url": "https://example.com/tool/invalid3",
+        "schema:url": "https://example.com/tool/invalid6",
         "schema:license": "https://opensource.org/licenses/MIT",
         "schema:applicationCategory": {"@id": "rs:AnalysisCode"},
         "rs:hasQualityDimension": ["rs:InvalidDimension"]
     },
     # Invalid quality dimension as an object without @id
     {
-        "@id": "https://example.com/tool/invalid4",
+        "@id": "https://example.com/tool/invalid7",
         "schema:name": "Invalid Quality Dimension Object",
         "schema:description": "This tool has an invalid quality dimension object.",
-        "schema:url": "https://example.com/tool/invalid4",
+        "schema:url": "https://example.com/tool/invalid7",
         "schema:license": "https://opensource.org/licenses/MIT",
         "schema:applicationCategory": {"@id": "rs:AnalysisCode"},
         "rs:hasQualityDimension": {"name": "rs:Documentation"}
