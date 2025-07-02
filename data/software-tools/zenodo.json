@@ -13,5 +13,5 @@
     "rs:hasQualityDimension": {"@id":"rs:Sustainability", "@type": "@id"},
     "rs:howToUse": ["CI/CD", "command-line", "online-service"],
     "rs:usedBy": ["ENVRI", "ESCAPE", "EOSC-Life", "PaNOSC", "SSHOC"],
-    "schema:license": {"@id": " https://ohwr.org/cernohl/", "@type": "@id"}
+    "schema:license": {"@id": "https://ohwr.org/cernohl/", "@type": "@id"}
   }

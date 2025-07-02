@@ -10,6 +10,7 @@
     "schema:url": "https://gitlab.com/",
     "schema:isAccessibleForFree": false,
     "schema:applicationCategory": { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id"},
+    "rs:howToUse": ["online-service", "CI/CD", "command-line"], 
     "rs:hasQualityDimension": {
       "@id": "rs:FAIRness",
       "@type": "@id"
