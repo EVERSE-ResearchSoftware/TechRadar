@@ -1,0 +1,23 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rs" : "https://w3id.org/everse/rs#"
+  },
+  "@id": "https://w3id.org/everse/tools/pre-commit",
+  "@type": "schema:SoftwareApplication",
+  "schema:name": "pre-commit",
+  "schema:description": "A framework for managing and maintaining multi-language pre-commit hooks.",
+  "schema:url": "https://pre-commit.com/",
+  "schema:isAccessibleForFree": true,
+    "schema:applicationCategory": [
+    { "@id": "rs:AnalysisCode", "@type": "@id" },
+    { "@id": "rs:PrototypeTool", "@type": "@id" },
+    { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" }
+  ],
+  "rs:hasQualityDimension": [
+    { "@id": "rs:Sustainability", "@type": "@id" },
+    { "@id": "rs:Maintainability", "@type": "@id" }
+  ],
+  "rs:howToUse": ["command-line"],
+  "schema:license": { "@id": "https://spdx.org/licenses/MIT.html", "@type": "@id"} 
+}
