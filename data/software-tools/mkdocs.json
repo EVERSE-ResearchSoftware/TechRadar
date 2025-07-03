@@ -1,0 +1,30 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rs": "https://w3id.org/everse/rs#"
+  },
+  "@id": "https://w3id.org/everse/tools/mkdocs",
+  "@type": "schema:SoftwareApplication",
+  "schema:name": "MkDocs",
+  "schema:description": "MkDocs is a static site generator that's geared towards project documentation, written in Markdown.",
+  "schema:url": "https://www.mkdocs.org/",
+  "schema:isAccessibleForFree": true,
+  "rs:hasQualityDimension": {
+    "@id": "rs:Interaction Capability",
+    "@type": "@id"
+  },
+  "rs:howToUse": ["command-line", "CI/CD"],
+  "rs:appliesToProgrammingLanguage": ["Python"],
+  "schema:license": {
+    "@id": "https://opensource.org/licenses/BSD-2-Clause",
+    "@type": "@id"
+  },
+  "schema:applicationCategory": [{
+    "@id": "rs:ResearchInfrastructureSoftware",
+    "@type": "@id"
+  }, 
+  {
+    "@id": "rs:PrototypeTool",
+    "@type": "@id"
+  }]
+}
