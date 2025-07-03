@@ -1,0 +1,26 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rs": "https://w3id.org/everse/rs#"
+  },
+  "@id": "https://w3id.org/everse/tools/checkstyle",
+  "@type": "schema:SoftwareApplication",
+  "schema:name": "Checkstyle",
+  "schema:description": "Checkstyle is a tool for checking Java source code for adherence to coding standards.",
+  "schema:url": "https://checkstyle.sourceforge.io/",
+  "schema:isAccessibleForFree": true,
+  "rs:hasQualityDimension": {
+    "@id": "rs:Maintainability",
+    "@type": "@id"
+  },
+  "rs:howToUse": ["command-line", "CI/CD"],
+  "rs:appliesToProgrammingLanguage": ["Java"],
+  "schema:license": {
+    "@id": "https://opensource.org/licenses/LGPL-2.1",
+    "@type": "@id"
+  },
+  "schema:applicationCategory": {
+    "@id": "rs:AnalysisCode",
+    "@type": "@id"
+  }
+}

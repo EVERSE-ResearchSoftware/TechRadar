@@ -1,0 +1,34 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rs": "https://w3id.org/everse/rs#"
+  },
+  "@id": "https://w3id.org/everse/tools/ruff",
+  "@type": "schema:SoftwareApplication",
+  "schema:name": "Ruff",
+  "schema:description": "Ruff is an extremely fast Python linter, written in Rust.",
+  "schema:url": "https://docs.astral.sh/ruff/",
+  "schema:isAccessibleForFree": true,
+  "rs:hasQualityDimension": {
+    "@id": "rs:Maintainability",
+    "@type": "@id"
+  },
+  "rs:howToUse": ["command-line", "CI/CD"],
+  "rs:appliesToProgrammingLanguage": ["Python"],
+  "schema:license": {
+    "@id": "https://opensource.org/licenses/MIT",
+    "@type": "@id"
+  },
+  "schema:applicationCategory": [{
+    "@id": "rs:AnalysisCode",
+    "@type": "@id"
+  }, 
+  {
+    "@id": "rs:ResearchInfrastructureSoftware",
+    "@type": "@id"
+  }, 
+  {
+    "@id": "rs:PrototypeTool",
+    "@type": "@id"
+  }]
+}

@@ -1,0 +1,34 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rs": "https://w3id.org/everse/rs#"
+  },
+  "@id": "https://w3id.org/everse/tools/flake8",
+  "@type": "schema:SoftwareApplication",
+  "schema:name": "flake8",
+  "schema:description": "flake8 is a Python linting tool that checks code for style and programming errors. Integrates multiple tools (pyflakes, pycodestyle, etc.) and supports plugin extensions.",
+  "schema:url": "https://flake8.pycqa.org/",
+  "schema:isAccessibleForFree": true,
+  "rs:hasQualityDimension": {
+    "@id": "rs:Maintainability",
+    "@type": "@id"
+  },
+  "rs:howToUse": ["command-line", "CI/CD"],
+  "rs:appliesToProgrammingLanguage": ["Python"],
+  "schema:license": {
+    "@id": "https://opensource.org/licenses/MIT",
+    "@type": "@id"
+  },
+  "schema:applicationCategory": [{
+    "@id": "rs:AnalysisCode",
+    "@type": "@id"
+  }, 
+  {
+    "@id": "rs:ResearchInfrastructureSoftware",
+    "@type": "@id"
+  }, 
+  {
+    "@id": "rs:PrototypeTool",
+    "@type": "@id"
+  }]
+}
