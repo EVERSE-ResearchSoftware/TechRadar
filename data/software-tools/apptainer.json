@@ -1,0 +1,22 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rs": "https://w3id.org/everse/rs#"
+  },
+  "@id": "https://w3id.org/everse/tools/apptainer",
+  "@type": "schema:SoftwareApplication",
+  "schema:name": "Apptainer",
+  "schema:description": "Container platform designed for ease-of-use on shared systems and in high performance computing (HPC) environments",
+  "schema:url": "https://apptainer.org/",
+  "schema:applicationCategory": { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" },
+  "schema:isAccessibleForFree": true,
+  "rs:hasQualityDimension": [
+    { "@id": "rs:Compatibility", "@type": "@id" },
+    { "@id": "rs:Flexibility", "@type": "@id" }
+  ],
+  "rs:howToUse": ["command-line"],
+  "schema:license": {
+    "@id": "https://opensource.org/license/bsd-3-clause",
+    "@type": "@id"
+  }
+}

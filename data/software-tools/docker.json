@@ -1,0 +1,22 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rs": "https://w3id.org/everse/rs#"
+  },
+  "@id": "https://w3id.org/everse/tools/docker",
+  "@type": "schema:SoftwareApplication",
+  "schema:name": "Docker",
+  "schema:description": "Docker provides a suite of development tools, services, trusted content, and automations, used individually or together, to accelerate the delivery of secure applications.",
+  "schema:url": "https://www.docker.com/",
+  "schema:applicationCategory": { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" },
+  "schema:isAccessibleForFree": true,
+  "rs:hasQualityDimension": [
+    { "@id": "rs:Compatibility", "@type": "@id" },
+    { "@id": "rs:Flexibility", "@type": "@id" }
+  ],
+  "rs:howToUse": ["command-line", "online-service"],
+  "schema:license": {
+    "@id": "https://www.apache.org/licenses/LICENSE-2.0",
+    "@type": "@id"
+  }
+}

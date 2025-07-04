@@ -1,0 +1,22 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rs": "https://w3id.org/everse/rs#"
+  },
+  "@id": "https://w3id.org/everse/tools/vscode",
+  "@type": "schema:SoftwareApplication",
+  "schema:name": "Visual Studio Code",
+  "schema:description": "Visual Studio Code, also commonly referred to as VS Code,[9] is an integrated development environment developed by Microsoft for Windows, Linux, macOS and web browsers.",
+  "schema:url": "https://code.visualstudio.com/",
+  "schema:applicationCategory": { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" },
+  "schema:isAccessibleForFree": true,
+  "rs:hasQualityDimension": {
+      "@id": "rs:Interaction Capability",
+      "@type": "@id"
+    },
+  "rs:howToUse": ["command-line"],
+  "schema:license": {
+    "@id": "https://code.visualstudio.com/license",
+    "@type": "@id"
+  }
+}
