@@ -1,17 +1,20 @@
 {
-    "@context": {
-      "schema": "http://schema.org/",
-      "rs" : "https://w3id.org/everse/rs#"
-    },
-    "@id": "https://w3id.org/everse/tools/zenodo",
-    "@type": "schema:SoftwareApplication",
-    "schema:name": "zenodo",
-    "schema:description": "Open repository for EU-funded research outputs from Horizon Europe, Euratom, and earlier Framework Programmes.",
-    "schema:url": "https://zenodo.org/",
-    "schema:isAccessibleForFree": true,
-    "schema:applicationCategory": { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id"},
-    "rs:hasQualityDimension": {"@id":"rs:Sustainability", "@type": "@id"},
-    "rs:howToUse": ["CI/CD", "command-line", "online-service"],
-    "rs:usedBy": ["ENVRI", "ESCAPE", "EOSC-Life", "PaNOSC", "SSHOC"],
-    "schema:license": {"@id": " https://ohwr.org/cernohl/", "@type": "@id"}
-  }
+  "@context": {
+    "schema": "http://schema.org/",
+    "rs": "https://w3id.org/everse/rs#"
+  },
+  "@id": "https://w3id.org/everse/tools/zenodo",
+  "@type": "schema:SoftwareApplication",
+  "schema:name": "zenodo",
+  "schema:description": "Open repository for EU-funded research outputs from Horizon Europe, Euratom, and earlier Framework Programmes.",
+  "schema:url": "https://zenodo.org/",
+  "schema:isAccessibleForFree": true,
+  "schema:applicationCategory": {
+    "@id": "rs:ResearchInfrastructureSoftware",
+    "@type": "@id"
+  },
+  "rs:hasQualityDimension": { "@id": "rs:Sustainability", "@type": "@id" },
+  "rs:howToUse": ["CI/CD", "command-line", "online-service"],
+  "rs:usedBy": ["ENVRI", "ESCAPE", "EOSC-Life", "PaNOSC", "SSHOC"],
+  "schema:license": { "@id": " https://ohwr.org/cernohl/", "@type": "@id" }
+}

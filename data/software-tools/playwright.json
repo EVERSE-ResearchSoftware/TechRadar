@@ -1,17 +1,19 @@
 {
-    "@context": {
-      "schema": "http://schema.org/",
-      "rs" : "https://w3id.org/everse/rs#"
-    },
-    "@id": "https://w3id.org/everse/tools/playwright",
-    "@type": "schema:SoftwareApplication",
-    "schema:name": "Playwright",
-    "schema:description": "Framework for Web testing and automation, allowing testing using Chromium, Firefox and WebKit with a single API",
-    "schema:url": "https://playwright.dev/",
-    "schema:isAccessibleForFree": true,
-    "schema:applicationCategory": { "@id": "rs:AnalysisCode", "@type": "@id"},
-    "rs:hasQualityDimension": {"@id":"rs:Sustainability", "@type": "@id"},
-    "rs:howToUse": ["CI/CD", "command-line"],
-    "schema:license": { "@id": "https://opensource.org/licenses/Apache-2.0", "@type": "@id"}
-      
+  "@context": {
+    "schema": "http://schema.org/",
+    "rs": "https://w3id.org/everse/rs#"
+  },
+  "@id": "https://w3id.org/everse/tools/playwright",
+  "@type": "schema:SoftwareApplication",
+  "schema:name": "Playwright",
+  "schema:description": "Framework for Web testing and automation, allowing testing using Chromium, Firefox and WebKit with a single API",
+  "schema:url": "https://playwright.dev/",
+  "schema:isAccessibleForFree": true,
+  "schema:applicationCategory": { "@id": "rs:AnalysisCode", "@type": "@id" },
+  "rs:hasQualityDimension": { "@id": "rs:Sustainability", "@type": "@id" },
+  "rs:howToUse": ["CI/CD", "command-line"],
+  "schema:license": {
+    "@id": "https://opensource.org/licenses/Apache-2.0",
+    "@type": "@id"
   }
+}

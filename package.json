@@ -1,14 +1,24 @@
 {
-  "name": "aoe-techradar",
+  "name": "everse-techradar",
   "private": true,
-  "version": "4.3.0",
+  "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
     "build": "techradar build",
-    "serve": "techradar serve"
+    "serve": "techradar serve",
+    "lint-prettier:check": "prettier --check data/software-tools",
+    "lint-prettier:fix": "prettier --write data/software-tools"
   },
   "dependencies": {
-    "aoe_technology_radar": "github:AOEpeople/aoe_technology_radar#main"
+    "aoe_technology_radar": "github:EVERSE-ResearchSoftware/aoe_technology_radar#v5",
+    "npm-package-json-lint": "^9.0.0"
+  },
+  "engines": {
+    "node": ">=18",
+    "npm": ">=9"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.3"
   }
 }

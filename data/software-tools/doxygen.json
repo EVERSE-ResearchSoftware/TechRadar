@@ -1,17 +1,33 @@
 {
-    "@context": {
-      "schema": "http://schema.org/",
-      "rs" : "https://w3id.org/everse/rs#"
-    },
-    "@id": "https://w3id.org/everse/tools/doxygen",
-    "@type": "schema:SoftwareApplication",
-    "schema:name": "doxygen",
-    "schema:description": "Doxygen is a documentation generator for annotated source code. It helps developers automatically produce software documentation from the comments and structure of their code. Supports languages like C, C++, Java, Python, PHP, Fortran, etc",
-    "schema:url": "https://www.doxygen.nl/",
-    "schema:applicationCategory": { "@id": "rs:AnalysisCode", "type": "@id"},
-    "schema:isAccessibleForFree": true,
-    "rs:hasQualityDimension": {"@id":"rs:Documentation", "@type": "@id"},
-    "rs:howToUse": ["CI/CD","command-line"],
-    "rs:appliesToProgrammingLanguage": ["C++", "C", "Python", "PHP", "Java", "C#", "Objective-C", "Fortran", "VHDL", "Splice", "IDL", "Lex"],
-    "schema:license": { "@id": "https://spdx.org/licenses/GPL-2.0-only", "@type": "@id"}      
+  "@context": {
+    "schema": "http://schema.org/",
+    "rs": "https://w3id.org/everse/rs#"
+  },
+  "@id": "https://w3id.org/everse/tools/doxygen",
+  "@type": "schema:SoftwareApplication",
+  "schema:name": "doxygen",
+  "schema:description": "Doxygen is a documentation generator for annotated source code. It helps developers automatically produce software documentation from the comments and structure of their code. Supports languages like C, C++, Java, Python, PHP, Fortran, etc",
+  "schema:url": "https://www.doxygen.nl/",
+  "schema:applicationCategory": { "@id": "rs:AnalysisCode", "type": "@id" },
+  "schema:isAccessibleForFree": true,
+  "rs:hasQualityDimension": { "@id": "rs:Documentation", "@type": "@id" },
+  "rs:howToUse": ["CI/CD", "command-line"],
+  "rs:appliesToProgrammingLanguage": [
+    "C++",
+    "C",
+    "Python",
+    "PHP",
+    "Java",
+    "C#",
+    "Objective-C",
+    "Fortran",
+    "VHDL",
+    "Splice",
+    "IDL",
+    "Lex"
+  ],
+  "schema:license": {
+    "@id": "https://spdx.org/licenses/GPL-2.0-only",
+    "@type": "@id"
   }
+}

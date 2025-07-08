@@ -8,10 +8,19 @@
   "schema:name": "Selenium",
   "schema:description": "Framework for automating web browser interactions for testing purposes.",
   "schema:url": "https://www.selenium.dev/",
-  "schema:applicationCategory": { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" },
+  "schema:applicationCategory": {
+    "@id": "rs:ResearchInfrastructureSoftware",
+    "@type": "@id"
+  },
   "schema:isAccessibleForFree": true,
-  "rs:hasQualityDimension": { "@id": "rs:Functional Suitability", "@type": "@id" },
+  "rs:hasQualityDimension": {
+    "@id": "rs:Functional Suitability",
+    "@type": "@id"
+  },
   "rs:howToUse": ["command-line", "CI/CD"],
   "rs:appliesToProgrammingLanguage": ["Java", "Python", "JavaScript", "C#"],
-  "schema:license": { "@id": "https://spdx.org/licenses/Apache-2.0", "@type": "@id" }
+  "schema:license": {
+    "@id": "https://spdx.org/licenses/Apache-2.0",
+    "@type": "@id"
+  }
 }

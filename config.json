@@ -15,42 +15,84 @@
     "foreground": "#000000",
     "background": "#FFFFFF",
     "highlight": "#029df7",
-    "content": "#000000",
+    "content": "#f5f5f5",
     "text": "#575757",
     "link": "#029df7",
     "border": "rgba(255, 255, 255, 0.1)",
     "tag": "rgba(255, 255, 255, 0.1)"
   },
-  "quadrants": [
+  "segments": [
     {
-      "id": "source-code",
-      "title": "Source Code",
-      "description": "This quadrant includes Source code management (SCM) tools related software development, using this developers can track and manage changes to software code over time.",
-      "color": "#84BFA4"
+      "id": "compatibility",
+      "title": "Compatibility",
+      "description": "Degree to which a product, system or component can exchange information with other products, systems or components, and/or perform its required functions while sharing the same common environment and resources.",
+      "color": "#4E79A7"
     },
     {
       "id": "fairness",
       "title": "FAIRness",
-      "description": "This quadrant covers Tools and services to help with software FAIRness evalution and improvement.",
-      "color": "#248EA6"
+      "description": "FAIRness refers to the degree to which research software adheres to the FAIR principles: Findable, Accessible, Interoperable, and Reusable.",
+      "color": "#F28E2B"
     },
     {
-      "id": "platforms-and-services",
-      "title": "Platforms & Services",
-      "description": "This quadrant clusters technologies focused on the operation of software, related platforms, tools, infrastructure, and services.",
-      "color": "#F25244"
+      "id": "flexibility",
+      "title": "Flexibility",
+      "description": "Degree to which a product can be adapted to changes in its requirements, contexts of use or system environment. ",
+      "color": "#E15759"
     },
     {
-      "id": "documentation",
-      "title": "Documentation",
-      "description": "This quadrant features a variety of tools, helps to document the software.",
-      "color": "#F2A25C"
+      "id": "functional-suitability",
+      "title": "Functional Suitability",
+      "description": "This characteristic represents the degree to which a product or system provides functions that meet stated and implied needs when used under specified conditions. ",
+      "color": "#76B7B2"
+    },
+    {
+      "id": "interaction-capability",
+      "title": "Interaction Capability",
+      "description": "This characteristic represents the degree to which a product or system supports users in performing their tasks and achieving specified goals.",
+      "color": "#59A14F"
+    },
+    {
+      "id": "maintainability",
+      "title": "Maintainability",
+      "description": "This characteristic represents the degree of effectiveness and efficiency with which a product or system can be modified to improve it, correct it or adapt it to changes in environment, and in requirements.",
+      "color": "#EDC948"
+    },
+    {
+      "id": "performance-efficiency",
+      "title": "Performance Efficiency",
+      "description": "This characteristic represents the degree to which a product performs its functions within specified time and throughput parameters and is efficient in the use of resources (such as CPU, memory, storage, network devices, energy, materials...) under specified conditions.",
+      "color": "#B07AA1"
+    },
+    {
+      "id": "reliability",
+      "title": "Reliability",
+      "description": "Degree to which a system, product or component performs specified functions under specified conditions for a specified period of time.",
+      "color": "#FF9DA7"
+    },
+    {
+      "id": "safety",
+      "title": "Safety",
+      "description": "This characteristic represents the degree to which a product under defined conditions to avoid a state in which human life, health, property, or the environment is endangered.",
+      "color": "#9C755F"
+    },
+    {
+      "id": "security",
+      "title": "Security",
+      "description": "Degree to which a product or system defends against attack patterns by malicious actors and protects information and data so that persons or other products or systems have the degree of data access appropriate to their types and levels of authorization.",
+      "color": "#BAB0AC"
+    },
+    {
+      "id": "sustainability",
+      "title": "Sustainability",
+      "description": "The capacity of the software to endure. In other words, sustainability means that the software will continue to be available in the future, on new platforms, meeting new needs.",
+      "color": "#5FA2CE"
     }
   ],
   "rings": [
     {
-      "id": "research software infra",
-      "title": "Research software infra",
+      "id": "research infra software",
+      "title": "Research infra software",
       "description": "This involves software that captures broadly accepted ideas, methods and models for use in research, warranting close researcher involvement in their development. This tier represents broadly applicable research software, often with a large and possibly distributed development team.",
       "color": "#5cb449",
       "radius": 0.45,

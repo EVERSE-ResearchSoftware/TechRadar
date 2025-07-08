@@ -8,10 +8,22 @@
   "schema:name": "SonarQube",
   "schema:description": "Tool for continuous inspection of code quality and security vulnerabilities.",
   "schema:url": "https://www.sonarqube.org/",
-  "schema:applicationCategory": { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" },
+  "schema:applicationCategory": {
+    "@id": "rs:ResearchInfrastructureSoftware",
+    "@type": "@id"
+  },
   "schema:isAccessibleForFree": true,
   "rs:hasQualityDimension": { "@id": "rs:Maintainability", "@type": "@id" },
   "rs:howToUse": ["CI/CD", "online-service"],
-  "rs:appliesToProgrammingLanguage": ["Java", "Python", "JavaScript", "C#", "C++"],
-  "schema:license": { "@id": "https://spdx.org/licenses/GPL-3.0-only", "@type": "@id" }
+  "rs:appliesToProgrammingLanguage": [
+    "Java",
+    "Python",
+    "JavaScript",
+    "C#",
+    "C++"
+  ],
+  "schema:license": {
+    "@id": "https://spdx.org/licenses/GPL-3.0-only",
+    "@type": "@id"
+  }
 }

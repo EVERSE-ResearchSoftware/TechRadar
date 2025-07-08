@@ -1,20 +1,22 @@
 {
-    "@context": {
-      "schema": "http://schema.org/",
-      "rs": "https://w3id.org/everse/rs#"
-    },
-    "@id": "https://w3id.org/everse/tools/github_pages",
-    "@type": "schema:SoftwareApplication",
-    "schema:name": "GitHub Pages",
-    "schema:description": "A static site hosting service by GitHub that allows users to publish websites directly from a GitHub repository.",
-    "schema:url": "https://pages.github.com/",
-    "schema:applicationCategory": { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id"},
-    "schema:isAccessibleForFree": true,
-    "rs:hasQualityDimension": {
-      "@id": "rs:Sustainability",
-      "@type": "@id"
-    },
-    "rs:howToUse": ["CI/CD", "command-line", "online-service"],
-    "schema:license": { "@id": "https://spdx.org/licenses/MIT", "@type": "@id"}
-  }
-  
+  "@context": {
+    "schema": "http://schema.org/",
+    "rs": "https://w3id.org/everse/rs#"
+  },
+  "@id": "https://w3id.org/everse/tools/github_pages",
+  "@type": "schema:SoftwareApplication",
+  "schema:name": "GitHub Pages",
+  "schema:description": "A static site hosting service by GitHub that allows users to publish websites directly from a GitHub repository.",
+  "schema:url": "https://pages.github.com/",
+  "schema:applicationCategory": {
+    "@id": "rs:ResearchInfrastructureSoftware",
+    "@type": "@id"
+  },
+  "schema:isAccessibleForFree": true,
+  "rs:hasQualityDimension": {
+    "@id": "rs:Sustainability",
+    "@type": "@id"
+  },
+  "rs:howToUse": ["CI/CD", "command-line", "online-service"],
+  "schema:license": { "@id": "https://spdx.org/licenses/MIT", "@type": "@id" }
+}

@@ -1,18 +1,23 @@
 {
-    "@context": {
-      "schema": "http://schema.org/",
-      "rs" : "https://w3id.org/everse/rs#"
-    },
-    "@id": "https://w3id.org/everse/tools/javadoc",
-    "@type": "schema:SoftwareApplication",
-    "schema:name": "javadoc",
-    "schema:description": "Documentation generator for Java used to generate API documentation in HTML format from Java source code",
-    "schema:url": "https://www.oracle.com/java/technologies/javase/javadoc-tool.html",
-    "schema:applicationCategory": { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id"},
-    "schema:isAccessibleForFree": true,
-    "rs:hasQualityDimension": {"@id":"rs:Sustainability", "@type": "@id"},
-    "rs:howToUse": ["CI/CD", "command-line"],
-    "rs:appliesToProgrammingLanguage": ["Java"],
-    "schema:license": { "@id": "https://www.oracle.com/downloads/licenses/no-fee-license", "@type": "@id"}
-      
+  "@context": {
+    "schema": "http://schema.org/",
+    "rs": "https://w3id.org/everse/rs#"
+  },
+  "@id": "https://w3id.org/everse/tools/javadoc",
+  "@type": "schema:SoftwareApplication",
+  "schema:name": "javadoc",
+  "schema:description": "Documentation generator for Java used to generate API documentation in HTML format from Java source code",
+  "schema:url": "https://www.oracle.com/java/technologies/javase/javadoc-tool.html",
+  "schema:applicationCategory": {
+    "@id": "rs:ResearchInfrastructureSoftware",
+    "@type": "@id"
+  },
+  "schema:isAccessibleForFree": true,
+  "rs:hasQualityDimension": { "@id": "rs:Sustainability", "@type": "@id" },
+  "rs:howToUse": ["CI/CD", "command-line"],
+  "rs:appliesToProgrammingLanguage": ["Java"],
+  "schema:license": {
+    "@id": "https://www.oracle.com/downloads/licenses/no-fee-license",
+    "@type": "@id"
   }
+}

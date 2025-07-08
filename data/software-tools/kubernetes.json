@@ -8,13 +8,19 @@
   "schema:name": "Kubernetes",
   "schema:description": "Open-source system for automating deployment, scaling, and management of containerized applications.",
   "schema:url": "https://kubernetes.io/",
-  "schema:applicationCategory": { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" },
+  "schema:applicationCategory": {
+    "@id": "rs:ResearchInfrastructureSoftware",
+    "@type": "@id"
+  },
   "schema:isAccessibleForFree": true,
   "rs:hasQualityDimension": [
-        { "@id": "rs:Maintainability", "@type": "@id" },
-        { "@id": "rs:Sustainability", "@type": "@id" },
-        { "@id": "rs:Reliability", "@type": "@id" }
+    { "@id": "rs:Maintainability", "@type": "@id" },
+    { "@id": "rs:Sustainability", "@type": "@id" },
+    { "@id": "rs:Reliability", "@type": "@id" }
   ],
-"rs:howToUse": ["command-line", "online-service", "CI/CD"],
-  "schema:license": { "@id": "https://spdx.org/licenses/Apache-2.0", "@type": "@id" }
+  "rs:howToUse": ["command-line", "online-service", "CI/CD"],
+  "schema:license": {
+    "@id": "https://spdx.org/licenses/Apache-2.0",
+    "@type": "@id"
+  }
 }

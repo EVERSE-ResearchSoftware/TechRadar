@@ -8,7 +8,10 @@
   "schema:name": "Travis CI",
   "schema:description": "A continuous integration service used to build and test software projects hosted on GitHub.",
   "schema:url": "https://travis-ci.com/",
-  "schema:applicationCategory": { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" },
+  "schema:applicationCategory": {
+    "@id": "rs:ResearchInfrastructureSoftware",
+    "@type": "@id"
+  },
   "schema:isAccessibleForFree": true,
   "rs:hasQualityDimension": { "@id": "rs:Maintainability", "@type": "@id" },
   "rs:howToUse": ["CI/CD", "online-service"],

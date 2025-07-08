@@ -1,23 +1,25 @@
 {
-    "@context": {
-      "schema": "http://schema.org/",
-      "rs": "https://w3id.org/everse/rs#"
-    },
-    "@id": "https://w3id.org/everse/tools/hugo",
-    "@type": "schema:SoftwareApplication",
-    "schema:name": "Hugo",
-    "schema:description": "A fast and flexible static site generator written in Go, known for its speed and flexibility in creating websites.",
-    "schema:url": "https://gohugo.io/",
-    "schema:applicationCategory": { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id"},
-    "schema:isAccessibleForFree": true,
-    "rs:hasQualityDimension": {
-      "@id": "rs:Sustainability",
-      "@type": "@id"
-    },
-    "rs:howToUse": ["CI/CD", "command-line"],
-    "schema:license": {
-      "@id": "https://opensource.org/licenses/Apache-2.0",
-      "@type": "@id"
-    }
+  "@context": {
+    "schema": "http://schema.org/",
+    "rs": "https://w3id.org/everse/rs#"
+  },
+  "@id": "https://w3id.org/everse/tools/hugo",
+  "@type": "schema:SoftwareApplication",
+  "schema:name": "Hugo",
+  "schema:description": "A fast and flexible static site generator written in Go, known for its speed and flexibility in creating websites.",
+  "schema:url": "https://gohugo.io/",
+  "schema:applicationCategory": {
+    "@id": "rs:ResearchInfrastructureSoftware",
+    "@type": "@id"
+  },
+  "schema:isAccessibleForFree": true,
+  "rs:hasQualityDimension": {
+    "@id": "rs:Sustainability",
+    "@type": "@id"
+  },
+  "rs:howToUse": ["CI/CD", "command-line"],
+  "schema:license": {
+    "@id": "https://opensource.org/licenses/Apache-2.0",
+    "@type": "@id"
   }
-  
+}

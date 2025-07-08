@@ -19,5 +19,5 @@
     "@id": "https://opensource.org/licenses/Apache-2.0",
     "@type": "@id"
   },
-  "schema:applicationCategory": { "@id": "rs:AnalysisCode", "@type": "@id"}
+  "schema:applicationCategory": { "@id": "rs:AnalysisCode", "@type": "@id" }
 }

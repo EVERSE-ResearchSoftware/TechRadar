@@ -1,18 +1,17 @@
 {
-    "@context": {
-      "schema": "http://schema.org/",
-      "rs" : "https://w3id.org/everse/rs#"
-    },
-    "@id": "https://w3id.org/everse/tools/scorep",
-    "@type": "schema:SoftwareApplication",
-    "schema:name": "Score-P",
-    "schema:description": "The Score-P (Scalable Performance Measurement Infrastructure for Parallel Codes) measurement infrastructure is a highly scalable and easy-to-use tool suite for profiling and event trace recording of HPC applications.",
-    "schema:url": "https://gitlab.com/score-p/scorep",
-    "schema:applicationCategory": { "@id": "rs:AnalysisCode", "@type": "@id"},
-    "schema:isAccessibleForFree": true,
-    "rs:hasQualityDimension": {"@id":"rs:Sustainability", "@type": "@id"},
-    "rs:howToUse": ["CI/CD", "command-line"],
-    "rs:appliesToProgrammingLanguage": ["C", "C++"],
-    "schema:license": { "@id": "https://spdx.org/licenses/0BSD", "@type": "@id"}
-      
-  }
+  "@context": {
+    "schema": "http://schema.org/",
+    "rs": "https://w3id.org/everse/rs#"
+  },
+  "@id": "https://w3id.org/everse/tools/scorep",
+  "@type": "schema:SoftwareApplication",
+  "schema:name": "Score-P",
+  "schema:description": "The Score-P (Scalable Performance Measurement Infrastructure for Parallel Codes) measurement infrastructure is a highly scalable and easy-to-use tool suite for profiling and event trace recording of HPC applications.",
+  "schema:url": "https://gitlab.com/score-p/scorep",
+  "schema:applicationCategory": { "@id": "rs:AnalysisCode", "@type": "@id" },
+  "schema:isAccessibleForFree": true,
+  "rs:hasQualityDimension": { "@id": "rs:Sustainability", "@type": "@id" },
+  "rs:howToUse": ["CI/CD", "command-line"],
+  "rs:appliesToProgrammingLanguage": ["C", "C++"],
+  "schema:license": { "@id": "https://spdx.org/licenses/0BSD", "@type": "@id" }
+}

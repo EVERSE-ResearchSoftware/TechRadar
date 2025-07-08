@@ -10,7 +10,13 @@
   "schema:url": "https://citation-file-format.github.io/cffinit",
   "schema:isAccessibleForFree": true,
   "rs:hasQualityDimension": { "@id": "rs:FAIRness", "@type": "@id" },
-  "rs:howToUse": [ "online-service" ],
-  "schema:license": { "@id": "https://spdx.org/licenses/Apache-2.0", "@type": "@id" },
-  "schema:applicationCategory": { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" }
+  "rs:howToUse": ["online-service"],
+  "schema:license": {
+    "@id": "https://spdx.org/licenses/Apache-2.0",
+    "@type": "@id"
+  },
+  "schema:applicationCategory": {
+    "@id": "rs:ResearchInfrastructureSoftware",
+    "@type": "@id"
+  }
 }

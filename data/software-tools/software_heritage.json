@@ -1,16 +1,22 @@
 {
-    "@context": {
-      "schema": "http://schema.org/",
-      "rs" : "https://w3id.org/everse/rs#"
-    },
-    "@id": "https://w3id.org/everse/tools/software_heritage",
-    "@type": "schema:SoftwareApplication",
-    "schema:name": "Software Heritage",
-    "schema:description": "Collects, preserves, curates and makes available software in source code form as cultural heritage",
-    "schema:url": "https://www.softwareheritage.org",
-    "schema:isAccessibleForFree": true,
-    "schema:applicationCategory": { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id"},
-    "rs:hasQualityDimension": {"@id":"rs:Sustainability", "@type": "@id"},
-    "rs:howToUse": ["online-service","command-line"],
-    "schema:license": { "@id": "https://www.gnu.org/licenses/agpl-3.0", "@type": "@id"}
+  "@context": {
+    "schema": "http://schema.org/",
+    "rs": "https://w3id.org/everse/rs#"
+  },
+  "@id": "https://w3id.org/everse/tools/software_heritage",
+  "@type": "schema:SoftwareApplication",
+  "schema:name": "Software Heritage",
+  "schema:description": "Collects, preserves, curates and makes available software in source code form as cultural heritage",
+  "schema:url": "https://www.softwareheritage.org",
+  "schema:isAccessibleForFree": true,
+  "schema:applicationCategory": {
+    "@id": "rs:ResearchInfrastructureSoftware",
+    "@type": "@id"
+  },
+  "rs:hasQualityDimension": { "@id": "rs:Sustainability", "@type": "@id" },
+  "rs:howToUse": ["online-service", "command-line"],
+  "schema:license": {
+    "@id": "https://www.gnu.org/licenses/agpl-3.0",
+    "@type": "@id"
   }
+}

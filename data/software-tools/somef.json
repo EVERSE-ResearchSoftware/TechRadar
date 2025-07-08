@@ -1,17 +1,19 @@
 {
-    "@context": {
-      "schema": "http://schema.org/",
-      "rs" : "https://w3id.org/everse/rs#"
-    },
-    "@id": "https://w3id.org/everse/tools/somef",
-    "@type": "schema:SoftwareApplication",
-    "schema:name": "SOMEF",
-    "schema:description": "Software Metadata Extraction Framework (SOMEF) is a command line interface for automatically extracting relevant information from README files",
-    "schema:url": "https://github.com/KnowledgeCaptureAndDiscovery/somef",
-    "schema:isAccessibleForFree": true,
-    "rs:hasQualityDimension": {"@id":"rs:Sustainability", "@type": "@id"},
-    "schema:applicationCategory": { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id"},
-    "rs:howToUse": ["command-line", "CI/CD"],
-    "schema:license": { "@id": "https://spdx.org/licenses/MIT", "@type": "@id"}
-      
-  }
+  "@context": {
+    "schema": "http://schema.org/",
+    "rs": "https://w3id.org/everse/rs#"
+  },
+  "@id": "https://w3id.org/everse/tools/somef",
+  "@type": "schema:SoftwareApplication",
+  "schema:name": "SOMEF",
+  "schema:description": "Software Metadata Extraction Framework (SOMEF) is a command line interface for automatically extracting relevant information from README files",
+  "schema:url": "https://github.com/KnowledgeCaptureAndDiscovery/somef",
+  "schema:isAccessibleForFree": true,
+  "rs:hasQualityDimension": { "@id": "rs:Sustainability", "@type": "@id" },
+  "schema:applicationCategory": {
+    "@id": "rs:ResearchInfrastructureSoftware",
+    "@type": "@id"
+  },
+  "rs:howToUse": ["command-line", "CI/CD"],
+  "schema:license": { "@id": "https://spdx.org/licenses/MIT", "@type": "@id" }
+}

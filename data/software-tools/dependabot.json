@@ -11,7 +11,22 @@
   "schema:isAccessibleForFree": true,
   "rs:hasQualityDimension": { "@id": "rs:Security", "@type": "@id" },
   "rs:howToUse": ["CI/CD", "command-line"],
-  "schema:applicationCategory": { "@id": "rs:ResearchInfrastructureSoftware", "type": "@id" },
-  "rs:appliesToProgrammingLanguage": ["Ruby", "JavaScript", "Python", "PHP", "Dart", "Elixir", "Elm", "Go", "Rust", "Java", ".NET"],
+  "schema:applicationCategory": {
+    "@id": "rs:ResearchInfrastructureSoftware",
+    "type": "@id"
+  },
+  "rs:appliesToProgrammingLanguage": [
+    "Ruby",
+    "JavaScript",
+    "Python",
+    "PHP",
+    "Dart",
+    "Elixir",
+    "Elm",
+    "Go",
+    "Rust",
+    "Java",
+    ".NET"
+  ],
   "schema:license": { "@id": "https://spdx.org/licenses/MIT", "@type": "@id" }
 }

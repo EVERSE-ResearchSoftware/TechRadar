@@ -1,9 +1,9 @@
 name: Validate
 on:
   push:
-    branches: ["main", "intermidiate_branch_with_reviewed_tools"]
+    branches: ["main"]
   pull_request:
-    branches: ["main", "intermidiate_branch_with_reviewed_tools"]
+    branches: ["main"]
   workflow_dispatch:
 
 permissions:

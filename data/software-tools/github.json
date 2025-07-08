@@ -1,21 +1,23 @@
 {
-    "@context": {
-      "schema": "http://schema.org/",
-      "rs": "https://w3id.org/everse/rs#"
-    },
-    "@id": "https://w3id.org/everse/tools/github",
-    "@type": "schema:SoftwareApplication",
-    "schema:name": "GitHub",
-    "schema:description": "A platform for version control and collaboration, allowing developers to manage and store their code repositories, track changes, and collaborate with others.",
-    "schema:applicationCategory": { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id"},
-    "schema:url": "https://github.com/",
-    "schema:isAccessibleForFree": true,
-    "rs:hasQualityDimension": {
-      "@id": "rs:FAIRness",
-      "@type": "@id"
-    },
-    "rs:howToUse": ["online-service", "CI/CD", "command-line"], 
-    "rs:usedBy": ["ENVRI", "ESCAPE", "EOSC-Life", "PaNOSC", "SSHOC"],
-    "schema:license": { "@id": "https://spdx.org/licenses/MIT", "@type": "@id"}
-  }
-  
+  "@context": {
+    "schema": "http://schema.org/",
+    "rs": "https://w3id.org/everse/rs#"
+  },
+  "@id": "https://w3id.org/everse/tools/github",
+  "@type": "schema:SoftwareApplication",
+  "schema:name": "GitHub",
+  "schema:description": "A platform for version control and collaboration, allowing developers to manage and store their code repositories, track changes, and collaborate with others.",
+  "schema:applicationCategory": {
+    "@id": "rs:ResearchInfrastructureSoftware",
+    "@type": "@id"
+  },
+  "schema:url": "https://github.com/",
+  "schema:isAccessibleForFree": true,
+  "rs:hasQualityDimension": {
+    "@id": "rs:FAIRness",
+    "@type": "@id"
+  },
+  "rs:howToUse": ["online-service", "CI/CD", "command-line"],
+  "rs:usedBy": ["ENVRI", "ESCAPE", "EOSC-Life", "PaNOSC", "SSHOC"],
+  "schema:license": { "@id": "https://spdx.org/licenses/MIT", "@type": "@id" }
+}
