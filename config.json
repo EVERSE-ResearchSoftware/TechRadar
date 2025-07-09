@@ -91,28 +91,28 @@
   ],
   "rings": [
     {
-      "id": "research infra software",
-      "title": "Research infra software",
+      "id": "analysis code",
+      "title": "Analysis code",
       "description": "This involves software that captures broadly accepted ideas, methods and models for use in research, warranting close researcher involvement in their development. This tier represents broadly applicable research software, often with a large and possibly distributed development team.",
-      "color": "#5cb449",
-      "radius": 0.45,
-      "strokeWidth": 3
+      "color": "#029df7",
+      "radius": 0.35,
+      "strokeWidth": 1
     },
     {
       "id": "prototype tools",
       "title": "Prototype tools",
       "description": "This refers to research software that demonstrates a new idea, method or model for use beyond the project in which it originated, often as a substantive intellectual contribution or proof of concept. These tools are designed to answer multiple research questions and are typically developed and used by more than one person.",
       "color": "#faa03d",
-      "radius": 0.75,
+      "radius": 0.60,
       "strokeWidth": 2
     },
     {
-      "id": "analysis code",
-      "title": "Analysis code",
+      "id": "research infra software",
+      "title": "Research infra software",
       "description": "This involves software that captures broadly accepted ideas, methods and models for use in research, warranting close researcher involvement in their development. This tier represents broadly applicable research software, often with a large and possibly distributed development team.",
-      "color": "#029df7",
+      "color": "#5cb449",
       "radius": 1,
-      "strokeWidth": 1
+      "strokeWidth": 3
     }
   ],
   "flags": {
@@ -133,7 +133,7 @@
     }
   },
   "chart": {
-    "size": 800,
+    "size": 1000,
     "blipSize": 12
   },
   "social": [
