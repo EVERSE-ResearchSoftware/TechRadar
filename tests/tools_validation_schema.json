@@ -41,7 +41,19 @@
         }
       },
       "required": [ "@id" ]
+    }, 
+    
+"qualityIndicatorObject": {
+  "type": "object",
+  "properties": {
+    "@id": {
+      "type": "string",
+      "description": "Identifier for the quality indicator",
+      "format": "uri"
     }
+  },
+  "required": ["@id"]
+}
   },
   "properties": {
     "@context": {
