@@ -1,0 +1,21 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rs" : "https://w3id.org/everse/rs#"
+  },
+  "@id": "https://example.org/FAIR_aware_tool",
+  "@type": "schema:SoftwareApplication",
+  "schema:name": "FAIR-Aware tool",
+  "schema:description": "Guided approach to assess the FAIRness of data",
+  "schema:url": "https://dans.knaw.nl/en/satifyd/",
+  "schema:identifier": { "@id": "https://example.org/FAIR_aware_tool"},
+  "schema:isAccessibleForFree": true,
+  "rs:hasQualityDimension": {"@id":"rs:FAIRness", "@type": "@id"},
+  "rs:howToUse": ["online-service"],
+  "schema:license": { "@id": "https://spdx.org/licenses/Apache-2.0.html", "@type": "@id"},
+  "schema:applicationCategory": [
+  { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" },
+  { "@id": "rs:PrototypeTool", "@type": "@id" },
+  { "@id": "rs:AnalysisCode", "@type": "@id" }
+  ] 
+}

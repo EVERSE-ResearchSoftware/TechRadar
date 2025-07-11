@@ -1,0 +1,20 @@
+{
+    "@context": {
+      "schema": "http://schema.org/",
+      "rs" : "https://w3id.org/everse/rs#"
+    },
+    "@id": "https://w3id.org/everse/tools/Five_Recommendations_for_FAIR_Software",
+    "@type": "schema:SoftwareApplication",
+    "schema:name": "Five Recommendations for FAIR Software",
+    "schema:description": "“Guided” approaches to assess the FAIRness of research software: Asking a series of questions to a human. You assess yourself as to whether your resources satisfy FAIR principles. Does not explicitly se FAIR4RS principles.",
+    "schema:url": "https://fair-software.nl/",
+    "schema:isAccessibleForFree": "free",
+    "rs:hasQualityDimension": {"@id":"rs:"FAIRness", "@type": "@id"},
+    "rs:howToUse": ["online-service"],
+    "schema:license": { "@id": "@type": "@id"},
+    "schema:applicationCategory": [
+     { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" },
+     { "@id": "rs:PrototypeTool", "@type": "@id" },
+     { "@id": "rs:AnalysisCode", "@type": "@id" }
+     ] 
+  }
