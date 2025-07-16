@@ -33,7 +33,6 @@ New versions of the TechRadar will be published regularly. You can find all the 
 
 The catalog of tools and services is presented in a visual dashboard at <https://github.com/EVERSE-ResearchSoftware/TechRadar>.
 
-
 ### Development
 Make sure you install [Node.js](https://nodejs.org/en) on your system as it will be needed to build and serve TechRadar.
 > [!WARNING]
@@ -41,13 +40,24 @@ Make sure you install [Node.js](https://nodejs.org/en) on your system as it will
 > The current version of Technology Watch is a work in progress.
 > Any content should not be considered final at this stage.
 
+#### Configuring TechRadar segments
+
+1. Open the config.json file.
+
+2. Update the segments section based on the dimensions of tool.json (/data/software-tools)
+
+3. Ensure that each segment listed in config.json has at least one corresponding tool in /data/software-tools
+
+4. If a segment does not have any associated tools, remove that segment from the segments section to avoid displaying empty segments on the radar.
+
+This configuration ensures that the TechRadar dashboard remains accurate and visually clear by avoiding the display of segments with no associated tools.
+
 #### Build the TechRadar
 
 ```bash
 npm install
 npm run serve
 ```
-
 Then open here: <http://localhost:3000/techradar>
 
 #### Build with static files

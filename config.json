@@ -71,12 +71,6 @@
       "color": "#FF9DA7"
     },
     {
-      "id": "Safety",
-      "title": "Safety",
-      "description": "This characteristic represents the degree to which a product under defined conditions to avoid a state in which human life, health, property, or the environment is endangered.",
-      "color": "#9C755F"
-    },
-    {
       "id": "Security",
       "title": "Security",
       "description": "Degree to which a product or system defends against attack patterns by malicious actors and protects information and data so that persons or other products or systems have the degree of data access appropriate to their types and levels of authorization.",
