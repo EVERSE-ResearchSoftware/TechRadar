@@ -44,7 +44,7 @@ Make sure you install [Node.js](https://nodejs.org/en) on your system as it will
 
 1. Open the config.json file.
 
-2. Update the segments section based on the dimensions of tool.json (/data/software-tools)
+2. Update the segments section based on the quality dimensions of tool.json (/data/software-tools)
 
 3. Ensure that each segment listed in config.json has at least one corresponding tool in /data/software-tools
 
