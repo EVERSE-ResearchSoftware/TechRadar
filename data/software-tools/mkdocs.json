@@ -3,13 +3,13 @@
   "@id": "https://w3id.org/everse/tools/mkdocs",
   "@type": "schema:SoftwareApplication",
   "name": "MkDocs",
-  "description": "MkDocs is a static site generator that's geared towards project documentation, written in Markdown.",
+  "description": "Static site generator designed for project documentation that creates professional documentation websites from Markdown files, improving research software usability and interaction capability through clear documentation.",
   "url": "https://www.mkdocs.org/",
   "isAccessibleForFree": true,
-  "hasQualityDimension": {
-    "@id": "dim:Interaction Capability",
-    "@type": "@id"
-  },
+  "hasQualityDimension": [
+    {"@id": "dim:Interaction Capability", "@type": "@id" },
+    {"@id": "dim:Maintainability", "@type": "@id" }
+  ],
   "howToUse": ["command-line", "CI/CD"],
   "appliesToProgrammingLanguage": ["Python"],
   "license": "https://opensource.org/licenses/BSD-2-Clause",

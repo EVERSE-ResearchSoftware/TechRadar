@@ -6,8 +6,12 @@
     "@id": "rs:ResearchInfrastructureSoftware",
     "@type": "@id"
   },
-  "description": "Tool for continuous inspection of code quality and security vulnerabilities.",
-  "hasQualityDimension": { "@id": "dim:Maintainability", "@type": "@id" },
+  "description": "Continuous code quality platform that automatically detects bugs, vulnerabilities, and code smells across multiple programming languages, providing comprehensive static analysis to improve software maintainability, security, and reliability.",
+  "hasQualityDimension": [
+    { "@id": "dim:Maintainability", "@type": "@id" },
+    { "@id": "dim:Security", "@type": "@id" },
+    { "@id": "dim:Reliability", "@type": "@id" }
+  ],
   "howToUse": ["CI/CD", "online-service"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/GPL-3.0-only",

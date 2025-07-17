@@ -3,13 +3,13 @@
   "@id": "https://w3id.org/everse/tools/junit",
   "@type": "schema:SoftwareApplication",
   "name": "JUnit",
-  "description": "JUnit is a simple framework to write repeatable tests for Java programming language.",
+  "description": "Comprehensive unit testing framework for Java that enables systematic testing of research software components, improving code reliability and maintainability through automated test execution and reporting.",
   "url": "https://junit.org/",
   "isAccessibleForFree": true,
-  "hasQualityDimension": {
-    "@id": "dim:Maintainability",
-    "@type": "@id"
-  },
+  "hasQualityDimension": [
+    { "@id": "dim:Maintainability", "@type": "@id" },
+    { "@id": "dim:Reliability", "@type": "@id" }
+  ],
   "howToUse": ["command-line"],
   "appliesToProgrammingLanguage": ["Java"],
   "license": "https://opensource.org/licenses/EPL-2.0",

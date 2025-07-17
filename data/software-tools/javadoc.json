@@ -7,8 +7,11 @@
     "@type": "@id"
   },
   "appliesToProgrammingLanguage": ["Java"],
-  "description": "Documentation generator for Java used to generate API documentation in HTML format from Java source code",
-  "hasQualityDimension": { "@id": "dim:Sustainability", "@type": "@id" },
+  "description": "Documentation generator for Java that automatically produces API documentation from source code comments, improving research software maintainability and usability through comprehensive code documentation and developer reference materials.",
+  "hasQualityDimension": [
+    { "@id": "dim:Sustainability", "@type": "@id" },
+    { "@id": "dim:Maintainability", "@type": "@id" }
+  ],
   "howToUse": ["CI/CD", "command-line"],
   "isAccessibleForFree": true,
   "license": "https://www.oracle.com/downloads/licenses/no-fee-license",

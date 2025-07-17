@@ -13,7 +13,7 @@
     "Python"
   ],
   "description": "Bearer CLI is a static application security testing (SAST) tool that scans your source code and analyzes your data flows to discover, filter and prioritize security and privacy risks.",
-  "hasQualityDimension": { "@id": "dim:Sustainability", "@type": "@id" },
+  "hasQualityDimension": { "@id": "dim:Security", "@type": "@id" },
   "howToUse": ["online-service"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/Elastic-2.0",

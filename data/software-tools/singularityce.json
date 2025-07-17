@@ -3,7 +3,7 @@
   "@id": "https://w3id.org/everse/tools/singularityce",
   "@type": "schema:SoftwareApplication",
   "name": "SingularityCE",
-  "description": "container platform designed for ease-of-use on shared systems and in high performance computing (HPC) environments",
+  "description": "Container platform designed for high-performance computing environments that provides secure, portable, and reproducible containers for scientific computing workflows, enabling research software deployment across different HPC systems.",
   "url": "https://sylabs.io/singularity/",
   "applicationCategory": {
     "@id": "rs:ResearchInfrastructureSoftware",

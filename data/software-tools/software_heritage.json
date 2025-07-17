@@ -6,7 +6,7 @@
     "@id": "rs:ResearchInfrastructureSoftware",
     "@type": "@id"
   },
-  "description": "Collects, preserves, curates and makes available software in source code form as cultural heritage",
+  "description": "Universal archive that collects, preserves, and makes available research software source code as cultural heritage, ensuring long-term sustainability and accessibility of software for future generations and reproducibility studies.",
   "hasQualityDimension": { "@id": "dim:Sustainability", "@type": "@id" },
   "howToUse": ["online-service", "command-line"],
   "isAccessibleForFree": true,

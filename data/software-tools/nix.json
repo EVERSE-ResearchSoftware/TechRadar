@@ -8,9 +8,8 @@
   },
   "description": "Tool for reproducible builds and declarative system configuration using the Nix language.",
   "hasQualityDimension": [
-    { "@id": "dim:Performance Efficiency", "@type": "@id" },
     { "@id": "dim:Flexibility", "@type": "@id" },
-    { "@id": "dim:Security", "@type": "@id" }
+    { "@id": "dim:Reliability", "@type": "@id" }
   ],
   "howToUse": ["command-line"],
   "isAccessibleForFree": true,

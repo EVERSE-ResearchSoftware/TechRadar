@@ -17,7 +17,7 @@
     "IDL",
     "Lex"
   ],
-  "description": "Doxygen is a documentation generator for annotated source code. It helps developers automatically produce software documentation from the comments and structure of their code. Supports languages like C, C++, Java, Python, PHP, Fortran, etc",
+  "description": "Documentation generator for C++, C, Java, and other languages that automatically extracts documentation from annotated source code, improving research software maintainability through comprehensive API documentation.",
   "hasQualityDimension": { "@id": "dim:Maintainability", "@type": "@id" },
   "howToUse": ["CI/CD", "command-line"],
   "isAccessibleForFree": true,

@@ -3,7 +3,7 @@
   "@id": "https://w3id.org/everse/tools/pylint",
   "@type": "schema:SoftwareApplication",
   "name": "Pylint",
-  "description": "Pylint is a source-code, bug and quality checker for the Python programming language.",
+  "description": "Comprehensive Python static analysis tool that identifies programming errors, enforces coding standards, and suggests improvements, enhancing research software maintainability and code quality.",
   "url": "https://pylint.pycqa.org/",
   "isAccessibleForFree": true,
   "hasQualityDimension": {

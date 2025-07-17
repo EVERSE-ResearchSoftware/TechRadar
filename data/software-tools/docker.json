@@ -3,7 +3,7 @@
   "@id": "https://w3id.org/everse/tools/docker",
   "@type": "schema:SoftwareApplication",
   "name": "Docker",
-  "description": "Docker provides a suite of development tools, services, trusted content, and automations, used individually or together, to accelerate the delivery of secure applications.",
+  "description": "Containerization platform that ensures research software reproducibility across different environments, improving compatibility and deployment reliability while enabling consistent execution of research workflows regardless of underlying infrastructure.",
   "url": "https://www.docker.com/",
   "applicationCategory": {
     "@id": "rs:ResearchInfrastructureSoftware",
@@ -12,7 +12,9 @@
   "isAccessibleForFree": true,
   "hasQualityDimension": [
     { "@id": "dim:Compatibility", "@type": "@id" },
-    { "@id": "dim:Flexibility", "@type": "@id" }
+    { "@id": "dim:Flexibility", "@type": "@id" },
+    { "@id": "dim:Reliability", "@type": "@id" },
+    { "@id": "dim:Sustainability", "@type": "@id" }
   ],
   "howToUse": ["command-line", "online-service"],
   "license": {

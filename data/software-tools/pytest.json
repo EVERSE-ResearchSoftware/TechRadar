@@ -3,13 +3,19 @@
   "@id": "https://w3id.org/everse/tools/pytest",
   "@type": "schema:SoftwareApplication",
   "name": "pytest",
-  "description": "pytest is a framework that makes building simple and scalable test cases easy in Python.",
+  "description": "Comprehensive testing framework for Python that enhances research software reliability and maintainability through advanced testing capabilities, fixtures, and plugins, supporting test-driven development practices essential for research software quality assurance.",
   "url": "https://docs.pytest.org/",
   "isAccessibleForFree": true,
-  "hasQualityDimension": {
-    "@id": "dim:Maintainability",
-    "@type": "@id"
-  },
+  "hasQualityDimension": [
+    {
+      "@id": "dim:Maintainability",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:Reliability",
+      "@type": "@id"
+    }
+  ],
   "howToUse": ["command-line", "CI/CD"],
   "appliesToProgrammingLanguage": ["Python"],
   "license": "https://opensource.org/licenses/MIT",

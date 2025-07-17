@@ -19,8 +19,11 @@
     "Java",
     ".NET"
   ],
-  "description": "Automated dependency update tool for GitHub repositories. Dependabot version updates are automated pull requests that keep your dependencies updated, even when they don't have any vulnerabilities.",
-  "hasQualityDimension": { "@id": "dim:Security", "@type": "@id" },
+  "description": "Automated dependency management service that continuously monitors research software dependencies for security vulnerabilities and updates, maintaining software security and reducing technical debt for long-term sustainability.",
+  "hasQualityDimension": [
+    { "@id": "dim:Security", "@type": "@id" },
+    { "@id": "dim:Maintainability", "@type": "@id" }
+  ],
   "howToUse": ["CI/CD", "command-line"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/MIT",

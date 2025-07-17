@@ -7,8 +7,10 @@
     "@type": "@id"
   },
   "appliesToProgrammingLanguage": ["Python"],
-  "description": "Documentation generator from reStructuredText files primarily for Python, but also supports other languages - C++, C, JavaScript.",
-  "hasQualityDimension": { "@id": "dim:Sustainability", "@type": "@id" },
+    "description": "Documentation generator that creates comprehensive, searchable documentation from source code and reStructuredText files, improving research software maintainability and usability through professional documentation.",
+  "hasQualityDimension": [
+    { "@id": "dim:Maintainability", "@type": "@id" }
+  ],
   "howToUse": ["command-line", "CI/CD"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/BSD-2-Clause",
