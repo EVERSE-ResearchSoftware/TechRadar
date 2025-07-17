@@ -7,9 +7,7 @@
     "@type": "@id"
   },
   "description": "Distributed version control system that enables collaborative research software development, change tracking, and version management, essential for research software maintainability and reproducibility throughout the development lifecycle.",
-  "hasQualityDimension": [
-    { "@id": "dim:Maintainability", "@type": "@id" }
-  ],
+  "hasQualityDimension": { "@id": "dim:Maintainability", "@type": "@id" },
   "howToUse": ["command-line", "online-service"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/GPL-2.0-only",

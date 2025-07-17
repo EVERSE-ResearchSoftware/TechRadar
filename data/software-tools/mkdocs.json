@@ -7,8 +7,8 @@
   "url": "https://www.mkdocs.org/",
   "isAccessibleForFree": true,
   "hasQualityDimension": [
-    {"@id": "dim:Interaction Capability", "@type": "@id" },
-    {"@id": "dim:Maintainability", "@type": "@id" }
+    { "@id": "dim:Interaction Capability", "@type": "@id" },
+    { "@id": "dim:Maintainability", "@type": "@id" }
   ],
   "howToUse": ["command-line", "CI/CD"],
   "appliesToProgrammingLanguage": ["Python"],
