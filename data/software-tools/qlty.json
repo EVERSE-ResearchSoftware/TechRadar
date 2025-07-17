@@ -3,7 +3,7 @@
   "@id": "https://qlty.sh/",
   "@type": "schema:SoftwareApplication",
   "name": "Qlty",
-  "description": "Qlty is a lightweight, modular framework for writing high-quality shell scripts. It provides reusable components and utilities to improve script structure, error handling, and maintainability in Bash and POSIX-compliant environments.",
+  "description": "Lightweight, modular framework for writing high-quality shell scripts with reusable components and utilities to improve script structure, error handling, and maintainability in computing environments and automation workflows.",
   "url": "https://github.com/qltysh/qlty",
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/BUSL-1.1",
@@ -12,6 +12,6 @@
     { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" },
     { "@id": "rs:AnalysisCode", "@type": "@id" }
   ],
-  "hasQualityDimension": { "@id": "dim:Sustainability", "@type": "@id" },
+  "hasQualityDimension": { "@id": "dim:Maintainability", "@type": "@id" },
   "howToUse": ["CI/CD", "command-line"]
 }

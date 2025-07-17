@@ -6,8 +6,11 @@
     "@id": "rs:ResearchInfrastructureSoftware",
     "@type": "@id"
   },
-  "description": "Manage and version images, audio, video, and text files in storage and organize your ML modeling process into a reproducible workflow.",
-  "hasQualityDimension": { "@id": "dim:Sustainability", "@type": "@id" },
+  "description": "Data version control system that tracks large files, datasets, and machine learning models, enabling reproducible research workflows and enhancing research software sustainability through proper data and model versioning.",
+  "hasQualityDimension": [
+    { "@id": "dim:Sustainability", "@type": "@id" },
+    { "@id": "dim:FAIRness", "@type": "@id" }
+  ],
   "howToUse": ["CI/CD", "command-line"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/Apache-2.0",

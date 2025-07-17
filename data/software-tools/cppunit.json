@@ -3,17 +3,17 @@
   "@id": "https://w3id.org/everse/tools/cppunit",
   "@type": "schema:SoftwareApplication",
   "name": "CppUnit",
-  "description": "C++ testing tool",
+  "description": "Unit testing framework for C++ that enables systematic testing of research software components, improving code reliability and maintainability through automated test execution and comprehensive testing capabilities.",
   "url": "https://freedesktop.org/wiki/Software/cppunit/",
   "applicationCategory": [
     { "@id": "rs:PrototypeTool", "@type": "@id" },
     { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" }
   ],
   "isAccessibleForFree": true,
-  "hasQualityDimension": {
-    "@id": "dim:Maintainability",
-    "@type": "@id"
-  },
+  "hasQualityDimension": [
+    { "@id": "dim:Maintainability", "@type": "@id" },
+    { "@id": "dim:Reliability", "@type": "@id" }
+  ],
   "howToUse": ["command-line"],
   "appliesToProgrammingLanguage": ["C++"],
   "license": {

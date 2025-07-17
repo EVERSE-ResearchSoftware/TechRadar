@@ -6,8 +6,11 @@
     "@id": "rs:ResearchInfrastructureSoftware",
     "@type": "@id"
   },
-  "description": "Open repository for EU-funded research outputs from Horizon Europe, Euratom, and earlier Framework Programmes.",
-  "hasQualityDimension": { "@id": "dim:Sustainability", "@type": "@id" },
+  "description": "Open research repository that provides persistent identifiers (DOIs) for research software and data, enabling long-term preservation, discoverability, and citation of research outputs, supporting software sustainability and FAIRness principles.",
+  "hasQualityDimension": [
+    { "@id": "dim:Sustainability", "@type": "@id" },
+    { "@id": "dim:FAIRness", "@type": "@id" }
+  ],
   "howToUse": ["CI/CD", "command-line", "online-service"],
   "isAccessibleForFree": true,
   "license": " https://ohwr.org/cernohl/",

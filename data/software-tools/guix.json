@@ -6,7 +6,7 @@
     "@id": "rs:ResearchInfrastructureSoftware",
     "@type": "@id"
   },
-  "description": "Functional package manager for reproducible software deployment and system configuration.",
+  "description": "Functional package manager providing reproducible software deployment and system configuration, ensuring consistent and reliable software installations across different systems with transactional upgrades and rollbacks.",
   "hasQualityDimension": [
     { "@id": "dim:Maintainability", "@type": "@id" },
     { "@id": "dim:Sustainability", "@type": "@id" },

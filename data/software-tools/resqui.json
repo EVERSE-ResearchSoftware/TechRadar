@@ -3,8 +3,8 @@
   "@id": "https://w3id.org/everse/tools/resqui",
   "@type": "schema:SoftwareApplication",
   "name": "resqui",
-  "description": "A command line tool to check a bunch of indicators related to research software quality.",
-  "url": "https://github.com/EVERSE-ResearchSoftware/resqui",
+  "description": "Comprehensive research software quality assessment framework developed by EVERSE that evaluates repositories across all quality dimensions including maintainability, security, FAIRness, and sustainability, providing actionable insights for improving research software throughout its lifecycle.",
+  "url": "https://github.com/EVERSE-ResearchSoftware/QualityPipelines",
   "applicationCategory": [
     { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" },
     { "@id": "rs:AnalysisCode", "@type": "@id" },

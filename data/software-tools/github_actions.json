@@ -3,7 +3,7 @@
   "@id": "https://github.com/features/actions",
   "@type": "schema:SoftwareApplication",
   "name": "GitHub Actions",
-  "description": "GitHub Actions is a CI/CD platform built into GitHub that lets you automate tasks like testing, building, and deploying code. It uses workflows defined in YAML files to run jobs triggered by events such as pushes, pull requests, or releases.",
+  "description": "CI/CD platform integrated with GitHub that automates research software testing, building, and deployment, improving software reliability and sustainability through automated quality checks.",
   "url": "https://github.com/features/actions",
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/MIT",
@@ -11,6 +11,9 @@
     { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" },
     { "@id": "rs:PrototypeTool", "@type": "@id" }
   ],
-  "hasQualityDimension": { "@id": "dim:Sustainability", "@type": "@id" },
+  "hasQualityDimension": [
+    { "@id": "dim:Sustainability", "@type": "@id" },
+    { "@id": "dim:Reliability", "@type": "@id" }
+  ],
   "howToUse": ["CI/CD"]
 }

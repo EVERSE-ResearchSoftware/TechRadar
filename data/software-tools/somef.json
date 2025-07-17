@@ -7,7 +7,7 @@
     "@type": "@id"
   },
   "description": "Software Metadata Extraction Framework (SOMEF) is a command line interface for automatically extracting relevant information from README files",
-  "hasQualityDimension": { "@id": "dim:Sustainability", "@type": "@id" },
+  "hasQualityDimension": { "@id": "dim:FAIRness", "@type": "@id" },
   "howToUse": ["command-line", "CI/CD"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/MIT",

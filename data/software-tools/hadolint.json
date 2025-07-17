@@ -3,13 +3,13 @@
   "@id": "https://w3id.org/everse/tools/hadolint",
   "@type": "schema:SoftwareApplication",
   "name": "Hadolint",
-  "description": "Hadolint is a Dockerfile linter that helps build best practice Docker images.",
+  "description": "Dockerfile linter that analyzes Docker build files for best practices, security issues, and optimization opportunities, improving research software containerization quality and deployment reliability.",
   "url": "https://github.com/hadolint/hadolint",
   "isAccessibleForFree": true,
-  "hasQualityDimension": {
-    "@id": "dim:Maintainability",
-    "@type": "@id"
-  },
+  "hasQualityDimension": [
+    { "@id": "dim:Maintainability", "@type": "@id" },
+    { "@id": "dim:Security", "@type": "@id" }
+  ],
   "howToUse": ["command-line", "CI/CD"],
   "license": "https://opensource.org/licenses/GPL-3.0",
   "applicationCategory": [

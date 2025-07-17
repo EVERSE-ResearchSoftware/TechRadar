@@ -3,7 +3,7 @@
   "@id": "https://gitleaks.io/",
   "@type": "schema:SoftwareApplication",
   "name": "Gitleaks",
-  "description": "Gitleaks is an open source secret scanner for git repositories, files, directories, and stdin. With over 20 million docker downloads, 19k GitHub stars, 14 million GitHub downloads, thousands of weekly clones, and over 850k homebrew installs, gitleaks is the most trusted open source secret scanner among security professionals, enterprises, and developers.",
+  "description": "Security-focused scanner that detects secrets, passwords, and sensitive information in git repositories and files, helping protect research software and data from accidental exposure of confidential information.",
   "url": "https://github.com/gitleaks/gitleaks",
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/MIT",
@@ -12,6 +12,9 @@
     { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" },
     { "@id": "rs:AnalysisCode", "@type": "@id" }
   ],
-  "hasQualityDimension": { "@id": "dim:Sustainability", "@type": "@id" },
+  "hasQualityDimension": [
+    { "@id": "dim:Security", "@type": "@id" },
+    { "@id": "dim:Sustainability", "@type": "@id" }
+  ],
   "howToUse": ["CI/CD", "command-line"]
 }

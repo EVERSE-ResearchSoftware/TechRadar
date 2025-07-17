@@ -3,7 +3,7 @@
   "@id": "https://w3id.org/everse/tools/apptainer",
   "@type": "schema:SoftwareApplication",
   "name": "Apptainer",
-  "description": "Container platform designed for ease-of-use on shared systems and in high performance computing (HPC) environments",
+  "description": "High-performance container platform designed for scientific computing and HPC environments that enables reproducible research software execution across different systems, improving compatibility and reliability for research workflows.",
   "url": "https://apptainer.org/",
   "applicationCategory": {
     "@id": "rs:ResearchInfrastructureSoftware",

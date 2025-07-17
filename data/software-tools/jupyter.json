@@ -6,8 +6,11 @@
     "@id": "rs:ResearchInfrastructureSoftware",
     "@type": "@id"
   },
-  "description": "Open-source web application for creating and sharing live code, equations, visualizations, and narrative text.",
-  "hasQualityDimension": { "@id": "dim:Maintainability", "@type": "@id" },
+  "description": "Open-source web application for creating and sharing live code, equations, visualizations, and narrative text, enhancing research software development and collaboration through interactive computing environments.",
+  "hasQualityDimension": [
+    { "@id": "dim:Maintainability", "@type": "@id" },
+    { "@id": "dim:Interaction Capability", "@type": "@id" }
+  ],
   "howToUse": ["online-service"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/BSD-3-Clause",
