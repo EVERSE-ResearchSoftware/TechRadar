@@ -3,7 +3,7 @@
   "@id": "https://w3id.org/everse/tools/ruff",
   "@type": "schema:SoftwareApplication",
   "name": "Ruff",
-  "description": "Ruff is an extremely fast Python linter, written in Rust.",
+  "description": "High-performance Python linter that quickly identifies code quality issues and style violations, enabling rapid feedback for research software development and improving overall code maintainability.",
   "url": "https://docs.astral.sh/ruff/",
   "isAccessibleForFree": true,
   "hasQualityDimension": {

@@ -6,8 +6,8 @@
     "@id": "rs:ResearchInfrastructureSoftware",
     "@type": "@id"
   },
-  "description": "A free, open-source project that creates a minimal metadata schema for research software and code.",
-  "hasQualityDimension": { "@id": "dim:Sustainability", "@type": "@id" },
+  "description": "Web-based tool that creates standardized CodeMeta metadata files for research software, enhancing software discoverability and supporting FAIR principles through structured software description and cataloging.",
+  "hasQualityDimension": { "@id": "dim:FAIRness", "@type": "@id" },
   "howToUse": ["CI/CD", "command-line"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/AGPL-3.0-or-later",

@@ -3,7 +3,7 @@
   "@id": "https://escape-ossr.gitlab.io/eossr",
   "@type": "schema:SoftwareApplication",
   "name": "eOSSR",
-  "description": "The eOSSR is the Python library to programmatically manage the ESCAPE OSSR. It also includes CodeMeta generator and validator.",
+  "description": "Python library for programmatically managing the ESCAPE Open Source Software Repository (OSSR) that includes CodeMeta generator and validator tools, supporting research software FAIRness and metadata management for scientific code repositories.",
   "url": "https://gitlab.com/escape-ossr/eossr",
   "applicationCategory": [
     { "@id": "rs:PrototypeTool", "@type": "@id" },

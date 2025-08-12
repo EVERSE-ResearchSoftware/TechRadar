@@ -6,7 +6,7 @@
     "@id": "rs:ResearchInfrastructureSoftware",
     "@type": "@id"
   },
-  "description": "A web application to create CITATION.cff files",
+  "description": "Web-based tool for creating standardized CITATION.cff files that enable proper citation of research software, improving software findability and supporting FAIR principles through structured metadata generation.",
   "hasQualityDimension": { "@id": "dim:FAIRness", "@type": "@id" },
   "howToUse": ["online-service"],
   "isAccessibleForFree": true,

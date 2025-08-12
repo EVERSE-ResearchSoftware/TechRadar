@@ -6,7 +6,7 @@
     "@id": "rs:ResearchInfrastructureSoftware",
     "@type": "@id"
   },
-  "description": "Distributed version control system for tracking changes in source code.",
+  "description": "Distributed version control system that enables collaborative research software development, change tracking, and version management, essential for research software maintainability and reproducibility throughout the development lifecycle.",
   "hasQualityDimension": { "@id": "dim:Maintainability", "@type": "@id" },
   "howToUse": ["command-line", "online-service"],
   "isAccessibleForFree": true,

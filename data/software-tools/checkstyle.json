@@ -3,7 +3,7 @@
   "@id": "https://w3id.org/everse/tools/checkstyle",
   "@type": "schema:SoftwareApplication",
   "name": "Checkstyle",
-  "description": "Checkstyle is a tool for checking Java source code for adherence to coding standards.",
+  "description": "Java code style checker that enforces coding standards and best practices in research software projects, improving code maintainability and readability through automated style analysis.",
   "url": "https://checkstyle.sourceforge.io/",
   "isAccessibleForFree": true,
   "hasQualityDimension": {

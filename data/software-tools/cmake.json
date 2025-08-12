@@ -6,8 +6,11 @@
     "@id": "rs:ResearchInfrastructureSoftware",
     "type": "@id"
   },
-  "description": "Cross-platform build system generator used to control software compilation processes.",
-  "hasQualityDimension": { "@id": "dim:Maintainability", "@type": "@id" },
+  "description": "Cross-platform build system generator that simplifies the build process for research software across different operating systems and compilers, improving software portability and maintainability.",
+  "hasQualityDimension": [
+    { "@id": "dim:Maintainability", "@type": "@id" },
+    { "@id": "dim:Compatibility", "@type": "@id" }
+  ],
   "howToUse": ["command-line"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/BSD-3-Clause",

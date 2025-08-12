@@ -6,8 +6,11 @@
     "@id": "rs:ResearchInfrastructureSoftware",
     "@type": "@id"
   },
-  "description": "A continuous integration service used to build and test software projects hosted on GitHub.",
-  "hasQualityDimension": { "@id": "dim:Maintainability", "@type": "@id" },
+  "description": "Continuous integration service that automates testing and deployment of research software projects hosted on GitHub, improving software reliability and maintainability through automated quality checks.",
+  "hasQualityDimension": [
+    { "@id": "dim:Maintainability", "@type": "@id" },
+    { "@id": "dim:Reliability", "@type": "@id" }
+  ],
   "howToUse": ["CI/CD", "online-service"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/MIT",

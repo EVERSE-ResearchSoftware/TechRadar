@@ -6,7 +6,7 @@
     "@id": "rs:ResearchInfrastructureSoftware",
     "@type": "@id"
   },
-  "description": "Command line tool to analyze a GitHub or GitLab repository's compliance with the fair-software.eu recommendations",
+  "description": "Automated assessment tool that evaluates research software repositories against FAIR software principles, providing compliance scoring and actionable recommendations to improve software findability, accessibility, interoperability, and reusability in research contexts.",
   "hasQualityDimension": { "@id": "dim:FAIRness", "@type": "@id" },
   "howToUse": ["command-line"],
   "isAccessibleForFree": true,

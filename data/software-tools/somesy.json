@@ -7,7 +7,7 @@
     "@type": "@id"
   },
   "description": "Somesy (software metadata sync) is a CLI tool to avoid messy software project metadata by keeping it in sync.",
-  "hasQualityDimension": { "@id": "dim:Sustainability", "@type": "@id" },
+  "hasQualityDimension": { "@id": "dim:FAIRness", "@type": "@id" },
   "howToUse": ["CI/CD", "command-line"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/MIT",

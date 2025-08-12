@@ -6,8 +6,11 @@
     "@id": "rs:ResearchInfrastructureSoftware",
     "@type": "@id"
   },
-  "description": "Open-source automation server for building, testing, and deploying software.",
-  "hasQualityDimension": { "@id": "dim:Maintainability", "@type": "@id" },
+  "description": "Automation server that enables continuous integration and deployment of research software, improving software reliability through automated testing and deployment pipelines.",
+  "hasQualityDimension": [
+    { "@id": "dim:Maintainability", "@type": "@id" },
+    { "@id": "dim:Reliability", "@type": "@id" }
+  ],
   "howToUse": ["online-service", "CI/CD"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/MIT",

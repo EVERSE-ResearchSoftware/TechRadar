@@ -6,8 +6,11 @@
     "@id": "rs:ResearchInfrastructureSoftware",
     "@type": "@id"
   },
-  "description": "A platform for Integration, Delivery and Deployment.",
-  "hasQualityDimension": { "@id": "dim:Sustainability", "@type": "@id" },
+  "description": "Integrated continuous integration and deployment platform that automates research software testing, building, and deployment workflows, improving software reliability and sustainability through comprehensive DevOps practices.",
+  "hasQualityDimension": [
+    { "@id": "dim:Sustainability", "@type": "@id" },
+    { "@id": "dim:Reliability", "@type": "@id" }
+  ],
   "howToUse": ["CI/CD", "command-line", "online-service"],
   "isAccessibleForFree": false,
   "license": "https://spdx.org/licenses/MIT",

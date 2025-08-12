@@ -3,7 +3,7 @@
   "@id": "https://w3id.org/everse/tools/flake8",
   "@type": "schema:SoftwareApplication",
   "name": "flake8",
-  "description": "flake8 is a Python linting tool that checks code for style and programming errors. Integrates multiple tools (pyflakes, pycodestyle, etc.) and supports plugin extensions.",
+  "description": "Python linting tool that combines multiple code quality checkers to identify style violations, programming errors, and complexity issues, improving research software maintainability through comprehensive code analysis.",
   "url": "https://flake8.pycqa.org/",
   "isAccessibleForFree": true,
   "hasQualityDimension": {
