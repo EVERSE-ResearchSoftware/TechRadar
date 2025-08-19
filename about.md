@@ -56,6 +56,52 @@ Please see our [contributing guidelines](CONTRIBUTING.md)
 
 ## Curation team
 
-The curation team can be seen here: https://github.com/orgs/EVERSE-ResearchSoftware/teams/techradar-curators/
+The TechRadar curation team reviews and maintains the quality tools and services catalogued in the TechRadar.
 
+---
+
+### <img src="team_images/thomas_vuillaume.jpg" alt="Thomas Vuillaume" width="150" style="border-radius: 50%; vertical-align: middle;" />  
+**Thomas Vuillaume**  
+*LAPP, CNRS*  
+📧 thomas.vuillaume@lapp.in2p3.fr  
+🔗[ORCID](https://orcid.org/0000-0002-5686-2078)
+
+---
+
+### <img src="team_images/roundedshraddha.jpg" alt="Shraddha Bajare" width="150" style="border-radius: 50%; vertical-align: middle;" />  
+**Shraddha Bajare**  
+*Square Kilometre Array Observatory*  
+📧 shraddha.bajare@skao.int
+
+
+---
+
+### <img src="team_images/roundednikos.jpg" alt="Nikos Pechlivanis" width="150" style="border-radius: 50%; vertical-align: middle;" />  
+**Nikos Pechlivanis**  
+*Centre for Research and Technology Hellas*  
+📧 nikosp41@certh.gr  
+🔗[ORCID](https://orcid.org/0000-0003-2502-612X)
+
+---
+
+### <img src="team_images/faruk_diblen.jpg" alt="Faruk Diblen" width="150" style="border-radius: 50%; vertical-align: middle;" />  
+**Faruk Diblen**  
+*Netherlands eScience Center*  
+🔗[ORCID](https://orcid.org/0000-0002-0989-929X) 
+
+---
+
+### <img src="team_images/roundedazza.jpg" alt="Azza Gamgami" width="150" style="border-radius: 50%; vertical-align: middle;" />  
+**Azza Gamgami**  
+*LAPP, CNRS*  
+📧 azza.gamgami@lapp.in2p3.fr  
+🔗[ORCID](https://orcid.org/0009-0003-7084-3900) 
+
+---
+
+### <img src="team_images/roundedelena.jpg" alt="Elena Breitmoser" width="150" style="border-radius: 50%; vertical-align: middle;" />  
+**Elena Breitmoser**  
+*University of Edinburgh*  
+📧 e.breitmoser@epcc.ed.ac.uk  
+🔗[ORCID](https://orcid.org/0000-0003-1295-9326)
 
