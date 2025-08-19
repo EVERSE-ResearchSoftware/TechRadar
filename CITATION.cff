@@ -43,6 +43,11 @@ authors:
     family-names: Pringle
     email: K.Pringle@epcc.ed.ac.uk
     affiliation: 'University of Edinburgh'
+  - given-names: Srobona
+    family-names: Ghosh
+    email: srobona.ghosh@hzdr.de
+    affiliation: 'Helmholtz-Zentrum Dresden-Rossendorf'
+    orcid: 'https://orcid.org/0009-0008-9084-064X' 
 repository-code: 'https://github.com/EVERSE-ResearchSoftware/TechRadar/'
 url: 'https://everse.software/TechRadar/'
 abstract: >-
