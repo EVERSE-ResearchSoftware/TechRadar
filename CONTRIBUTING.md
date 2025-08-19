@@ -58,3 +58,37 @@ You can contribute to the TechRadar by reporting issues, suggesting improvements
 
 ## Joining the curation team
 If you are interested in actively participating in the curation of the TechRadar, you may join the team. To do so, contact us by [opening an issue](https://github.com/EVERSE-ResearchSoftware/TechRadar/issues/new?template=BLANK_ISSUE) and express your interest in joining the curation team. Provide a brief introduction about yourself, your background, and your interest in research software quality. You should have a background in software engineering or development applied to research. After consideration, you will be added to the [team of curators](https://github.com/orgs/EVERSE-ResearchSoftware/teams/techradar-curators)
+
+## Contributor metadata requirements
+
+All contributors to this repository must be properly acknowledged in our metadata files. This ensures proper attribution and compliance with academic standards.
+
+### Managing contributor identities
+
+If you use multiple email addresses or names when contributing:
+
+1. **Add entries to `.mailmap`**: This file unifies different emails/names for the same person
+2. **Format**: `Canonical Name <canonical@email.com> <alternative@email.com>`
+3. **Example**:
+   ```
+   John Doe <john.doe@university.edu> John <john.personal@gmail.com>
+   ```
+
+### CITATION.cff
+
+Please add your name, email and ORCID (optional) to the `CITATION.cff` file in the following format:
+
+```
+name: Your Name
+email: your.email@example.com
+orcid: https://orcid.org/0000-0001-2345-6789
+```
+
+### Automated checks
+
+A GitHub Action automatically checks that all contributors in pull request commits are listed in the metadata files. If you see a warning:
+
+- **New contributor**: Add your information to `CITATION.cff`
+- **Existing contributor with new email**: Update `.mailmap` to map your new email to your canonical identity
+
+For questions about contributor metadata, please [open an issue](https://github.com/EVERSE-ResearchSoftware/TechRadar/issues/new/choose).
