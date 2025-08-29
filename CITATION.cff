@@ -48,6 +48,8 @@ authors:
     email: srobona.ghosh@hzdr.de
     affiliation: 'Helmholtz-Zentrum Dresden-Rossendorf'
     orcid: 'https://orcid.org/0009-0008-9084-064X' 
+  - family-names: Garijo
+    given-names: Daniel
 repository-code: 'https://github.com/EVERSE-ResearchSoftware/TechRadar/'
 url: 'https://everse.software/TechRadar/'
 abstract: >-
