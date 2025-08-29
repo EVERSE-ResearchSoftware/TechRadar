@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "main": "index.js",
-  "license": "CC-BY-NC-SA-4.0",
+  "license": "MIT",
   "scripts": {
     "build": "techradar build",
     "serve": "techradar serve",
