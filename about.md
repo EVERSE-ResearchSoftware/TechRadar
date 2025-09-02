@@ -60,7 +60,7 @@ The TechRadar curation team reviews and maintains the quality tools and services
 
 ---
 
-### <img src="/images/team_images/thomas_vuillaume.jpg" alt="Thomas Vuillaume" width="150" style="border-radius: 50%; vertical-align: middle;" />  
+### <img src="/TechRadar/images/team_images/thomas_vuillaume.jpg" alt="Thomas Vuillaume" width="150" style="border-radius: 50%; vertical-align: middle;" />  
 **Thomas Vuillaume**  
 *LAPP, CNRS*  
 📧 thomas.vuillaume@lapp.in2p3.fr  
@@ -68,14 +68,14 @@ The TechRadar curation team reviews and maintains the quality tools and services
 
 ---
 
-### <img src="/images/team_images/roundedshraddha.jpg" alt="Shraddha Bajare" width="150" style="border-radius: 50%; vertical-align: middle;" />  
+### <img src="/TechRadar/images/team_images/roundedshraddha.jpg" alt="Shraddha Bajare" width="150" style="border-radius: 50%; vertical-align: middle;" />  
 **Shraddha Bajare**  
 *Square Kilometre Array Observatory*  
 📧 shraddha.bajare@skao.int
 
 ---
 
-### <img src="/images/team_images/roundednikos.jpg" alt="Nikos Pechlivanis" width="150" style="border-radius: 50%; vertical-align: middle;" />  
+### <img src="/TechRadar/images/team_images/roundednikos.jpg" alt="Nikos Pechlivanis" width="150" style="border-radius: 50%; vertical-align: middle;" />  
 **Nikos Pechlivanis**  
 *Centre for Research and Technology Hellas*  
 📧 nikosp41@certh.gr  
@@ -83,14 +83,14 @@ The TechRadar curation team reviews and maintains the quality tools and services
 
 ---
 
-### <img src="/images/team_images/faruk_diblen.jpg" alt="Faruk Diblen" width="150" style="border-radius: 50%; vertical-align: middle;" />  
+### <img src="/TechRadar/images/team_images/faruk_diblen.jpg" alt="Faruk Diblen" width="150" style="border-radius: 50%; vertical-align: middle;" />  
 **Faruk Diblen**  
 *Netherlands eScience Center*  
 🔗[ORCID](https://orcid.org/0000-0002-0989-929X) 
 
 ---
 
-### <img src="/images/team_images/roundedazza.jpg" alt="Azza Gamgami" width="150" style="border-radius: 50%; vertical-align: middle;" />  
+### <img src="/TechRadar/images/team_images/roundedazza.jpg" alt="Azza Gamgami" width="150" style="border-radius: 50%; vertical-align: middle;" />  
 **Azza Gamgami**  
 *LAPP, CNRS*  
 📧 azza.gamgami@lapp.in2p3.fr  
@@ -98,7 +98,7 @@ The TechRadar curation team reviews and maintains the quality tools and services
 
 ---
 
-### <img src="/images/team_images/roundedelena.jpg" alt="Elena Breitmoser" width="150" style="border-radius: 50%; vertical-align: middle;" />  
+### <img src="/TechRadar/images/team_images/roundedelena.jpg" alt="Elena Breitmoser" width="150" style="border-radius: 50%; vertical-align: middle;" />  
 **Elena Breitmoser**  
 *University of Edinburgh*  
 📧 e.breitmoser@epcc.ed.ac.uk  
