@@ -1,2 +1,39 @@
 /* Use this file to optionally override global css styles and use with caution. */
 /* See README.md for hints and examples: https://github.com/AOEpeople/aoe_technology_radar/ */
+
+/* Fix for navigation buttons being unclickable due to radar chart overlaying */
+header {
+  position: relative !important;
+  z-index: 1000 !important;
+}
+
+/* Specific fix for the exact polygon that's causing the issue */
+main svg polygon[fill="#4E79A7"] {
+  pointer-events: none !important;
+}
+
+/* More aggressive fix - disable pointer events on all SVG elements that could overlay */
+main svg, 
+main svg *, 
+main svg polygon, 
+main svg circle, 
+main svg path, 
+main svg rect {
+  pointer-events: none !important;
+}
+
+/* Re-enable pointer events only for clickable elements within the radar */
+main svg a,
+main svg a * {
+  pointer-events: auto !important;
+}
+
+/* Additional fix - ensure navigation links always receive clicks */
+header nav a,
+header nav li,
+header navigation a,
+header navigation li {
+  position: relative !important;
+  z-index: 1001 !important;
+  pointer-events: auto !important;
+}
