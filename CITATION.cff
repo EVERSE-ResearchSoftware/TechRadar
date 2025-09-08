@@ -14,7 +14,7 @@ authors:
     family-names: Vuillaume
     email: thomas.vuillaume@lapp.in2p3.fr
     affiliation: 'LAPP, CNRS'
-    orcid: 'https://orcid.org/0000-0002-5686-2078'
+    oricd: 'https://orcid.org/0000-0002-5686-2078'
   - affiliation: "Netherlands eScience Center"
     family-names: Diblen
     given-names: Faruk
@@ -60,3 +60,7 @@ keywords:
   - research software
   - RSE
 license: CC-BY-NC-SA-4.0
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.17036276
+    description: Zenodo DOI
