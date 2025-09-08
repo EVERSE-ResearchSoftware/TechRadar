@@ -14,7 +14,7 @@ authors:
     family-names: Vuillaume
     email: thomas.vuillaume@lapp.in2p3.fr
     affiliation: 'LAPP, CNRS'
-    oricd: 'https://orcid.org/0000-0002-5686-2078'
+    orcid: 'https://orcid.org/0000-0002-5686-2078'
   - affiliation: "Netherlands eScience Center"
     family-names: Diblen
     given-names: Faruk
@@ -33,12 +33,12 @@ authors:
     family-names: Breitmoser
     email: e.breitmoser@epcc.ed.ac.uk
     affiliation: 'University of Edinburgh'
-    oricd: 'https://orcid.org/0000-0003-1295-9326'
+    orcid: 'https://orcid.org/0000-0003-1295-9326'
   - given-names: Nikos
     family-names: Pechlivanis
     email: nikosp41@certh.gr
     affiliation: 'Centre for Research and Technology Hellas'
-    oricd: 'https://orcid.org/0000-0003-2502-612X'
+    orcid: 'https://orcid.org/0000-0003-2502-612X'
   - given-names: Kirsty
     family-names: Pringle
     email: K.Pringle@epcc.ed.ac.uk
