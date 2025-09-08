@@ -1,12 +1,14 @@
-[![everse-logo]][everse-logo] [![DOI][doi-badge]][doi-badge]
+[![everse-logo]][everse-url] [![DOI][doi-badge]][doi-url]
 
 <!-- Badges links -->
 [everse-logo]: https://everse.software/images/logos/EOSCEverse_PosColour.svg "EVERSE project"
-[doi-badge]: https://zenodo.org/badge/DOI/10.5281/zenodo.17036276.svg "DOI badge"
+[everse-url]: https://everse.software/
+[doi-badge]: https://zenodo.org/badge/DOI/10.5281/zenodo.17036276.svg
+[doi-url]: https://doi.org/10.5281/zenodo.17036276
 
 # EVERSE TechRadar
 
-This is preliminary work done as part of [EVERSE project](https://everse.software/) Technology Watch.
+This is preliminary work done as part of [EVERSE project][everse-url] Technology Watch.
 
 It contains a [catalog of of _tools and services for research software quality_](#research-quality-tools-and-services-catalog) designed to assess, measure, and improve the quality of software developed for research purposes and the [TechRadar](#technology-radar-dashboard), a visual dashboard to display the catalog.
 
