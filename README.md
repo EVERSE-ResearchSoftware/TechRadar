@@ -1,3 +1,8 @@
+[![everse-logo]][everse-logo] [![DOI][doi-badge]][doi-badge]
+
+<!-- Badges links -->
+[everse-logo]: https://everse.software/images/logos/EOSCEverse_PosColour.svg "EVERSE project"
+[doi-badge]: https://zenodo.org/badge/DOI/10.5281/zenodo.17036276.svg "DOI badge"
 
 # EVERSE TechRadar
 
