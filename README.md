@@ -10,7 +10,7 @@
 
 This is preliminary work done as part of [EVERSE project][everse-url] Technology Watch.
 
-It contains a [catalog of of _tools and services for research software quality_](#research-quality-tools-and-services-catalog) designed to assess, measure, and improve the quality of software developed for research purposes and the [TechRadar](#technology-radar-dashboard), a visual dashboard to display the catalog.
+It contains a [catalog of _tools and services for research software quality_](#research-quality-tools-and-services-catalog) designed to assess, measure, and improve the quality of software developed for research purposes and the [TechRadar](#technology-radar-dashboard), a visual dashboard to display the catalog.
 
 ## Research Quality Tools and Services Catalog
 
