@@ -14,7 +14,7 @@
   ],
   "howToUse": ["command-line", "CI/CD"],
   "appliesToProgrammingLanguage": ["C", "C++"],
-  "license": { "@id": "https://spdx.org/licenses/GPL-3.0-or-later", "@type": "@id" },
+  "license": "https://spdx.org/licenses/GPL-3.0-or-later",
   "applicationCategory": [
     { "@id": "rs:PrototypeTool", "@type": "@id" },
     { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" }
