@@ -32,7 +32,7 @@ You may use the **#web search** feature to gather additional information on the 
 >   "isAccessibleForFree": true,
 >   "hasQualityDimension": { "@id": "dim:fairness", "@type": "@id" },
 >   "howToUse": [ "CI/CD", "command-line" ],
->   "license": { "@id":"https://spdx.org/licenses/Apache-2.0", "@type": "@id" },
+>   "license": "https://spdx.org/licenses/Apache-2.0",
 >   "applicationCategory": { "@id":"rs:PrototypeTool", "@type": "@id" }
 > }
 > ```
