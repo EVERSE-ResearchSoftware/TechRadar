@@ -2,9 +2,16 @@
   "@context": "https://w3id.org/everse/rs#",
   "@id": "https://w3id.org/everse/tools/scorecard",
   "@type": "SoftwareApplication",
-  "applicationCategory": [{ "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" }, { "@id": "rs:PrototypeTool", "@type": "@id" }],
+  "applicationCategory": [
+    { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" },
+    { "@id": "rs:PrototypeTool", "@type": "@id" }
+  ],
   "description": "OpenSSF Scorecard is a tool that automatically evaluates the security health of open source projects. It runs checks on best practices like branch protection, dependency management, and code review, then produces a score to help maintainers and users assess project risk.",
-  "hasQualityDimension": [{ "@id": "dim:Security", "@type": "@id" }, { "@id": "dim:Maintainability", "@type": "@id" }, { "@id": "dim:Sustainability", "@type": "@id" }],
+  "hasQualityDimension": [
+    { "@id": "dim:Security", "@type": "@id" },
+    { "@id": "dim:Maintainability", "@type": "@id" },
+    { "@id": "dim:Sustainability", "@type": "@id" }
+  ],
   "howToUse": ["CI/CD", "command-line"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/Apache-2.0",
