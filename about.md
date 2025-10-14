@@ -104,3 +104,17 @@ The TechRadar curation team reviews and maintains the quality tools and services
 *University of Edinburgh*  
 📧 e.breitmoser@epcc.ed.ac.uk  
 🔗[ORCID](https://orcid.org/0000-0003-1295-9326)
+---
+
+### <img src="/TechRadar/images/team_images/roundedsrobona1.png" alt="Srobona Ghosh" width="150" style="border-radius: 50%; vertical-align: middle;" />  
+**Srobona Ghosh**  
+*Helmholtz-Zentrum Dresden-Rossendorf*  
+📧 srobona.ghosh@hzdr.de  
+🔗[ORCID](https://orcid.org/0009-0008-9084-064X)
+---
+
+### <img src="/TechRadar/images/team_images/roundeddaniel.png" alt="Daniel Garijo" width="150" style="border-radius: 50%; vertical-align: middle;" />  
+**Daniel Garijo**  
+*Universidad Politecnica de Madrid*  
+📧 daniel.garijo@upm.es 
+🔗[ORCID](https://orcid.org/0000-0003-0454-7145)
