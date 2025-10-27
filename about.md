@@ -7,7 +7,7 @@ The EVERSE Technology Radar is developed as part of the [EVERSE](https://everse.
 
 ## What is the EVERSE Technology Radar?
 
-It contains a [catalogue of_tools and services for research software quality_](#research-quality-tools-and-services-catalog) designed to assess, measure, and improve the quality of software developed for research purposes and the [TechRadar](#technology-radar-dashboard), a visual dashboard to display the catalogue. The EVERSE Technology Radar offers a comprehensive overview of various research software quality tools and services. These tools and services are systematically categorised and presented in alignment with the established quality dimensions as segments. It is important to note that the radar does not encompass all existing tools and services; rather, it concentrates on tools that satisfy a set of criteria.
+It contains a [catalogue of tools and services for research software quality](#research-quality-tools-and-services-catalog) designed to assess, measure, and improve the quality of software developed for research purposes and the [TechRadar](#technology-radar-dashboard), a visual dashboard to display the catalogue. The EVERSE Technology Radar offers a comprehensive overview of various research software quality tools and services. These tools and services are systematically categorised and presented in alignment with the established quality dimensions as segments. It is important to note that the radar does not encompass all existing tools and services; rather, it concentrates on tools that satisfy a set of criteria.
 
 ## How it is created
 
