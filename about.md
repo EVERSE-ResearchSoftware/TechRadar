@@ -7,7 +7,11 @@ The EVERSE Technology Radar is developed as part of the [EVERSE](https://everse.
 
 ## What is the EVERSE Technology Radar?
 
-It contains a [catalogue of tools and services for research software quality](#research-quality-tools-and-services-catalog) designed to assess, measure, and improve the quality of software developed for research purposes and the [TechRadar](#technology-radar-dashboard), a visual dashboard to display the catalogue. The EVERSE Technology Radar offers a comprehensive overview of various research software quality tools and services. These tools and services are systematically categorised and presented in alignment with the established quality dimensions as segments. It is important to note that the radar does not encompass all existing tools and services; rather, it concentrates on tools that satisfy a set of criteria.
+It contains:
+- a catalogue of tools and services for research software quality designed to assess, measure, and improve the quality of software developed for research purposes
+- the TechRadar, a visual dashboard to display the catalogue 
+
+The EVERSE Technology Radar offers a comprehensive overview of various research software quality tools and services. These tools and services are systematically categorised and presented in alignment with the established quality dimensions as segments. It is important to note that the radar does not encompass all existing tools and services; rather, it concentrates on tools that satisfy a set of criteria.
 
 ## How it is created
 
@@ -15,9 +19,9 @@ The tools and services appearing in the TechRadar can be proposed by anyone, but
 Please see [instructions below](#contributing-to-the-everse-technology-radar).
 
 
-### Segments
+#### Segments
 
-The segments correspond to [the EVERSE Quality Dimensions](https://everse.software/indicators/website/dimensions.html):
+The radar segments map [the EVERSE Quality Dimensions](https://everse.software/indicators/website/dimensions.html).
 
 - **Compatibility:** This segment covers tools and services that assess the degree to which a product, system, or component can exchange information with other products, systems, or components, and/or perform its required functions while sharing a common environment and resources.
 - **FAIRness:** This segment covers tools and services that evaluate FAIRness, which refers to the extent to which research software aligns with the FAIR principles: Findable, Accessible, Interoperable, and Reusable.
@@ -31,7 +35,8 @@ The segments correspond to [the EVERSE Quality Dimensions](https://everse.softwa
 - **Security:** This segment covers tools and services that measure the degree to which a product or system defends against attack patterns by malicious actors, while protecting information and data to ensure that individuals or other systems have the appropriate level of access based on their types and authorization levels.
 - **Sustainability:** This segment covers tools and services that assess the capacity of software to endure, ensuring its availability on future platforms and its ability to meet evolving needs over time.
 
-### Rings
+
+#### Rings
 
 The rings reflect the [three-tier model of research software](https://everse.software/RSQKit/three_tier_view):
 
@@ -49,58 +54,60 @@ Note: if a tool is relevant to multiple tiers, it is placed only in the **lowest
 
 ## Contributing to the EVERSE Technology Radar
 
-Contributions and source code of the **EVERSE Tech Radar** are on GitHub:  
-👉 [EVERSE Tech Radar on GitHub](https://github.com/EVERSE-ResearchSoftware/TechRadar)  
-👉 [EVERSE AOE Tech Radar fork](https://github.com/EVERSE-ResearchSoftware/aoe_technology_radar)
+The EVERSE Technology Radar is a community-driven initiative, and we welcome contributions from anyone interested in enhancing the catalogue of tools and services for research software quality.
+If you would like to suggest a new tool or service to be added to the TechRadar, please follow the instructions in our [contributing guidelines](CONTRIBUTING.md).
 
-Please see our 🛠️ [**contributing guidelines**](https://github.com/EVERSE-ResearchSoftware/TechRadar/blob/main/CONTRIBUTING.md)
 
-## Curation team
+<h2 id="curation-team">Curation team</h2>
 
 The TechRadar curation team reviews and maintains the quality tools and services catalogued in the TechRadar.
 
----
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem;">
 
-### <img src="/TechRadar/images/team_images/thomas_vuillaume.jpg" alt="Thomas Vuillaume" width="150" style="border-radius: 50%; vertical-align: middle;" />  
-**Thomas Vuillaume**  
-*LAPP, CNRS*  
-📧 thomas.vuillaume@lapp.in2p3.fr  
-🔗[ORCID](https://orcid.org/0000-0002-5686-2078)
+<div style="text-align: center;">
+<img src="/TechRadar/images/team_images/thomas_vuillaume.jpg" alt="Thomas Vuillaume" width="150" style="border-radius: 50%; margin-bottom: 1rem;" />
+<div><strong>Thomas Vuillaume</strong></div>
+<div style="font-style: italic; color: #666;">LAPP, CNRS</div>
+<div>📧 thomas.vuillaume@lapp.in2p3.fr</div>
+<div>🔗 <a href="https://orcid.org/0000-0002-5686-2078">ORCID</a></div>
+</div>
 
----
+<div style="text-align: center;">
+<img src="/TechRadar/images/team_images/roundedshraddha.jpg" alt="Shraddha Bajare" width="150" style="border-radius: 50%; margin-bottom: 1rem;" />
+<div><strong>Shraddha Bajare</strong></div>
+<div style="font-style: italic; color: #666;">Square Kilometre Array Observatory</div>
+<div>📧 shraddha.bajare@skao.int</div>
+</div>
 
-### <img src="/TechRadar/images/team_images/roundedshraddha.jpg" alt="Shraddha Bajare" width="150" style="border-radius: 50%; vertical-align: middle;" />  
-**Shraddha Bajare**  
-*Square Kilometre Array Observatory*  
-📧 shraddha.bajare@skao.int
+<div style="text-align: center;">
+<img src="/TechRadar/images/team_images/roundednikos.jpg" alt="Nikos Pechlivanis" width="150" style="border-radius: 50%; margin-bottom: 1rem;" />
+<div><strong>Nikos Pechlivanis</strong></div>
+<div style="font-style: italic; color: #666;">Centre for Research and Technology Hellas</div>
+<div>📧 nikosp41@certh.gr</div>
+<div>🔗 <a href="https://orcid.org/0000-0003-2502-612X">ORCID</a></div>
+</div>
 
----
+<div style="text-align: center;">
+<img src="/TechRadar/images/team_images/faruk_diblen.jpg" alt="Faruk Diblen" width="150" style="border-radius: 50%; margin-bottom: 1rem;" />
+<div><strong>Faruk Diblen</strong></div>
+<div style="font-style: italic; color: #666;">Netherlands eScience Center</div>
+<div>🔗 <a href="https://orcid.org/0000-0002-0989-929X">ORCID</a></div>
+</div>
 
-### <img src="/TechRadar/images/team_images/roundednikos.jpg" alt="Nikos Pechlivanis" width="150" style="border-radius: 50%; vertical-align: middle;" />  
-**Nikos Pechlivanis**  
-*Centre for Research and Technology Hellas*  
-📧 nikosp41@certh.gr  
-🔗[ORCID](https://orcid.org/0000-0003-2502-612X)
+<div style="text-align: center;">
+<img src="/TechRadar/images/team_images/roundedazza.jpg" alt="Azza Gamgami" width="150" style="border-radius: 50%; margin-bottom: 1rem;" />
+<div><strong>Azza Gamgami</strong></div>
+<div style="font-style: italic; color: #666;">LAPP, CNRS</div>
+<div>📧 azza.gamgami@lapp.in2p3.fr</div>
+<div>🔗 <a href="https://orcid.org/0009-0003-7084-3900">ORCID</a></div>
+</div>
 
----
+<div style="text-align: center;">
+<img src="/TechRadar/images/team_images/roundedelena.jpg" alt="Elena Breitmoser" width="150" style="border-radius: 50%; margin-bottom: 1rem;" />
+<div><strong>Elena Breitmoser</strong></div>
+<div style="font-style: italic; color: #666;">University of Edinburgh</div>
+<div>📧 e.breitmoser@epcc.ed.ac.uk</div>
+<div>🔗 <a href="https://orcid.org/0000-0003-1295-9326">ORCID</a></div>
+</div>
 
-### <img src="/TechRadar/images/team_images/faruk_diblen.jpg" alt="Faruk Diblen" width="150" style="border-radius: 50%; vertical-align: middle;" />  
-**Faruk Diblen**  
-*Netherlands eScience Center*  
-🔗[ORCID](https://orcid.org/0000-0002-0989-929X) 
-
----
-
-### <img src="/TechRadar/images/team_images/roundedazza.jpg" alt="Azza Gamgami" width="150" style="border-radius: 50%; vertical-align: middle;" />  
-**Azza Gamgami**  
-*LAPP, CNRS*  
-📧 azza.gamgami@lapp.in2p3.fr  
-🔗[ORCID](https://orcid.org/0009-0003-7084-3900) 
-
----
-
-### <img src="/TechRadar/images/team_images/roundedelena.jpg" alt="Elena Breitmoser" width="150" style="border-radius: 50%; vertical-align: middle;" />  
-**Elena Breitmoser**  
-*University of Edinburgh*  
-📧 e.breitmoser@epcc.ed.ac.uk  
-🔗[ORCID](https://orcid.org/0000-0003-1295-9326)
+</div>
