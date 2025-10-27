@@ -1,7 +1,7 @@
 /* Use this file to optionally override global css styles and use with caution. */
 /* See README.md for hints and examples: https://github.com/AOEpeople/aoe_technology_radar/ */
 
-/* Fix link colors to be visible and distinguish from regular text */
+/* Link colors to be visible and distinguish from regular text */
 a {
   color: #0066cc !important;
   text-decoration: none;
