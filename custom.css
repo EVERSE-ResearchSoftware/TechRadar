@@ -1,2 +1,31 @@
 /* Use this file to optionally override global css styles and use with caution. */
 /* See README.md for hints and examples: https://github.com/AOEpeople/aoe_technology_radar/ */
+
+/* Fix link colors to be visible and distinguish from regular text */
+a {
+  color: #0066cc !important;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #004499 !important;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #551a8b !important;
+}
+
+/* Ensure links in specific contexts are also styled properly */
+.markdown-body a,
+.content a,
+p a {
+  color: #0066cc !important;
+}
+
+.markdown-body a:hover,
+.content a:hover,
+p a:hover {
+  color: #004499 !important;
+  text-decoration: underline;
+}
