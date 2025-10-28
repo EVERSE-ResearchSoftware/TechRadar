@@ -110,4 +110,20 @@ The TechRadar curation team reviews and maintains the quality tools and services
 <div>🔗 <a href="https://orcid.org/0000-0003-1295-9326">ORCID</a></div>
 </div>
 
+<div style="text-align: center;">
+<img src="/TechRadar/images/team_images/roundedsrobona1.png" alt="Srobona Ghosh" width="150" style="border-radius: 50%; margin-bottom: 1rem;" />
+<div><strong>Srobona Ghosh</strong></div>
+<div style="font-style: italic; color: #666;">Helmholtz-Zentrum Dresden-Rossendorf</div>
+<div>📧 srobona.ghosh@hzdr.de</div>
+<div>🔗 <a href="https://orcid.org/0009-0008-9084-064X">ORCID</a></div>
+</div>
+
+<div style="text-align: center;">
+<img src="/TechRadar/images/team_images/roundeddaniel.png" alt="Daniel Garijo" width="150" style="border-radius: 50%; margin-bottom: 1rem;" />
+<div><strong>Daniel Garijo</strong></div>
+<div style="font-style: italic; color: #666;">Universidad Politecnica de Madrid</div>
+<div>📧 daniel.garijo@upm.es</div>
+<div>🔗 <a href="https://orcid.org/0000-0003-0454-7145">ORCID</a></div>
+</div>
+
 </div>
