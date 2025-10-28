@@ -1,7 +1,7 @@
 ---
 title: "Gitleaks"
 ring: AnalysisCode
-segment: Security
+segment: security
 tags: ['CI/CD', 'command-line', 'multi-dimensional']
 ---
 Security-focused scanner that detects secrets, passwords, and sensitive information in git repositories and files, helping protect research software and data from accidental exposure of confidential information.

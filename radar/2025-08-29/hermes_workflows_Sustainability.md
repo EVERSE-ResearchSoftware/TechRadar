@@ -1,7 +1,7 @@
 ---
 title: "Hermes Workflows"
 ring: ResearchInfrastructureSoftware
-segment: Sustainability
+segment: sustainability
 tags: ['command-line', 'CI/CD', 'multi-dimensional']
 ---
 Workflow system for automated publication of rich research software metadata and artifacts, improving software sustainability and FAIRness through comprehensive metadata management and automated publication workflows.

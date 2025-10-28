@@ -13,10 +13,10 @@
   ],
   "hasQualityDimension": [
     {
-      "@id": "dim:Maintainability",
+      "@id": "dim:maintainability",
       "@type": "@id"
     },
-    { "@id": "dim:Sustainability", "@type": "@id" }
+    { "@id": "dim:sustainability", "@type": "@id" }
   ],
   "howToUse": ["CI/CD", "command-line"],
   "license": "https://choosealicense.com/licenses/gpl-2.0/"

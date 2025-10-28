@@ -8,9 +8,9 @@
   },
   "description": "Functional package manager providing reproducible software deployment and system configuration, ensuring consistent and reliable software installations across different systems with transactional upgrades and rollbacks.",
   "hasQualityDimension": [
-    { "@id": "dim:Maintainability", "@type": "@id" },
-    { "@id": "dim:Sustainability", "@type": "@id" },
-    { "@id": "dim:Reliability", "@type": "@id" }
+    { "@id": "dim:maintainability", "@type": "@id" },
+    { "@id": "dim:sustainability", "@type": "@id" },
+    { "@id": "dim:reliability", "@type": "@id" }
   ],
   "howToUse": ["command-line", "online-service"],
   "isAccessibleForFree": true,

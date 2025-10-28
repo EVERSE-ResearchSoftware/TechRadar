@@ -4,7 +4,7 @@
   "@type": "SoftwareApplication",
   "applicationCategory": { "@id": "rs:AnalysisCode", "@type": "@id" },
   "description": "Software Quality Assessment as a Service platform that analyzes completeness against FAIR4RS reference criteria for research software releases, providing comprehensive quality assessment and awarding capabilities for research software projects.",
-  "hasQualityDimension": { "@id": "dim:FAIRness", "@type": "@id" },
+  "hasQualityDimension": { "@id": "dim:fairness", "@type": "@id" },
   "howToUse": ["online-service", "CI/CD"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/AGPL-3.0-or-later",

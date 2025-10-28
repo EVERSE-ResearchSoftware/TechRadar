@@ -1,7 +1,7 @@
 ---
 title: "valgrind"
 ring: AnalysisCode
-segment: Maintainability
+segment: maintainability
 tags: ['multi-dimensional']
 ---
 Detects memory management and threading bugs, run profiling to see how to speed up your programs

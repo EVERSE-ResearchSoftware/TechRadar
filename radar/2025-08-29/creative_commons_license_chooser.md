@@ -1,7 +1,7 @@
 ---
 title: "Creative Commons License Chooser"
 ring: ResearchInfrastructureSoftware
-segment: FAIRness
+segment: fairness
 tags: ['command-line']
 ---
 A web-based tool to help users select an appropriate Creative Commons license for their work.

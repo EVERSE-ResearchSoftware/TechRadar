@@ -1,7 +1,7 @@
 ---
 title: "Somesy"
 ring: ResearchInfrastructureSoftware
-segment: FAIRness
+segment: fairness
 tags: ['CI/CD', 'command-line']
 ---
 Somesy (software metadata sync) is a CLI tool to avoid messy software project metadata by keeping it in sync.

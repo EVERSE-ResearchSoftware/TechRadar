@@ -1,7 +1,7 @@
 ---
 title: "Git"
 ring: ResearchInfrastructureSoftware
-segment: Maintainability
+segment: maintainability
 tags: ['command-line', 'online-service']
 ---
 Distributed version control system that enables collaborative research software development, change tracking, and version management, essential for research software maintainability and reproducibility throughout the development lifecycle.

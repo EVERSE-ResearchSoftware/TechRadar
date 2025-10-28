@@ -1,7 +1,7 @@
 ---
 title: "Fair Python Cookiecutter"
 ring: PrototypeTool
-segment: FAIRness
+segment: fairness
 tags: ['CI/CD', 'command-line', 'online-service', 'Python']
 ---
 Opinionated cookiecutter template to kickstart modern best-practice Python research projects with FAIR metadata, providing standardized project structure and quality tools for sustainable research software development.

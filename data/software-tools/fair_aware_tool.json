@@ -7,7 +7,7 @@
   "url": "https://fairaware.dans.knaw.nl/",
   "identifier": { "@id": "https://example.org/FAIR_aware_tool" },
   "isAccessibleForFree": true,
-  "hasQualityDimension": { "@id": "dim:FAIRness", "@type": "@id" },
+  "hasQualityDimension": { "@id": "dim:fairness", "@type": "@id" },
   "howToUse": ["online-service"],
   "license": "https://spdx.org/licenses/Apache-2.0",
   "applicationCategory": [

@@ -8,8 +8,8 @@
   },
   "description": "Open research repository that provides persistent identifiers (DOIs) for research software and data, enabling long-term preservation, discoverability, and citation of research outputs, supporting software sustainability and FAIRness principles.",
   "hasQualityDimension": [
-    { "@id": "dim:Sustainability", "@type": "@id" },
-    { "@id": "dim:FAIRness", "@type": "@id" }
+    { "@id": "dim:sustainability", "@type": "@id" },
+    { "@id": "dim:fairness", "@type": "@id" }
   ],
   "howToUse": ["CI/CD", "command-line", "online-service"],
   "isAccessibleForFree": true,

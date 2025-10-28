@@ -1,7 +1,7 @@
 ---
 title: "javadoc"
 ring: ResearchInfrastructureSoftware
-segment: Sustainability
+segment: sustainability
 tags: ['CI/CD', 'command-line', 'Java', 'multi-dimensional']
 ---
 Documentation generator for Java that automatically produces API documentation from source code comments, improving research software maintainability and usability through comprehensive code documentation and developer reference materials.

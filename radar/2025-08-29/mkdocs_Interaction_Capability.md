@@ -1,7 +1,7 @@
 ---
 title: "MkDocs"
 ring: PrototypeTool
-segment: Interaction Capability
+segment: interaction_capability
 tags: ['command-line', 'CI/CD', 'Python', 'multi-dimensional']
 ---
 Static site generator designed for project documentation that creates professional documentation websites from Markdown files, improving research software usability and interaction capability through clear documentation.
