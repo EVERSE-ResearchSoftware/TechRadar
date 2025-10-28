@@ -1,11 +1,11 @@
 # Contribution guidelines
 
-Welcome! This guide explains how to contribute to the EVERSE Technology Radar. It’s organized for quick scanning, with collapsible sections for the deep dives.
+Welcome! This guide explains how to contribute to the EVERSE Technology Radar.
 
 ## TL;DR
 
 - Want to add or update a tool? Jump to the [Quick Start](#quick-start-add-or-update-a-tool)
-- Check the [Inclusion criteria](#inclusion-criteria) before you submit
+   - Check the [Inclusion criteria](#inclusion-criteria) before you submit
 - Unsure? [Open an issue](https://github.com/EVERSE-ResearchSoftware/TechRadar/issues/new/choose) or start a [discussion](https://github.com/EVERSE-ResearchSoftware/TechRadar/discussions)
 
 ## Types of contributions
