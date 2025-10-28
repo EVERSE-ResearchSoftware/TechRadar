@@ -8,8 +8,8 @@
   },
   "description": "Integrated continuous integration and deployment platform that automates research software testing, building, and deployment workflows, improving software reliability and sustainability through comprehensive DevOps practices.",
   "hasQualityDimension": [
-    { "@id": "dim:Sustainability", "@type": "@id" },
-    { "@id": "dim:Reliability", "@type": "@id" }
+    { "@id": "dim:sustainability", "@type": "@id" },
+    { "@id": "dim:reliability", "@type": "@id" }
   ],
   "howToUse": ["CI/CD", "command-line", "online-service"],
   "isAccessibleForFree": false,

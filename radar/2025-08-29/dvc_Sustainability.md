@@ -1,7 +1,7 @@
 ---
 title: "DVC"
 ring: ResearchInfrastructureSoftware
-segment: Sustainability
+segment: sustainability
 tags: ['CI/CD', 'command-line', 'multi-dimensional']
 ---
 Data version control system that tracks large files, datasets, and machine learning models, enabling reproducible research workflows and enhancing research software sustainability through proper data and model versioning.

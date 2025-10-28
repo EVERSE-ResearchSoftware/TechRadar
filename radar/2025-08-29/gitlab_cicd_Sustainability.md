@@ -1,7 +1,7 @@
 ---
 title: "GitLab CICD"
 ring: ResearchInfrastructureSoftware
-segment: Sustainability
+segment: sustainability
 tags: ['CI/CD', 'command-line', 'online-service', 'multi-dimensional']
 ---
 Integrated continuous integration and deployment platform that automates research software testing, building, and deployment workflows, improving software reliability and sustainability through comprehensive DevOps practices.

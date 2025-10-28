@@ -1,7 +1,7 @@
 ---
 title: "bearer"
 ring: AnalysisCode
-segment: Security
+segment: security
 tags: ['online-service', 'JavaScript', 'TypeScript', 'Ruby', 'PHP', 'Java', 'Go', 'Python']
 ---
 Bearer CLI is a static application security testing (SAST) tool that scans your source code and analyzes your data flows to discover, filter and prioritize security and privacy risks.

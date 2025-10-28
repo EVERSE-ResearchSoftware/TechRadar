@@ -1,7 +1,7 @@
 ---
 title: "bandit"
 ring: AnalysisCode
-segment: Security
+segment: security
 tags: ['CI/CD', 'command-line', 'Python']
 ---
 Security-focused static analysis tool for Python that identifies common security vulnerabilities and anti-patterns in software, helping maintain secure coding practices.

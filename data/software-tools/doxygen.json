@@ -18,7 +18,7 @@
     "Lex"
   ],
   "description": "Documentation generator for C++, C, Java, and other languages that automatically extracts documentation from annotated source code, improving research software maintainability through comprehensive API documentation.",
-  "hasQualityDimension": { "@id": "dim:Maintainability", "@type": "@id" },
+  "hasQualityDimension": { "@id": "dim:maintainability", "@type": "@id" },
   "howToUse": ["CI/CD", "command-line"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/GPL-2.0-only",

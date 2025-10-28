@@ -11,10 +11,10 @@
   },
   "isAccessibleForFree": true,
   "hasQualityDimension": [
-    { "@id": "dim:Compatibility", "@type": "@id" },
-    { "@id": "dim:Flexibility", "@type": "@id" },
-    { "@id": "dim:Reliability", "@type": "@id" },
-    { "@id": "dim:Sustainability", "@type": "@id" }
+    { "@id": "dim:compatibility", "@type": "@id" },
+    { "@id": "dim:flexibility", "@type": "@id" },
+    { "@id": "dim:reliability", "@type": "@id" },
+    { "@id": "dim:sustainability", "@type": "@id" }
   ],
   "howToUse": ["command-line", "online-service"],
   "license": "https://www.apache.org/licenses/LICENSE-2.0"

@@ -1,7 +1,7 @@
 ---
 title: "GNU Guix"
 ring: ResearchInfrastructureSoftware
-segment: Maintainability
+segment: maintainability
 tags: ['command-line', 'online-service', 'multi-dimensional']
 ---
 Functional package manager providing reproducible software deployment and system configuration, ensuring consistent and reliable software installations across different systems with transactional upgrades and rollbacks.

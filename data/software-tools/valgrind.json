@@ -22,19 +22,19 @@
   ],
   "hasQualityDimension": [
     {
-      "@id": "dim:Reliability",
+      "@id": "dim:reliability",
       "@type": "@id"
     },
     {
-      "@id": "dim:Performance Efficiency",
+      "@id": "dim:performance_efficiency",
       "@type": "@id"
     },
     {
-      "@id": "dim:Sustainability",
+      "@id": "dim:sustainability",
       "@type": "@id"
     },
     {
-      "@id": "dim:Maintainability",
+      "@id": "dim:maintainability",
       "@type": "@id"
     }
   ],

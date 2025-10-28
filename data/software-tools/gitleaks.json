@@ -13,8 +13,8 @@
     { "@id": "rs:AnalysisCode", "@type": "@id" }
   ],
   "hasQualityDimension": [
-    { "@id": "dim:Security", "@type": "@id" },
-    { "@id": "dim:Sustainability", "@type": "@id" }
+    { "@id": "dim:security", "@type": "@id" },
+    { "@id": "dim:sustainability", "@type": "@id" }
   ],
   "howToUse": ["CI/CD", "command-line"]
 }
