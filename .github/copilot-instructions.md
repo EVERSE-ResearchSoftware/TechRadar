@@ -39,17 +39,12 @@ You may use the **#web search** feature to gather additional information on the 
 
 ### ✅ Step 1: Check Inclusion Criteria
 
-Confirm that the proposed tool meets all the following:
+All tools/services added to the TechRadar must satisfy these criteria:
 
-1. The tool/service has been designed with the intent of measuring/improving software quality, and it does measure or improve software quality.
-
-2. The tool/service is frequently used on research software and is being actively maintained.
-
-3. The tool/service enables the software it is used on to follow relevant research community standards and best practices.
-
-4. The tool/service has capabilities to analyse and improve software quality throughout the research software lifecycle, from development to long-term sustainability.
-
-If any criterion is not met, suggest that the PR is rejected and explain why.
+1. Designed to measure and/or improve software quality (and demonstrably does so)
+2. Frequently used on research software and actively maintained
+3. Enables adherence to relevant research community standards and best practices
+4. Has capabilities to analyse and improve software quality across the [research software lifecycle](https://everse.software/RSQKit/life_cycle#the-research-software-lifecycle) (from development to long-term sustainability)
 
 
 ### ✅ Step 2: Review and Suggest Metadata Improvements

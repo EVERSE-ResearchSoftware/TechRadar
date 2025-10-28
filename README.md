@@ -10,11 +10,11 @@
 
 # EVERSE TechRadar
 
-The EVERSE TechRadar contains a [catalog of _tools and services for research software quality_](#research-quality-tools-and-services-catalog) designed to assess, measure, and improve the quality of software developed for research purposes and the [TechRadar](#technology-radar-dashboard), a visual dashboard to display the catalog.
+The EVERSE TechRadar contains a [catalogue of _tools and services for research software quality_](#research-quality-tools-and-services-catalog) designed to assess, measure, and improve the quality of software developed for research purposes and the [TechRadar](#technology-radar-dashboard), a visual dashboard to display the catalog.
 
 ## Research Quality Tools and Services Catalog
 
-The present catalog includes tools and services that incorporate features that address the unique requirements of research software, including but not limited to:
+The present catalogue includes tools and services that incorporate features that address the unique requirements of research software, including but not limited to:
 
 - Analysis of source code to identify potential issues, vulnerabilities, and adherence to coding standards specific to research contexts.
 
@@ -30,7 +30,7 @@ These tools aim to enhance the overall quality, reliability, and reusability of 
 
 ### Content & publication process
 
-We welcome content contributions to the catalog (see our [contribution guidelines](CONTRIBUTING.md) in the form of JSON files describing tools and services for research software quality.
+We welcome content contributions to the catalogue (see our [contribution guidelines](CONTRIBUTING.md) in the form of JSON files describing tools and services for research software quality.
 
 After review from our curation team, the entry will be added to [our catalog](data/software-tools) as JSON file.
 
@@ -38,7 +38,7 @@ New versions of the TechRadar will be published regularly. You can find all the 
 
 ## EVERSE TechRadar dashboard
 
-The catalog of tools and services is presented in a visual dashboard at <https://github.com/EVERSE-ResearchSoftware/TechRadar>.
+The catalogue of tools and services is presented in a visual dashboard at <https://github.com/EVERSE-ResearchSoftware/TechRadar>.
 
 
 ### Development
