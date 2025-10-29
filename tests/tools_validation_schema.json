@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "EVERSE Research Software (RS) Tools Validation Schema",
-  "description": "Schema for validating software tool entries in the EVERSE Research Software context",
+  "description": "Schema for validating software tool entries in the EVERSE Research Software context.",
   "type": "object",
   "definitions": {
     "applicationCategoryObject": {
@@ -24,23 +24,12 @@
       "properties": {
         "@id": {
           "type": "string",
-          "description": "Identifier for the quality dimension",
-          "enum": [
-            "dim:compatibility",
-            "dim:fairness",
-            "dim:flexibility",
-            "dim:functional_suitability",
-            "dim:interaction_capability",
-            "dim:maintainability",
-            "dim:performance_efficiency",
-            "dim:reliability",
-            "dim:safety",
-            "dim:security",
-            "dim:sustainability"
-          ]
+          "description": "Identifier for the quality dimension. Valid values are dynamically fetched from the EVERSE indicators API at validation time.",
+          "pattern": "^dim:[a-z_]+$"
         }
       },
-      "required": [ "@id" ]
+      "required": [ "@id" ],
+      "comment": "The enum of valid dimension values is populated dynamically by helpers.py EVERSE api"
     }, 
     
 "qualityIndicatorObject": {
@@ -48,11 +37,12 @@
   "properties": {
     "@id": {
       "type": "string",
-      "description": "Identifier for the quality indicator",
+      "description": "Identifier for the quality indicator. Valid values are dynamically fetched from the EVERSE indicators API at validation time. If API is unavailable, any URI is accepted.",
       "format": "uri"
     }
   },
-  "required": ["@id"]
+  "required": ["@id"],
+  "comment": "The enum of valid indicator URIs is populated dynamically by helpers.py. If unavailable, validation is skipped."
 }
   },
   "properties": {
