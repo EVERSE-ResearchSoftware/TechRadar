@@ -1,0 +1,35 @@
+{
+  "@context": "https://w3id.org/everse/rs#",
+  "@id": "https://w3id.org/everse/tools/renovate",
+  "@type": "SoftwareApplication",
+  "applicationCategory": {
+    "@id": "rs:ResearchInfrastructureSoftware",
+    "type": "@id"
+  },
+  "appliesToProgrammingLanguage": [
+    "Ruby",
+    "JavaScript",
+    "Python",
+    "PHP",
+    "Dart",
+    "Elixir",
+    "Elm",
+    "Go",
+    "Rust",
+    "Java",
+    ".NET",
+    "npm",
+    "Scala",
+    "Docker"
+  ],
+  "description": "Automated dependency updates. Flexible so you don't need to be.",
+  "hasQualityDimension": [
+    { "@id": "dim:Security", "@type": "@id" },
+    { "@id": "dim:Maintainability", "@type": "@id" }
+  ],
+  "howToUse": ["CI/CD", "command-line"],
+  "isAccessibleForFree": true,
+  "license": "https://spdx.org/licenses/AGPL-3.0.html",
+  "name": "renovate",
+  "url": "https://github.com/renovatebot/renovate"
+}
