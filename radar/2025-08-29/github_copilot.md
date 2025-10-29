@@ -1,7 +1,7 @@
 ---
 title: "GitHub Copilot"
 ring: AnalysisCode
-segment: Sustainability
+segment: sustainability
 tags: ['online-service']
 ---
 GitHub Copilot is an AI-powered code completion and automatic programming assistant developed by GitHub and OpenAI. It supports users across multiple integrated development environments (IDEs) including Visual Studio Code, Visual Studio, Neovim, and JetBrains by providing intelligent code suggestions and autocompletion to boost developer productivity.

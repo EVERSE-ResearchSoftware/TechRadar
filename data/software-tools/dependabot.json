@@ -21,8 +21,8 @@
   ],
   "description": "Automated dependency management service that continuously monitors research software dependencies for security vulnerabilities and updates, maintaining software security and reducing technical debt for long-term sustainability.",
   "hasQualityDimension": [
-    { "@id": "dim:Security", "@type": "@id" },
-    { "@id": "dim:Maintainability", "@type": "@id" }
+    { "@id": "dim:security", "@type": "@id" },
+    { "@id": "dim:maintainability", "@type": "@id" }
   ],
   "howToUse": ["CI/CD", "command-line"],
   "isAccessibleForFree": true,

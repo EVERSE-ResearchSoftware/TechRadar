@@ -12,8 +12,8 @@
     { "@id": "rs:PrototypeTool", "@type": "@id" }
   ],
   "hasQualityDimension": [
-    { "@id": "dim:Sustainability", "@type": "@id" },
-    { "@id": "dim:Reliability", "@type": "@id" }
+    { "@id": "dim:sustainability", "@type": "@id" },
+    { "@id": "dim:reliability", "@type": "@id" }
   ],
   "howToUse": ["CI/CD"]
 }

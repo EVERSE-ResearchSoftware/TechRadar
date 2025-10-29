@@ -1,7 +1,7 @@
 ---
 title: "gcov"
 ring: AnalysisCode
-segment: Maintainability
+segment: maintainability
 tags: ['CI/CD', 'command-line', 'multi-dimensional']
 ---
 Gcov is a test coverage analysis tool, it considers which lines are actually executed and how often

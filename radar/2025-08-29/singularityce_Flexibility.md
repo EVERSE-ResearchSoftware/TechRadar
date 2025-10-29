@@ -1,7 +1,7 @@
 ---
 title: "SingularityCE"
 ring: ResearchInfrastructureSoftware
-segment: Flexibility
+segment: flexibility
 tags: ['command-line', 'multi-dimensional']
 ---
 Container platform designed for high-performance computing environments that provides secure, portable, and reproducible containers for scientific computing workflows, enabling research software deployment across different HPC systems.

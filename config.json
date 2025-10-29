@@ -23,67 +23,67 @@
   },
   "segments": [
     {
-      "id": "Compatibility",
+      "id": "compatibility",
       "title": "Compatibility",
       "description": "Degree to which a product, system or component can exchange information with other products, systems or components, and/or perform its required functions while sharing the same common environment and resources.",
       "color": "#4E79A7"
     },
     {
-      "id": "FAIRness",
+      "id": "fairness",
       "title": "FAIRness",
       "description": "FAIRness refers to the degree to which research software adheres to the FAIR principles: Findable, Accessible, Interoperable, and Reusable.",
       "color": "#F28E2B"
     },
     {
-      "id": "Flexibility",
+      "id": "flexibility",
       "title": "Flexibility",
       "description": "Degree to which a product can be adapted to changes in its requirements, contexts of use or system environment. ",
       "color": "#E15759"
     },
     {
-      "id": "Functional Suitability",
+      "id": "functional_suitability",
       "title": "Functional Suitability",
       "description": "This characteristic represents the degree to which a product or system provides functions that meet stated and implied needs when used under specified conditions. ",
       "color": "#76B7B2"
     },
     {
-      "id": "Interaction Capability",
+      "id": "interaction_capability",
       "title": "Interaction Capability",
       "description": "This characteristic represents the degree to which a product or system supports users in performing their tasks and achieving specified goals.",
       "color": "#59A14F"
     },
     {
-      "id": "Maintainability",
+      "id": "maintainability",
       "title": "Maintainability",
       "description": "This characteristic represents the degree of effectiveness and efficiency with which a product or system can be modified to improve it, correct it or adapt it to changes in environment, and in requirements.",
       "color": "#EDC948"
     },
     {
-      "id": "Performance Efficiency",
+      "id": "performance_efficiency",
       "title": "Performance Efficiency",
       "description": "This characteristic represents the degree to which a product performs its functions within specified time and throughput parameters and is efficient in the use of resources (such as CPU, memory, storage, network devices, energy, materials...) under specified conditions.",
       "color": "#B07AA1"
     },
     {
-      "id": "Reliability",
+      "id": "reliability",
       "title": "Reliability",
       "description": "Degree to which a system, product or component performs specified functions under specified conditions for a specified period of time.",
       "color": "#FF9DA7"
     },
     {
-      "id": "Safety",
+      "id": "safety",
       "title": "Safety",
       "description": "This characteristic represents the degree to which a product under defined conditions to avoid a state in which human life, health, property, or the environment is endangered.",
       "color": "#9C755F"
     },
     {
-      "id": "Security",
+      "id": "security",
       "title": "Security",
       "description": "Degree to which a product or system defends against attack patterns by malicious actors and protects information and data so that persons or other products or systems have the degree of data access appropriate to their types and levels of authorization.",
       "color": "#BAB0AC"
     },
     {
-      "id": "Sustainability",
+      "id": "sustainability",
       "title": "Sustainability",
       "description": "The capacity of the software to endure. In other words, sustainability means that the software will continue to be available in the future, on new platforms, meeting new needs.",
       "color": "#5FA2CE"

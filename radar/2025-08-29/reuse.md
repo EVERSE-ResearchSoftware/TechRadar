@@ -1,7 +1,7 @@
 ---
 title: "REUSE"
 ring: PrototypeTool
-segment: FAIRness
+segment: fairness
 tags: ['command-line', 'online-service', 'CI/CD']
 ---
 Automate the declaring of copyright and licensing for software projects with SPDX Tags.

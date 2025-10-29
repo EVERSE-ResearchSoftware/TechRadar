@@ -11,8 +11,8 @@
   },
   "isAccessibleForFree": true,
   "hasQualityDimension": [
-    { "@id": "dim:Compatibility", "@type": "@id" },
-    { "@id": "dim:Flexibility", "@type": "@id" }
+    { "@id": "dim:compatibility", "@type": "@id" },
+    { "@id": "dim:flexibility", "@type": "@id" }
   ],
   "howToUse": ["command-line"],
   "license": "https://opensource.org/license/bsd-3-clause"

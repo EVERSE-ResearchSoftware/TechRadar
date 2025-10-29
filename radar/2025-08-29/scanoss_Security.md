@@ -1,7 +1,7 @@
 ---
 title: "SCANOSS"
 ring: ResearchInfrastructureSoftware
-segment: Security
+segment: security
 tags: ['command-line', 'online-service', 'multi-dimensional']
 ---
 Software composition analysis tool for detecting open-source components and licenses in software projects, helping ensure compliance, security, and proper attribution of dependencies in scientific computing workflows.

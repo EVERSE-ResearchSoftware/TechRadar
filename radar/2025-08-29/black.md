@@ -1,7 +1,7 @@
 ---
 title: "Black"
 ring: PrototypeTool
-segment: Maintainability
+segment: maintainability
 tags: ['CI/CD', 'command-line']
 ---
 Deterministic Python code formatter that enforces consistent coding style across software projects, improving code readability, maintainability, and collaboration in research teams.

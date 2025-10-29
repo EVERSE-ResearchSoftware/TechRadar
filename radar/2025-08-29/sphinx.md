@@ -1,7 +1,7 @@
 ---
 title: "sphinx"
 ring: ResearchInfrastructureSoftware
-segment: Maintainability
+segment: maintainability
 tags: ['command-line', 'CI/CD', 'Python']
 ---
 Documentation generator that creates comprehensive, searchable documentation from source code and reStructuredText files, improving research software maintainability and usability through professional documentation.

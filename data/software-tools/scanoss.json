@@ -8,8 +8,8 @@
   },
   "description": "Software composition analysis tool for detecting open-source components and licenses in software projects, helping ensure compliance, security, and proper attribution of dependencies in scientific computing workflows.",
   "hasQualityDimension": [
-    { "@id": "dim:Security", "@type": "@id" },
-    { "@id": "dim:Maintainability", "@type": "@id" }
+    { "@id": "dim:security", "@type": "@id" },
+    { "@id": "dim:maintainability", "@type": "@id" }
   ],
   "howToUse": ["command-line", "online-service"],
   "isAccessibleForFree": true,

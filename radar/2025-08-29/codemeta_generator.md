@@ -1,7 +1,7 @@
 ---
 title: "CodeMeta Generator"
 ring: ResearchInfrastructureSoftware
-segment: FAIRness
+segment: fairness
 tags: ['CI/CD', 'command-line']
 ---
 Web-based tool that creates standardized CodeMeta metadata files for research software, enhancing software discoverability and supporting FAIR principles through structured software description and cataloging.

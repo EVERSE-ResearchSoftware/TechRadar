@@ -12,8 +12,8 @@
     { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" }
   ],
   "hasQualityDimension": [
-    { "@id": "dim:Sustainability", "@type": "@id" },
-    { "@id": "dim:Maintainability", "@type": "@id" }
+    { "@id": "dim:sustainability", "@type": "@id" },
+    { "@id": "dim:maintainability", "@type": "@id" }
   ],
   "howToUse": ["command-line"],
   "license": "https://spdx.org/licenses/MIT.html"

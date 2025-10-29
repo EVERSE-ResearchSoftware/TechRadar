@@ -1,7 +1,7 @@
 ---
 title: "pytest"
 ring: AnalysisCode
-segment: Reliability
+segment: reliability
 tags: ['command-line', 'CI/CD', 'Python', 'multi-dimensional']
 ---
 Comprehensive testing framework for Python that enhances research software reliability and maintainability through advanced testing capabilities, fixtures, and plugins, supporting test-driven development practices essential for research software quality assurance.

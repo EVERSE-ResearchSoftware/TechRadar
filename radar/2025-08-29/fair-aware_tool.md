@@ -1,7 +1,7 @@
 ---
 title: "FAIR-Aware tool"
 ring: AnalysisCode
-segment: FAIRness
+segment: fairness
 tags: ['online-service']
 ---
 Guided approach to assess the FAIRness of data

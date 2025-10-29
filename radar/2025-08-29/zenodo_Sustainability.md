@@ -1,7 +1,7 @@
 ---
 title: "zenodo"
 ring: ResearchInfrastructureSoftware
-segment: Sustainability
+segment: sustainability
 tags: ['CI/CD', 'command-line', 'online-service', 'multi-dimensional']
 ---
 Open research repository that provides persistent identifiers (DOIs) for research software and data, enabling long-term preservation, discoverability, and citation of research outputs, supporting software sustainability and FAIRness principles.

@@ -1,7 +1,7 @@
 ---
 title: "pre-commit"
 ring: AnalysisCode
-segment: Maintainability
+segment: maintainability
 tags: ['command-line', 'multi-dimensional']
 ---
 A framework for managing and maintaining multi-language pre-commit hooks.

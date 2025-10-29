@@ -1,7 +1,7 @@
 ---
 title: "valgrind"
 ring: AnalysisCode
-segment: Performance Efficiency
+segment: performance_efficiency
 tags: ['multi-dimensional']
 ---
 Detects memory management and threading bugs, run profiling to see how to speed up your programs

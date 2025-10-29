@@ -12,17 +12,17 @@
   ],
   "isAccessibleForFree": true,
   "hasQualityDimension": [
-    { "@id": "dim:Compatibility", "@type": "@id" },
-    { "@id": "dim:FAIRness", "@type": "@id" },
-    { "@id": "dim:Flexibility", "@type": "@id" },
-    { "@id": "dim:Functional Suitability", "@type": "@id" },
-    { "@id": "dim:Interaction Capability", "@type": "@id" },
-    { "@id": "dim:Maintainability", "@type": "@id" },
-    { "@id": "dim:Performance Efficiency", "@type": "@id" },
-    { "@id": "dim:Reliability", "@type": "@id" },
-    { "@id": "dim:Safety", "@type": "@id" },
-    { "@id": "dim:Security", "@type": "@id" },
-    { "@id": "dim:Sustainability", "@type": "@id" }
+    { "@id": "dim:compatibility", "@type": "@id" },
+    { "@id": "dim:fairness", "@type": "@id" },
+    { "@id": "dim:flexibility", "@type": "@id" },
+    { "@id": "dim:functional_suitability", "@type": "@id" },
+    { "@id": "dim:interaction_capability", "@type": "@id" },
+    { "@id": "dim:maintainability", "@type": "@id" },
+    { "@id": "dim:performance_efficiency", "@type": "@id" },
+    { "@id": "dim:reliability", "@type": "@id" },
+    { "@id": "dim:safety", "@type": "@id" },
+    { "@id": "dim:security", "@type": "@id" },
+    { "@id": "dim:sustainability", "@type": "@id" }
   ],
   "hasQualityIndicator": [
     {

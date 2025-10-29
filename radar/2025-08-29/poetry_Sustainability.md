@@ -1,7 +1,7 @@
 ---
 title: "poetry"
 ring: PrototypeTool
-segment: Sustainability
+segment: sustainability
 tags: ['CI/CD', 'command-line', 'multi-dimensional']
 ---
 Python packaging and dependency management made easy

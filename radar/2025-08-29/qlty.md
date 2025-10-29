@@ -1,7 +1,7 @@
 ---
 title: "Qlty"
 ring: AnalysisCode
-segment: Maintainability
+segment: maintainability
 tags: ['CI/CD', 'command-line']
 ---
 Lightweight, modular framework for writing high-quality shell scripts with reusable components and utilities to improve script structure, error handling, and maintainability in computing environments and automation workflows.

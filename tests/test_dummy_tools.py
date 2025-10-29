@@ -14,7 +14,7 @@ valid_tool = {
     "url": "https://example.com/tool/valid",
     "license": "https://opensource.org/licenses/MIT",
     "applicationCategory": {"@id": "rs:AnalysisCode"},
-    "hasQualityDimension": {"@id": "dim:FAIRness"}
+    "hasQualityDimension": {"@id": "dim:fairness"}
 }
 
 # 2. Tools that should not pass validation
@@ -27,7 +27,7 @@ invalid_tools = [
         "url": "https://example.com/tool/invalid1",
         "license": "https://opensource.org/licenses/MIT",
         "applicationCategory": {"@id": "rs:AnalysisCode"},
-        "hasQualityDimension": {"@id": "dim:FAIRness"}
+        "hasQualityDimension": {"@id": "dim:fairness"}
     },
     # Missing required property: context
     {
@@ -36,7 +36,7 @@ invalid_tools = [
         "url": "https://example.com/tool/invalid1",
         "license": "https://opensource.org/licenses/MIT",
         "applicationCategory": {"@id": "rs:AnalysisCode"},
-        "hasQualityDimension": {"@id": "dim:FAIRness"}
+        "hasQualityDimension": {"@id": "dim:fairness"}
     },
     # Missing required property: description
     {
@@ -46,7 +46,7 @@ invalid_tools = [
         "url": "https://example.com/tool/invalid2",
         "license": "https://opensource.org/licenses/MIT",
         "applicationCategory": {"@id": "rs:AnalysisCode"},
-        "hasQualityDimension": {"@id": "dim:FAIRness"}
+        "hasQualityDimension": {"@id": "dim:fairness"}
     },
     # Missing required property: license
     {
@@ -56,7 +56,7 @@ invalid_tools = [
         "description": "This tool is missing a license.",
         "url": "https://example.com/tool/invalid3",
         "applicationCategory": {"@id": "rs:AnalysisCode"},
-        "hasQualityDimension": {"@id": "dim:FAIRness"}
+        "hasQualityDimension": {"@id": "dim:fairness"}
     },
     # Missing required property: url
     {
@@ -66,7 +66,7 @@ invalid_tools = [
         "description": "This tool is missing a url.",
         "license": "https://opensource.org/licenses/MIT",
         "applicationCategory": {"@id": "rs:AnalysisCode"},
-        "hasQualityDimension": {"@id": "dim:FAIRness"}
+        "hasQualityDimension": {"@id": "dim:fairness"}
     },
     # Invalid applicationCategory
     {
@@ -77,7 +77,7 @@ invalid_tools = [
         "url": "https://example.com/tool/invalid5",
         "license": "https://opensource.org/licenses/MIT",
         "applicationCategory": {"@id": "rs:InvalidCategory"},
-        "hasQualityDimension": {"@id": "dim:FAIRness"}
+        "hasQualityDimension": {"@id": "dim:fairness"}
     },
     # Invalid quality dimension as a string
     {
@@ -99,7 +99,7 @@ invalid_tools = [
         "url": "https://example.com/tool/invalid7",
         "license": "https://opensource.org/licenses/MIT",
         "applicationCategory": {"@id": "rs:AnalysisCode"},
-        "hasQualityDimension": {"name": "dim:Documentation"}
+        "hasQualityDimension": {"name": "dim:documentation"}
     }
 ]
 

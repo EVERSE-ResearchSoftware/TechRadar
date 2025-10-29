@@ -1,7 +1,7 @@
 ---
 title: "F-UJI"
 ring: ResearchInfrastructureSoftware
-segment: FAIRness
+segment: fairness
 tags: ['CI/CD', 'command-line']
 ---
 Automated assessment tool for data FAIRness with extended version for research software based on FAIR4RS principles, enabling systematic evaluation and improvement of research output compliance with FAIR standards.

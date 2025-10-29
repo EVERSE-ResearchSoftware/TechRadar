@@ -1,7 +1,7 @@
 ---
 title: "Ruff"
 ring: AnalysisCode
-segment: Maintainability
+segment: maintainability
 tags: ['command-line', 'CI/CD', 'Python']
 ---
 High-performance Python linter that quickly identifies code quality issues and style violations, enabling rapid feedback for research software development and improving overall code maintainability.

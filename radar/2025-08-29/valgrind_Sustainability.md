@@ -1,7 +1,7 @@
 ---
 title: "valgrind"
 ring: AnalysisCode
-segment: Sustainability
+segment: sustainability
 tags: ['multi-dimensional']
 ---
 Detects memory management and threading bugs, run profiling to see how to speed up your programs

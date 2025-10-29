@@ -10,7 +10,7 @@
     { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" },
     { "@id": "rs:PrototypeTool", "@type": "@id" }
   ],
-  "hasQualityDimension": { "@id": "dim:FAIRness", "@type": "@id" },
+  "hasQualityDimension": { "@id": "dim:fairness", "@type": "@id" },
   "license": "https://www.gnu.org/licenses/old-licenses/gpl-3.0.html",
   "howToUse": ["command-line", "online-service", "CI/CD"]
 }

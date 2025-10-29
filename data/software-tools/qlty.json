@@ -12,6 +12,6 @@
     { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" },
     { "@id": "rs:AnalysisCode", "@type": "@id" }
   ],
-  "hasQualityDimension": { "@id": "dim:Maintainability", "@type": "@id" },
+  "hasQualityDimension": { "@id": "dim:maintainability", "@type": "@id" },
   "howToUse": ["CI/CD", "command-line"]
 }

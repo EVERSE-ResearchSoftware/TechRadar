@@ -5,7 +5,7 @@
   "applicationCategory": { "@id": "rs:PrototypeTool", "@type": "@id" },
   "appliesToProgrammingLanguage": ["Python"],
   "description": "Opinionated cookiecutter template to kickstart modern best-practice Python research projects with FAIR metadata, providing standardized project structure and quality tools for sustainable research software development.",
-  "hasQualityDimension": { "@id": "dim:FAIRness", "@type": "@id" },
+  "hasQualityDimension": { "@id": "dim:fairness", "@type": "@id" },
   "howToUse": ["CI/CD", "command-line", "online-service"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/MIT",

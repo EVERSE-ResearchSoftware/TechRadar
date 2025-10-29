@@ -1,7 +1,7 @@
 ---
 title: "CppUnit"
 ring: PrototypeTool
-segment: Reliability
+segment: reliability
 tags: ['command-line', 'C++', 'multi-dimensional']
 ---
 Unit testing framework for C++ that enables systematic testing of research software components, improving code reliability and maintainability through automated test execution and comprehensive testing capabilities.

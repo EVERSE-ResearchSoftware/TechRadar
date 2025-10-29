@@ -1,7 +1,7 @@
 ---
 title: "resqui"
 ring: AnalysisCode
-segment: Interaction Capability
+segment: interaction_capability
 tags: ['command-line', 'multi-dimensional']
 ---
 Comprehensive research software quality assessment framework developed by EVERSE that evaluates repositories across all quality dimensions including maintainability, security, FAIRness, and sustainability, providing actionable insights for improving research software throughout its lifecycle.

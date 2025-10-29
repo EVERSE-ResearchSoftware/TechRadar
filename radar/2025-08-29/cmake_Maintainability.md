@@ -1,7 +1,7 @@
 ---
 title: "CMake"
 ring: ResearchInfrastructureSoftware
-segment: Maintainability
+segment: maintainability
 tags: ['command-line', 'multi-dimensional']
 ---
 Cross-platform build system generator that simplifies the build process for research software across different operating systems and compilers, improving software portability and maintainability.

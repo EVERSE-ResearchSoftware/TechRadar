@@ -8,7 +8,7 @@
   },
   "appliesToProgrammingLanguage": ["Python"],
   "description": "Documentation generator that creates comprehensive, searchable documentation from source code and reStructuredText files, improving research software maintainability and usability through professional documentation.",
-  "hasQualityDimension": { "@id": "dim:Maintainability", "@type": "@id" },
+  "hasQualityDimension": { "@id": "dim:maintainability", "@type": "@id" },
   "howToUse": ["command-line", "CI/CD"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/BSD-2-Clause",

@@ -1,7 +1,7 @@
 ---
 title: "Nix"
 ring: ResearchInfrastructureSoftware
-segment: Security
+segment: security
 tags: ['command-line', 'multi-dimensional']
 ---
 Tool for reproducible builds and declarative system configuration using the Nix language. Improves **Flexibility** by enabling multiple software versions and environments to coexist without conflicts, allowing researchers to switch between different tool configurations. Enhances **Reliability** through immutable package management and atomic upgrades/rollbacks, ensuring consistent and reproducible software environments across different systems. Strengthens **Security** via isolated build environments, cryptographic verification of packages, and the ability to quickly patch vulnerabilities through declarative configuration updates.
