@@ -57,7 +57,8 @@ You can contribute to the TechRadar by reporting issues, suggesting improvements
 
 ## Suggesting new tools
 ### File naming convention
-If you are someone trying to suggest a new tool for TechRadar, you have to create ``example-tool.json`` in ``data/software-tools``. To maintain consistency in our repository, please follow these guidelines when naming tools json files:
+
+If you are submitting a new tool for inclusion in TechRadar, you are required to create a file named ``example-tool.json`` within the ``data/software-tools`` directory. To ensure consistency across our repository, kindly adhere to the following guidelines when naming the tool's JSON file:
 
 1. **Lowercase letters**: Use only lowercase letters in file names.
 2. **Hyphens for separation**: Use hyphens (`-`) to separate words (avoid spaces or underscores).
