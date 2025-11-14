@@ -55,6 +55,20 @@ You can contribute to the TechRadar by reporting issues, suggesting improvements
 3. **Submit the issue**: Once you have filled in the details, submit the issue. The TechRadar team will review it and respond as soon as possible.
 4.  **Follow up**: If necessary, you may be asked for additional information or clarification. Please respond promptly to help us address your contribution effectively.
 
+## Suggesting new tools
+### File naming convention
+If you are someone trying to suggest a new tool for TechRadar, you have to create ``example-tool.json`` in ``data/software-tools``. To maintain consistency in our repository, please follow these guidelines when naming tools json files:
+
+1. **Lowercase letters**: Use only lowercase letters in file names.
+2. **Hyphens for separation**: Use hyphens (`-`) to separate words (avoid spaces or underscores).
+3. **Descriptive names**: File names should be short yet descriptive, reflecting the tool or content clearly.
+4. **Optional Category Prefix**: If the file belongs to a specific category (e.g., AI, cloud), consider adding a category prefix for clarity.
+
+### Examples:
+- `jupyter-notebook.json`
+- `docker-devops.json`
+
+By following these conventions, we ensure that files are easily identifiable and organized.
 
 ## Joining the curation team
 If you are interested in actively participating in the curation of the TechRadar, you may join the team. To do so, contact us by [opening an issue](https://github.com/EVERSE-ResearchSoftware/TechRadar/issues/new?template=BLANK_ISSUE) and express your interest in joining the curation team. Provide a brief introduction about yourself, your background, and your interest in research software quality. You should have a background in software engineering or development applied to research. After consideration, you will be added to the [team of curators](https://github.com/orgs/EVERSE-ResearchSoftware/teams/techradar-curators)
