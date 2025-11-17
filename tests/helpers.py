@@ -44,7 +44,7 @@ def fetch_quality_indicators():
     indicators API. If the API is unavailable, returns None (which causes
     indicator validation to be skipped).
     
-    API Endpoint: https://vuillaut.github.io/indicators/api/indicators.json
+    API Endpoint: https://everse.software/indicators/api/indicators.json
     
     Returns:
         list or None: Indicator URIs if successful, None if API unavailable.
@@ -56,30 +56,22 @@ def fetch_quality_indicators():
         - Returns None on any error (no fallback for indicators)
         - Timeout set to 5 seconds to avoid hanging tests
     """
-    # TODO: modify URL to EVERSE one once available (PR https://github.com/EVERSE-ResearchSoftware/indicators/pull/75)
-    api_url = "https://vuillaut.github.io/indicators/api/indicators.json"
+    api_url = "https://everse.software/indicators/api/indicators.json"
     
     try:
         with urllib.request.urlopen(api_url, timeout=5) as response:
             data = json.loads(response.read().decode("utf-8"))
 
-        indicators = []
+        indicators_identifiers = []
 
-        # Handle different possible response structures
-        if isinstance(data, list):
-            for item in data:
-                if isinstance(item, dict) and "@id" in item:
-                    indicators.append(item["@id"])
-        elif isinstance(data, dict):
-            # Check for various possible keys that might contain indicators
-            indicator_list = data.get("indicators", data.get("@graph", []))
-            for item in indicator_list:
-                if isinstance(item, dict) and "@id" in item:
-                    indicators.append(item["@id"])
+        indicators_list = data.get("indicators", [])
+        for indicator in indicators_list:
+            if isinstance(indicator, dict) and "identifier" in indicator:
+                indicators_identifiers.append(indicator["identifier"]["@id"])
 
-        if indicators:
-            print(f"Successfully fetched {len(indicators)} indicators from {api_url}")
-            return indicators
+        if indicators_identifiers:
+            print(f"Successfully fetched {len(indicators_identifiers)} indicators from {api_url}")
+            return indicators_identifiers
         else:
             print(f"No indicators found in API response from {api_url}")
             return None
@@ -103,7 +95,7 @@ def fetch_quality_dimensions():
     indicators API. If the API is unavailable (no internet connection or API error),
     falls back to a hardcoded list of dimensions.
     
-    API Endpoint: https://vuillaut.github.io/indicators/api/dimensions.json
+    API Endpoint: https://everse.software/indicators/api/dimensions.json
     
     Returns:
         list: Dimension identifiers in the format "dim:<dimension_name>".
@@ -116,42 +108,28 @@ def fetch_quality_dimensions():
         - Prints status messages during fetch attempt
         - Timeout set to 5 seconds to avoid hanging tests
     """
-    # TODO: modify URL to EVERSE one once available (PR https://github.com/EVERSE-ResearchSoftware/indicators/pull/75)
-    api_url = "https://vuillaut.github.io/indicators/api/dimensions.json"
+    api_url = "https://everse.software/indicators/api/dimensions.json"
     
     try:
         with urllib.request.urlopen(api_url, timeout=5) as response:
             data = json.loads(response.read().decode('utf-8'))
             
         # Extract dimension identifiers from the API response
-        dimensions = []
+        dimensions_identifiers = []
         
-        # Handle different possible response structures
-        if isinstance(data, list):
-            # If it's a list of dimension objects
-            for item in data:
-                if isinstance(item, dict) and '@id' in item:
-                    dim_id = item['@id']
-                    if '/' in dim_id:
-                        dim_name = dim_id.split('/')[-1]
-                        dimensions.append(f"dim:{dim_name}")
-                    else:
-                        dimensions.append(dim_id if dim_id.startswith('dim:') else f"dim:{dim_id}")
-        elif isinstance(data, dict):
-            # If it's a dict with a @graph or similar structure
-            graph = data.get('@graph', [])
-            for item in graph:
-                if isinstance(item, dict) and '@id' in item:
-                    dim_id = item['@id']
-                    if '/' in dim_id:
-                        dim_name = dim_id.split('/')[-1]
-                        dimensions.append(f"dim:{dim_name}")
-                    else:
-                        dimensions.append(dim_id if dim_id.startswith('dim:') else f"dim:{dim_id}")
+        dimensions = data.get('dimensions', [])
+        for item in dimensions:
+            if isinstance(item, dict) and 'identifier' in item:
+                dim_id = item['identifier']
+                if '/' in dim_id:
+                    dim_name = dim_id.split('/')[-1]
+                    dimensions_identifiers.append(f"dim:{dim_name}")
+                else:
+                    dimensions_identifiers.append(dim_id if dim_id.startswith('dim:') else f"dim:{dim_id}")
         
-        if dimensions:
-            print(f"Successfully fetched {len(dimensions)} dimensions from {api_url}")
-            return dimensions
+        if dimensions_identifiers:
+            print(f"Successfully fetched {len(dimensions_identifiers)} dimensions from {api_url}")
+            return dimensions_identifiers
         else:
             print(f"No dimensions found in API response from {api_url}")
             
