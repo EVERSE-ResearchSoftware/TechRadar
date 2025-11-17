@@ -41,20 +41,13 @@ def fetch_quality_indicators():
     Fetch quality indicators from the EVERSE indicators API.
     
     Attempts to fetch the current list of quality indicators from the EVERSE 
-    indicators API. If the API is unavailable, returns None (which causes
-    indicator validation to be skipped).
+    indicators API. If the API is unavailable, raises a RuntimeError.
     
     API Endpoint: https://everse.software/indicators/api/indicators.json
     
     Returns:
-        list or None: Indicator URIs if successful, None if API unavailable.
+        list: Indicator URIs if successful.
                      Example: ["https://w3id.org/everse/i/no_leaked_credentials", ...]
-    
-    Notes:
-        - Handles both list and @graph-style JSON-LD responses
-        - Extracts full URIs from @id fields
-        - Returns None on any error (no fallback for indicators)
-        - Timeout set to 5 seconds to avoid hanging tests
     """
     api_url = "https://everse.software/indicators/api/indicators.json"
     
@@ -98,13 +91,6 @@ def fetch_quality_dimensions():
     Returns:
         list: Dimension identifiers in the format "dim:<dimension_name>".
               Example: ["dim:compatibility", "dim:fairness", ...]
-    
-    Notes:
-        - Handles both list and @graph-style JSON-LD responses
-        - Extracts dimension names from full URIs (e.g., extracts "fairness" from 
-          "https://w3id.org/everse/i/dimensions/fairness")
-        - Prints status messages during fetch attempt
-        - Timeout set to 5 seconds to avoid hanging tests
     """
     api_url = "https://everse.software/indicators/api/dimensions.json"
     
@@ -156,52 +142,27 @@ def load_local_schema(schema_path):
         
     Raises:
         pytest.Failed: If schema file not found or invalid JSON
-        
-    Notes:
-        - Calls fetch_quality_dimensions() to get current dimensions (with fallback)
-        - Calls fetch_quality_indicators() to get current indicators (no fallback)
-        - If indicators unavailable, removes enum validation (allows any URI)
-        - Prints progress messages during schema loading
     """
     print(f"Attempting to load local schema from: {schema_path}")
     if not os.path.exists(schema_path):
         pytest.fail(f"Schema file not found at {schema_path}", pytrace=False)
+
     try:
         with open(schema_path, "r") as f:
             schema_data = json.load(f)
         
         # Update the quality dimension enums dynamically
         dimensions = fetch_quality_dimensions()
-        
-        # Update the qualityDimensionObject definition if it exists
-        if ('definitions' in schema_data and 
-            'qualityDimensionObject' in schema_data['definitions'] and
-            'properties' in schema_data['definitions']['qualityDimensionObject'] and
-            '@id' in schema_data['definitions']['qualityDimensionObject']['properties']):
-            
-            schema_data['definitions']['qualityDimensionObject']['properties']['@id']['enum'] = dimensions
-            print(f"Updated schema with {len(dimensions)} quality dimensions")
+        schema_data['definitions']['qualityDimensionObject']['properties']['@id']['enum'] = dimensions
+        print(f"Updated schema with {len(dimensions)} quality dimensions")
         
         # Update the quality indicator enums dynamically
         indicators = fetch_quality_indicators()
+        schema_data['definitions']['qualityIndicatorObject']['properties']['@id']['enum'] = indicators
+        print(f"Updated schema with {len(indicators)} quality indicators")
         
-        # Update the qualityIndicatorObject definition if it exists
-        if ('definitions' in schema_data and 
-            'qualityIndicatorObject' in schema_data['definitions'] and
-            'properties' in schema_data['definitions']['qualityIndicatorObject'] and
-            '@id' in schema_data['definitions']['qualityIndicatorObject']['properties']):
-            
-            if indicators is not None:
-                # Set the enum with fetched indicators
-                schema_data['definitions']['qualityIndicatorObject']['properties']['@id']['enum'] = indicators
-                print(f"Updated schema with {len(indicators)} quality indicators")
-            else:
-                # Remove enum validation if indicators unavailable - allow any URI
-                schema_data['definitions']['qualityIndicatorObject']['properties']['@id'].pop('enum', None)
-                print("Indicator validation skipped (API unavailable)")
-        
-        print("Successfully loaded local schema.")
         return schema_data
+
     except json.JSONDecodeError as e:
         pytest.fail(
             f"Failed to decode JSON from schema file {schema_path}: {e}", pytrace=False
@@ -228,12 +189,6 @@ def validate_json_files_using_schema(schema_file_path, json_file_path):
     Raises:
         pytest.skip: If no JSON files found in the directory
         AssertionError: If any JSON files fail validation
-        
-    Notes:
-        - Uses glob pattern to find all *.json files
-        - Validates each file independently
-        - Prints progress for each file validation
-        - Collects all errors before failing (doesn't stop at first error)
     """
 
     json_files = glob.glob(f"{json_file_path}/*.json")
