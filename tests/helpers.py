@@ -82,9 +82,7 @@ def fetch_quality_indicators():
         json.JSONDecodeError,
         TimeoutError,
     ) as e:
-        print(f"Could not fetch indicators from {api_url}: {e}")
-        print("Indicator validation will be skipped")
-        return None
+        raise RuntimeError(f"Could not fetch indicators from {api_url}: {e}")
 
 
 def fetch_quality_dimensions():
@@ -136,7 +134,7 @@ def fetch_quality_dimensions():
     except (urllib.error.URLError, urllib.error.HTTPError, json.JSONDecodeError, TimeoutError) as e:
         print(f"Could not fetch dimensions from {api_url}: {e}")
     
-    print("Using fallback dimension list")
+    print(f"Using fallback dimension list:\n{FALLBACK_DIMENSIONS}")
     return FALLBACK_DIMENSIONS
 
 
