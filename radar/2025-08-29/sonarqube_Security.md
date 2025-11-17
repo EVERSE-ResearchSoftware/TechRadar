@@ -1,7 +1,7 @@
 ---
 title: "SonarQube"
 ring: ResearchInfrastructureSoftware
-segment: Security
+segment: security
 tags: ['CI/CD', 'online-service', 'Java', 'Python', 'JavaScript', 'C#', 'C++', 'multi-dimensional']
 ---
 Continuous code quality platform that automatically detects bugs, vulnerabilities, and code smells across multiple programming languages, providing comprehensive static analysis to improve software maintainability, security, and reliability.

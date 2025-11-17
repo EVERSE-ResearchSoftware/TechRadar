@@ -1,7 +1,7 @@
 ---
 title: "poetry"
 ring: PrototypeTool
-segment: Maintainability
+segment: maintainability
 tags: ['CI/CD', 'command-line', 'multi-dimensional']
 ---
 Python packaging and dependency management made easy

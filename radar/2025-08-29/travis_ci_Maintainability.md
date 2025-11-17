@@ -1,7 +1,7 @@
 ---
 title: "Travis CI"
 ring: ResearchInfrastructureSoftware
-segment: Maintainability
+segment: maintainability
 tags: ['CI/CD', 'online-service', 'multi-dimensional']
 ---
 Continuous integration service that automates testing and deployment of research software projects hosted on GitHub, improving software reliability and maintainability through automated quality checks.

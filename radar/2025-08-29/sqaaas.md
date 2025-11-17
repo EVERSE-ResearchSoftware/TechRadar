@@ -1,7 +1,7 @@
 ---
 title: "SQAaas"
 ring: AnalysisCode
-segment: FAIRness
+segment: fairness
 tags: ['online-service', 'CI/CD']
 ---
 Software Quality Assessment as a Service platform that analyzes completeness against FAIR4RS reference criteria for research software releases, providing comprehensive quality assessment and awarding capabilities for research software projects.

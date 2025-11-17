@@ -7,8 +7,8 @@
   "url": "https://github.com/hadolint/hadolint",
   "isAccessibleForFree": true,
   "hasQualityDimension": [
-    { "@id": "dim:Maintainability", "@type": "@id" },
-    { "@id": "dim:Security", "@type": "@id" }
+    { "@id": "dim:maintainability", "@type": "@id" },
+    { "@id": "dim:security", "@type": "@id" }
   ],
   "howToUse": ["command-line", "CI/CD"],
   "license": "https://opensource.org/licenses/GPL-3.0",

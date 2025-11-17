@@ -1,7 +1,7 @@
 ---
 title: "Checkstyle"
 ring: AnalysisCode
-segment: Maintainability
+segment: maintainability
 tags: ['command-line', 'CI/CD', 'Java']
 ---
 Java code style checker that enforces coding standards and best practices in research software projects, improving code maintainability and readability through automated style analysis.

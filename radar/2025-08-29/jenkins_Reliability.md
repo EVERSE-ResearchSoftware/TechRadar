@@ -1,7 +1,7 @@
 ---
 title: "Jenkins"
 ring: ResearchInfrastructureSoftware
-segment: Reliability
+segment: reliability
 tags: ['online-service', 'CI/CD', 'multi-dimensional']
 ---
 Automation server that enables continuous integration and deployment of research software, improving software reliability through automated testing and deployment pipelines.

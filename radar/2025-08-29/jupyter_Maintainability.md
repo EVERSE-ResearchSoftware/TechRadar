@@ -1,7 +1,7 @@
 ---
 title: "Jupyter"
 ring: ResearchInfrastructureSoftware
-segment: Maintainability
+segment: maintainability
 tags: ['online-service', 'Python', 'R', 'Julia', 'multi-dimensional']
 ---
 Open-source web application for creating and sharing live code, equations, visualizations, and narrative text, enhancing research software development and collaboration through interactive computing environments.

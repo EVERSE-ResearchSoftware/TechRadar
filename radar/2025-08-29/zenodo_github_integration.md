@@ -1,7 +1,7 @@
 ---
 title: "Zenodo GitHub Integration"
 ring: PrototypeTool
-segment: Sustainability
+segment: sustainability
 tags: ['CI/CD', 'online-service']
 ---
 Zenodo archives your repository and issues a new DOI each time you create a new GitHub release
