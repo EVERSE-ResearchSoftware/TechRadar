@@ -1,7 +1,7 @@
 ---
 title: "GitHub Actions"
 ring: PrototypeTool
-segment: Sustainability
+segment: sustainability
 tags: ['CI/CD', 'multi-dimensional']
 ---
 CI/CD platform integrated with GitHub that automates research software testing, building, and deployment, improving software reliability and sustainability through automated quality checks.

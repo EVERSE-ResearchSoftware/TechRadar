@@ -1,7 +1,7 @@
 ---
 title: "cffinit"
 ring: ResearchInfrastructureSoftware
-segment: FAIRness
+segment: fairness
 tags: ['online-service']
 ---
 Web-based tool for creating standardized CITATION.cff files that enable proper citation of research software, improving software findability and supporting FAIR principles through structured metadata generation.

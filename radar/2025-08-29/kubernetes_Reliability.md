@@ -1,7 +1,7 @@
 ---
 title: "Kubernetes"
 ring: ResearchInfrastructureSoftware
-segment: Reliability
+segment: reliability
 tags: ['command-line', 'online-service', 'CI/CD', 'multi-dimensional']
 ---
 Container orchestration platform that automates deployment, scaling, and management of research software applications, improving reliability, maintainability, and sustainability through robust infrastructure management and service mesh capabilities.

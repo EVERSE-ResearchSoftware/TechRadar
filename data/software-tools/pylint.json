@@ -7,7 +7,7 @@
   "url": "https://pylint.pycqa.org/",
   "isAccessibleForFree": true,
   "hasQualityDimension": {
-    "@id": "dim:Maintainability",
+    "@id": "dim:maintainability",
     "@type": "@id"
   },
   "measuresQualityIndicator": { "@id": "ind:has_no_linting_issues", "@type": "@id" },

@@ -1,7 +1,7 @@
 ---
 title: "eOSSR"
 ring: AnalysisCode
-segment: FAIRness
+segment: fairness
 tags: ['CI/CD', 'command-line', 'online-service']
 ---
 Python library for programmatically managing the ESCAPE Open Source Software Repository (OSSR) that includes CodeMeta generator and validator tools, supporting research software FAIRness and metadata management for scientific code repositories.

@@ -1,7 +1,7 @@
 ---
 title: "doxygen"
 ring: AnalysisCode
-segment: Maintainability
+segment: maintainability
 tags: ['CI/CD', 'command-line', 'C++', 'C', 'Python', 'PHP', 'Java', 'C#', 'Objective-C', 'Fortran', 'VHDL', 'Splice', 'IDL', 'Lex']
 ---
 Documentation generator for C++, C, Java, and other languages that automatically extracts documentation from annotated source code, improving research software maintainability through comprehensive API documentation.

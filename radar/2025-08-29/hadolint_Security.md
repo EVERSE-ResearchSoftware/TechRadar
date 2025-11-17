@@ -1,7 +1,7 @@
 ---
 title: "Hadolint"
 ring: AnalysisCode
-segment: Security
+segment: security
 tags: ['command-line', 'CI/CD', 'multi-dimensional']
 ---
 Dockerfile linter that analyzes Docker build files for best practices, security issues, and optimization opportunities, improving research software containerization quality and deployment reliability.
