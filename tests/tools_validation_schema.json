@@ -37,7 +37,7 @@
   "properties": {
     "@id": {
       "type": "string",
-      "description": "Identifier for the quality indicator. Valid values are dynamically fetched from the EVERSE indicators API at validation time. If API is unavailable, any URI is accepted.",
+      "description": "Identifier for the quality indicator. Valid values are dynamically fetched from the EVERSE indicators API at validation time.",
       "format": "uri"
     }
   },
