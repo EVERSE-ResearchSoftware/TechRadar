@@ -87,6 +87,13 @@ Aim for clarity, completeness, and evidence. Prefer concise, user-focused descri
 
 </details>
 
+Please follow below naming conventions for ``tool.json``:
+- **Lowercase letters**: Use only lowercase letters in file names.
+- **Hyphens for separation**: Use hyphens (`-`) to separate words (avoid spaces or underscores).
+- **Descriptive names**: File names should be short yet descriptive, reflecting the tool or content clearly.
+- **Optional Category Prefix**: If the file belongs to a specific category (e.g., AI, cloud), consider adding a category prefix for clarity.
+
+- Examples: `jupyter-notebook.json` , `docker-devops.json`
 
 ## Review process
 
@@ -135,8 +142,8 @@ A brief description of the tool/service and its utility.
 - Which research software tier(s) is it relevant for?
 - Which research software domain(s) is it primarily used in?
 
-
 </details>
+
 
 ## General contribution
 

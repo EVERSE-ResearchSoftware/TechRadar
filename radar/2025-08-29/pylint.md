@@ -1,7 +1,7 @@
 ---
 title: "Pylint"
 ring: AnalysisCode
-segment: Maintainability
+segment: maintainability
 tags: ['command-line', 'CI/CD', 'Python']
 ---
 Comprehensive Python static analysis tool that identifies programming errors, enforces coding standards, and suggests improvements, enhancing research software maintainability and code quality.

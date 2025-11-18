@@ -8,11 +8,11 @@
   "isAccessibleForFree": true,
   "hasQualityDimension": [
     {
-      "@id": "dim:Maintainability",
+      "@id": "dim:maintainability",
       "@type": "@id"
     },
     {
-      "@id": "dim:Reliability",
+      "@id": "dim:reliability",
       "@type": "@id"
     }
   ],

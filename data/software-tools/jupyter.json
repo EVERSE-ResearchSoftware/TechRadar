@@ -8,8 +8,8 @@
   },
   "description": "Open-source web application for creating and sharing live code, equations, visualizations, and narrative text, enhancing research software development and collaboration through interactive computing environments.",
   "hasQualityDimension": [
-    { "@id": "dim:Maintainability", "@type": "@id" },
-    { "@id": "dim:Interaction Capability", "@type": "@id" }
+    { "@id": "dim:maintainability", "@type": "@id" },
+    { "@id": "dim:interaction_capability", "@type": "@id" }
   ],
   "howToUse": ["online-service"],
   "isAccessibleForFree": true,

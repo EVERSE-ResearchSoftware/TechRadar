@@ -6,7 +6,7 @@
   "appliesToProgrammingLanguage": ["C", "C++"],
   "description": "Scalable Performance Measurement Infrastructure for Parallel Codes that provides highly scalable and easy-to-use tool suite for profiling and event trace recording of HPC applications, enabling performance optimization in computational research.",
   "hasQualityDimension": {
-    "@id": "dim:Performance Efficiency",
+    "@id": "dim:performance_efficiency",
     "@type": "@id"
   },
   "howToUse": ["CI/CD", "command-line"],

@@ -1,7 +1,7 @@
 ---
 title: "tox"
 ring: ResearchInfrastructureSoftware
-segment: Sustainability
+segment: sustainability
 tags: ['command-line', 'CI/CD', 'Python', 'multi-dimensional']
 ---
 Python testing automation tool that enables testing across multiple Python versions and environments, improving software reliability and maintainability through comprehensive cross-environment validation.

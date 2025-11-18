@@ -7,7 +7,7 @@
   "url": "https://docs.astral.sh/ruff/",
   "isAccessibleForFree": true,
   "hasQualityDimension": {
-    "@id": "dim:Maintainability",
+    "@id": "dim:maintainability",
     "@type": "@id"
   },
   "howToUse": ["command-line", "CI/CD"],

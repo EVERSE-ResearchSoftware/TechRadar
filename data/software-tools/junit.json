@@ -7,8 +7,8 @@
   "url": "https://junit.org/",
   "isAccessibleForFree": true,
   "hasQualityDimension": [
-    { "@id": "dim:Maintainability", "@type": "@id" },
-    { "@id": "dim:Reliability", "@type": "@id" }
+    { "@id": "dim:maintainability", "@type": "@id" },
+    { "@id": "dim:reliability", "@type": "@id" }
   ],
   "howToUse": ["command-line"],
   "appliesToProgrammingLanguage": ["Java"],
