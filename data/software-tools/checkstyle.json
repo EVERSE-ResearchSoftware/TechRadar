@@ -17,5 +17,11 @@
     { "@id": "rs:PrototypeTool", "@type": "@id" },
     { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" },
     { "@id": "rs:AnalysisCode", "@type": "@id" }
+  ],
+  "hasQualityIndicator": [
+    {
+      "@id": "ind:has_no_linting_issues",
+      "@type": "@id"
+    }
   ]
 }
