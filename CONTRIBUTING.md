@@ -31,7 +31,15 @@ All tools and services must meet the [specific set of criteria](#criteria-for-a-
 
 1. **Fork the repository**: Create a fork of the TechRadar repository on GitHub.
 2.  **Create a new branch**: Create a new branch for your changes.
-3. **Add or update JSON files**: Add new JSON files for new tools and services or update existing ones in the `data/software-tools` directory. Each JSON file should follow the structure defined in the [RS metadata schema](https://github.com/EVERSE-ResearchSoftware/schemas/tree/main/software). Please be as accurate and exhaustive as possible when filling in the metadata fields.
+3. **Add or update JSON files**: Add new JSON files for new tools and services or update existing ones in the `data/software-tools` directory. Each JSON file should follow the structure defined in the [RS metadata schema](https://github.com/EVERSE-ResearchSoftware/schemas/tree/main/software). Please be as accurate and exhaustive as possible when filling in the metadata fields. Follow below naming conventions for ``tool.json``
+
+- **Lowercase letters**: Use only lowercase letters in file names.
+- **Hyphens for separation**: Use hyphens (`-`) to separate words (avoid spaces or underscores).
+- **Descriptive names**: File names should be short yet descriptive, reflecting the tool or content clearly.
+- **Optional Category Prefix**: If the file belongs to a specific category (e.g., AI, cloud), consider adding a category prefix for clarity.
+
+- Examples: `jupyter-notebook.json` , `docker-devops.json`
+
 4. **Commit your changes**: Commit your changes with a clear and descriptive commit message.
 5. **Push your changes**: Push your changes to your forked repository.
 6. **Create a pull request**: Open a pull request against the main branch of the TechRadar repository. Provide a clear explanation of the reasons to add or update the tool or service, and any relevant context or information that may help the curation team review your contribution. Make sure all the GitHub Workflows are passing. If there are errors, fix them before requesting a review.
