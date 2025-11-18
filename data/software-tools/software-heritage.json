@@ -7,7 +7,7 @@
     "@type": "@id"
   },
   "description": "Universal archive that collects, preserves, and makes available research software source code as cultural heritage, ensuring long-term sustainability and accessibility of software for future generations and reproducibility studies.",
-  "hasQualityDimension": { "@id": "dim:Sustainability", "@type": "@id" },
+  "hasQualityDimension": { "@id": "dim:sustainability", "@type": "@id" },
   "howToUse": ["online-service", "command-line"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/AGPL-3.0-or-later",

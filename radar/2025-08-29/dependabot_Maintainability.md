@@ -1,7 +1,7 @@
 ---
 title: "Dependabot"
 ring: ResearchInfrastructureSoftware
-segment: Maintainability
+segment: maintainability
 tags: ['CI/CD', 'command-line', 'Ruby', 'JavaScript', 'Python', 'PHP', 'Dart', 'Elixir', 'Elm', 'Go', 'Rust', 'Java', '.NET', 'multi-dimensional']
 ---
 Automated dependency management service that continuously monitors research software dependencies for security vulnerabilities and updates, maintaining software security and reducing technical debt for long-term sustainability.

@@ -7,7 +7,7 @@
   "url": "https://flake8.pycqa.org/",
   "isAccessibleForFree": true,
   "hasQualityDimension": {
-    "@id": "dim:Maintainability",
+    "@id": "dim:maintainability",
     "@type": "@id"
   },
   "howToUse": ["command-line", "CI/CD"],

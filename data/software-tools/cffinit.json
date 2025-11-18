@@ -7,7 +7,7 @@
     "@type": "@id"
   },
   "description": "Web-based tool for creating standardized CITATION.cff files that enable proper citation of research software, improving software findability and supporting FAIR principles through structured metadata generation.",
-  "hasQualityDimension": { "@id": "dim:FAIRness", "@type": "@id" },
+  "hasQualityDimension": { "@id": "dim:fairness", "@type": "@id" },
   "howToUse": ["online-service"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/Apache-2.0",

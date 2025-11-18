@@ -4,7 +4,7 @@
   "@type": "schema:SoftwareApplication",
   "name": "Choose a License",
   "description": "Choose a License is a website that helps developers understand and select open-source software licenses. It provides clear explanations of common licenses, their permissions and limitations, making it easier to choose the right one for your project.",
-  "url": "https://github.com/github/choosealicense.com",
+  "url": "https://choosealicense.com/",
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/MIT",
   "applicationCategory": [
@@ -12,6 +12,6 @@
     { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" },
     { "@id": "rs:AnalysisCode", "@type": "@id" }
   ],
-  "hasQualityDimension": { "@id": "dim:Sustainability", "@type": "@id" },
+  "hasQualityDimension": { "@id": "dim:sustainability", "@type": "@id" },
   "howToUse": ["online-service"]
 }

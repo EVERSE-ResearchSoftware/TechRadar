@@ -7,10 +7,10 @@
   "url": "https://tox.wiki/",
   "isAccessibleForFree": true,
   "hasQualityDimension": [
-    { "@id": "dim:Interaction Capability", "@type": "@id" },
-    { "@id": "dim:Reliability", "@type": "@id" },
-    { "@id": "dim:Maintainability", "@type": "@id" },
-    { "@id": "dim:Sustainability", "@type": "@id" }
+    { "@id": "dim:interaction_capability", "@type": "@id" },
+    { "@id": "dim:reliability", "@type": "@id" },
+    { "@id": "dim:maintainability", "@type": "@id" },
+    { "@id": "dim:sustainability", "@type": "@id" }
   ],
   "howToUse": ["command-line", "CI/CD"],
   "appliesToProgrammingLanguage": ["Python"],

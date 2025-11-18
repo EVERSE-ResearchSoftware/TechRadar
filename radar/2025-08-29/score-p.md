@@ -1,7 +1,7 @@
 ---
 title: "Score-P"
 ring: AnalysisCode
-segment: Performance Efficiency
+segment: performance_efficiency
 tags: ['CI/CD', 'command-line', 'C', 'C++']
 ---
 Scalable Performance Measurement Infrastructure for Parallel Codes that provides highly scalable and easy-to-use tool suite for profiling and event trace recording of HPC applications, enabling performance optimization in computational research.

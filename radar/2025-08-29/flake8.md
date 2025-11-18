@@ -1,7 +1,7 @@
 ---
 title: "flake8"
 ring: AnalysisCode
-segment: Maintainability
+segment: maintainability
 tags: ['command-line', 'CI/CD', 'Python']
 ---
 Python linting tool that combines multiple code quality checkers to identify style violations, programming errors, and complexity issues, improving research software maintainability through comprehensive code analysis.

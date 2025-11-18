@@ -7,7 +7,7 @@
     "@type": "@id"
   },
   "description": "This repository contains a (client-side) web application to automatically generate  Codemeta documents (aka. codemeta.json).",
-  "hasQualityDimension": { "@id": "dim:FAIRness", "@type": "@id" },
+  "hasQualityDimension": { "@id": "dim:fairness", "@type": "@id" },
   "howToUse": ["CI/CD", "command-line"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/AGPL-3.0-or-later",
