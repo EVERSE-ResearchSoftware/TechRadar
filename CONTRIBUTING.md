@@ -58,7 +58,8 @@ Aim for clarity, completeness, and evidence. Prefer concise, user-focused descri
 - **name:** Use the official tool/service name; ensure the file name is unique and stable.
 - **description:** State what the tool improves (e.g., maintainability, security), for whom, and how. Extra information is welcome but keep it focused.
 - **url:** Link to the official homepage or repository.
-- **hasQualityDimension:** Map capabilities to [EVERSE Quality Dimensions](https://everse.software/indicators/website/dimensions.html).
+- **hasQualityDimension:** Quality dimension related to the tool, must exist in [EVERSE Quality Dimensions](https://everse.software/indicators/website/dimensions.html).
+- **hasQualityIndicator:** Quality indicator related to the tool, must exist in [EVERSE Quality Indicators](https://everse.software/indicators/website/indicators.html).
 - **license:** Provide URL to the license file.
 - **howToUse:** List the means to use the tool using the following terminology: `online-service`, `command-line`, `CI/CD`.
 - **applicationCategory:** Specify the relevant research software tiers on which the tool operates: `rs:AnalysisCode`, `rs:PrototypeTool`, or `rs:ResearchInfrastructureSoftware`. For example, `AnalysisCode` means the tool is suitable to improve or assess the quality of software in that tier.
@@ -77,6 +78,7 @@ Aim for clarity, completeness, and evidence. Prefer concise, user-focused descri
    "identifier": "https://example.org/howfairis",
    "isAccessibleForFree": true,
    "hasQualityDimension": { "@id": "dim:FAIRness", "@type": "@id" },
+   "hasQualityIndicator": { "@id": "ind:software_has_license", "@type": "@id" },
    "howToUse": ["CI/CD", "command-line"],
    "license": "https://spdx.org/licenses/Apache-2.0",
    "applicationCategory": { "@id": "rs:PrototypeTool", "@type": "@id" }
