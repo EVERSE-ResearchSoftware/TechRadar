@@ -31,7 +31,15 @@ All tools and services must meet the [specific set of criteria](#criteria-for-a-
 
 1. **Fork the repository**: Create a fork of the TechRadar repository on GitHub.
 2.  **Create a new branch**: Create a new branch for your changes.
-3. **Add or update JSON files**: Add new JSON files for new tools and services or update existing ones in the `data/software-tools` directory. Each JSON file should follow the structure defined in the [RS metadata schema](https://github.com/EVERSE-ResearchSoftware/schemas/tree/main/software). Please be as accurate and exhaustive as possible when filling in the metadata fields.
+3. **Add or update JSON files**: Add new JSON files for new tools and services or update existing ones in the `data/software-tools` directory. Each JSON file should follow the structure defined in the [RS metadata schema](https://github.com/EVERSE-ResearchSoftware/schemas/tree/main/software). Please be as accurate and exhaustive as possible when filling in the metadata fields. Follow below naming conventions for ``tool.json``
+
+- **Lowercase letters**: Use only lowercase letters in file names.
+- **Hyphens for separation**: Use hyphens (`-`) to separate words (avoid spaces or underscores).
+- **Descriptive names**: File names should be short yet descriptive, reflecting the tool or content clearly.
+- **Optional Category Prefix**: If the file belongs to a specific category (e.g., AI, cloud), consider adding a category prefix for clarity.
+
+- Examples: `jupyter-notebook.json` , `docker-devops.json`
+
 4. **Commit your changes**: Commit your changes with a clear and descriptive commit message.
 5. **Push your changes**: Push your changes to your forked repository.
 6. **Create a pull request**: Open a pull request against the main branch of the TechRadar repository. Provide a clear explanation of the reasons to add or update the tool or service, and any relevant context or information that may help the curation team review your contribution. Make sure all the GitHub Workflows are passing. If there are errors, fix them before requesting a review.
@@ -55,21 +63,6 @@ You can contribute to the TechRadar by reporting issues, suggesting improvements
 3. **Submit the issue**: Once you have filled in the details, submit the issue. The TechRadar team will review it and respond as soon as possible.
 4.  **Follow up**: If necessary, you may be asked for additional information or clarification. Please respond promptly to help us address your contribution effectively.
 
-## Suggesting new tools
-### File naming convention
-
-If you are submitting a new tool for inclusion in TechRadar, you are required to create a file named ``example-tool.json`` within the ``data/software-tools`` directory. To ensure consistency across our repository, kindly adhere to the following guidelines when naming the tool's JSON file:
-
-1. **Lowercase letters**: Use only lowercase letters in file names.
-2. **Hyphens for separation**: Use hyphens (`-`) to separate words (avoid spaces or underscores).
-3. **Descriptive names**: File names should be short yet descriptive, reflecting the tool or content clearly.
-4. **Optional Category Prefix**: If the file belongs to a specific category (e.g., AI, cloud), consider adding a category prefix for clarity.
-
-### Examples:
-- `jupyter-notebook.json`
-- `docker-devops.json`
-
-By following these conventions, we ensure that files are easily identifiable and organized.
 
 ## Joining the curation team
 If you are interested in actively participating in the curation of the TechRadar, you may join the team. To do so, contact us by [opening an issue](https://github.com/EVERSE-ResearchSoftware/TechRadar/issues/new?template=BLANK_ISSUE) and express your interest in joining the curation team. Provide a brief introduction about yourself, your background, and your interest in research software quality. You should have a background in software engineering or development applied to research. After consideration, you will be added to the [team of curators](https://github.com/orgs/EVERSE-ResearchSoftware/teams/techradar-curators)
