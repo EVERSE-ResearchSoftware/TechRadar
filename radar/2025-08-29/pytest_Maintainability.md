@@ -11,3 +11,5 @@ Tool License: https://opensource.org/licenses/MIT
 Tool url: https://docs.pytest.org/
 
 Application Category (or Categories in case of multi-tier tool): AnalysisCode, ResearchInfrastructureSoftware
+
+See more about [Testing software](https://everse.software/RSQKit/testing_software) or [Task automation using GitHub Actions](https://everse.software/RSQKit/task_automation_github_actions) in RSQKit.
