@@ -35,6 +35,22 @@ def get_items(field):
         items.append(field)
     return items
 
+def rsqkit_to_md(field):
+    """Generates an md written list of the related RSQKit pages"""
+    if not field:
+        return ''
+    links = [f"[{item['title']}]({item['url']})" for item in field]
+
+    print(links)
+
+    if not links:
+        return ''
+    elif len(links) == 1:
+        return links[0]
+    elif len(links) == 2:
+        return ' and '.join(links)
+    else:
+        return ', '.join(links[:-1]) + ' and ' + links[-1]
 
 def generate_markdown(json_ld_file, output_dir, quality_dimension=None, is_multi_dim=False):
     """Generates tools markdown for techradar dashboard from a JSON-LD file."""
@@ -97,6 +113,13 @@ def generate_markdown(json_ld_file, output_dir, quality_dimension=None, is_multi
     if is_multi_dim:
         tags.append('multi-dimensional')
 
+    # Extract RSQKit links
+    rsqkit_field = json_ld.get('rsqkit', [])
+    rsqkit_list_md = rsqkit_to_md(rsqkit_field)
+    rsqkit = ''
+    if rsqkit_list_md:
+        rsqkit = 'See more in RSQKit: ' + rsqkit_list_md
+
     # Prepare markdown content
     markdown_content = f"""---
 title: "{title}"
@@ -111,6 +134,8 @@ Tool License: {license_info}
 Tool url: {url}
 
 Application Category (or Categories in case of multi-tier tool): {', '.join(application_categories)}
+
+{rsqkit}
 """
 
     os.makedirs(output_dir, exist_ok=True)
