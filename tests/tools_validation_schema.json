@@ -137,7 +137,7 @@
       ]
     },
   "measuresQualityIndicator": {
-  "description": "Quality indicators addressed by the tool",
+  "description": "Quality indicators measured by the tool",
   "oneOf": [
     { "$ref": "#/definitions/qualityIndicatorObject" },
     {
@@ -147,7 +147,7 @@
   ]
 },
   "improvesQualityIndicator": {
-  "description": "Quality indicators addressed by the tool",
+  "description": "Quality indicators improved by the tool",
   "oneOf": [
     { "$ref": "#/definitions/qualityIndicatorObject" },
     {
