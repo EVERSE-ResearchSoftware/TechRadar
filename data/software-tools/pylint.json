@@ -10,7 +10,7 @@
     "@id": "dim:Maintainability",
     "@type": "@id"
   },
-  "hasQualityIndicator": { "@id": "ind:has_no_linting_issues", "@type": "@id" },
+  "measuresQualityIndicator": { "@id": "ind:has_no_linting_issues", "@type": "@id" },
   "howToUse": ["command-line", "CI/CD"],
   "appliesToProgrammingLanguage": ["Python"],
   "license": "https://opensource.org/licenses/GPL-2.0-only",
