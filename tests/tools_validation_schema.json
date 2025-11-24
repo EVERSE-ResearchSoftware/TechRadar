@@ -136,7 +136,17 @@
         }
       ]
     },
-    "hasQualityIndicator": {
+  "measuresQualityIndicator": {
+  "description": "Quality indicators addressed by the tool",
+  "oneOf": [
+    { "$ref": "#/definitions/qualityIndicatorObject" },
+    {
+      "type": "array",
+      "items": { "$ref": "#/definitions/qualityIndicatorObject" }
+    }
+  ]
+},
+  "improvesQualityIndicator": {
   "description": "Quality indicators addressed by the tool",
   "oneOf": [
     { "$ref": "#/definitions/qualityIndicatorObject" },
