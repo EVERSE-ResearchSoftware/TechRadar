@@ -12,6 +12,12 @@
     "schema:softwareTier": ["analysis code"],
     "schema:isAccessibleForFree": "free",
     "rs:hasQualityDimension": {"@id":"rs:FAIRness", "@type": "@id"},
+      "hasQualityIndicator": [
+          {"@id": "ind:has_license", "@type": "@id"},
+          {"@id": "ind:listed_in_a_registry", "@type": "@id"},
+          {"@id": "ind:uses_citation", "@type": "@id"},
+          {"@id": "ind:has_no_linting_issues", "@type": "@id"}
+  ]
     "rs:howToUse": ["CI/CD","command-line"],
     "schema:license": { "@id": "https://spdx.org/licenses/Apache-2.0.html", "@type": "@id"}
       
