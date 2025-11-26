@@ -24,7 +24,7 @@
     { "@id": "dim:security", "@type": "@id" },
     { "@id": "dim:sustainability", "@type": "@id" }
   ],
-  "hasQualityIndicator": [
+  "measuresQualityIndicator": [
     {
       "@id": "https://w3id.org/everse/i/indicators/software_has_license",
       "@type": "@id"
