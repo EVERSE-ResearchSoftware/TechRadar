@@ -8,6 +8,14 @@
   },
   "description": "Automated assessment tool that evaluates research software repositories against FAIR software principles, providing compliance scoring and actionable recommendations to improve software findability, accessibility, interoperability, and reusability in research contexts.",
   "hasQualityDimension": { "@id": "dim:fairness", "@type": "@id" },
+  "measuresQualityIndicator": [
+    {"@id": "https://w3id.org/everse/i/indicators/has_license", "@type": "@id"},
+    { "@id": "https://w3id.org/everse/i/indicators/listed_in_a_registry", "@type": "@id"},
+    { "@id": "https://w3id.org/everse/i/indicators/uses_citation", "@type": "@id"},
+    { "@id": "https://w3id.org/everse/i/indicators/has_no_linting_issues", "@type": "@id"},
+    { "@id": "https://w3id.org/everse/i/indicators/has_documentation", "@type": "@id"},
+    { "@id": "https://w3id.org/everse/i/indicators/provides_tests", "@type": "@id"}
+    ],
   "howToUse": ["command-line"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/Apache-2.0",
