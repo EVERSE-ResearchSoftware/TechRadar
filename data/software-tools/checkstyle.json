@@ -18,9 +18,9 @@
     { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" },
     { "@id": "rs:AnalysisCode", "@type": "@id" }
   ],
-  "hasQualityIndicator": [
+  "measuresQualityIndicator": [
     {
-      "@id": "ind:has_no_linting_issues",
+      "@id": "https://w3id.org/everse/i/indicators/has_no_linting_issues",
       "@type": "@id"
     }
   ]
