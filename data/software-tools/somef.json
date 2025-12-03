@@ -33,14 +33,14 @@
       "@id": "https://w3id.org/everse/i/indicators/provides_tests",
       "@type": "@id"
     },
-      {
+    {
       "@id": "https://w3id.org/everse/i/indicators/descriptive_metadata",
       "@type": "@id"
-      },
-      {
+    },
+    {
       "@id": "https://w3id.org/everse/i/indicators/has_published_package",
       "@type": "@id"
-      }
+    }
   ],
   "howToUse": ["command-line", "CI/CD"],
   "isAccessibleForFree": true,
