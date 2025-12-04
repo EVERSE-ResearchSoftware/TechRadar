@@ -22,7 +22,7 @@
       "@type": "@id"
     },
     {
-      "@id": "https://w3id.org/everse/i/indicators/has_no_linting_issues",
+      "@id": "https://w3id.org/everse/i/indicators/codemeta_completeness",
       "@type": "@id"
     },
     {
@@ -30,7 +30,7 @@
       "@type": "@id"
     },
     {
-      "@id": "https://w3id.org/everse/i/indicators/provides_tests",
+      "@id": "https://w3id.org/everse/i/indicators/repository_workflows",
       "@type": "@id"
     },
     {
@@ -39,6 +39,14 @@
     },
     {
       "@id": "https://w3id.org/everse/i/indicators/has_published_package",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/has_releases",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/requirements_specified",
       "@type": "@id"
     }
   ],
