@@ -15,5 +15,15 @@
     { "@id": "dim:sustainability", "@type": "@id" },
     { "@id": "dim:reliability", "@type": "@id" }
   ],
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/repository_workflows",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_has_tests",
+      "@type": "@id"
+    }
+  ],
   "howToUse": ["CI/CD"]
 }
