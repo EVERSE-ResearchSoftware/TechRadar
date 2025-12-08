@@ -10,7 +10,7 @@
   "hasQualityDimension": { "@id": "dim:fairness", "@type": "@id" },
   "measuresQualityIndicator": [
     {
-      "@id": "https://w3id.org/everse/i/indicators/has_license",
+      "@id": "https://w3id.org/everse/i/indicators/software_has_license",
       "@type": "@id"
     },
     {
@@ -34,7 +34,7 @@
       "@type": "@id"
     }
   ],
-  "howToUse": ["command-line"],
+  "howToUse": [ "command-line" ],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/Apache-2.0",
   "name": "howfairis",
