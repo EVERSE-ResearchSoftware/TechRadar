@@ -22,19 +22,15 @@
       "@type": "@id"
     },
     {
-      "@id": "https://w3id.org/everse/i/indicators/has_no_linting_issues",
-      "@type": "@id"
-    },
-    {
       "@id": "https://w3id.org/everse/i/indicators/has_documentation",
       "@type": "@id"
     },
     {
-      "@id": "https://w3id.org/everse/i/indicators/provides_tests",
+      "@id": "https://w3id.org/everse/i/indicators/version_control_use",
       "@type": "@id"
     }
   ],
-  "howToUse": [ "command-line" ],
+  "howToUse": ["command-line"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/Apache-2.0",
   "name": "howfairis",
