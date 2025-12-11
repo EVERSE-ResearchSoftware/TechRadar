@@ -11,3 +11,5 @@ Tool License: https://spdx.org/licenses/Elastic-2.0
 Tool url: https://github.com/bearer/bearer
 
 Application Category (or Categories in case of multi-tier tool): AnalysisCode
+
+See more about [Software identifiers](https://everse.software/RSQKit/software_identifiers) in RSQKit.
