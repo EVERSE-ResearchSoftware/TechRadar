@@ -2,12 +2,55 @@
   "@context": "https://w3id.org/everse/rs#",
   "@id": "https://w3id.org/everse/tools/sqaaas",
   "@type": "SoftwareApplication",
-  "applicationCategory": { "@id": "rs:AnalysisCode", "@type": "@id" },
+  "applicationCategory": {
+    "@id": "rs:AnalysisCode",
+    "@type": "@id"
+  },
   "description": "Software Quality Assessment as a Service platform that analyzes completeness against FAIR4RS reference criteria for research software releases, providing comprehensive quality assessment and awarding capabilities for research software projects.",
-  "hasQualityDimension": { "@id": "dim:fairness", "@type": "@id" },
-  "howToUse": ["online-service", "CI/CD"],
+  "hasQualityDimension": {
+    "@id": "dim:fairness",
+    "@type": "@id"
+  },
+  "howToUse": [
+    "online-service",
+    "CI/CD"
+  ],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/AGPL-3.0-or-later",
   "name": "SQAaas",
-  "url": "https://sqaaas.eosc-synergy.eu/"
+  "url": "https://sqaaas.eosc-synergy.eu/",
+  "measuresQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/listed_in_registry",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/requirements_specified",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_has_documentation",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_has_license",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/descriptive_metadata",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/no_leaked_credentials",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_has_tests",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/has_no_linting_issues",
+      "@type": "@id"
+    }
+  ]
 }
