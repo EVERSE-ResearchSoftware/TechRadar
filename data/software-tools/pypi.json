@@ -21,8 +21,17 @@
       "@id": "dim:maintainability",
       "@type": "@id"
     },
-    { "@id": "dim:flexibility", "@type": "@id" }
+    {
+      "@id": "dim:flexibility",
+      "@type": "@id"
+    }
   ],
   "howToUse": ["CI/CD", "command-line", "online-service"],
-  "license": "https://github.com/pypi/warehouse/blob/main/LICENSE"
+  "license": "https://github.com/pypi/warehouse/blob/main/LICENSE",
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/has_published_package",
+      "@type": "@id"
+    }
+  ]
 }
