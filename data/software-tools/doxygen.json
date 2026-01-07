@@ -20,6 +20,12 @@
   "description": "Documentation generator for C++, C, Java, and other languages that automatically extracts documentation from annotated source code, improving research software maintainability through comprehensive API documentation.",
   "hasQualityDimension": { "@id": "dim:maintainability", "@type": "@id" },
   "howToUse": ["CI/CD", "command-line"],
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_documentation",
+      "@type": "@id"
+    }
+  ],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/GPL-2.0-only",
   "name": "doxygen",
