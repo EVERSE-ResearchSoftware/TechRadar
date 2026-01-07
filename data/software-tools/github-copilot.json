@@ -13,5 +13,11 @@
   "isAccessibleForFree": false,
   "hasQualityDimension": { "@id": "dim:sustainability", "@type": "@id" },
   "license": "https://github.com/customer-terms/github-copilot-product-specific-terms",
-  "howToUse": ["online-service"]
+  "howToUse": ["online-service"],
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/has_no_linting_issues",
+      "@type": "@id"
+    }
+  ]
 }
