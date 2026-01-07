@@ -2,7 +2,10 @@
   "@context": "https://w3id.org/everse/rs#",
   "@id": "https://w3id.org/everse/tools/bearer",
   "@type": "SoftwareApplication",
-  "applicationCategory": { "@id": "rs:AnalysisCode", "@type": "@id" },
+  "applicationCategory": {
+    "@id": "rs:AnalysisCode",
+    "@type": "@id"
+  },
   "appliesToProgrammingLanguage": [
     "JavaScript",
     "TypeScript",
@@ -13,10 +16,27 @@
     "Python"
   ],
   "description": "Bearer CLI is a static application security testing (SAST) tool that scans your source code and analyzes your data flows to discover, filter and prioritize security and privacy risks.",
-  "hasQualityDimension": { "@id": "dim:security", "@type": "@id" },
+  "hasQualityDimension": {
+    "@id": "dim:security",
+    "@type": "@id"
+  },
   "howToUse": ["online-service"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/Elastic-2.0",
   "name": "bearer",
-  "url": "https://github.com/bearer/bearer"
+  "url": "https://github.com/bearer/bearer",
+  "measuresQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/no_critical_vulnerability",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/no_leaked_credentials",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/static_analysis_common_vulnerabilities",
+      "@type": "@id"
+    }
+  ]
 }
