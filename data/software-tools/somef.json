@@ -14,11 +14,11 @@
       "@type": "@id"
     },
     {
-      "@id": "https://w3id.org/everse/i/indicators/listed_in_a_registry",
+      "@id": "https://w3id.org/everse/i/indicators/listed_in_registry",
       "@type": "@id"
     },
     {
-      "@id": "https://w3id.org/everse/i/indicators/uses_citation",
+      "@id": "https://w3id.org/everse/i/indicators/software_has_citation",
       "@type": "@id"
     },
     {
@@ -26,7 +26,7 @@
       "@type": "@id"
     },
     {
-      "@id": "https://w3id.org/everse/i/indicators/software_documentation",
+      "@id": "https://w3id.org/everse/i/indicators/software_has_documentation",
       "@type": "@id"
     },
     {

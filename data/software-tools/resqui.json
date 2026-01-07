@@ -34,7 +34,7 @@
       "@type": "@id"
     },
     {
-      "@id": "https://w3id.org/everse/i/indicators/software_has_ci-tests",
+      "@id": "https://w3id.org/everse/i/indicators/has_ci-tests",
       "@type": "@id"
     },
     {
