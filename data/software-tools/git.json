@@ -12,5 +12,19 @@
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/GPL-2.0-only",
   "name": "Git",
-  "url": "https://git-scm.com/"
+  "url": "https://git-scm.com/",
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/has_releases",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/version_control_use",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/versioning_standards_use",
+      "@type": "@id"
+    }
+  ]
 }
