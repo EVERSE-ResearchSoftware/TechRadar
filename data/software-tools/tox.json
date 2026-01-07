@@ -7,16 +7,39 @@
   "url": "https://tox.wiki/",
   "isAccessibleForFree": true,
   "hasQualityDimension": [
-    { "@id": "dim:interaction_capability", "@type": "@id" },
-    { "@id": "dim:reliability", "@type": "@id" },
-    { "@id": "dim:maintainability", "@type": "@id" },
-    { "@id": "dim:sustainability", "@type": "@id" }
+    {
+      "@id": "dim:interaction_capability",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:reliability",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:maintainability",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:sustainability",
+      "@type": "@id"
+    }
   ],
-  "howToUse": ["command-line", "CI/CD"],
-  "appliesToProgrammingLanguage": ["Python"],
+  "howToUse": [
+    "command-line",
+    "CI/CD"
+  ],
+  "appliesToProgrammingLanguage": [
+    "Python"
+  ],
   "license": "https://opensource.org/licenses/MIT",
   "applicationCategory": {
     "@id": "rs:ResearchInfrastructureSoftware",
     "@type": "@id"
-  }
+  },
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/dependency_management",
+      "@type": "@id"
+    }
+  ]
 }
