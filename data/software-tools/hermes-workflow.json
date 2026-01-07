@@ -8,13 +8,28 @@
   },
   "description": "Workflow system for automated publication of rich research software metadata and artifacts, improving software sustainability and FAIRness through comprehensive metadata management and automated publication workflows.",
   "hasQualityDimension": [
-    { "@id": "dim:maintainability", "@type": "@id" },
-    { "@id": "dim:sustainability", "@type": "@id" },
-    { "@id": "dim:fairness", "@type": "@id" }
+    {
+      "@id": "dim:maintainability",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:sustainability",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:fairness",
+      "@type": "@id"
+    }
   ],
   "howToUse": ["command-line", "CI/CD"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/Apache-2.0",
   "name": "Hermes Workflows",
-  "url": "https://hermes.software-metadata.pub/en/latest/"
+  "url": "https://hermes.software-metadata.pub/en/latest/",
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/descriptive_metadata",
+      "@type": "@id"
+    }
+  ]
 }
