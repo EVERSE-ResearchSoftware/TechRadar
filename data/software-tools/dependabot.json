@@ -21,12 +21,24 @@
   ],
   "description": "Automated dependency management service that continuously monitors research software dependencies for security vulnerabilities and updates, maintaining software security and reducing technical debt for long-term sustainability.",
   "hasQualityDimension": [
-    { "@id": "dim:security", "@type": "@id" },
-    { "@id": "dim:maintainability", "@type": "@id" }
+    {
+      "@id": "dim:security",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:maintainability",
+      "@type": "@id"
+    }
   ],
   "howToUse": ["CI/CD", "command-line"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/MIT",
   "name": "Dependabot",
-  "url": "https://github.com/dependabot"
+  "url": "https://github.com/dependabot",
+  "measuresQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/dependency_management",
+      "@type": "@id"
+    }
+  ]
 }
