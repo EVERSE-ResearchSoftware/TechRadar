@@ -8,13 +8,32 @@
   },
   "description": "Functional package manager providing reproducible software deployment and system configuration, ensuring consistent and reliable software installations across different systems with transactional upgrades and rollbacks.",
   "hasQualityDimension": [
-    { "@id": "dim:maintainability", "@type": "@id" },
-    { "@id": "dim:sustainability", "@type": "@id" },
-    { "@id": "dim:reliability", "@type": "@id" }
+    {
+      "@id": "dim:maintainability",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:sustainability",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:reliability",
+      "@type": "@id"
+    }
   ],
   "howToUse": ["command-line", "online-service"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/GPL-3.0-or-later",
   "name": "GNU Guix",
-  "url": "https://guix.gnu.org/"
+  "url": "https://guix.gnu.org/",
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/has_published_package",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/dependency_management",
+      "@type": "@id"
+    }
+  ]
 }
