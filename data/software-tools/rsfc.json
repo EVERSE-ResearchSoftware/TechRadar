@@ -7,10 +7,63 @@
     "@type": "@id"
   },
   "description": "A command line interface to automatically evaluate the FAIRness of a Github or Gitlab repository.",
-  "hasQualityDimension": { "@id": "dim:fairness", "@type": "@id" },
+  "hasQualityDimension": {
+    "@id": "dim:fairness",
+    "@type": "@id"
+  },
   "howToUse": ["command-line"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/MIT",
   "name": "RSFC",
-  "url": "https://github.com/oeg-upm/rsfc"
+  "url": "https://github.com/oeg-upm/rsfc",
+  "measuresQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_has_license",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_has_citation",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/has_releases",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/repository_workflows",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/version_control_use",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/requirements_specified",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_has_documentation",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/persistent_and_unique_identifier",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/descriptive_metadata",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_has_tests",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/archived_in_software_heritage",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/versioning_standards_use",
+      "@type": "@id"
+    }
+  ]
 }
