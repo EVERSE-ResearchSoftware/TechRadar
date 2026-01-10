@@ -2,13 +2,25 @@
   "@context": "https://w3id.org/everse/rs#",
   "@id": "https://w3id.org/everse/tools/bandit",
   "@type": "SoftwareApplication",
-  "applicationCategory": { "@id": "rs:AnalysisCode", "@type": "@id" },
+  "applicationCategory": {
+    "@id": "rs:AnalysisCode",
+    "@type": "@id"
+  },
   "appliesToProgrammingLanguage": ["Python"],
   "description": "Security-focused static analysis tool for Python that identifies common security vulnerabilities and anti-patterns in software, helping maintain secure coding practices.",
-  "hasQualityDimension": { "@id": "dim:security", "@type": "@id" },
+  "hasQualityDimension": {
+    "@id": "dim:security",
+    "@type": "@id"
+  },
   "howToUse": ["CI/CD", "command-line"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/Apache-2.0",
   "name": "bandit",
-  "url": "https://github.com/PyCQA/bandit"
+  "url": "https://github.com/PyCQA/bandit",
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/static_analysis_common_vulnerabilities",
+      "@type": "@id"
+    }
+  ]
 }
