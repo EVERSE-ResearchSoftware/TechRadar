@@ -11,11 +11,33 @@
   },
   "isAccessibleForFree": true,
   "hasQualityDimension": [
-    { "@id": "dim:compatibility", "@type": "@id" },
-    { "@id": "dim:flexibility", "@type": "@id" },
-    { "@id": "dim:reliability", "@type": "@id" },
-    { "@id": "dim:sustainability", "@type": "@id" }
+    {
+      "@id": "dim:compatibility",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:flexibility",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:reliability",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:sustainability",
+      "@type": "@id"
+    }
   ],
   "howToUse": ["command-line"],
-  "license": "https://opensource.org/license/bsd-3-clause"
+  "license": "https://opensource.org/license/bsd-3-clause",
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/dependency_management",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/requirements_specified",
+      "@type": "@id"
+    }
+  ]
 }
