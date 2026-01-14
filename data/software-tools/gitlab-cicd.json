@@ -8,8 +8,14 @@
   },
   "description": "Integrated continuous integration and deployment platform that automates research software testing, building, and deployment workflows, improving software reliability and sustainability through comprehensive DevOps practices.",
   "hasQualityDimension": [
-    { "@id": "dim:sustainability", "@type": "@id" },
-    { "@id": "dim:reliability", "@type": "@id" }
+    {
+      "@id": "dim:sustainability",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:reliability",
+      "@type": "@id"
+    }
   ],
   "improvesQualityIndicator": [
     {
@@ -29,5 +35,19 @@
   "isAccessibleForFree": false,
   "license": "https://spdx.org/licenses/MIT",
   "name": "GitLab CICD",
-  "url": "https://docs.gitlab.com/ci/"
+  "url": "https://docs.gitlab.com/ci/",
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/repository_workflows",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_has_tests",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/has_ci-tests",
+      "@type": "@id"
+    }
+  ]
 }
