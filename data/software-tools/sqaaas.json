@@ -11,10 +11,7 @@
     "@id": "dim:fairness",
     "@type": "@id"
   },
-  "howToUse": [
-    "online-service",
-    "CI/CD"
-  ],
+  "howToUse": ["online-service", "CI/CD"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/AGPL-3.0-or-later",
   "name": "SQAaas",
