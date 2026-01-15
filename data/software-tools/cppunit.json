@@ -14,7 +14,7 @@
     { "@id": "dim:maintainability", "@type": "@id" },
     { "@id": "dim:reliability", "@type": "@id" }
   ],
-  "rs:improvesQualityIndicator": [
+  "improvesQualityIndicator": [
     {
       "@id": "https://w3id.org/everse/i/indicators/has_ci-tests",
       "@type": "@id"
