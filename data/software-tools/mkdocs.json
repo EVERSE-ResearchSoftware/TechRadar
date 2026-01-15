@@ -22,5 +22,10 @@
       "@id": "rs:PrototypeTool",
       "@type": "@id"
     }
-  ]
+  ],
+  "improvesQualityIndicator": 
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_documentation",
+      "@type": "@id"
+    }
 }
