@@ -16,5 +16,11 @@
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/Apache-2.0",
   "name": "Kubernetes",
-  "url": "https://kubernetes.io/"
+  "url": "https://kubernetes.io/",
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/requirements_specified",
+      "@type": "@id"
+    }
+  ]
 }
