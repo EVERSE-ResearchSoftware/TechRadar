@@ -11,11 +11,33 @@
   },
   "isAccessibleForFree": true,
   "hasQualityDimension": [
-    { "@id": "dim:compatibility", "@type": "@id" },
-    { "@id": "dim:flexibility", "@type": "@id" },
-    { "@id": "dim:reliability", "@type": "@id" },
-    { "@id": "dim:sustainability", "@type": "@id" }
+    {
+      "@id": "dim:compatibility",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:flexibility",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:reliability",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:sustainability",
+      "@type": "@id"
+    }
   ],
   "howToUse": ["command-line", "online-service"],
-  "license": "https://www.apache.org/licenses/LICENSE-2.0"
+  "license": "https://www.apache.org/licenses/LICENSE-2.0",
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/has_published_package",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/requirements_specified",
+      "@type": "@id"
+    }
+  ]
 }
