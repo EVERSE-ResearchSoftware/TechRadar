@@ -24,7 +24,7 @@
     }
   ],
   "improvesQualityIndicator": {
-    "@id": "https://w3id.org/everse/i/indicators/software_documentation",
+    "@id": "https://w3id.org/everse/i/indicators/software_has_documentation",
     "@type": "@id"
   }
 }
