@@ -14,6 +14,20 @@
     { "@id": "dim:maintainability", "@type": "@id" },
     { "@id": "dim:reliability", "@type": "@id" }
   ],
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/has_ci-tests",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_test_coverage",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_has_tests",
+      "@type": "@id"
+    }
+  ],
   "howToUse": ["command-line"],
   "appliesToProgrammingLanguage": ["C++"],
   "license": "https://www.gnu.org/licenses/lgpl-3.0"
