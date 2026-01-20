@@ -54,7 +54,7 @@
       "@type": "@id"
     },
     {
-      "@id": "https://w3id.org/everse/i/indicators/uses_tool_for_warnings_or_mistakes",
+      "@id": "https://w3id.org/everse/i/indicators/uses_tool_for_warnings_and_mistakes",
       "@type": "@id"
     }
   ]
