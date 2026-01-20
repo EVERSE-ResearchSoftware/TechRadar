@@ -17,13 +17,11 @@
     { "@id": "dim:sustainability", "@type": "@id" }
   ],
   "howToUse": ["CI/CD", "command-line"],
-  "improvesQualityIndicator": [
+  "measuresQualityIndicator": [
     {
       "@id": "https://w3id.org/everse/i/indicators/no_leaked_credentials",
       "@type": "@id"
-    }
-  ],
-  "measuresQualityIndicator": [
+    },
     {
       "@id": "https://w3id.org/everse/i/indicators/no_critical_vulnerability",
       "@type": "@id"
