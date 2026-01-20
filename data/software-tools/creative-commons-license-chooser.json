@@ -7,10 +7,19 @@
     "@type": "@id"
   },
   "description": "A web-based tool to help users select an appropriate Creative Commons license for their work.",
-  "hasQualityDimension": { "@id": "dim:fairness", "@type": "@id" },
+  "hasQualityDimension": {
+    "@id": "dim:fairness",
+    "@type": "@id"
+  },
   "howToUse": ["command-line"],
   "isAccessibleForFree": true,
   "license": "https://creativecommons.org/publicdomain/zero/1.0",
   "name": "Creative Commons License Chooser",
-  "url": "https://chooser-beta.creativecommons.org/"
+  "url": "https://chooser-beta.creativecommons.org/",
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_has_license",
+      "@type": "@id"
+    }
+  ]
 }

@@ -12,5 +12,11 @@
     { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" }
   ],
   "hasQualityDimension": { "@id": "dim:maintainability", "@type": "@id" },
+  "measuresQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/has_no_linting_issues",
+      "@type": "@id"
+    }
+  ],
   "howToUse": ["CI/CD", "command-line"]
 }

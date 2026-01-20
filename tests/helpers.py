@@ -1,6 +1,14 @@
 """
-copy of the original file:
-https://github.com/EVERSE-ResearchSoftware/indicators/blob/main/tests/helpers.py
+Helper functions for validating JSON files against schemas.
+
+This module provides utilities for loading JSON schemas and validating JSON files.
+It includes dynamic fetching of quality dimensions and indicators from the EVERSE 
+indicators API to ensure validation uses the most up-to-date lists.
+
+Dimensions: Always validated (with fallback if API unavailable)
+Indicators: Validated only if API is available (skipped otherwise)
+
+Adapted from: https://github.com/EVERSE-ResearchSoftware/indicators/blob/main/tests/helpers.py
 """
 
 import json
@@ -8,18 +16,153 @@ import glob
 import pytest
 from jsonschema import validate, ValidationError
 import os
+import urllib.request
+import urllib.error
+
+
+# Fallback list of dimensions if API is not accessible
+FALLBACK_DIMENSIONS = [
+    "dim:compatibility",
+    "dim:fairness",
+    "dim:flexibility",
+    "dim:functional_suitability",
+    "dim:interaction_capability",
+    "dim:maintainability",
+    "dim:performance_efficiency",
+    "dim:reliability",
+    "dim:safety",
+    "dim:security",
+    "dim:sustainability",
+]
+
+
+def fetch_quality_indicators():
+    """
+    Fetch quality indicators from the EVERSE indicators API.
+    
+    Attempts to fetch the current list of quality indicators from the EVERSE 
+    indicators API. If the API is unavailable, raises a RuntimeError.
+    
+    API Endpoint: https://everse.software/indicators/api/indicators.json
+    
+    Returns:
+        list: Indicator URIs if successful.
+                     Example: ["https://w3id.org/everse/i/no_leaked_credentials", ...]
+    """
+    api_url = "https://everse.software/indicators/api/indicators.json"
+    
+    try:
+        with urllib.request.urlopen(api_url, timeout=5) as response:
+            data = json.loads(response.read().decode("utf-8"))
+
+        indicators_identifiers = []
+
+        indicators_list = data.get("indicators", [])
+        for indicator in indicators_list:
+            if isinstance(indicator, dict) and "identifier" in indicator:
+                indicators_identifiers.append(indicator["identifier"]["@id"])
+
+        if indicators_identifiers:
+            print(f"Successfully fetched {len(indicators_identifiers)} indicators from {api_url}")
+            return indicators_identifiers
+        else:
+            print(f"No indicators found in API response from {api_url}")
+            return None
+
+    except (
+        urllib.error.URLError,
+        urllib.error.HTTPError,
+        json.JSONDecodeError,
+        TimeoutError,
+    ) as e:
+        raise RuntimeError(f"Could not fetch indicators from {api_url}: {e}")
+
+
+def fetch_quality_dimensions():
+    """
+    Fetch quality dimensions from the EVERSE indicators API with offline fallback.
+    
+    Attempts to fetch the current list of quality dimensions from the EVERSE 
+    indicators API. If the API is unavailable (no internet connection or API error),
+    falls back to a hardcoded list of dimensions.
+    
+    API Endpoint: https://everse.software/indicators/api/dimensions.json
+    
+    Returns:
+        list: Dimension identifiers in the format "dim:<dimension_name>".
+              Example: ["dim:compatibility", "dim:fairness", ...]
+    """
+    api_url = "https://everse.software/indicators/api/dimensions.json"
+    
+    try:
+        with urllib.request.urlopen(api_url, timeout=5) as response:
+            data = json.loads(response.read().decode('utf-8'))
+            
+        # Extract dimension identifiers from the API response
+        dimensions_identifiers = []
+        
+        dimensions = data.get('dimensions', [])
+        for item in dimensions:
+            if isinstance(item, dict) and 'identifier' in item:
+                dim_id = item['identifier']
+                if '/' in dim_id:
+                    dim_name = dim_id.split('/')[-1]
+                    dimensions_identifiers.append(f"dim:{dim_name}")
+                else:
+                    dimensions_identifiers.append(dim_id if dim_id.startswith('dim:') else f"dim:{dim_id}")
+        
+        if dimensions_identifiers:
+            print(f"Successfully fetched {len(dimensions_identifiers)} dimensions from {api_url}")
+            return dimensions_identifiers
+        else:
+            print(f"No dimensions found in API response from {api_url}")
+            
+    except (urllib.error.URLError, urllib.error.HTTPError, json.JSONDecodeError, TimeoutError) as e:
+        print(f"Could not fetch dimensions from {api_url}: {e}")
+    
+    print(f"Using fallback dimension list:\n{FALLBACK_DIMENSIONS}")
+    return FALLBACK_DIMENSIONS
 
 
 def load_local_schema(schema_path):
-    """Loads the JSON schema from a local file."""
+    """
+    Load JSON schema from file and update it with current quality dimensions and indicators.
+    
+    Loads the JSON schema file and dynamically updates:
+    - Quality dimension enum with latest values from EVERSE API (or fallback)
+    - Quality indicator enum with latest values from EVERSE API (or makes it optional if unavailable)
+    
+    This ensures validation always uses current dimension and indicator definitions.
+    
+    Args:
+        schema_path (str): Absolute path to the JSON schema file
+        
+    Returns:
+        dict: The loaded and updated JSON schema
+        
+    Raises:
+        pytest.Failed: If schema file not found or invalid JSON
+    """
     print(f"Attempting to load local schema from: {schema_path}")
     if not os.path.exists(schema_path):
         pytest.fail(f"Schema file not found at {schema_path}", pytrace=False)
+
     try:
         with open(schema_path, "r") as f:
             schema_data = json.load(f)
-        print("Successfully loaded local schema.")
+        
+        # Update the quality dimension enums dynamically
+        dimensions = fetch_quality_dimensions()
+        schema_data['definitions']['qualityDimensionObject']['properties']['@id']['enum'] = dimensions
+        print(f"Updated schema with {len(dimensions)} quality dimensions")
+        
+        # Update the quality indicator enums dynamically
+        indicators = fetch_quality_indicators()
+        schema_data['definitions']['qualityIndicatorObject']['properties']['@id']['enum'] = indicators
+        print(f"Updated schema with {len(indicators)} quality indicators")
+        
         return schema_data
+
     except json.JSONDecodeError as e:
         pytest.fail(
             f"Failed to decode JSON from schema file {schema_path}: {e}", pytrace=False
@@ -33,8 +176,19 @@ def load_local_schema(schema_path):
 
 def validate_json_files_using_schema(schema_file_path, json_file_path):
     """
-    Validates all JSON files in the 'json_file_path/' directory against the
-    local JSON Schema file (schema_file_path).
+    Validate all JSON files in a directory against a JSON schema.
+    
+    Loads the schema (with dynamic dimension updates), then validates each JSON file
+    in the specified directory. Collects all validation errors and fails the test
+    if any files are invalid.
+    
+    Args:
+        schema_file_path (str): Path to the JSON schema file
+        json_file_path (str): Directory containing JSON files to validate
+        
+    Raises:
+        pytest.skip: If no JSON files found in the directory
+        AssertionError: If any JSON files fail validation
     """
 
     json_files = glob.glob(f"{json_file_path}/*.json")

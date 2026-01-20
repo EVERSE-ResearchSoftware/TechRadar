@@ -34,19 +34,19 @@
       "@type": "@id"
     },
     {
-      "@id": "https://w3id.org/everse/i/indicators/software_has_ci_tests",
+      "@id": "https://w3id.org/everse/i/indicators/has_ci-tests",
       "@type": "@id"
     },
     {
-      "@id": "https://w3id.org/everse/i/indicators/software_human_code_review_requirement",
+      "@id": "https://w3id.org/everse/i/indicators/human_code_review_requirement",
       "@type": "@id"
     },
     {
-      "@id": "https://w3id.org/everse/i/indicators/software_has_published_package",
+      "@id": "https://w3id.org/everse/i/indicators/has_published_package",
       "@type": "@id"
     },
     {
-      "@id": "https://w3id.org/everse/i/indicators/software_has_no_security_leak",
+      "@id": "https://w3id.org/everse/i/indicators/no_leaked_credentials",
       "@type": "@id"
     }
   ],

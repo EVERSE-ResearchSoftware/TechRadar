@@ -7,8 +7,14 @@
   "url": "https://python-poetry.org/",
   "isAccessibleForFree": true,
   "hasQualityDimension": [
-    { "@id": "dim:maintainability", "@type": "@id" },
-    { "@id": "dim:sustainability", "@type": "@id" }
+    {
+      "@id": "dim:maintainability",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:sustainability",
+      "@type": "@id"
+    }
   ],
   "applicationCategory": [
     {
@@ -21,5 +27,11 @@
     }
   ],
   "howToUse": ["CI/CD", "command-line"],
-  "license": "https://spdx.org/licenses/MIT"
+  "license": "https://spdx.org/licenses/MIT",
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/dependency_management",
+      "@type": "@id"
+    }
+  ]
 }
