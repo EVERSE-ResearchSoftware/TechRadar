@@ -8,12 +8,24 @@
   },
   "description": "Continuous integration service that automates testing and deployment of research software projects hosted on GitHub, improving software reliability and maintainability through automated quality checks.",
   "hasQualityDimension": [
-    { "@id": "dim:maintainability", "@type": "@id" },
-    { "@id": "dim:reliability", "@type": "@id" }
+    {
+      "@id": "dim:maintainability",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:reliability",
+      "@type": "@id"
+    }
   ],
   "howToUse": ["CI/CD", "online-service"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/MIT",
   "name": "Travis CI",
-  "url": "https://travis-ci.com/"
+  "url": "https://travis-ci.com/",
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/repository_workflows",
+      "@type": "@id"
+    }
+  ]
 }
