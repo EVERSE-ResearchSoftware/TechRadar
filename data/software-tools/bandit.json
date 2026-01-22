@@ -6,6 +6,12 @@
   "appliesToProgrammingLanguage": ["Python"],
   "description": "Security-focused static analysis tool for Python that identifies common security vulnerabilities and anti-patterns in software, helping maintain secure coding practices.",
   "hasQualityDimension": { "@id": "dim:security", "@type": "@id" },
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/static_analysis_common_vulnerabilities",
+      "@type": "@id"
+    }
+  ],
   "howToUse": ["CI/CD", "command-line"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/Apache-2.0",
