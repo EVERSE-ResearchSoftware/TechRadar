@@ -42,10 +42,6 @@
       "@type": "@id"
     },
     {
-      "@id": "https://w3id.org/everse/i/indicators/version_control_use",
-      "@type": "@id"
-    },
-    {
       "@id": "https://w3id.org/everse/i/indicators/human_code_review_requirement",
       "@type": "@id"
     },
