@@ -8,13 +8,34 @@
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/MIT",
   "applicationCategory": [
-    { "@id": "rs:PrototypeTool", "@type": "@id" },
-    { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" },
-    { "@id": "rs:AnalysisCode", "@type": "@id" }
+    {
+      "@id": "rs:PrototypeTool",
+      "@type": "@id"
+    },
+    {
+      "@id": "rs:ResearchInfrastructureSoftware",
+      "@type": "@id"
+    },
+    {
+      "@id": "rs:AnalysisCode",
+      "@type": "@id"
+    }
   ],
   "hasQualityDimension": [
-    { "@id": "dim:security", "@type": "@id" },
-    { "@id": "dim:sustainability", "@type": "@id" }
+    {
+      "@id": "dim:security",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:sustainability",
+      "@type": "@id"
+    }
   ],
-  "howToUse": ["CI/CD", "command-line"]
+  "howToUse": ["CI/CD", "command-line"],
+  "measuresQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/no_leaked_credentials",
+      "@type": "@id"
+    }
+  ]
 }

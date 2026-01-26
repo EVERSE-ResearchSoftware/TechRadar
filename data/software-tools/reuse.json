@@ -7,10 +7,25 @@
   "url": "https://reuse.software",
   "isAccessibleForFree": true,
   "applicationCategory": [
-    { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" },
-    { "@id": "rs:PrototypeTool", "@type": "@id" }
+    {
+      "@id": "rs:ResearchInfrastructureSoftware",
+      "@type": "@id"
+    },
+    {
+      "@id": "rs:PrototypeTool",
+      "@type": "@id"
+    }
   ],
-  "hasQualityDimension": { "@id": "dim:fairness", "@type": "@id" },
+  "hasQualityDimension": {
+    "@id": "dim:fairness",
+    "@type": "@id"
+  },
   "license": "https://www.gnu.org/licenses/old-licenses/gpl-3.0.html",
-  "howToUse": ["command-line", "online-service", "CI/CD"]
+  "howToUse": ["command-line", "online-service", "CI/CD"],
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_has_license",
+      "@type": "@id"
+    }
+  ]
 }

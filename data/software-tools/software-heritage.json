@@ -8,6 +8,24 @@
   },
   "description": "Universal archive that collects, preserves, and makes available research software source code as cultural heritage, ensuring long-term sustainability and accessibility of software for future generations and reproducibility studies.",
   "hasQualityDimension": { "@id": "dim:sustainability", "@type": "@id" },
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/persistent_and_unique_identifier",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/archived_in_software_heritage",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/archived_in_scholarly_repository",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/listed_in_registry",
+      "@type": "@id"
+    }
+  ],
   "howToUse": ["online-service", "command-line"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/AGPL-3.0-or-later",

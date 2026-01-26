@@ -7,10 +7,31 @@
     "@type": "@id"
   },
   "description": "Web-based tool for creating standardized CITATION.cff files that enable proper citation of research software, improving software findability and supporting FAIR principles through structured metadata generation.",
-  "hasQualityDimension": { "@id": "dim:fairness", "@type": "@id" },
+  "hasQualityDimension": {
+    "@id": "dim:fairness",
+    "@type": "@id"
+  },
   "howToUse": ["online-service"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/Apache-2.0",
   "name": "cffinit",
-  "url": "https://citation-file-format.github.io/cffinit"
+  "url": "https://citation-file-format.github.io/cffinit",
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_has_citation",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_has_license",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/descriptive_metadata",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/metadata_is_up_to_date",
+      "@type": "@id"
+    }
+  ]
 }
