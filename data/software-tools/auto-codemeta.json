@@ -7,10 +7,31 @@
     "@type": "@id"
   },
   "description": "This repository contains a (client-side) web application to automatically generate  Codemeta documents (aka. codemeta.json).",
-  "hasQualityDimension": { "@id": "dim:fairness", "@type": "@id" },
+  "hasQualityDimension": {
+    "@id": "dim:fairness",
+    "@type": "@id"
+  },
   "howToUse": ["CI/CD", "command-line"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/AGPL-3.0-or-later",
   "name": "Auto-CodeMeta Generator",
-  "url": "https://w3id.org/autocodemeta"
+  "url": "https://w3id.org/autocodemeta",
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/descriptive_metadata",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/codemeta_completeness",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/metadata_is_up_to_date",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_has_citation",
+      "@type": "@id"
+    }
+  ]
 }
