@@ -24,6 +24,14 @@
     {
       "@id": "https://w3id.org/everse/i/indicators/codemeta_completeness",
       "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/metadata_is_up_to_date",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_has_citation",
+      "@type": "@id"
     }
   ]
 }
