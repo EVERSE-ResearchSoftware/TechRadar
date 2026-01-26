@@ -17,5 +17,29 @@
     { "@id": "dim:sustainability", "@type": "@id" }
   ],
   "howToUse": ["command-line", "online-service"],
-  "license": "https://www.apache.org/licenses/LICENSE-2.0"
+  "license": "https://www.apache.org/licenses/LICENSE-2.0",
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/dependency_management",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/listed_in_registry",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/has_published_package",
+      "@type": "@id"
+    }
+  ],
+  "measuresQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/no_critical_vulnerability",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/static_analysis_common_vulnerabilities",
+      "@type": "@id"
+    }
+  ]
 }
