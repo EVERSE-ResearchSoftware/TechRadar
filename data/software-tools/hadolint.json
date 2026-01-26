@@ -7,8 +7,14 @@
   "url": "https://github.com/hadolint/hadolint",
   "isAccessibleForFree": true,
   "hasQualityDimension": [
-    { "@id": "dim:maintainability", "@type": "@id" },
-    { "@id": "dim:security", "@type": "@id" }
+    {
+      "@id": "dim:maintainability",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:security",
+      "@type": "@id"
+    }
   ],
   "howToUse": ["command-line", "CI/CD"],
   "license": "https://opensource.org/licenses/GPL-3.0",
@@ -23,6 +29,12 @@
     },
     {
       "@id": "rs:PrototypeTool",
+      "@type": "@id"
+    }
+  ],
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/uses_tool_for_warnings_and_mistakes",
       "@type": "@id"
     }
   ]
