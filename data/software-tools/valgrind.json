@@ -38,5 +38,15 @@
       "@type": "@id"
     }
   ],
-  "license": "https://www.gnu.org/licenses/old-licenses/gpl-2.0"
+  "license": "https://www.gnu.org/licenses/old-licenses/gpl-2.0",
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/static_analysis_common_vulnerabilities",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/no_leaked_credentials",
+      "@type": "@id"
+    }
+  ]
 }
