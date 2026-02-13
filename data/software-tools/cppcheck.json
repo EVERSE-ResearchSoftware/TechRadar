@@ -1,0 +1,22 @@
+{
+  "@context": "https://w3id.org/everse/rs#",
+  "@id": "https://w3id.org/everse/tools/cppcheck",
+  "@type": "schema:SoftwareApplication",
+  "name": "Cppcheck",
+  "description": "Static analysis tool for C/C++ that focuses on detecting undefined behavior, dangerous coding constructs, and real defects with low false positives; supports coding standards like MISRA and CERT, improving maintainability, reliability, security, and safety of research software.",
+  "url": "https://cppcheck.sourceforge.io/",
+  "isAccessibleForFree": true,
+  "hasQualityDimension": [
+    { "@id": "dim:Maintainability", "@type": "@id" },
+    { "@id": "dim:Reliability", "@type": "@id" },
+    { "@id": "dim:Security", "@type": "@id" },
+    { "@id": "dim:Safety", "@type": "@id" }
+  ],
+  "howToUse": ["command-line", "CI/CD"],
+  "appliesToProgrammingLanguage": ["C", "C++"],
+  "license": "https://spdx.org/licenses/GPL-3.0-or-later",
+  "applicationCategory": [
+    { "@id": "rs:PrototypeTool", "@type": "@id" },
+    { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" }
+  ]
+}
