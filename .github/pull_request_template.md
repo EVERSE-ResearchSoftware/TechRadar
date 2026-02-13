@@ -1,5 +1,5 @@
 <!-- 
-Remove the part that does not concern your PR
+Remove the part that does not concern your PR: TOOL ADDITION OR TECHNICAL DEVELOPMENT
 -->
 
 
@@ -54,12 +54,10 @@ If none apply, justify why this tool is relevant for research software.
 
 Justification for the research software tier(s) it can be applied to:
 
-
 ---
 
-
 <!-- 
-Technical Development
+TECHNICAL DEVELOPMENT
 -->
 
 **Describe the proposed development**
