@@ -1,0 +1,14 @@
+{
+  "@context": "https://w3id.org/everse/rs#",
+  "@id": "https://w3id.org/everse/tools/nlesc_python_template",
+  "@type": "SoftwareApplication",
+  "applicationCategory": { "@id": "rs:PrototypeTool", "@type": "@id" },
+  "appliesToProgrammingLanguage": ["Python"],
+  "description": "Netherlands eScience Center Python Template",
+  "hasQualityDimension": { "@id": "dim:FAIRness", "@type": "@id" },
+  "howToUse": ["command-line"],
+  "isAccessibleForFree": true,
+  "license": "https://spdx.org/licenses/Apache-2.0",
+  "name": "Netherlands eScience Center Python Template",
+  "url": "https://github.com/NLeSC/python-template"
+}
