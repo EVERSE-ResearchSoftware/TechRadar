@@ -1,0 +1,42 @@
+{
+  "@context": "https://w3id.org/everse/rs#",
+  "@id": "https://w3id.org/everse/tools/maqao",
+  "@type": "schema:SoftwareApplication",
+  "name": "maqao",
+  "description": "MAQAO (Modular Assembly Quality Analyzer and Optimizer) is a performance analysis and optimization framework operating at binary level with a focus on core performance. Its main goal of is to guide application developpers along the optimization process through synthetic reports and hints.",
+  "url": "https://maqao.org/",
+  "isAccessibleForFree": true,
+  "applicationCategory": [
+    {
+      "@id": "rs:AnalysisCode",
+      "@type": "@id"
+    },
+    {
+      "@id": "rs:PrototypeTool",
+      "@type": "@id"
+    },
+    {
+      "@id": "rs:ResearchInfrastructureSoftware",
+      "@type": "@id"
+    }
+  ],
+  "hasQualityDimension": [
+    {
+      "@id": "dim:reliability",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:performance_efficiency",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:sustainability",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:maintainability",
+      "@type": "@id"
+    }
+  ],
+  "license": "https://gitlab.liparad.uvsq.fr/maqao_release/MAQAO/-/blob/dd4a3cbb8e43020fb478e6efa16fa219ce510be4/LICENSE"
+}
