@@ -1,0 +1,19 @@
+{
+  "@context": "https://w3id.org/everse/rs#",
+  "@id": "https://w3id.org/everse/tools/renovatebot",
+  "@type": "SoftwareApplication",
+  "applicationCategory": {
+    "@id": "rs:ResearchInfrastructureSoftware",
+    "type": "@id"
+  },
+  "description": "Automated dependency management tool or service that regularly monitors software and tools dependencies for security vulnerabilities and updates, maintaining software security and reducing technical debt for long-term sustainability.",
+  "hasQualityDimension": [
+    { "@id": "dim:security", "@type": "@id" },
+    { "@id": "dim:maintainability", "@type": "@id" }
+  ],
+  "howToUse": ["CI/CD", "command-line"],
+  "isAccessibleForFree": true,
+  "license": "https://opensource.org/licenses/GPL-3.0",
+  "name": "Renovate",
+  "url": "https://docs.renovatebot.com/"
+}
