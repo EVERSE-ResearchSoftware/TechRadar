@@ -1,0 +1,51 @@
+{
+  "@context": "https://w3id.org/everse/rs#",
+  "@id": "https://w3id.org/everse/tools/pixi",
+  "@type": "schema:SoftwareApplication",
+  "name": "pixi",
+  "description": "Pixi is a fast, modern, and reproducible package management tool for developers of all backgrounds. It is based on the conda ecosystem and allows to create reproducible software development environment and workflows for all platforms.",
+  "url": "https://pixi.prefix.dev/latest/",
+  "applicationCategory": {
+    "@id": "rs:ResearchInfrastructureSoftware",
+    "@type": "@id"
+  },
+  "isAccessibleForFree": true,
+  "hasQualityDimension": [
+    {
+      "@id": "dim:compatibility",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:flexibility",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:reliability",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:sustainability",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:maintainability",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:functional_suitability",
+      "@type": "@id"
+    }
+  ],
+  "howToUse": ["command-line", "Graphical User Interface"],
+  "license": "https://opensource.org/license/bsd-3-clause",
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/dependency_management",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/requirements_specified",
+      "@type": "@id"
+    }
+  ]
+}
