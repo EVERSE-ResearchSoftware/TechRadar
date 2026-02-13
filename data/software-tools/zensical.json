@@ -1,0 +1,30 @@
+{
+  "@context": "https://w3id.org/everse/rs#",
+  "@id": "https://w3id.org/everse/tools/zensical",
+  "@type": "schema:SoftwareApplication",
+  "name": "Zensical",
+  "description": "Static site generator designed for technical projects that creates professional documentation websites from Markdown files, improving research software usability and interaction capability through clear documentation. Currently a prototype, it aims to be the successor to material for mkdocs, a popular theme for (unmaintained) MkDocs",
+  "url": "https://zensical.org/",
+  "isAccessibleForFree": true,
+  "hasQualityDimension": [
+    { "@id": "dim:interaction_capability", "@type": "@id" },
+    { "@id": "dim:maintainability", "@type": "@id" }
+  ],
+  "howToUse": ["command-line", "CI/CD"],
+  "appliesToProgrammingLanguage": ["Python"],
+  "license": "https://spdx.org/licenses/MIT",
+  "applicationCategory": [
+    {
+      "@id": "rs:ResearchInfrastructureSoftware",
+      "@type": "@id"
+    },
+    {
+      "@id": "rs:PrototypeTool",
+      "@type": "@id"
+    }
+  ],
+  "improvesQualityIndicator": {
+    "@id": "https://w3id.org/everse/i/indicators/software_has_documentation",
+    "@type": "@id"
+  }
+}
