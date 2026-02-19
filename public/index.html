@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechRadar - Coming Soon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .wrapper {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 1200px;
+            overflow: hidden;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            padding: 60px;
+            align-items: start;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            grid-column: 1 / -1;
+            max-width: 500px;
+        }
+
+        .logo {
+            max-width: 150px;
+            height: auto;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .heading-section {
+            grid-column: 1 / -1;
+            margin-bottom: 30px;
+        }
+
+        .body-section {
+            display: contents;
+        }
+
+        .text-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.15em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .image-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .text-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.15em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .image-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .preview-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .preview-image:hover {
+            transform: scale(1.02);
+        }
+
+        .status {
+            background: #f0f4ff;
+            border-left: 4px solid #667eea;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .status-title {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 12px;
+            font-size: 1.05em;
+        }
+
+        .status-text {
+            color: #666;
+            font-size: 1em;
+            line-height: 1.7;
+        }
+
+        .contact {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+            color: #666;
+            font-size: 1em;
+            line-height: 1.6;
+        }
+
+        .contact a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* Tablet and smaller desktop */
+        @media (max-width: 900px) {
+            .container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 50px 40px;
+            }
+
+            .heading-section {
+                grid-column: 1;
+            }
+
+            .text-content {
+                grid-column: 1;
+            }
+
+            .image-section {
+                grid-column: 1;
+            }
+
+            h1 {
+                font-size: 2.5em;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            .wrapper {
+                border-radius: 12px;
+            }
+
+            .container {
+                gap: 30px;
+                padding: 40px 25px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .subtitle {
+                font-size: 1em;
+            }
+
+            .logo {
+                max-width: 120px;
+            }
+
+            .status {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="heading-section">
+                <img src="logo.svg" alt="TechRadar Logo" class="logo">
+                <h1>🚀 Coming Soon</h1>
+            </div>
+
+            <div class="body-section">
+                <div class="text-content">
+                    <p class="subtitle">
+                        The TechRadar is currently being redesigned to provide you with an even better experience.
+                    </p>
+
+                    <div class="status">
+                        <div class="status-title">What's Happening?</div>
+                        <div class="status-text">
+                            We're working on major improvements to the TechRadar platform. We'll be back online shortly
+                            with a refreshed design and enhanced features to better serve the research software
+                            community.
+                        </div>
+                    </div>
+
+                    <div class="contact">
+                        Have questions? Reach out to us or follow our progress on <a
+                            href="https://github.com/EVERSE-ResearchSoftware/TechRadar">GitHub</a>.
+                    </div>
+                </div>
+
+                <div class="image-section">
+                    <img src="images/techradar_screenshot.png" alt="TechRadar Preview" class="preview-image">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
