@@ -11,6 +11,20 @@
     { "@id": "dim:sustainability", "@type": "@id" },
     { "@id": "dim:fairness", "@type": "@id" }
   ],
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/archived_in_scholarly_repository",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/persistent_and_unique_identifier",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/listed_in_registry",
+      "@type": "@id"
+    }
+  ],
   "howToUse": ["CI/CD", "command-line", "online-service"],
   "isAccessibleForFree": true,
   "license": " https://ohwr.org/cernohl/",
