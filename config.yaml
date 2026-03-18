@@ -1,7 +1,5 @@
 # ────────────────────────────────────────────────────────────────────────────
 # TechRadar Platform Configuration
-# All platform behaviour is driven from this file — no hard-coded values.
-# To deploy a custom instance: fork the repo, edit this file, done.
 # ────────────────────────────────────────────────────────────────────────────
 
 platform:
@@ -12,7 +10,7 @@ platform:
   description: >
     A catalog of tools and services for research software quality.
     Covers reproducibility, maintainability, FAIRness, security, testing, and more.
-  baseUrl: "/techradar-branch-refactor/"
+  baseUrl: "/techradar/"
   repository: "https://github.com/EVERSE-ResearchSoftware/TechRadar/"
   logoPath: "/techradar/logo.svg"
   contributingUrl: "https://github.com/EVERSE-ResearchSoftware/TechRadar/blob/main/CONTRIBUTING.md"
@@ -60,60 +58,57 @@ tiers:
 # ── Quality Dimensions ───────────────────────────────────────────────────────
 # Configurable — add, remove, or rename dimensions without any code changes.
 dimensions:
-  - id: reproducibility
-    label: "Reproducibility"
-    description: "Ability to reproduce results from the same software and data"
-    color: "#4af0a0"
+  - id: compatibility
+    label: "Compatibility"
+    description: "Degree to which a product, system or component can exchange information with other products, systems or components, and/or perform its required functions while sharing the same common environment and resources."
+    color: "#a0b8ff"
 
   - id: maintainability
     label: "Maintainability"
-    description: "Ease of modifying, understanding, and evolving the software"
+    description: "This characteristic represents the degree of effectiveness and efficiency with which a product or system can be modified to improve it, correct it or adapt it to changes in environment, and in requirements."
     color: "#6a8cff"
 
   - id: fairness
     label: "FAIRness"
-    description: "Findability, Accessibility, Interoperability, Reusability"
+    description: "FAIRness refers to the degree to which research software adheres to the FAIR principles: Findable, Accessible, Interoperable, and Reusable. These principles, adapted for research software, aim to enhance the discoverability, accessibility, interoperability, and reusability of software, thereby maximizing its value and impact in scientific research."
     color: "#ffd166"
+  
+  - id: functional_suitability
+    label: "Functional Suitability"
+    description: "This characteristic represents the degree to which a product or system provides functions that meet stated and implied needs when used under specified conditions."
+    color: "#e8c87a"
+
+  - id: interaction_capability
+    label: "Interaction Capability"
+    description: "Degree to which a product or system can be interacted with by specified users to exchange information via the user interface to complete specific tasks in a variety of contexts of use."
+    color: "#ff7b4f"
+
+  - id: open_source_software
+    label: "Open Source Software"
+    description: "Open source software is software with source code that anyone can inspect, modify, and enhance. Research software can be published with or without open access to the source code."
+    color: "#b8f5e4"
+
+  - id: performance_efficiency
+    label: "Performance Efficiency"
+    description: "This characteristic represents the degree to which a product performs its functions within specified time and throughput parameters and is efficient in the use of resources (such as CPU, memory, storage, network devices, energy, materials...) under specified conditions."
+    color: "#ffe499"
+
+  - id: reliability
+    label: "Reliability"
+    description: "Degree to which a system, product or component performs specified functions under specified conditions for a specified period of time."
+    color: "#ffb49a"
 
   - id: security
     label: "Security"
-    description: "Protection against vulnerabilities and unauthorised access"
-    color: "#ff7b4f"
-
-  - id: documentation
-    label: "Documentation"
-    description: "Quality and completeness of documentation for users and developers"
-    color: "#b8f5e4"
-
-  - id: testing
-    label: "Testing"
-    description: "Test coverage, automation, and validation of software behaviour"
-    color: "#a0b8ff"
-
-  - id: portability
-    label: "Portability"
-    description: "Ability to run on different platforms and environments"
-    color: "#ffe499"
-
-  - id: interoperability
-    label: "Interoperability"
-    description: "Ability to exchange data and work with other tools"
-    color: "#ffb49a"
-
-  - id: usability
-    label: "Usability"
-    description: "Ease of use and learning curve for the intended audience"
+    description: "Degree to which a product or system defends against attack patterns by malicious actors and protects information and data so that persons or other products or systems have the degree of data access appropriate to their types and levels of authorization."
     color: "#7df5c5"
 
-  - id: performance
-    label: "Performance"
-    description: "Computational efficiency and resource utilisation"
+  - id: sustainability
+    label: "Sustainability"
+    description: "The capacity of the software to endure. In other words, sustainability means that the software will continue to be available in the future, on new platforms, meeting new needs."
     color: "#8fa8ff"
 
-  - id: accessibility
-    label: "Accessibility"
-    description: "Inclusive design for users with different abilities"
-    color: "#e8c87a"
+ 
 
 # ── Software Tiers (classification) ────────────────────────
 softwareTypes:

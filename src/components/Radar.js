@@ -61,14 +61,12 @@ export function renderBig() {
   if (!svg) return;
 
   svg.innerHTML = "";
-  svg.setAttribute("viewBox", "0 0 530 530");
+  svg.setAttribute("viewBox", "0 0 900 900");
   const segsG = createG(svg, "big-segs");
   const dotsG = createG(svg, "big-dots");
   const ringsG = createG(svg, "big-rings");
-
-  const CX = 265,
-    CY = 265,
-    R = 185;
+  
+  const CX = 450, CY = 450, R = 320;
   drawSegments(segsG, dotsG, {
     dims: _config.dimensions,
     tools: _tools,

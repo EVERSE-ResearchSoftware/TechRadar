@@ -54,7 +54,7 @@ export function drawRings(group, cx, cy, tiers, maxR) {
       y: cy - labelR,
       "text-anchor": "middle",
       "dominant-baseline": "middle",
-      "font-size": "8",
+      "font-size": "9",
       fill: "#4a3a6a",
       "font-family": "DM Mono, monospace",
       "font-weight": "700",
@@ -128,18 +128,18 @@ export function drawSegments(segGroup, dotGroup, opts) {
 
     // Label (big radar only)
     if (showLabels) {
-      const labelR = r * 1.15;
+      const labelR = r * 1.18;
       const lx = cx + labelR * Math.cos(mid);
       const ly = cy + labelR * Math.sin(mid);
-      const anchor =
-        Math.cos(mid) > 0.1 ? "start" : Math.cos(mid) < -0.1 ? "end" : "middle";
+      const cosM = Math.cos(mid);
+      const anchor = cosM > 0.25 ? "start" : cosM < -0.25 ? "end" : "middle";
 
       const t = svgEl("text", {
         x: lx,
         y: ly,
         "text-anchor": anchor,
         "dominant-baseline": "middle",
-        "font-size": "9",
+        "font-size": "15",
         fill: labelFill(hue, isInactive),
         "font-family": "DM Mono, monospace",
         "font-weight": "600",

@@ -326,7 +326,7 @@ function radarWidget() {
         <button id="expand-radar-btn" class="expand-btn"
                 aria-label="Expand radar to full view"
                 onclick="window.__tr.openModal('radar-modal');import('@/components/Radar.js').then(m=>m.renderBig())">
-          <svg width="11" height="11" viewBox="0 0 11 11" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+          <svg width="11" height="11" viewBox="0 0 900 900" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
             <path d="M1 4V1h3M7 1h3v3M10 7v3H7M4 10H1V7"/>
           </svg>
           Expand
@@ -470,7 +470,7 @@ function radarModal() {
         <button class="modal-x" onclick="window.__tr.closeModal('radar-modal')" aria-label="Close radar">✕</button>
         <h2 id="radar-modal-title" class="modal-title">Tech Radar — Quality Dimensions</h2>
         <p class="modal-meta">Click a segment to filter. Click a dot to view that tool.</p>
-        <svg id="big-radar" class="big-radar" viewBox="0 0 530 530"
+          <svg id="big-radar" class="big-radar" viewBox="0 0 900 900"
              xmlns="http://www.w3.org/2000/svg" role="img"
              aria-label="Full radar visualization with quality dimension segments">
           <g class="big-rings"></g>
