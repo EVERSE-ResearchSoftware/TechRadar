@@ -13,7 +13,7 @@ Three design principles drive every decision:
 
 1. **Discovery-first** — the catalog and search are the primary UI, not the radar visualisation.
 2. **Clarity-first** — every tool explains *how* it measures quality, not just *what* it does.
-3. **Config-driven** — tiers, dimensions, and vocabularies live in one YAML file; no code changes needed to customise them.
+3. **Config-driven** — tiers, dimensions, and vocabularies live in one JSON file; no code changes needed to customise them.
 
 ---
 
