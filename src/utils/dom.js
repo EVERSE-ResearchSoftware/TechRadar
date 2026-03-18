@@ -3,7 +3,7 @@
  */
 
 /** Query one element, throw if missing */
-export const qs  = (sel, root = document) => root.querySelector(sel);
+export const qs = (sel, root = document) => root.querySelector(sel);
 /** Query all elements */
 export const qsa = (sel, root = document) => [...root.querySelectorAll(sel)];
 

@@ -16,42 +16,39 @@ function dimHue(i, n) {
 }
 
 function wedgeFill(hue, inactive) {
-  return inactive
-    ? `hsl(${hue}, 15%, 92%)`
-    : `hsl(${hue}, 55%, 88%)`;
+  return inactive ? `hsl(${hue}, 15%, 92%)` : `hsl(${hue}, 55%, 88%)`;
 }
 
 function dotFill(hue, inactive) {
-  return inactive
-    ? `hsl(${hue}, 15%, 75%)`
-    : `hsl(${hue}, 65%, 45%)`;
+  return inactive ? `hsl(${hue}, 15%, 75%)` : `hsl(${hue}, 65%, 45%)`;
 }
 
 /** Segment label colour */
 function labelFill(hue, inactive) {
-  return inactive
-    ? `hsl(${hue}, 10%, 70%)`
-    : `hsl(${hue}, 55%, 32%)`;
+  return inactive ? `hsl(${hue}, 10%, 70%)` : `hsl(${hue}, 55%, 32%)`;
 }
-
 
 export function drawRings(group, cx, cy, tiers, maxR) {
   const rings = tiers.map((_, i, arr) => maxR * ((i + 1) / arr.length));
 
   rings.forEach((r, i) => {
-    group.appendChild(svgEl("circle", {
-      cx, cy, r,
-      fill: "none",
-      stroke: "#c8c0d8",
-      "stroke-width": i === rings.length - 1 ? 1.5 : 0.8,
-      "stroke-dasharray": i < rings.length - 1 ? "3,4" : "none",
-    }));
+    group.appendChild(
+      svgEl("circle", {
+        cx,
+        cy,
+        r,
+        fill: "none",
+        stroke: "#c8c0d8",
+        "stroke-width": i === rings.length - 1 ? 1.5 : 0.8,
+        "stroke-dasharray": i < rings.length - 1 ? "3,4" : "none",
+      }),
+    );
   });
 
   // Ring labels — centred vertically in each ring band at the top.
   tiers.forEach((tier, i) => {
     const innerR = i === 0 ? 0 : maxR * (i / tiers.length);
-    const labelR = innerR + (maxR * (1 / tiers.length)) * 0.5;
+    const labelR = innerR + maxR * (1 / tiers.length) * 0.5;
     const t = svgEl("text", {
       x: cx,
       y: cy - labelR,
@@ -69,9 +66,19 @@ export function drawRings(group, cx, cy, tiers, maxR) {
   });
 }
 
-
 export function drawSegments(segGroup, dotGroup, opts) {
-  const { dims, tools, tiers, activeFilters, cx, cy, r, showLabels, onDimClick, onDotClick } = opts;
+  const {
+    dims,
+    tools,
+    tiers,
+    activeFilters,
+    cx,
+    cy,
+    r,
+    showLabels,
+    onDimClick,
+    onDotClick,
+  } = opts;
   segGroup.innerHTML = "";
   dotGroup.innerHTML = "";
 
@@ -88,11 +95,16 @@ export function drawSegments(segGroup, dotGroup, opts) {
     const isActive = activeFilters?.dim?.has(dim.label);
     const isInactive = hasActiveDim && !isActive;
 
-    //  Wedge 
-    const x0 = cx + r * Math.cos(a0), y0 = cy + r * Math.sin(a0);
-    const x1 = cx + r * Math.cos(a1), y1 = cy + r * Math.sin(a1);
+    //  Wedge
+    const x0 = cx + r * Math.cos(a0),
+      y0 = cy + r * Math.sin(a0);
+    const x1 = cx + r * Math.cos(a1),
+      y1 = cy + r * Math.sin(a1);
     const g = svgEl("g", {
-      class: "seg" + (isActive ? " seg--active" : "") + (isInactive ? " seg--inactive" : ""),
+      class:
+        "seg" +
+        (isActive ? " seg--active" : "") +
+        (isInactive ? " seg--inactive" : ""),
     });
 
     const wedge = svgEl("path", {
@@ -119,10 +131,12 @@ export function drawSegments(segGroup, dotGroup, opts) {
       const labelR = r * 1.15;
       const lx = cx + labelR * Math.cos(mid);
       const ly = cy + labelR * Math.sin(mid);
-      const anchor = Math.cos(mid) > 0.1 ? "start" : Math.cos(mid) < -0.1 ? "end" : "middle";
+      const anchor =
+        Math.cos(mid) > 0.1 ? "start" : Math.cos(mid) < -0.1 ? "end" : "middle";
 
       const t = svgEl("text", {
-        x: lx, y: ly,
+        x: lx,
+        y: ly,
         "text-anchor": anchor,
         "dominant-baseline": "middle",
         "font-size": "9",
@@ -148,17 +162,22 @@ export function drawSegments(segGroup, dotGroup, opts) {
       const hue = dimHue(dimIdx, n);
       const a0 = dimIdx * step - Math.PI / 2;
       const dimMid = a0 + step / 2;
-      const spread = seededRand(tool.name + dimLabel + "s") * step * 0.65 - step * 0.325;
+      const spread =
+        seededRand(tool.name + dimLabel + "s") * step * 0.65 - step * 0.325;
       const ring = tierRings[tool.tier];
       if (!ring) return;
-      const rDist = ring.inner + seededRand(tool.name + dimLabel + "r") * (ring.outer - ring.inner);
+      const rDist =
+        ring.inner +
+        seededRand(tool.name + dimLabel + "r") * (ring.outer - ring.inner);
 
       const dx = cx + rDist * Math.cos(dimMid + spread);
       const dy = cy + rDist * Math.sin(dimMid + spread);
-      const isInactive = activeFilters?.dim?.size && !activeFilters.dim.has(dimLabel);
+      const isInactive =
+        activeFilters?.dim?.size && !activeFilters.dim.has(dimLabel);
 
       const dot = svgEl("circle", {
-        cx: dx, cy: dy,
+        cx: dx,
+        cy: dy,
         r: showLabels ? 5 : 3,
         fill: dotFill(hue, isInactive),
         opacity: isInactive ? "0.35" : "1",

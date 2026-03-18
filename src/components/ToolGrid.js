@@ -45,8 +45,10 @@ function cardHTML(tool, config, idx) {
   const dimDef = config.dimensions?.find((d) => d.label === firstDim);
   const dimColor = dimDef?.color || "#7b82a0";
   const indicator = tool.indicators?.[firstDim] || "";
-  const langs = (tool.languages || []).slice(0, 3)
-    .map((l) => `<span class="tag">${l}</span>`).join("");
+  const langs = (tool.languages || [])
+    .slice(0, 3)
+    .map((l) => `<span class="tag">${l}</span>`)
+    .join("");
 
   return `
     <article class="card" data-name="${tool.name}" data-tier="${tool.tier}"
@@ -59,14 +61,22 @@ function cardHTML(tool, config, idx) {
         </div>
       </header>
       <p class="card-desc">${tool.description}</p>
-      ${indicator ? `
+      ${
+        indicator
+          ? `
         <aside class="card-indicator" style="border-color:${dimColor}">
           <strong style="color:${dimColor}">${firstDim}</strong> — This tool ${indicator}
-        </aside>` : ""}
+        </aside>`
+          : ""
+      }
       <footer class="card-foot">
-        <div class="tags" aria-label="Languages: ${(tool.languages || []).join(', ')}">${langs}</div>
-        ${tool.website ? `<a class="card-link" href="${tool.website}" target="_blank" rel="noopener noreferrer"
-             aria-label="Open ${tool.name} documentation (new tab)">Docs ↗</a>` : ""}
+        <div class="tags" aria-label="Languages: ${(tool.languages || []).join(", ")}">${langs}</div>
+        ${
+          tool.website
+            ? `<a class="card-link" href="${tool.website}" target="_blank" rel="noopener noreferrer"
+             aria-label="Open ${tool.name} documentation (new tab)">Docs ↗</a>`
+            : ""
+        }
       </footer>
     </article>`;
 }

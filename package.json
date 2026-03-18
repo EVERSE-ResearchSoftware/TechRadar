@@ -8,8 +8,8 @@
     "serve": "vite --port 3000",
     "build": "vite build",
     "generate:snapshot": "node scripts/snapshot.js",
-    "lint-prettier:fix": "prettier --write \"data/**/*.json\"",
-    "lint-prettier:check": "prettier --check \"data/**/*.json\""
+    "lint-prettier:fix": "prettier --write \"data/**/*.json\" \"src/**/*.js\"",
+    "lint-prettier:check": "prettier --check \"data/**/*.json\" \"src/**/*.js\" "
   },
   "dependencies": {
     "js-yaml": "^4.1.0",

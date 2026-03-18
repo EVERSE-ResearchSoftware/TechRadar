@@ -12,16 +12,17 @@ import { openModal } from "../utils/dom.js";
 export function showTool(tool, config) {
   const dims = config.dimensions || [];
 
-  set("modal-name",    tool.name);
-  set("modal-meta",    `${tool.softwareType || ""} · ${tool.tier}`);
-  set("modal-desc",    tool.description);
+  set("modal-name", tool.name);
+  set("modal-meta", `${tool.softwareType || ""} · ${tool.tier}`);
+  set("modal-desc", tool.description);
   set("modal-license", tool.license || "Unknown");
 
   // Languages
   const langsEl = document.getElementById("modal-langs");
   if (langsEl) {
     langsEl.innerHTML = (tool.languages || [])
-      .map((l) => `<span class="tag">${l}</span>`).join("");
+      .map((l) => `<span class="tag">${l}</span>`)
+      .join("");
   }
 
   // Indicators
@@ -30,15 +31,17 @@ export function showTool(tool, config) {
   if (indsEl && indsSection) {
     const entries = Object.entries(tool.indicators || {});
     if (entries.length) {
-      indsEl.innerHTML = entries.map(([dim, text]) => {
-        const def = dims.find((d) => d.label === dim);
-        const col = def?.color || "#7b82a0";
-        return `
+      indsEl.innerHTML = entries
+        .map(([dim, text]) => {
+          const def = dims.find((d) => d.label === dim);
+          const col = def?.color || "#7b82a0";
+          return `
           <div class="indicator-row" style="border-color:${col}">
             <span class="ind-dim" style="color:${col}">${dim}</span>
             <span class="ind-text">This tool ${text}</span>
           </div>`;
-      }).join("");
+        })
+        .join("");
       indsSection.hidden = false;
     } else {
       indsSection.hidden = true;
@@ -51,7 +54,8 @@ export function showTool(tool, config) {
   if (ucEl && ucSection) {
     if (tool.useCases?.length) {
       ucEl.innerHTML = tool.useCases
-        .map((uc) => `<li class="usecase">${uc}</li>`).join("");
+        .map((uc) => `<li class="usecase">${uc}</li>`)
+        .join("");
       ucSection.hidden = false;
     } else {
       ucSection.hidden = true;
