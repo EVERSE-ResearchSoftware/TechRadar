@@ -1,0 +1,105 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "EVERSE TechRadar Tool",
+  "description": "Schema for a single tool entry. Supports both the flat legacy format and the JSON-LD format used by the EVERSE project.",
+  "type": "object",
+  "required": ["name", "description"],
+  "additionalProperties": true,
+  "properties": {
+    "@context": { "type": "string" },
+    "@id":      { "type": "string" },
+    "@type":    { "type": "string" },
+
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "description": {
+      "type": "string",
+      "minLength": 20,
+      "maxLength": 2000
+    },
+
+    "url":     { "type": "string", "format": "uri" },
+    "website": { "type": "string", "format": "uri" },
+
+    "tier": {
+      "type": "string",
+      "enum": ["Adopt", "Trial", "Assess", "Hold"]
+    },
+
+    "softwareType": {
+      "type": "string",
+      "enum": ["Analysis Code", "Prototype Tool", "Research Software Infrastructure"]
+    },
+
+    "applicationCategory": {
+      "description": "JSON-LD category — maps to softwareType at load time",
+      "oneOf": [
+        { "type": "object" },
+        { "type": "array",  "items": { "type": "object" } }
+      ]
+    },
+
+    "dimensions": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" }
+    },
+
+    "hasQualityDimension": {
+      "description": "JSON-LD quality dimensions — maps to dimensions at load time",
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "object" }
+    },
+
+    "indicators": {
+      "type": "object",
+      "description": "How the tool measures each quality dimension. Key = dimension label.",
+      "additionalProperties": { "type": "string", "minLength": 10 }
+    },
+
+    "improvesQualityIndicator": {
+      "description": "JSON-LD quality indicator URIs",
+      "type": "array",
+      "items": { "type": "object" }
+    },
+
+    "useCases": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 10 }
+    },
+
+    "license": { "type": "string", "minLength": 1 },
+
+    "languages": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+
+    "appliesToProgrammingLanguage": {
+      "description": "JSON-LD programming languages — maps to languages at load time",
+      "type": "array",
+      "items": { "type": "string" }
+    },
+
+    "howToUse": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+
+    "isAccessibleForFree": { "type": "boolean" },
+
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+
+    "alternativeTo": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

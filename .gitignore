@@ -1,5 +1,15 @@
+node_modules/
+dist/
+coverage/
+.env
+.env.local
+*.log
 .DS_Store
-node_modules
+Thumbs.db
+public/catalog.json
+public/snapshots/
 .techradar/
-**/__pycache__/
+.pytest_cache/
+__pycache__/
+.node_modules/
 build/

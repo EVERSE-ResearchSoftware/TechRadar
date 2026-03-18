@@ -1,0 +1,54 @@
+{
+  "@context": "https://w3id.org/everse/rs#",
+  "@id": "https://w3id.org/everse/tools/sonarqube",
+  "@type": "SoftwareApplication",
+  "applicationCategory": {
+    "@id": "rs:ResearchInfrastructureSoftware",
+    "@type": "@id"
+  },
+  "description": "Continuous code quality platform that automatically detects bugs, vulnerabilities, and code smells across multiple programming languages, providing comprehensive static analysis to improve software maintainability, security, and reliability.",
+  "hasQualityDimension": [
+    {
+      "@id": "dim:maintainability",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:security",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:reliability",
+      "@type": "@id"
+    }
+  ],
+  "howToUse": ["CI/CD", "online-service"],
+  "isAccessibleForFree": true,
+  "license": "https://spdx.org/licenses/GPL-3.0-only",
+  "name": "SonarQube",
+  "appliesToProgrammingLanguage": ["Java", "Python", "JavaScript", "C#", "C++"],
+  "url": "https://www.sonarqube.org/",
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/no_critical_vulnerability",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/no_leaked_credentials",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/static_analysis_common_vulnerabilities",
+      "@type": "@id"
+    }
+  ],
+  "indicators": {
+        "Maintainability": "measures Maintainability by scanning for code smells, cyclomatic complexity, and duplication — giving a debt rating (A–E) and estimating remediation effort in developer-days.",
+        "Security": "measures Security by detecting OWASP Top 10 and CWE patterns via static analysis, assigning hotspot severity and providing fix guidance.",
+        "Reliability": "measures Testing by integrating with coverage tools to surface untested critical paths and tracking coverage trends across releases."
+      },
+  "useCases": [
+    "Block low-quality merges by configuring quality gates in a CI/CD pipeline",
+    "Track code health trends over time to demonstrate maintainability improvements before publication",
+    "Run pre-release security audits on research software before making it publicly available"
+  ]
+}
