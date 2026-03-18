@@ -1,0 +1,33 @@
+{
+  "@context": "https://w3id.org/everse/rs#",
+  "@id": "https://black.readthedocs.io/en/stable",
+  "@type": "schema:SoftwareApplication",
+  "name": "Black",
+  "description": "Deterministic Python code formatter that enforces consistent coding style across software projects, improving code readability, maintainability, and collaboration in research teams.",
+  "url": "https://github.com/psf/black",
+  "isAccessibleForFree": true,
+  "license": "https://spdx.org/licenses/MIT",
+  "applicationCategory": [
+    { "@id": "rs:PrototypeTool", "@type": "@id" },
+    { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" }
+  ],
+  "hasQualityDimension": { "@id": "dim:maintainability", "@type": "@id" },
+  "measuresQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/has_no_linting_issues",
+      "@type": "@id"
+    }
+  ],
+  "howToUse": ["CI/CD", "command-line"],
+
+  "indicators": {
+    "Maintainability": "measures Maintainability by enforcing a consistent and deterministic code style, reducing formatting-related complexity, minimizing stylistic discrepancies, and improving readability and long-term maintainability of Python codebases."
+  },
+
+  "useCases": [
+    "Automatically format Python code in CI/CD pipelines to enforce consistent coding standards",
+    "Improve readability and maintainability of research software by eliminating style inconsistencies",
+    "Reduce code review overhead by removing debates over formatting and style choices",
+    "Standardize code formatting across collaborative teams to enhance long-term maintainability"
+  ]
+}

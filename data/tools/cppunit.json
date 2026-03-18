@@ -1,0 +1,44 @@
+{
+  "@context": "https://w3id.org/everse/rs#",
+  "@id": "https://w3id.org/everse/tools/cppunit",
+  "@type": "schema:SoftwareApplication",
+  "name": "CppUnit",
+  "description": "Unit testing framework for C++ that enables systematic testing of research software components, improving code reliability and maintainability through automated test execution and comprehensive testing capabilities.",
+  "url": "https://freedesktop.org/wiki/Software/cppunit/",
+  "applicationCategory": [
+    { "@id": "rs:PrototypeTool", "@type": "@id" },
+    { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" }
+  ],
+  "isAccessibleForFree": true,
+  "hasQualityDimension": [
+    { "@id": "dim:maintainability", "@type": "@id" },
+    { "@id": "dim:reliability", "@type": "@id" }
+  ],
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/has_ci-tests",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_test_coverage",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_has_tests",
+      "@type": "@id"
+    }
+  ],
+  "howToUse": ["command-line"],
+  "appliesToProgrammingLanguage": ["C++"],
+  "license": "https://www.gnu.org/licenses/lgpl-3.0",
+  "indicators": {
+  "Maintainability": "measures Maintainability by encouraging modular code design and facilitating easier debugging through structured unit tests.",
+  "Reliability": "measures Reliability by enabling systematic testing of software components, detecting defects early, and ensuring consistent behavior through automated test execution and coverage tracking."
+},
+"useCases": [
+  "Develop and run unit tests for C++ research software components",
+  "Ensure correctness and stability of code through automated testing",
+  "Improve code reliability by detecting bugs early in development",
+  "Integrate testing into CI/CD pipelines to maintain software quality over time"
+]
+}

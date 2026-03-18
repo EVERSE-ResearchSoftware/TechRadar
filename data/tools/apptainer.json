@@ -1,0 +1,45 @@
+{
+  "@context": "https://w3id.org/everse/rs#",
+  "@id": "https://w3id.org/everse/tools/apptainer",
+  "@type": "schema:SoftwareApplication",
+  "name": "Apptainer",
+  "description": "High-performance container platform designed for scientific computing and HPC environments...",
+  "url": "https://apptainer.org/",
+  "applicationCategory": {
+    "@id": "rs:ResearchInfrastructureSoftware",
+    "@type": "@id"
+  },
+  "isAccessibleForFree": true,
+  "hasQualityDimension": [
+    { "@id": "dim:compatibility", "@type": "@id" },
+    { "@id": "dim:flexibility", "@type": "@id" },
+    { "@id": "dim:reliability", "@type": "@id" },
+    { "@id": "dim:sustainability", "@type": "@id" }
+  ],
+  "howToUse": ["command-line"],
+  "license": "https://opensource.org/license/bsd-3-clause",
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/dependency_management",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/requirements_specified",
+      "@type": "@id"
+    }
+  ],
+
+  "indicators": {
+    "Compatibility": "measures Compatibility by ensuring consistent execution across heterogeneous HPC systems, validating environment portability, and supporting multiple architectures and OS configurations without modification.",
+    "Flexibility": "measures Flexibility by enabling scalable deployment from local machines to supercomputers, supporting modular container definitions, and allowing rapid replacement or customization of software environments.",
+    "Reliability": "measures Reliability by ensuring reproducible execution through immutable container images, reducing runtime variability, and maintaining stable behavior across different infrastructures.",
+    "Sustainability": "measures Sustainability by preserving executable research environments over time, enabling long-term reproducibility of scientific workflows, and reducing dependency on evolving system configurations."
+  },
+
+  "useCases": [
+    "Package complex scientific software stacks into portable containers for execution across HPC clusters",
+    "Ensure reproducibility of computational experiments by preserving runtime environments",
+    "Run the same workflow seamlessly on local machines, cloud platforms, and supercomputers",
+    "Archive and share research environments to support long-term sustainability and reuse"
+  ]
+}

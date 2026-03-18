@@ -1,0 +1,34 @@
+{
+  "@context": "https://w3id.org/everse/rs#",
+  "@id": "https://w3id.org/everse/tools/creative_commons_license_chooser",
+  "@type": "SoftwareApplication",
+  "applicationCategory": {
+    "@id": "rs:ResearchInfrastructureSoftware",
+    "@type": "@id"
+  },
+  "description": "A web-based tool to help users select an appropriate Creative Commons license for their work.",
+  "hasQualityDimension": {
+    "@id": "dim:fairness",
+    "@type": "@id"
+  },
+  "howToUse": ["command-line"],
+  "isAccessibleForFree": true,
+  "license": "https://creativecommons.org/publicdomain/zero/1.0",
+  "name": "Creative Commons License Chooser",
+  "url": "https://chooser-beta.creativecommons.org/",
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_has_license",
+      "@type": "@id"
+    }
+  ],
+  "indicators": {
+  "Fairness": "measures Fairness by enabling appropriate selection of Creative Commons licenses, ensuring proper attribution, clear usage rights, and equitable sharing of research outputs."
+},
+"useCases": [
+  "Select appropriate Creative Commons licenses for research outputs",
+  "Ensure proper attribution and reuse conditions for shared work",
+  "Support open science practices through clear licensing of datasets and software",
+  "Facilitate compliant sharing and reuse of research materials"
+]
+}

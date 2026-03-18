@@ -1,0 +1,37 @@
+{
+  "@context": "https://w3id.org/everse/rs#",
+  "@id": "https://w3id.org/everse/tools/checkstyle",
+  "@type": "schema:SoftwareApplication",
+  "name": "Checkstyle",
+  "description": "Java code style checker that enforces coding standards and best practices in research software projects, improving code maintainability and readability through automated style analysis.",
+  "url": "https://checkstyle.sourceforge.io/",
+  "isAccessibleForFree": true,
+  "hasQualityDimension": {
+    "@id": "dim:maintainability",
+    "@type": "@id"
+  },
+  "howToUse": ["command-line", "CI/CD"],
+  "appliesToProgrammingLanguage": ["Java"],
+  "license": "https://opensource.org/licenses/LGPL-2.1",
+  "applicationCategory": [
+    { "@id": "rs:PrototypeTool", "@type": "@id" },
+    { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" },
+    { "@id": "rs:AnalysisCode", "@type": "@id" }
+  ],
+  "measuresQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/has_no_linting_issues",
+      "@type": "@id"
+    }
+    
+  ],
+  "indicators": {
+  "Maintainability": "measures Maintainability by enforcing consistent coding standards, detecting style violations, and reducing code complexity, thereby improving readability and long-term maintainability of Java codebases."
+},
+"useCases": [
+  "Enforce coding standards in Java projects through automated style checks in CI/CD pipelines",
+  "Improve readability and maintainability of research software by identifying style violations early",
+  "Reduce code review effort by automating detection of formatting and convention issues",
+  "Standardize code structure across teams working on collaborative Java projects"
+]
+}

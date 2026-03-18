@@ -1,0 +1,29 @@
+{
+  "@context": "https://w3id.org/everse/rs#",
+  "@id": "https://w3id.org/everse/tools/cmake",
+  "@type": "SoftwareApplication",
+  "applicationCategory": {
+    "@id": "rs:ResearchInfrastructureSoftware",
+    "type": "@id"
+  },
+  "description": "Cross-platform build system generator that simplifies the build process for research software across different operating systems and compilers, improving software portability and maintainability.",
+  "hasQualityDimension": [
+    { "@id": "dim:maintainability", "@type": "@id" },
+    { "@id": "dim:compatibility", "@type": "@id" }
+  ],
+  "howToUse": ["command-line"],
+  "isAccessibleForFree": true,
+  "license": "https://spdx.org/licenses/BSD-3-Clause",
+  "name": "CMake",
+  "url": "https://cmake.org/",
+  "indicators": {
+  "Maintainability": "measures Maintainability by simplifying and standardizing build configurations, reducing manual build complexity, and improving reproducibility of software builds across environments.",
+  "Compatibility": "measures Compatibility by enabling cross-platform builds across different operating systems, compilers, and architectures, ensuring consistent software behavior in diverse environments."
+},
+"useCases": [
+  "Configure and manage cross-platform builds for research software projects",
+  "Ensure consistent build processes across development, testing, and deployment environments",
+  "Simplify complex build configurations for multi-language or multi-module systems",
+  "Improve portability of software across operating systems and compilers"
+]
+}

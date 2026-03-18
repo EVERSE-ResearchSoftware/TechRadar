@@ -1,0 +1,42 @@
+{
+  "@context": "https://w3id.org/everse/rs#",
+  "@id": "https://w3id.org/everse/tools/doxygen",
+  "@type": "SoftwareApplication",
+  "applicationCategory": { "@id": "rs:AnalysisCode", "@type": "@id" },
+  "appliesToProgrammingLanguage": [
+    "C++",
+    "C",
+    "Python",
+    "PHP",
+    "Java",
+    "C#",
+    "Objective-C",
+    "Fortran",
+    "VHDL",
+    "Splice",
+    "IDL",
+    "Lex"
+  ],
+  "description": "Documentation generator for C++, C, Java, and other languages that automatically extracts documentation from annotated source code, improving research software maintainability through comprehensive API documentation.",
+  "hasQualityDimension": { "@id": "dim:maintainability", "@type": "@id" },
+  "howToUse": ["CI/CD", "command-line"],
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_has_documentation",
+      "@type": "@id"
+    }
+  ],
+  "isAccessibleForFree": true,
+  "license": "https://spdx.org/licenses/GPL-2.0-only",
+  "name": "doxygen",
+  "url": "https://www.doxygen.nl/",
+  "indicators": {
+  "Maintainability": "measures Maintainability by automatically generating comprehensive documentation from source code, improving code understanding, reducing onboarding effort, and supporting long-term software maintenance."
+},
+"useCases": [
+  "Generate API documentation automatically from annotated source code",
+  "Improve maintainability by providing clear and structured documentation",
+  "Support onboarding of new contributors through accessible code documentation",
+  "Ensure documentation stays synchronized with code through automated generation"
+]
+}

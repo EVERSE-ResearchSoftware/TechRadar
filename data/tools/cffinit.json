@@ -1,0 +1,48 @@
+{
+  "@context": "https://w3id.org/everse/rs#",
+  "@id": "https://w3id.org/everse/tools/cffinit",
+  "@type": "SoftwareApplication",
+  "applicationCategory": {
+    "@id": "rs:ResearchInfrastructureSoftware",
+    "@type": "@id"
+  },
+  "description": "Web-based tool for creating standardized CITATION.cff files that enable proper citation of research software, improving software findability and supporting FAIR principles through structured metadata generation.",
+  "hasQualityDimension": {
+    "@id": "dim:fairness",
+    "@type": "@id"
+  },
+  "howToUse": ["online-service"],
+  "isAccessibleForFree": true,
+  "license": "https://spdx.org/licenses/Apache-2.0",
+  "name": "cffinit",
+  "url": "https://citation-file-format.github.io/cffinit",
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_has_citation",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_has_license",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/descriptive_metadata",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/metadata_is_up_to_date",
+      "@type": "@id"
+    }
+  ],
+
+  "indicators": {
+    "Fairness": "measures Fairness by enabling standardized software citation through CITATION.cff files, ensuring proper attribution of authors and contributors, improving metadata completeness, and enhancing equitable visibility and reuse of research software."
+  },
+
+  "useCases": [
+    "Generate CITATION.cff files to ensure proper citation of research software in publications",
+    "Improve discoverability and reuse of software through standardized citation metadata",
+    "Provide clear attribution to authors and contributors in collaborative research projects",
+    "Prepare software repositories for FAIR compliance and integration with platforms like GitHub and Zenodo"
+  ]
+}

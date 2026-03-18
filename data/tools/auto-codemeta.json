@@ -1,0 +1,48 @@
+{
+  "@context": "https://w3id.org/everse/rs#",
+  "@id": "https://w3id.org/everse/tools/auto-codemeta_generator",
+  "@type": "SoftwareApplication",
+  "applicationCategory": {
+    "@id": "rs:PrototypeTool",
+    "@type": "@id"
+  },
+  "description": "This repository contains a (client-side) web application to automatically generate Codemeta documents (aka. codemeta.json).",
+  "hasQualityDimension": {
+    "@id": "dim:fairness",
+    "@type": "@id"
+  },
+  "howToUse": ["CI/CD", "command-line"],
+  "isAccessibleForFree": true,
+  "license": "https://spdx.org/licenses/AGPL-3.0-or-later",
+  "name": "Auto-CodeMeta Generator",
+  "url": "https://w3id.org/autocodemeta",
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/descriptive_metadata",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/codemeta_completeness",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/metadata_is_up_to_date",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_has_citation",
+      "@type": "@id"
+    }
+  ],
+
+  "indicators": {
+    "Fairness": "measures Fairness by improving completeness and standardization of software metadata using Codemeta, ensuring proper attribution, citation readiness, and equitable visibility of research software across repositories and platforms."
+  },
+
+  "useCases": [
+    "Generate standardized codemeta.json files to improve discoverability and interoperability of research software",
+    "Ensure proper attribution of software authors and contributors through complete metadata records",
+    "Integrate metadata generation into CI/CD pipelines to keep software descriptions up to date",
+    "Prepare research software for publication, citation, and indexing in scholarly repositories"
+  ]
+}
