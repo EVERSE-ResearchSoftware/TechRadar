@@ -168,7 +168,22 @@
       "items": {
         "type": "string"
       }
+    },
+    "useCases": {
+      "description": "Use cases for the software tool",
+      "type": [ "string", "array" ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "indicators": {
+      "description": "Indicators related to the software tool, with descriptions of how they are measured or improved",
+      "type": [ "string", "array" ],
+      "items": {
+        "type": "string"
+      }
     }
+
   },
   "required": [
     "@context",
