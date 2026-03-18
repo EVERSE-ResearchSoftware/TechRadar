@@ -1,9 +1,9 @@
 name: Validate
 on:
   push:
-    branches: ["main"]
+    branches: ["main", "techradar-ui-improvements"]
   pull_request:
-    branches: ["main"]
+    branches: ["main", "techradar-ui-improvements"]
   workflow_dispatch:
 
 permissions:
