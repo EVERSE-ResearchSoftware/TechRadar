@@ -7,7 +7,6 @@ export function mountSuggestModal(config) {
   const form = document.getElementById("suggest-form");
   if (!form) return;
 
-  // Populate tier and dimension selects from config
   const tierSelect = document.getElementById("sug-tier");
   const dimCheckboxes = document.getElementById("sug-dims");
 
@@ -24,11 +23,9 @@ export function mountSuggestModal(config) {
       </label>`).join("");
   }
 
-  // Live preview
   form.addEventListener("input", () => updatePreview());
   form.addEventListener("change", () => updatePreview());
 
-  // Download
   document.getElementById("sug-download")?.addEventListener("click", () => downloadJson());
 }
 
@@ -74,7 +71,6 @@ function updatePreview() {
   const obj = toJsonObj(gatherFormData());
   const raw = JSON.stringify(obj, null, 2);
 
-  // Syntax-highlight the JSON
   preview.innerHTML = raw
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")

@@ -14,8 +14,7 @@ platform:
     Covers reproducibility, maintainability, FAIRness, security, testing, and more.
   baseUrl: "/techradar"
   repository: "https://github.com/EVERSE-ResearchSoftware/TechRadar/"
-  contact: "techradar@your-org.example"
-  logoPath: "/techradar/logo.svg"   # path to logo in public/; set to "" to show text name instead
+  logoPath: "/techradar/logo.svg"
   contributingUrl: "https://github.com/EVERSE-ResearchSoftware/TechRadar/blob/main/CONTRIBUTING.md"
   privacyUrl: "https://everse.software/privacy/"
 
@@ -60,7 +59,6 @@ tiers:
 
 # ── Quality Dimensions ───────────────────────────────────────────────────────
 # Configurable — add, remove, or rename dimensions without any code changes.
-# Tool YAML files reference dimensions by their `label` value.
 dimensions:
   - id: reproducibility
     label: "Reproducibility"
@@ -117,13 +115,12 @@ dimensions:
     description: "Inclusive design for users with different abilities"
     color: "#e8c87a"
 
-# ── Software Tiers (classification, not quality tiers) ────────────────────────
+# ── Software Tiers (classification) ────────────────────────
 softwareTypes:
   - "Analysis Code"
   - "Prototype Tool"
   - "Research Software Infrastructure"
 
-# ── Controlled Vocabularies ───────────────────────────────────────────────────
 # Used for validation and filter chips
 licenses:
   - MIT
@@ -132,85 +129,33 @@ licenses:
   - CC-BY-4.0
   - Other
 
-# ── UI Preferences ────────────────────────────────────────────────────────────
 ui:
-  defaultSort: "name"          # name | tier | newest
+  defaultSort: "name"          
   cardsPerPage: 24
-  defaultView: "grid"          # grid | list
+  defaultView: "grid"         
   showRadar: true
   theme: "dark"
 
-# ── Contribution ──────────────────────────────────────────────────────────────
-contribution:
-  requiredFields:
-    - name
-    - description
-    - website
-    - tier
-    - softwareType
-    - dimensions
-    - license
-  optionalFields:
-    - repository
-    - languages
-    - useCases
-    - indicators
-    - tags
-    - alternativeTo
-    - icon
-  guideUrl: "CONTRIBUTING.md"
-  schemaPath: "scripts/schema/tool.schema.json"
-
-# ── Theme ─────────────────────────────────────────────────────────────────────
-# All visual tokens for the UI. Change any value here and run `npm run dev`
-# or `npm run build` — the browser will pick up the new theme automatically.
-# No code changes needed.
-#
-# Colors: any valid CSS color (hex, rgb, hsl)
-# Fonts:  any Google Font or system font stack
-# Sizes:  use px units
-#
-# Built-in font stacks (no extra setup needed):
-#   sans-serif:  "Syne, sans-serif" | "DM Sans, sans-serif" | "Inter, sans-serif" | "system-ui, sans-serif"
-#   serif:       "Georgia, serif"   | "Merriweather, serif"
-#   monospace:   "DM Mono, monospace" | "Fira Code, monospace" | "Courier New, monospace"
-#
-# To use a custom Google Font: add it to the <link> in index.html, then reference it here.
-
 theme:
-  # ── EVERSE brand palette ───────────────────────────────────────────────────
-  # Exact hex values extracted from the EVERSE logo SVG:
-  #   Purple  #80529a  — logo mark + RSE lettering
-  #   Blue    #3ea3dc  — arc element + EVE lettering
-  #   Black   #040305  — body text in logo
+  colorBg:       "#f6f4f9"  
+  colorSurface:  "#ffffff" 
+  colorSurface2: "#ede9f4" 
+  colorBorder:   "#d5cce6" 
 
-  # ── Background layers ──────────────────────────────────────────────────────
-  colorBg:       "#f6f4f9"   # very light purple-tinted page background
-  colorSurface:  "#ffffff"   # white cards and nav
-  colorSurface2: "#ede9f4"   # light purple-tinted inputs, sidebar
-  colorBorder:   "#d5cce6"   # soft purple-grey dividers
+  colorText:  "#1e1028"  
+  colorMuted: "#5c4d72"  
+  colorDim:   "#a494bc"   
 
-  # ── Text ───────────────────────────────────────────────────────────────────
-  colorText:  "#1e1028"   # deep purple-black — strong readable text
-  colorMuted: "#5c4d72"   # mid-tone purple — descriptions, labels
-  colorDim:   "#a494bc"   # light purple — placeholders, disabled
 
-  # ── Accent colors ──────────────────────────────────────────────────────────
-  # colorGreen  → primary accent: buttons, active states, "Adopt" tier
-  # colorBlue   → secondary accent: links, "Trial" tier
-  # colorYellow → warning tone: "Assess" tier
-  # colorOrange → danger / "Hold" tier
-  colorGreen:  "#80529a"   # EVERSE purple — primary brand accent
-  colorBlue:   "#3ea3dc"   # EVERSE blue — secondary brand accent
-  colorYellow: "#c47d00"   # amber — assess / warning
-  colorOrange: "#c0392b"   # red — hold / danger
+  colorGreen:  "#80529a"   
+  colorBlue:   "#3ea3dc"   
+  colorYellow: "#c47d00"  
+  colorOrange: "#c0392b"  
 
-  # ── Typography ─────────────────────────────────────────────────────────────
   fontDisplay: "Syne, sans-serif"
   fontBody:    "DM Sans, sans-serif"
   fontMono:    "DM Mono, monospace"
   fontSize:    "14px"
 
-  # ── Shape ──────────────────────────────────────────────────────────────────
   radiusCard: "12px"
   radiusChip: "8px"

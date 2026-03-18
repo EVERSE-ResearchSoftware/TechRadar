@@ -1,6 +1,6 @@
 /**
  * ToolGrid.js
- * Renders the tool card grid into #catalog.
+ * the tool card grid into #catalog.
  */
 
 import { showTool } from "./ToolModal.js";

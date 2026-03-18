@@ -1,7 +1,5 @@
 /**
- * FilterPanel.js
- * Renders and updates all filter chip groups in the sidebar.
- */
+ * FilterPanel.js 
 
 /**
  * @param {string}   containerId  — DOM id of the filter panel container
@@ -30,14 +28,12 @@ export function renderFilters(containerId, config, tools, filters, onChange) {
     chipGroup("License", "license", licenses.map((l) => ({ val: l })), filters),
   ].join("");
 
-  // Wire up chip clicks
   container.querySelectorAll(".chip[data-key]").forEach((chip) => {
     chip.addEventListener("click", () => {
       const key = chip.dataset.key;
       const val = chip.dataset.val;
       const now = !chip.classList.contains("chip--active");
       chip.classList.toggle("chip--active", now);
-      // Apply dynamic active style if present
       if (chip.dataset.activeStyle) {
         chip.style.cssText = now ? chip.dataset.activeStyle : (chip.dataset.baseStyle || "");
       }
@@ -46,9 +42,6 @@ export function renderFilters(containerId, config, tools, filters, onChange) {
   });
 }
 
-/**
- * Sync chip UI to reflect current filter state (e.g. after programmatic clear).
- */
 export function syncFilterChips(filters) {
   document.querySelectorAll(".chip[data-key]").forEach((chip) => {
     const key = chip.dataset.key;

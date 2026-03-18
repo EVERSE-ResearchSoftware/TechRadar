@@ -1,6 +1,5 @@
 /**
  * ToolModal.js
- * Populates and opens the tool-detail modal.
  */
 
 import { openModal } from "../utils/dom.js";

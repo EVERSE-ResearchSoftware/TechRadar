@@ -21,7 +21,6 @@ export async function loadCatalog() {
 }
 
 // ── applicationCategory @id → softwareType label ─────────────────────────────
-// Human-readable label for softwareType display
 const CATEGORY_LABEL = {
   AnalysisCode:                   "Analysis Code",
   PrototypeTool:                  "Prototype Tool",
@@ -39,7 +38,6 @@ const CATEGORY_TIER = {
 //   AnalysisCode > PrototypeTool > ResearchInfrastructureSoftware
 const CATEGORY_PRIORITY = ["AnalysisCode", "PrototypeTool", "ResearchInfrastructureSoftware"];
 
-// Returns the winning short key (e.g. "AnalysisCode") after applying priority rule
 function resolveRawCategory(raw) {
   const items = Array.isArray(raw) ? raw : raw ? [raw] : [];
   const keys = items.map(item => {
@@ -61,13 +59,12 @@ function resolveCategory(raw) {
   return CATEGORY_LABEL[key] || key;
 }
 
-// Radar tier — e.g. "Adopt"
 function resolveTier(raw) {
   const key = resolveRawCategory(raw);
-  return CATEGORY_TIER[key] || "Assess";
+  return CATEGORY_TIER[key] || "Analysis Code";
 }
 
-// ── hasQualityDimension URIs → plain label array ──────────────────────────────
+// hasQualityDimension URIs
 function resolveDimensions(raw) {
   if (!raw) return [];
   const items = Array.isArray(raw) ? raw : [raw];
@@ -79,16 +76,14 @@ function resolveDimensions(raw) {
   }).filter(Boolean);
 }
 
-// ── license URI → short SPDX string ──────────────────────────────────────────
-// "https://spdx.org/licenses/GPL-3.0-only" → "GPL-3.0-only"
+// license URI "https://spdx.org/licenses/GPL-3.0-only" → "GPL-3.0-only"
 function resolveLicense(raw) {
   if (!raw) return "";
   if (typeof raw === "string") return raw.split("/").pop() || raw;
   return raw?.["@id"]?.split("/").pop() || String(raw);
 }
 
-// ── languages ─────────────────────────────────────────────────────────────────
-// Supports both old `languages` and new `appliesToProgrammingLanguage`
+// languages appliesToProgrammingLanguage
 function resolveLanguages(tool) {
   if (tool.languages?.length)                    return tool.languages;
   if (tool.appliesToProgrammingLanguage?.length) return tool.appliesToProgrammingLanguage;
@@ -106,31 +101,12 @@ function resolveIndicatorIds(raw) {
   }).filter(Boolean);
 }
 
-/**
- * normaliseTool — translates JSON-LD schema shape into the flat shape
- * all UI components expect. Old-style flat files pass through unchanged.
- *
- * applicationCategory drives BOTH tier and softwareType — they are the same
- * concept. Priority rule for multi-category tools:
- *   AnalysisCode > PrototypeTool > ResearchInfrastructureSoftware
- *
- * New schema fields handled:
- *   url                          → website
- *   applicationCategory          → tier + softwareType
- *   hasQualityDimension          → dimensions
- *   appliesToProgrammingLanguage → languages
- *   license (full URI)           → license (SPDX short string)
- *   improvesQualityIndicator     → qualityIndicatorIds
- *
- * Optional fields you can still add per tool:
- *   useCases    — string[]  shown in modal
- *   indicators  — object keyed by dimension label, shown on card + modal
- */
+
 function normaliseTool(tool) {
   return {
     ...tool,
     website:             tool.website || tool.url,
-    // tier: radar ring — Adopt/Trial/Assess driven by applicationCategory
+    // tier: radar ring driven by applicationCategory
     tier:                tool.tier        || resolveTier(tool.applicationCategory),
     // softwareType: display label — "Analysis Code" etc.
     softwareType:        tool.softwareType || resolveCategory(tool.applicationCategory),
@@ -142,7 +118,7 @@ function normaliseTool(tool) {
 }
 
 /**
- * Filter tools based on active filter state.
+ * Filter tools
  * ANDed across categories, ORed within a category.
  */
 export function applyFilters(tools, filters = {}) {

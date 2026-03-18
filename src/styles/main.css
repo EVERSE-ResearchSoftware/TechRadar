@@ -1,13 +1,9 @@
-/* ────────────────────────────────────────────────────────────────────────────
+/* 
    TechRadar — Main Stylesheet
-
-   ⚠  DO NOT edit colours, fonts, or sizes here to change the theme.
-      Edit the `theme:` section in config.yaml instead.
+      Edit the `theme:` section in config.yaml instead here, to change the color scheme and fonts.
       These :root values are fallback defaults only — they are overridden
-      at runtime by applyTheme() in main.js using values from config.yaml.
-   ──────────────────────────────────────────────────────────────────────────── */
 
-/* ── Fallback tokens (overridden at runtime from config.yaml → theme section) */
+/* ── Defaults (overridden at runtime from config.yaml → theme section) */
 :root {
   --bg:       #f6f4f9;
   --surface:  #ffffff;
@@ -30,7 +26,7 @@
   --font-sz:  14px;
 }
 
-/* ── Reset ───────────────────────────────────────────────────────────────── */
+/* Reset */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
@@ -46,7 +42,7 @@ body {
 ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 10px; }
 :focus-visible { outline: 2px solid var(--green); outline-offset: 2px; border-radius: 3px; }
 
-/* ── Nav ─────────────────────────────────────────────────────────────────── */
+/* Navigations */
 .nav {
   display: flex;
   align-items: center;
@@ -162,7 +158,7 @@ body {
   box-shadow: 0 4px 16px rgba(74,240,160,.25);
 }
 
-/* ── Layout ──────────────────────────────────────────────────────────────── */
+/* Layout */
 .layout {
   display: grid;
   grid-template-columns: 380px 1fr;
@@ -170,7 +166,7 @@ body {
   min-height: calc(100vh - 56px);
 }
 
-/* ── Hero section ────────────────────────────────────────────────────────── */
+/* Hero Title section  */
 .hero {
   grid-column: 1 / -1;
   display: flex;
@@ -243,7 +239,7 @@ body {
   min-height: 16px;
 }
 
-/* ── Sidebar ─────────────────────────────────────────────────────────────── */
+/* Sidebar */
 .sidebar {
   background: var(--surface);
   border-right: 1px solid var(--border);
@@ -262,7 +258,7 @@ body {
   color: var(--muted);
 }
 
-/* ── Radar widget ─────────────────────────────────────────────────────────── */
+/* Radar widget */
 .radar-widget {}
 .radar-widget-header {
   display: flex;
@@ -293,7 +289,7 @@ body {
   cursor: pointer;
 }
 
-/* ── Filters ─────────────────────────────────────────────────────────────── */
+/* Sidebar Filters */
 .filter-group { display: flex; flex-direction: column; gap: 8px; }
 .filter-title {
   font-family: var(--font-m);
@@ -339,21 +335,21 @@ body {
 }
 .clear-btn:hover { color: var(--green); }
 
-/* ── Catalog ─────────────────────────────────────────────────────────────── */
+/* Catalog */
 .catalog {
   background: var(--bg);
   padding: 20px 22px;
   overflow-y: auto;
 }
 
-/* ── Grid ────────────────────────────────────────────────────────────────── */
+/* Tools Grid */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(282px, 1fr));
   gap: 13px;
 }
 
-/* ── Card ────────────────────────────────────────────────────────────────── */
+/* Tools Card */
 .card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -482,7 +478,7 @@ body {
   border-radius: 4px;
 }
 
-/* ── Empty state ─────────────────────────────────────────────────────────── */
+/* Empty state */
 .empty {
   text-align: center;
   padding: 64px 20px;
@@ -495,7 +491,7 @@ body {
   color: var(--green); cursor: pointer; text-decoration: underline;
 }
 
-/* ── Modals ──────────────────────────────────────────────────────────────── */
+/* Modals for tool details */
 .modal-overlay {
   display: none;
   position: fixed;
@@ -621,7 +617,7 @@ body {
   color: var(--orange);
 }
 
-/* ── Buttons ─────────────────────────────────────────────────────────────── */
+/* Buttons for actions */
 .btn-primary {
   flex: 1;
   background: var(--green);
@@ -652,7 +648,7 @@ body {
 }
 .btn-secondary:hover { color: var(--text); border-color: var(--dim); }
 
-/* ── Forms ───────────────────────────────────────────────────────────────── */
+/* Forms for tool details */
 .form-row { display: flex; flex-direction: column; gap: 6px; }
 .form-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .form-label {
@@ -712,13 +708,13 @@ body {
 .yv { color: var(--orange); }
 .yl { color: var(--muted); }
 
-/* ── Radar modal ─────────────────────────────────────────────────────────── */
+/* Radar modal after zoom in */
 .big-radar {
   width: 100%;
   max-width: 440px;
 }
 
-/* ── About / How ─────────────────────────────────────────────────────────── */
+/* About / How at the Top */
 .about-phase {
   background: var(--surface2);
   border-left: 2px solid var(--dim);
@@ -752,7 +748,7 @@ body {
 .step-title { display: block; font-family: var(--font-d); font-size: 14px; font-weight: 700; margin-bottom: 2px; }
 .step-body { font-size: 13px; color: var(--muted); }
 
-/* ── Dimensions modal ────────────────────────────────────────────────────── */
+/* Dimensions modal */
 .dim-entry {
   display: flex;
   gap: 10px;
@@ -765,7 +761,7 @@ body {
 .dim-entry-name { font-family: var(--font-d); font-weight: 700; font-size: 13px; min-width: 130px; }
 .dim-entry-desc { font-size: 13px; color: var(--muted); }
 
-/* ── Responsive ──────────────────────────────────────────────────────────── */
+/* Responsive for smaller screens */
 @media (max-width: 860px) {
   .layout { grid-template-columns: 1fr; }
   .sidebar { display: none; }
@@ -777,7 +773,7 @@ body {
   .form-cols { grid-template-columns: 1fr; }
 }
 
-/* ── Reduced motion ──────────────────────────────────────────────────────── */
+/* Reduced motion for users who prefer it */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: .01ms !important;
@@ -786,7 +782,7 @@ body {
 }
 
 
-/* ── Footer ──────────────────────────────────────────────────────────────── */
+/* Footer  */
 .site-footer {
   background: var(--surface);
   border-top: 1px solid var(--border);

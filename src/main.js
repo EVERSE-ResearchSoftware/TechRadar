@@ -1,8 +1,6 @@
 /**
  * main.js — TechRadar Application
- *
- * Bootstraps the app, wires all components, and manages shared state.
- * State lives here; components are pure renderers that receive state.
+
  */
 
 import "@/styles/main.css";
@@ -13,7 +11,6 @@ import { renderGrid }                                                           
 import { renderFilters, syncFilterChips }                                         from "@/components/FilterPanel.js";
 import { mountSuggestModal }                                                      from "@/components/SuggestModal.js";
 
-// ── State ─────────────────────────────────────────────────────────────────────
 const state = {
   config: null,
   tools:  [],
@@ -21,7 +18,7 @@ const state = {
   sort: "name",
 };
 
-// ── Theme ────────────────────────────────────────────────────────────────────
+// Theme
 // Reads theme tokens from config.yaml (via catalog.json) and applies them
 // as CSS custom properties on :root. Edit config.yaml to change the theme.
 function applyTheme(theme) {
@@ -52,9 +49,6 @@ function applyTheme(theme) {
   if (theme.fontSize) root.style.fontSize = theme.fontSize;
 }
 
-// ── Nav logo ─────────────────────────────────────────────────────────────────
-// Replaces the placeholder text logo with an <img> if config.platform.logoPath
-// is set. Falls back to text (platform.name) if logoPath is empty or missing.
 function patchNavLogo(platform) {
   const el = document.getElementById("nav-logo");
   if (!el) return;
@@ -64,7 +58,6 @@ function patchNavLogo(platform) {
     el.innerHTML = `<span class="logo-dot" aria-hidden="true"></span>`;  }
 }
 
-// ── Hero ─────────────────────────────────────────────────────────────────────
 // Updates hero title and tagline from config.platform after catalog loads.
 function updateHero(platform) {
   const title = document.querySelector(".hero-title");
@@ -73,7 +66,7 @@ function updateHero(platform) {
   if (tagline) tagline.textContent = platform.tagline || "";
 }
 
-// ── Footer ───────────────────────────────────────────────────────────────────
+// Footer
 function footer() {
   return `
     <footer class="site-footer" id="footer" aria-label="Site footer">
@@ -125,7 +118,7 @@ function updateFooter(config) {
   }
   }
 
-  // Bottom text — swap "TechRadar" for platform name
+  // Bottom text
   const bottomText = document.getElementById("footer-bottom-text");
   if (bottomText && platform.name) {
     bottomText.innerHTML = `
@@ -136,7 +129,6 @@ function updateFooter(config) {
          target="_blank" rel="noopener noreferrer">HORIZON-INFRA-2023-EOSC-01-02</a>.`;
   }
 
-// ── Boot ──────────────────────────────────────────────────────────────────────
 async function boot() {
   renderShell();
 
@@ -161,10 +153,8 @@ async function boot() {
     return;
   }
 
-  // Populate dynamic parts (config-driven)
   populateDimensionsModal();
 
-  // Mount components
   mountRadar(state.config, state.tools, state.filters, onDimClick);
   wireRadarExpand();
   mountSuggestModal(state.config);
@@ -172,11 +162,9 @@ async function boot() {
   renderFilters("filter-panel", state.config, state.tools, state.filters, onFilterChange);
   refresh();
 
-  // Expose API for inline onclick handlers
   window.__tr = { clearFilters, openModal, closeModal };
 }
 
-// ── Shell HTML ────────────────────────────────────────────────────────────────
 function renderShell() {
   document.getElementById("app").innerHTML = `
     ${nav()}
@@ -203,7 +191,6 @@ function renderShell() {
 
 }
 
-// ── Refresh ───────────────────────────────────────────────────────────────────
 function refresh() {
   const filtered = sortTools(applyFilters(state.tools, state.filters), state.sort);
   renderGrid(filtered, state.config);
@@ -220,7 +207,6 @@ function updateResultCount(n) {
   }
 }
 
-// ── Filter Handlers ───────────────────────────────────────────────────────────
 function onFilterChange(key, value, active) {
   if (active) state.filters[key].add(value);
   else        state.filters[key].delete(value);
@@ -245,7 +231,6 @@ function clearFilters() {
   refresh();
 }
 
-// ── Dynamic modals ────────────────────────────────────────────────────────────
 function populateDimensionsModal() {
   const list = qs("#dimensions-list");
   if (!list || !state.config) return;
@@ -256,7 +241,6 @@ function populateDimensionsModal() {
     </div>`).join("");
 }
 
-// ── HTML Builders ─────────────────────────────────────────────────────────────
 function nav() {
   return `
     <nav class="nav" role="navigation" aria-label="Main navigation">
@@ -287,7 +271,6 @@ function nav() {
 }
 
 function heroSection() {
-  // Title and tagline come from config.platform — edit config.yaml to change them
   const name    = state.config?.platform?.name    || "TechRadar";
   const tagline = state.config?.platform?.tagline || "Find the right tools to improve your research software quality";
   return `
@@ -548,5 +531,4 @@ function howToUseModal() {
     </div>`;
 }
 
-// ── Start ─────────────────────────────────────────────────────────────────────
 boot();

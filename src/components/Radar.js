@@ -1,6 +1,6 @@
 /**
  * Radar.js
- * Renders the mini radar in the sidebar and wires the expand-to-modal action.
+ * Renders the mini radar in the sidebar
  */
 
 import { drawRings, drawSegments } from "../utils/radar-svg.js";
@@ -19,7 +19,6 @@ export function mountRadar(config, tools, filters, onDimClick) {
 export function updateRadar(filters) {
   _filters = filters;
   renderMini();
-  // Redraw big radar if modal is open
   if (document.getElementById("radar-modal")?.classList.contains("open")) {
     renderBig();
   }
@@ -29,8 +28,6 @@ function renderMini() {
   const svg = document.getElementById("mini-radar");
   if (!svg) return;
 
-  // Clear and re-append in correct paint order:
-  // segs (wedge fills) → dots → rings (circles + labels on top)
   svg.innerHTML = "";
   const segsG  = createG(svg, "radar-segs");
   const dotsG  = createG(svg, "radar-dots");
@@ -53,8 +50,6 @@ export function renderBig() {
   const svg = document.getElementById("big-radar");
   if (!svg) return;
 
-  // Clear and re-append in correct paint order:
-  // segs (wedge fills) → dots → rings (circles + labels on top)
   svg.innerHTML = "";
   svg.setAttribute("viewBox", "0 0 530 530");
   const segsG  = createG(svg, "big-segs");
@@ -81,7 +76,6 @@ function createG(svg, cls) {
   return g;
 }
 
-/** Wire expand-radar button (called from main.js after DOM is ready) */
 export function wireRadarExpand() {
   const btn = document.getElementById("expand-radar-btn");
   btn?.addEventListener("click", () => {

@@ -1,13 +1,6 @@
 /**
  * radar-svg.js
- * Pure functions for drawing the interactive SVG TechRadar.
- * No DOM side-effects except appending to passed SVG elements.
- *
- * Colour system — hue-based (inspired by the EVERSE radial map POC):
- *   Each dimension segment gets a hue evenly spaced around 360°.
- *   Wedge fill uses that hue at low saturation/high lightness.
- *   Dots use the same hue at higher saturation for visibility.
- *   Outer rings fade toward white (lower saturation) like the POC.
+ * functions for drawing the interactive SVG TechRadar.
  */
 
 const NS = "http://www.w3.org/2000/svg";
@@ -18,19 +11,16 @@ function svgEl(tag, attrs = {}) {
   return e;
 }
 
-/** Hue for dimension index i out of total n */
 function dimHue(i, n) {
   return Math.round((i / n) * 360);
 }
 
-/** Wedge fill colour — light, like the POC outer colour */
 function wedgeFill(hue, inactive) {
   return inactive
     ? `hsl(${hue}, 15%, 92%)`
     : `hsl(${hue}, 55%, 88%)`;
 }
 
-/** Dot fill colour — more saturated so dots stand out */
 function dotFill(hue, inactive) {
   return inactive
     ? `hsl(${hue}, 15%, 75%)`
@@ -44,9 +34,7 @@ function labelFill(hue, inactive) {
     : `hsl(${hue}, 55%, 32%)`;
 }
 
-/**
- * Draw static ring circles and tier labels.
- */
+
 export function drawRings(group, cx, cy, tiers, maxR) {
   const rings = tiers.map((_, i, arr) => maxR * ((i + 1) / arr.length));
 
@@ -61,7 +49,6 @@ export function drawRings(group, cx, cy, tiers, maxR) {
   });
 
   // Ring labels — centred vertically in each ring band at the top.
-  // Paint order in Radar.js ensures these render above wedge fills.
   tiers.forEach((tier, i) => {
     const innerR = i === 0 ? 0 : maxR * (i / tiers.length);
     const labelR = innerR + (maxR * (1 / tiers.length)) * 0.5;
@@ -82,9 +69,7 @@ export function drawRings(group, cx, cy, tiers, maxR) {
   });
 }
 
-/**
- * Draw clickable dimension wedges and tool dots.
- */
+
 export function drawSegments(segGroup, dotGroup, opts) {
   const { dims, tools, tiers, activeFilters, cx, cy, r, showLabels, onDimClick, onDotClick } = opts;
   segGroup.innerHTML = "";
@@ -103,7 +88,7 @@ export function drawSegments(segGroup, dotGroup, opts) {
     const isActive = activeFilters?.dim?.has(dim.label);
     const isInactive = hasActiveDim && !isActive;
 
-    // ── Wedge ──────────────────────────────────────────────────────────────
+    //  Wedge 
     const x0 = cx + r * Math.cos(a0), y0 = cy + r * Math.sin(a0);
     const x1 = cx + r * Math.cos(a1), y1 = cy + r * Math.sin(a1);
     const g = svgEl("g", {
@@ -129,7 +114,7 @@ export function drawSegments(segGroup, dotGroup, opts) {
     wedge.addEventListener("click", () => onDimClick?.(dim.label));
     g.appendChild(wedge);
 
-    // ── Label (big radar only) — outside the outermost ring ──────────────
+    // Label (big radar only)
     if (showLabels) {
       const labelR = r * 1.15;
       const lx = cx + labelR * Math.cos(mid);
@@ -154,7 +139,7 @@ export function drawSegments(segGroup, dotGroup, opts) {
     segGroup.appendChild(g);
   });
 
-  // ── Tool Dots ─────────────────────────────────────────────────────────────
+  // Tool Dots
   tools.forEach((tool) => {
     (tool.dimensions || []).forEach((dimLabel) => {
       const dimIdx = dims.findIndex((d) => d.label === dimLabel);
@@ -204,7 +189,6 @@ function computeTierRings(tiers, maxR) {
   return result;
 }
 
-/** Deterministic pseudo-random from string seed → [0,1) */
 function seededRand(seed) {
   let h = 0;
   for (let i = 0; i < seed.length; i++) {
