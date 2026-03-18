@@ -1,0 +1,30 @@
+name: Lint and Formatting Check
+
+on:
+  push:
+    branches:
+      - "*"
+  pull_request:
+    branches:
+      - "*"
+  workflow_dispatch:
+
+jobs:
+  format:
+    name: Format Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - run: npm ci
+
+      - name: Check tool JSON formatting
+        run: npx prettier --check "data/**/*.json"
+
+      - name: Check source JS formatting
+        run: npx prettier --check "src/**/*.js" "scripts/**/*.js"

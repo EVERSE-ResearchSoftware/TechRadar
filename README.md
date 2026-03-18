@@ -1,39 +1,45 @@
-# TechRadar
+[![everse-logo]][everse-url]
 
-> A catalog of tools and services for research software quality.  
-> Find the right tool for reproducibility, FAIRness, security, testing, and more.
+[![DOI][doi-badge]][doi-url] 
+
+<!-- Badges links -->
+[everse-logo]: https://everse.software/images/logos/EOSCEverse_PosColour.svg "EVERSE project"
+[everse-url]: https://everse.software/
+
+# EVERSE TechRadar
+
+The EVERSE TechRadar contains a [catalogue of _tools and services for research software quality_](#research-quality-tools-and-services-catalog) designed to assess, measure, and improve the quality of software developed for research purposes and the [TechRadar](#technology-radar-dashboard), a visual dashboard to display the catalog.
+
+## Research Quality Tools and Services Catalog
+
+The present catalogue includes tools and services that incorporate features that address the unique requirements of research software, including but not limited to:
+
+- Analysis of source code to identify potential issues, vulnerabilities, and adherence to coding standards specific to research contexts.
+
+- Evaluation of software against research-specific quality attributes such as reproducibility and FAIRness (Findability, Accessibility, Interoperability, and Reusability).
+
+- Support for community standards and best practices relevant to specific research disciplines.
+
+- Metrics and measurements tailored to assess both technical aspects and research-oriented factors.
+
+- Capabilities to analyze and improve research software quality throughout the research software lifecycle, from development to long-term sustainability.  
+
+These tools aim to enhance the overall quality, reliability, and reusability of research software, ultimately contributing to the reproducibility and impact of scientific research.
+
+### Content & publication process
+
+We welcome content contributions to the catalogue (see our [contribution guidelines](CONTRIBUTING.md) in the form of JSON files describing tools and services for research software quality.
+
+After review from our curation team, the entry will be added to [our catalog](data/tools) as JSON file.
+
+New versions of the TechRadar will be published regularly. You can find all the releases at the [releases](https://github.com/EVERSE-ResearchSoftware/TechRadar/releases) page.
 
 
-## What is TechRadar?
+## EVERSE TechRadar dashboard
 
-TechRadar is a static web application — no server, no database, no login.  
-It is a searchable, filterable catalog of tools that help research software teams improve quality.
+The catalogue of tools and services is presented in a visual dashboard at <https://github.com/EVERSE-ResearchSoftware/TechRadar>.
 
-Three design principles drive every decision:
 
-1. **Discovery-first** — the catalog and search are the primary UI, not the radar visualisation.
-2. **Clarity-first** — every tool explains *how* it measures quality, not just *what* it does.
-3. **Config-driven** — tiers, dimensions, and vocabularies live in one JSON file; no code changes needed to customise them.
-
----
-
-## Quick Start
-
-```bash
-# Requires Node.js v20+
-git clone https://github.com/EVERSE-ResearchSoftware/TechRadar.git
-cd TechRadar
-npm install
-npm run build
-npm run serve          # → http://localhost:3000/techradar
-```
-
-Other commands:
-
-```bash
-```
-
----
 ## Project Structure
 
 ```
@@ -136,11 +142,49 @@ Each file in `data/tools/` describes exactly one tool. The filename should be lo
 }
 ```
 
+### Development
+Make sure you install [Node.js](https://nodejs.org/en) on your system as it will be needed to build and serve TechRadar.
+
+> [!WARNING]
+> The work is initial representation and is likely to be changed.
+> Any content should not be considered final at this stage.
+
+#### Build the TechRadar
+
+```bash
+npm install
+npm run serve
+```
+
+Then open here: <http://localhost:3000/techradar>
+
+#### Build with static files
+
+```bash
+npm install
+npm run build
+```
+
+#### Run lint and formatting check on tools -> /data/tools/*.json
+
+```bash
+npm install
+npm run lint-prettier:check
+```
+
+#### Run lint and formatting fix
+
+```bash
+npm install
+npm run lint-prettier:fix
+```
+
+## Funding
+
+[EVERSE project](https://everse.software/) is funded by the [European Commission HORIZON-INFRA-2023-EOSC-01-02](https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-infra-2023-eosc-01-02).
+
 
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide on adding tools, the JSON format, and the PR process.
 
-## Licence
-
-Code: MIT · Content: CC-BY-4.0

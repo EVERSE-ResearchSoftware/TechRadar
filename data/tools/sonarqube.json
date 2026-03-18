@@ -42,10 +42,10 @@
     }
   ],
   "indicators": {
-        "Maintainability": "measures Maintainability by scanning for code smells, cyclomatic complexity, and duplication — giving a debt rating (A–E) and estimating remediation effort in developer-days.",
-        "Security": "measures Security by detecting OWASP Top 10 and CWE patterns via static analysis, assigning hotspot severity and providing fix guidance.",
-        "Reliability": "measures Testing by integrating with coverage tools to surface untested critical paths and tracking coverage trends across releases."
-      },
+    "Maintainability": "measures Maintainability by scanning for code smells, cyclomatic complexity, and duplication — giving a debt rating (A–E) and estimating remediation effort in developer-days.",
+    "Security": "measures Security by detecting OWASP Top 10 and CWE patterns via static analysis, assigning hotspot severity and providing fix guidance.",
+    "Reliability": "measures Testing by integrating with coverage tools to surface untested critical paths and tracking coverage trends across releases."
+  },
   "useCases": [
     "Block low-quality merges by configuring quality gates in a CI/CD pipeline",
     "Track code health trends over time to demonstrate maintainability improvements before publication",

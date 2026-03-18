@@ -1,15 +1,15 @@
 {
-  "name": "techradar",
-  "version": "1.0.0",
-  "description": "Discovery-first platform for research software quality tools",
+  "name": "everse-techradar",
+  "version": "2.0.0",
+  "description": "A platform for research software quality tools",
   "type": "module",
   "private": true,
   "scripts": {
     "serve": "vite --port 3000",
     "build": "vite build",
     "generate:snapshot": "node scripts/snapshot.js",
-    "fmt": "prettier --write \"data/**/*.json\"",
-    "fmt:check": "prettier --check \"data/**/*.json\""
+    "lint-prettier:fix": "prettier --write \"data/**/*.json\"",
+    "lint-prettier:check": "prettier --check \"data/**/*.json\""
   },
   "dependencies": {
     "js-yaml": "^4.1.0",
