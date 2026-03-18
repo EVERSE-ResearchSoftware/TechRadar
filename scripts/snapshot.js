@@ -31,9 +31,13 @@ function main() {
 
   const config = loadConfig(ROOT);
   const toolFiles = loadToolFiles(ROOT);
-  const tools = toolFiles.map((t) => t.data).sort((a, b) => a.name.localeCompare(b.name));
+  const tools = toolFiles
+    .map((t) => t.data)
+    .sort((a, b) => a.name.localeCompare(b.name));
 
-  console.log(`\n  Generating snapshot for ${dateStr} (${tools.length} tools)...\n`);
+  console.log(
+    `\n  Generating snapshot for ${dateStr} (${tools.length} tools)...\n`,
+  );
 
   // ── tools.json ─────────────────────────────────────────────────────────────
   const catalogSnapshot = {
@@ -54,15 +58,22 @@ function main() {
   const byLicense = {};
 
   tools.forEach((t) => {
-    byTier[t.tier]               = (byTier[t.tier] || 0) + 1;
+    byTier[t.tier] = (byTier[t.tier] || 0) + 1;
     bySoftwareType[t.softwareType] = (bySoftwareType[t.softwareType] || 0) + 1;
-    byLicense[t.license]         = (byLicense[t.license] || 0) + 1;
+    byLicense[t.license] = (byLicense[t.license] || 0) + 1;
     (t.dimensions || []).forEach((d) => {
       byDimension[d] = (byDimension[d] || 0) + 1;
     });
   });
 
-  const stats = { generatedAt: date.toISOString(), releaseDate: dateStr, byTier, bySoftwareType, byDimension, byLicense };
+  const stats = {
+    generatedAt: date.toISOString(),
+    releaseDate: dateStr,
+    byTier,
+    bySoftwareType,
+    byDimension,
+    byLicense,
+  };
   const statsPath = path.join(outDir, "stats.json");
   fs.writeFileSync(statsPath, JSON.stringify(stats, null, 2));
   console.log(`  ✓  Wrote ${path.relative(ROOT, statsPath)}`);
