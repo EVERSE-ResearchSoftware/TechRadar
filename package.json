@@ -5,7 +5,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "vite --port 3000",
+    "serve": "vite --port 3000",
     "build": "vite build",
     "generate:snapshot": "node scripts/snapshot.js",
     "fmt": "prettier --write \"data/**/*.json\"",

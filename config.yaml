@@ -10,9 +10,9 @@ platform:
     covers reproducibility, maintainability, FAIRness, security, testing, and more. 
     Find the right tools to improve your research software quality"
   description: >
-    A discovery-first catalog of tools and services for research software quality.
+    A catalog of tools and services for research software quality.
     Covers reproducibility, maintainability, FAIRness, security, testing, and more.
-  baseUrl: "/techradar"
+  baseUrl: "/techradar-branch-refactor/"
   repository: "https://github.com/EVERSE-ResearchSoftware/TechRadar/"
   logoPath: "/techradar/logo.svg"
   contributingUrl: "https://github.com/EVERSE-ResearchSoftware/TechRadar/blob/main/CONTRIBUTING.md"
