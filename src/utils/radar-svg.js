@@ -151,6 +151,23 @@ export function drawSegments(segGroup, dotGroup, opts) {
     }
 
     segGroup.appendChild(g);
+
+    // ── Hint text (big radar only) ────────────────────────────────────────────
+    if (showLabels) {
+    const hint = svgEl("text", {
+      x: cx,
+      y: cy + r * 1.28,
+      "text-anchor": "middle",
+      "dominant-baseline": "middle",
+      "font-size": "18",
+      fill: "#9080b0",
+      "font-family": "DM Sans, sans-serif",
+      "font-style": "italic",
+      style: "pointer-events:none",
+    });
+    hint.textContent = "Click a segment to filter  ·  Click a dot to view tool";
+    segGroup.appendChild(hint);
+  }
   });
 
   // Tool Dots

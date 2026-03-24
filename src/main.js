@@ -1,58 +1,47 @@
 /**
  * main.js — TechRadar Application
-
  */
 
 import "@/styles/main.css";
-import {
-  loadCatalog,
-  applyFilters,
-  sortTools,
-  emptyFilters,
-  hasActiveFilters,
-} from "@/utils/catalog.js";
-import { openModal, closeModal, qs } from "@/utils/dom.js";
-import {
-  mountRadar,
-  updateRadar,
-  renderBig,
-  wireRadarExpand,
-} from "@/components/Radar.js";
-import { renderGrid } from "@/components/ToolGrid.js";
-import { renderFilters, syncFilterChips } from "@/components/FilterPanel.js";
-import { mountSuggestModal } from "@/components/SuggestModal.js";
+import { loadCatalog, applyFilters, sortTools, emptyFilters, hasActiveFilters } from "@/utils/catalog.js";
+import { openModal, closeModal, qs }                                             from "@/utils/dom.js";
+import { mountRadar, updateRadar, renderBig, wireRadarExpand }                   from "@/components/Radar.js";
+import { renderGrid }                                                             from "@/components/ToolGrid.js";
+import { renderFilters, syncFilterChips }                                         from "@/components/FilterPanel.js";
+import { mountSuggestModal }                                                      from "@/components/SuggestModal.js";
 
+// ── State ─────────────────────────────────────────────────────────────────────
 const state = {
   config: null,
-  tools: [],
+  tools:  [],
   filters: emptyFilters(),
   sort: "name",
 };
 
-// Theme
+// ── Theme ────────────────────────────────────────────────────────────────────
 // Reads theme tokens from config.yaml (via catalog.json) and applies them
 // as CSS custom properties on :root. Edit config.yaml to change the theme.
 function applyTheme(theme) {
   if (!theme) return;
   const root = document.documentElement;
   const map = {
-    colorBg: "--bg",
-    colorSurface: "--surface",
+    colorBg:       "--bg",
+    colorSurface:  "--surface",
     colorSurface2: "--surface2",
-    colorBorder: "--border",
-    colorText: "--text",
-    colorMuted: "--muted",
-    colorDim: "--dim",
-    colorGreen: "--green",
-    colorBlue: "--blue",
-    colorYellow: "--yellow",
-    colorOrange: "--orange",
-    fontDisplay: "--font-d",
-    fontBody: "--font-b",
-    fontMono: "--font-m",
-    fontSize: "--font-sz",
-    radiusCard: "--r-lg",
-    radiusChip: "--r",
+    colorBorder:   "--border",
+    colorText:     "--text",
+    colorMuted:    "--muted",
+    colorDim:      "--dim",
+    colorGreen:    "--green",
+    colorBlue:     "--blue",
+    colorYellow:   "--yellow",
+    colorOrange:   "--orange",
+    fontDisplay:   "--font-d",
+    fontBody:      "--font-b",
+    fontMono:      "--font-m",
+    fontSize:      "--font-sz",
+    radiusCard:    "--r-lg",
+    radiusChip:    "--r",
   };
   Object.entries(map).forEach(([key, cssVar]) => {
     if (theme[key]) root.style.setProperty(cssVar, theme[key]);
@@ -60,25 +49,28 @@ function applyTheme(theme) {
   if (theme.fontSize) root.style.fontSize = theme.fontSize;
 }
 
+// ── Nav logo ─────────────────────────────────────────────────────────────────
 function patchNavLogo(platform) {
   const el = document.getElementById("nav-logo");
   if (!el) return;
   if (platform.logoPath) {
-    el.innerHTML = `<img src="${platform.logoPath}" alt="${platform.name}" class="nav-logo-img">`;
+    el.innerHTML = `
+      <img src="${platform.logoPath}" alt="${platform.name}" class="nav-logo-img">
+      <span class="nav-title">${platform.name}</span>`;
   } else {
-    el.innerHTML = `<span class="logo-dot" aria-hidden="true"></span>`;
+    el.innerHTML = `<span class="logo-dot" aria-hidden="true"></span><span class="nav-title">${platform.name}</span>`;
   }
 }
 
-// Updates hero title and tagline from config.platform after catalog loads.
+// ── Hero ─────────────────────────────────────────────────────────────────────
 function updateHero(platform) {
   const title = document.querySelector(".hero-title");
   const tagline = document.querySelector(".hero-tagline");
-  if (title) title.textContent = platform.name || "TechRadar";
+  if (title)   title.textContent   = platform.name    || "TechRadar";
   if (tagline) tagline.textContent = platform.tagline || "";
 }
 
-// Footer
+// ── Footer ───────────────────────────────────────────────────────────────────
 function footer() {
   return `
     <footer class="site-footer" id="footer" aria-label="Site footer">
@@ -116,6 +108,7 @@ function footer() {
 // Patches footer links and curator list from config after catalog loads.
 function updateFooter(config) {
   const platform = config.platform || {};
+  const curators = config.curators || [];
 
   // Contributing link
   const contribLink = document.getElementById("footer-contributing-link");
@@ -128,26 +121,41 @@ function updateFooter(config) {
   if (privacyLink && platform.privacyUrl) {
     privacyLink.href = platform.privacyUrl;
   }
-}
 
-// Bottom text
-const bottomText = document.getElementById("footer-bottom-text");
-if (bottomText && platform.name) {
-  bottomText.innerHTML = `
+  // Curators list
+  const curatorsList = document.getElementById("footer-curators");
+  if (curatorsList && curators.length) {
+    curatorsList.innerHTML = curators.map((c) => {
+      const nameEl = c.github
+        ? `<a class="footer-curator-link" href="${c.github}" target="_blank" rel="noopener noreferrer">${c.name}</a>`
+        : `<span>${c.name}</span>`;
+      const affEl = c.affiliation
+        ? `<span class="footer-curator-aff">${c.affiliation}</span>`
+        : "";
+      return `<li class="footer-curator">${nameEl}${affEl}</li>`;
+    }).join("");
+  }
+
+  // Bottom text — swap "TechRadar" for platform name
+  const bottomText = document.getElementById("footer-bottom-text");
+  if (bottomText && platform.name) {
+    bottomText.innerHTML = `
       ${platform.name} is being developed as part of the
       <a href="https://everse.software" target="_blank" rel="noopener noreferrer">EVERSE project</a>.
       EVERSE is funded by the European Commission
       <a href="https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-infra-2023-eosc-01-02"
          target="_blank" rel="noopener noreferrer">HORIZON-INFRA-2023-EOSC-01-02</a>.`;
+  }
 }
 
+// ── Boot ──────────────────────────────────────────────────────────────────────
 async function boot() {
   renderShell();
 
   try {
     const catalog = await loadCatalog();
     state.config = catalog.config;
-    state.tools = catalog.tools;
+    state.tools  = catalog.tools;
     applyTheme(state.config.theme);
     patchNavLogo(state.config.platform);
     updateHero(state.config.platform);
@@ -165,24 +173,22 @@ async function boot() {
     return;
   }
 
+  // Populate dynamic parts (config-driven)
   populateDimensionsModal();
 
+  // Mount components
   mountRadar(state.config, state.tools, state.filters, onDimClick);
   wireRadarExpand();
   mountSuggestModal(state.config);
 
-  renderFilters(
-    "filter-panel",
-    state.config,
-    state.tools,
-    state.filters,
-    onFilterChange,
-  );
+  renderFilters("filter-panel", state.config, state.tools, state.filters, onFilterChange);
   refresh();
 
+  // Expose API for inline onclick handlers
   window.__tr = { clearFilters, openModal, closeModal };
 }
 
+// ── Shell HTML ────────────────────────────────────────────────────────────────
 function renderShell() {
   document.getElementById("app").innerHTML = `
     ${nav()}
@@ -206,19 +212,16 @@ function renderShell() {
     state.filters.query = e.target.value;
     refresh();
   });
+
 }
 
+// ── Refresh ───────────────────────────────────────────────────────────────────
 function refresh() {
-  const filtered = sortTools(
-    applyFilters(state.tools, state.filters),
-    state.sort,
-  );
+  const filtered = sortTools(applyFilters(state.tools, state.filters), state.sort);
   renderGrid(filtered, state.config);
   updateResultCount(filtered.length);
   updateRadar(state.filters);
-  qs(".clear-btn").style.visibility = hasActiveFilters(state.filters)
-    ? "visible"
-    : "hidden";
+  qs(".clear-btn").style.visibility = hasActiveFilters(state.filters) ? "visible" : "hidden";
 }
 
 function updateResultCount(n) {
@@ -229,16 +232,17 @@ function updateResultCount(n) {
   }
 }
 
+// ── Filter Handlers ───────────────────────────────────────────────────────────
 function onFilterChange(key, value, active) {
   if (active) state.filters[key].add(value);
-  else state.filters[key].delete(value);
+  else        state.filters[key].delete(value);
   refresh();
 }
 
 function onDimClick(dim) {
   const active = !state.filters.dim.has(dim);
   if (active) state.filters.dim.add(dim);
-  else state.filters.dim.delete(dim);
+  else        state.filters.dim.delete(dim);
   syncFilterChips(state.filters);
   refresh();
 }
@@ -253,20 +257,18 @@ function clearFilters() {
   refresh();
 }
 
+// ── Dynamic modals ────────────────────────────────────────────────────────────
 function populateDimensionsModal() {
   const list = qs("#dimensions-list");
   if (!list || !state.config) return;
-  list.innerHTML = state.config.dimensions
-    .map(
-      (d) => `
+  list.innerHTML = state.config.dimensions.map((d) => `
     <div class="dim-entry" style="border-color:${d.color}">
       <span class="dim-entry-name" style="color:${d.color}">${d.label}</span>
       <span class="dim-entry-desc">${d.description}</span>
-    </div>`,
-    )
-    .join("");
+    </div>`).join("");
 }
 
+// ── HTML Builders ─────────────────────────────────────────────────────────────
 function nav() {
   return `
     <nav class="nav" role="navigation" aria-label="Main navigation">
@@ -281,7 +283,7 @@ function nav() {
         <li><button class="nav-link" onclick="window.__tr.openModal('how-modal')">How to Use</button></li>
       </ul>
       <div class="nav-actions">
-        <a class="nav-gh" href="https://github.com/EVERSE-ResearchSoftware/TechRadar/"
+        <a class="nav-gh" href="https://github.com/your-org/techradar"
            target="_blank" rel="noopener noreferrer" aria-label="View source on GitHub">
           <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
             <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
@@ -297,10 +299,9 @@ function nav() {
 }
 
 function heroSection() {
-  const name = state.config?.platform?.name || "TechRadar";
-  const tagline =
-    state.config?.platform?.tagline ||
-    "Find the right tools to improve your research software quality";
+  // Title and tagline come from config.platform — edit config.yaml to change them
+  const name    = state.config?.platform?.name    || "TechRadar";
+  const tagline = state.config?.platform?.tagline || "Find the right tools to improve your research software quality";
   return `
     <div class="hero" role="search" aria-label="Search tools">
       <h1 class="hero-title">${name}</h1>
@@ -326,7 +327,7 @@ function radarWidget() {
         <button id="expand-radar-btn" class="expand-btn"
                 aria-label="Expand radar to full view"
                 onclick="window.__tr.openModal('radar-modal');import('@/components/Radar.js').then(m=>m.renderBig())">
-          <svg width="11" height="11" viewBox="0 0 900 900" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+          <svg width="11" height="11" viewBox="0 0 11 11" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
             <path d="M1 4V1h3M7 1h3v3M10 7v3H7M4 10H1V7"/>
           </svg>
           Expand
@@ -469,9 +470,9 @@ function radarModal() {
       <div class="modal modal--radar">
         <button class="modal-x" onclick="window.__tr.closeModal('radar-modal')" aria-label="Close radar">✕</button>
         <h2 id="radar-modal-title" class="modal-title">Tech Radar — Quality Dimensions</h2>
-        <p class="modal-meta">Click a segment to filter. Click a dot to view that tool.</p>
-          <svg id="big-radar" class="big-radar" viewBox="0 0 900 900"
-             xmlns="http://www.w3.org/2000/svg" role="img"
+          <svg id="big-radar" class="big-radar" viewBox="0 0 1200 1200"
+                      preserveAspectRatio="xMidYMid meet"             
+            xmlns="http://www.w3.org/2000/svg" role="img"
              aria-label="Full radar visualization with quality dimension segments">
           <g class="big-rings"></g>
           <g class="big-segs"></g>
@@ -489,7 +490,7 @@ function dimensionsModal() {
       <div class="modal">
         <button class="modal-x" onclick="window.__tr.closeModal('dimensions-modal')" aria-label="Close">✕</button>
         <h2 id="dims-title" class="modal-title" style="color:var(--green)">Quality Dimensions</h2>
-        <p class="modal-meta">The configurable quality dimensions used to classify tools in EVERSE TechRadar.</p>
+        <p class="modal-meta">The configurable quality dimensions used to classify tools in TechRadar.</p>
         <div id="dimensions-list" role="list" aria-label="Quality dimensions"></div>
         <button class="btn-secondary" onclick="window.__tr.closeModal('dimensions-modal')">Close</button>
       </div>
@@ -503,25 +504,22 @@ function aboutModal() {
         <button class="modal-x" onclick="window.__tr.closeModal('about-modal')" aria-label="Close">✕</button>
         <h2 id="about-title" class="modal-title" style="color:var(--blue)">About TechRadar</h2>
         <section class="modal-section">
+          <h3 class="modal-section-title">What is the EVERSE Technology Radar ?</h3>
           <p class="modal-desc">
-            The EVERSE Technology Radar is developed as part of the EVERSE project to 
-            collect and classify tools and services that can measure or improve Research Software Quality.
-          </p>
-        </section>
-        <section class="modal-section">
-          <div class="about-phase" style="border-color:var(--green)">
-            <strong>What is the EVERSE Technology Radar ?</strong>
             It contains a catalogue of tools and services for research software quality designed to assess, measure, and improve the quality of software developed for research purposes
             the TechRadar, a visual dashboard to display the catalogue
             The EVERSE Technology Radar offers a comprehensive overview of various research software quality tools and services. 
-            These tools and services are systematically categorised and presented in alignment with the established quality dimensions as segments. It is important to note that the radar does not encompass all existing tools and services; rather, it concentrates on tools that satisfy a set of criteria.
-          </div>
-          <div class="about-phase" style="border-color:var(--blue)">
+            These tools and services are systematically categorised and presented in alignment with the established quality dimensions as segments. It is important to note that the radar does not encompass all existing tools and services; rather, it concentrates on tools that satisfy a set of criteria
+          </p>
+        </section>
+        <section class="modal-section">
+          <h3 class="modal-section-title">Roadmap</h3>
+          <div class="about-phase" style="border-color:var(--green)">
             <strong>How it is created ?</strong>
             The tools and services appearing in the TechRadar can be proposed by anyone, 
-            but are reviewed by the TechRadar curation team before addition.
+            but are reviewed by the TechRadar curation team before addition. 
 
-            continue...
+          continue...
           </div>
         </section>
         <button class="btn-secondary" onclick="window.__tr.closeModal('about-modal')">Close</button>
@@ -531,31 +529,11 @@ function aboutModal() {
 
 function howToUseModal() {
   const steps = [
-    {
-      n: 1,
-      title: "Identify your quality goal",
-      body: "Use the Quality Dimension filter. Focus on what matters most right now: Reproducibility? FAIRness? Security?",
-    },
-    {
-      n: 2,
-      title: "Narrow by context",
-      body: "Apply Tier and your programming language to surface the most relevant tools.",
-    },
-    {
-      n: 3,
-      title: "Read the indicator",
-      body: "Every tool card explains <em>exactly how</em> it measures quality — not just what it does, but what it checks and how.",
-    },
-    {
-      n: 4,
-      title: "Click for full details",
-      body: "Open any tool card for all quality indicators, real use cases, licence, and a direct link to the tool website.",
-    },
-    {
-      n: 5,
-      title: "Can't find what you need?",
-      body: "Click <strong>+ Suggest a Tool</strong> in the navigation bar. Fill the form, download the JSON, and open a GitHub PR.",
-    },
+    { n: 1, title: "Identify your quality goal", body: "Use the Quality Dimension filter. Focus on what matters most right now: Reproducibility? FAIRness? Security?" },
+    { n: 2, title: "Narrow by context", body: "Apply Tier (Adopt = proven; Trial = promising) and your programming language to surface the most relevant tools." },
+    { n: 3, title: "Read the indicator", body: "Every tool card explains <em>exactly how</em> it measures quality — not just what it does, but what it checks and how." },
+    { n: 4, title: "Click for full details", body: "Open any tool card for all quality indicators, real use cases, licence, and a direct link to the tool website." },
+    { n: 5, title: "Can't find what you need?", body: "Click <strong>+ Suggest a Tool</strong> in the navigation bar. Fill the form, download the JSON, and open a GitHub PR." },
   ];
 
   return `
@@ -565,22 +543,19 @@ function howToUseModal() {
         <h2 id="how-title" class="modal-title" style="color:var(--yellow)">How to Use TechRadar</h2>
         <p class="modal-meta">Find the right research software quality tool in under 3 minutes.</p>
         <ol class="how-steps" aria-label="Steps to find a tool">
-          ${steps
-            .map(
-              ({ n, title, body }) => `
+          ${steps.map(({ n, title, body }) => `
             <li class="how-step">
               <span class="step-n" aria-hidden="true">${n}</span>
               <div>
                 <strong class="step-title">${title}</strong>
                 <p class="step-body">${body}</p>
               </div>
-            </li>`,
-            )
-            .join("")}
+            </li>`).join("")}
         </ol>
         <button class="btn-primary" onclick="window.__tr.closeModal('how-modal')">Start Exploring →</button>
       </div>
     </div>`;
 }
 
+// ── Start ─────────────────────────────────────────────────────────────────────
 boot();
