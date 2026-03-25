@@ -17,13 +17,13 @@
   "name": "DVC",
   "url": "https://dvc.org/",
   "indicators": {
-  "Sustainability": "measures Sustainability by enabling version control of data and models, ensuring reproducibility of experiments and long-term usability of research workflows.",
-  "Fairness": "measures Fairness by promoting transparency and traceability of datasets and models, supporting proper attribution and reproducible sharing of research outputs."
-},
-"useCases": [
-  "Track and version datasets and machine learning models in research workflows",
-  "Ensure reproducibility of experiments by managing data and pipeline versions",
-  "Collaborate on data-driven projects with consistent version control practices",
-  "Maintain transparency and traceability of research outputs over time"
-]
+    "Sustainability": "measures Sustainability by enabling version control of data and models, ensuring reproducibility of experiments and long-term usability of research workflows.",
+    "Fairness": "measures Fairness by promoting transparency and traceability of datasets and models, supporting proper attribution and reproducible sharing of research outputs."
+  },
+  "useCases": [
+    "Track and version datasets and machine learning models in research workflows",
+    "Ensure reproducibility of experiments by managing data and pipeline versions",
+    "Collaborate on data-driven projects with consistent version control practices",
+    "Maintain transparency and traceability of research outputs over time"
+  ]
 }

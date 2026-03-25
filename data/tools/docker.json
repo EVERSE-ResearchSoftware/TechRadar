@@ -43,15 +43,15 @@
     }
   ],
   "indicators": {
-  "Compatibility": "measures Compatibility by enabling consistent execution of applications across different environments through containerization.",
-  "Flexibility": "measures Flexibility by supporting scalable deployment, modular architectures, and easy adaptation to different infrastructures.",
-  "Reliability": "measures Reliability by ensuring reproducible environments, isolating failures, and enabling rapid recovery through container orchestration and restart mechanisms.",
-  "Sustainability": "measures Sustainability by preserving software environments over time, enabling long-term reproducibility and portability across evolving platforms."
-},
-"useCases": [
-  "Package research software and dependencies into portable containers",
-  "Ensure reproducibility of experiments across different environments",
-  "Deploy applications consistently across local, cloud, and HPC systems",
-  "Maintain long-term usability of software through containerized environments"
-]
+    "Compatibility": "measures Compatibility by enabling consistent execution of applications across different environments through containerization.",
+    "Flexibility": "measures Flexibility by supporting scalable deployment, modular architectures, and easy adaptation to different infrastructures.",
+    "Reliability": "measures Reliability by ensuring reproducible environments, isolating failures, and enabling rapid recovery through container orchestration and restart mechanisms.",
+    "Sustainability": "measures Sustainability by preserving software environments over time, enabling long-term reproducibility and portability across evolving platforms."
+  },
+  "useCases": [
+    "Package research software and dependencies into portable containers",
+    "Ensure reproducibility of experiments across different environments",
+    "Deploy applications consistently across local, cloud, and HPC systems",
+    "Maintain long-term usability of software through containerized environments"
+  ]
 }

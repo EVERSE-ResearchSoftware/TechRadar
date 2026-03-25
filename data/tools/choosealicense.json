@@ -33,12 +33,12 @@
     }
   ],
   "indicators": {
-  "Sustainability": "measures Sustainability by guiding developers in selecting appropriate open-source licenses, ensuring legal clarity, enabling long-term reuse, and supporting sustainable distribution and collaboration of research software."
-},
-"useCases": [
-  "Select appropriate open-source licenses for research software projects",
-  "Ensure legal clarity for reuse and redistribution of software",
-  "Support long-term sustainability by enabling compliant collaboration and sharing",
-  "Educate developers about licensing implications and compatibility"
-]
+    "Sustainability": "measures Sustainability by guiding developers in selecting appropriate open-source licenses, ensuring legal clarity, enabling long-term reuse, and supporting sustainable distribution and collaboration of research software."
+  },
+  "useCases": [
+    "Select appropriate open-source licenses for research software projects",
+    "Ensure legal clarity for reuse and redistribution of software",
+    "Support long-term sustainability by enabling compliant collaboration and sharing",
+    "Educate developers about licensing implications and compatibility"
+  ]
 }

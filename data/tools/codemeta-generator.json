@@ -14,12 +14,12 @@
   "name": "CodeMeta Generator",
   "url": "https://codemeta.github.io/codemeta-generator",
   "indicators": {
-  "Fairness": "measures Fairness by generating standardized CodeMeta metadata that ensures proper attribution, improves metadata completeness, and enhances discoverability and interoperability of research software."
-},
-"useCases": [
-  "Generate standardized codemeta.json files for research software repositories",
-  "Improve discoverability and interoperability of software across platforms",
-  "Ensure proper attribution of authors and contributors through structured metadata",
-  "Support FAIR principles by maintaining complete and up-to-date software metadata"
-]
+    "Fairness": "measures Fairness by generating standardized CodeMeta metadata that ensures proper attribution, improves metadata completeness, and enhances discoverability and interoperability of research software."
+  },
+  "useCases": [
+    "Generate standardized codemeta.json files for research software repositories",
+    "Improve discoverability and interoperability of software across platforms",
+    "Ensure proper attribution of authors and contributors through structured metadata",
+    "Support FAIR principles by maintaining complete and up-to-date software metadata"
+  ]
 }

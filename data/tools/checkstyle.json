@@ -23,15 +23,14 @@
       "@id": "https://w3id.org/everse/i/indicators/has_no_linting_issues",
       "@type": "@id"
     }
-    
   ],
   "indicators": {
-  "Maintainability": "measures Maintainability by enforcing consistent coding standards, detecting style violations, and reducing code complexity, thereby improving readability and long-term maintainability of Java codebases."
-},
-"useCases": [
-  "Enforce coding standards in Java projects through automated style checks in CI/CD pipelines",
-  "Improve readability and maintainability of research software by identifying style violations early",
-  "Reduce code review effort by automating detection of formatting and convention issues",
-  "Standardize code structure across teams working on collaborative Java projects"
-]
+    "Maintainability": "measures Maintainability by enforcing consistent coding standards, detecting style violations, and reducing code complexity, thereby improving readability and long-term maintainability of Java codebases."
+  },
+  "useCases": [
+    "Enforce coding standards in Java projects through automated style checks in CI/CD pipelines",
+    "Improve readability and maintainability of research software by identifying style violations early",
+    "Reduce code review effort by automating detection of formatting and convention issues",
+    "Standardize code structure across teams working on collaborative Java projects"
+  ]
 }

@@ -31,12 +31,12 @@
   "name": "doxygen",
   "url": "https://www.doxygen.nl/",
   "indicators": {
-  "Maintainability": "measures Maintainability by automatically generating comprehensive documentation from source code, improving code understanding, reducing onboarding effort, and supporting long-term software maintenance."
-},
-"useCases": [
-  "Generate API documentation automatically from annotated source code",
-  "Improve maintainability by providing clear and structured documentation",
-  "Support onboarding of new contributors through accessible code documentation",
-  "Ensure documentation stays synchronized with code through automated generation"
-]
+    "Maintainability": "measures Maintainability by automatically generating comprehensive documentation from source code, improving code understanding, reducing onboarding effort, and supporting long-term software maintenance."
+  },
+  "useCases": [
+    "Generate API documentation automatically from annotated source code",
+    "Improve maintainability by providing clear and structured documentation",
+    "Support onboarding of new contributors through accessible code documentation",
+    "Ensure documentation stays synchronized with code through automated generation"
+  ]
 }

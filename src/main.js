@@ -3,17 +3,28 @@
  */
 
 import "@/styles/main.css";
-import { loadCatalog, applyFilters, sortTools, emptyFilters, hasActiveFilters } from "@/utils/catalog.js";
-import { openModal, closeModal, qs }                                             from "@/utils/dom.js";
-import { mountRadar, updateRadar, renderBig, wireRadarExpand }                   from "@/components/Radar.js";
-import { renderGrid }                                                             from "@/components/ToolGrid.js";
-import { renderFilters, syncFilterChips }                                         from "@/components/FilterPanel.js";
-import { mountSuggestModal }                                                      from "@/components/SuggestModal.js";
+import {
+  loadCatalog,
+  applyFilters,
+  sortTools,
+  emptyFilters,
+  hasActiveFilters,
+} from "@/utils/catalog.js";
+import { openModal, closeModal, qs } from "@/utils/dom.js";
+import {
+  mountRadar,
+  updateRadar,
+  renderBig,
+  wireRadarExpand,
+} from "@/components/Radar.js";
+import { renderGrid } from "@/components/ToolGrid.js";
+import { renderFilters, syncFilterChips } from "@/components/FilterPanel.js";
+import { mountSuggestModal } from "@/components/SuggestModal.js";
 
 // ── State ─────────────────────────────────────────────────────────────────────
 const state = {
   config: null,
-  tools:  [],
+  tools: [],
   filters: emptyFilters(),
   sort: "name",
 };
@@ -25,23 +36,23 @@ function applyTheme(theme) {
   if (!theme) return;
   const root = document.documentElement;
   const map = {
-    colorBg:       "--bg",
-    colorSurface:  "--surface",
+    colorBg: "--bg",
+    colorSurface: "--surface",
     colorSurface2: "--surface2",
-    colorBorder:   "--border",
-    colorText:     "--text",
-    colorMuted:    "--muted",
-    colorDim:      "--dim",
-    colorGreen:    "--green",
-    colorBlue:     "--blue",
-    colorYellow:   "--yellow",
-    colorOrange:   "--orange",
-    fontDisplay:   "--font-d",
-    fontBody:      "--font-b",
-    fontMono:      "--font-m",
-    fontSize:      "--font-sz",
-    radiusCard:    "--r-lg",
-    radiusChip:    "--r",
+    colorBorder: "--border",
+    colorText: "--text",
+    colorMuted: "--muted",
+    colorDim: "--dim",
+    colorGreen: "--green",
+    colorBlue: "--blue",
+    colorYellow: "--yellow",
+    colorOrange: "--orange",
+    fontDisplay: "--font-d",
+    fontBody: "--font-b",
+    fontMono: "--font-m",
+    fontSize: "--font-sz",
+    radiusCard: "--r-lg",
+    radiusChip: "--r",
   };
   Object.entries(map).forEach(([key, cssVar]) => {
     if (theme[key]) root.style.setProperty(cssVar, theme[key]);
@@ -66,7 +77,7 @@ function patchNavLogo(platform) {
 function updateHero(platform) {
   const title = document.querySelector(".hero-title");
   const tagline = document.querySelector(".hero-tagline");
-  if (title)   title.textContent   = platform.name    || "TechRadar";
+  if (title) title.textContent = platform.name || "TechRadar";
   if (tagline) tagline.textContent = platform.tagline || "";
 }
 
@@ -125,15 +136,17 @@ function updateFooter(config) {
   // Curators list
   const curatorsList = document.getElementById("footer-curators");
   if (curatorsList && curators.length) {
-    curatorsList.innerHTML = curators.map((c) => {
-      const nameEl = c.github
-        ? `<a class="footer-curator-link" href="${c.github}" target="_blank" rel="noopener noreferrer">${c.name}</a>`
-        : `<span>${c.name}</span>`;
-      const affEl = c.affiliation
-        ? `<span class="footer-curator-aff">${c.affiliation}</span>`
-        : "";
-      return `<li class="footer-curator">${nameEl}${affEl}</li>`;
-    }).join("");
+    curatorsList.innerHTML = curators
+      .map((c) => {
+        const nameEl = c.github
+          ? `<a class="footer-curator-link" href="${c.github}" target="_blank" rel="noopener noreferrer">${c.name}</a>`
+          : `<span>${c.name}</span>`;
+        const affEl = c.affiliation
+          ? `<span class="footer-curator-aff">${c.affiliation}</span>`
+          : "";
+        return `<li class="footer-curator">${nameEl}${affEl}</li>`;
+      })
+      .join("");
   }
 
   // Bottom text — swap "TechRadar" for platform name
@@ -155,7 +168,7 @@ async function boot() {
   try {
     const catalog = await loadCatalog();
     state.config = catalog.config;
-    state.tools  = catalog.tools;
+    state.tools = catalog.tools;
     applyTheme(state.config.theme);
     patchNavLogo(state.config.platform);
     updateHero(state.config.platform);
@@ -181,7 +194,13 @@ async function boot() {
   wireRadarExpand();
   mountSuggestModal(state.config);
 
-  renderFilters("filter-panel", state.config, state.tools, state.filters, onFilterChange);
+  renderFilters(
+    "filter-panel",
+    state.config,
+    state.tools,
+    state.filters,
+    onFilterChange,
+  );
   refresh();
 
   // Expose API for inline onclick handlers
@@ -212,16 +231,20 @@ function renderShell() {
     state.filters.query = e.target.value;
     refresh();
   });
-
 }
 
 // ── Refresh ───────────────────────────────────────────────────────────────────
 function refresh() {
-  const filtered = sortTools(applyFilters(state.tools, state.filters), state.sort);
+  const filtered = sortTools(
+    applyFilters(state.tools, state.filters),
+    state.sort,
+  );
   renderGrid(filtered, state.config);
   updateResultCount(filtered.length);
   updateRadar(state.filters);
-  qs(".clear-btn").style.visibility = hasActiveFilters(state.filters) ? "visible" : "hidden";
+  qs(".clear-btn").style.visibility = hasActiveFilters(state.filters)
+    ? "visible"
+    : "hidden";
 }
 
 function updateResultCount(n) {
@@ -235,14 +258,14 @@ function updateResultCount(n) {
 // ── Filter Handlers ───────────────────────────────────────────────────────────
 function onFilterChange(key, value, active) {
   if (active) state.filters[key].add(value);
-  else        state.filters[key].delete(value);
+  else state.filters[key].delete(value);
   refresh();
 }
 
 function onDimClick(dim) {
   const active = !state.filters.dim.has(dim);
   if (active) state.filters.dim.add(dim);
-  else        state.filters.dim.delete(dim);
+  else state.filters.dim.delete(dim);
   syncFilterChips(state.filters);
   refresh();
 }
@@ -261,11 +284,15 @@ function clearFilters() {
 function populateDimensionsModal() {
   const list = qs("#dimensions-list");
   if (!list || !state.config) return;
-  list.innerHTML = state.config.dimensions.map((d) => `
+  list.innerHTML = state.config.dimensions
+    .map(
+      (d) => `
     <div class="dim-entry" style="border-color:${d.color}">
       <span class="dim-entry-name" style="color:${d.color}">${d.label}</span>
       <span class="dim-entry-desc">${d.description}</span>
-    </div>`).join("");
+    </div>`,
+    )
+    .join("");
 }
 
 // ── HTML Builders ─────────────────────────────────────────────────────────────
@@ -300,8 +327,10 @@ function nav() {
 
 function heroSection() {
   // Title and tagline come from config.platform — edit config.yaml to change them
-  const name    = state.config?.platform?.name    || "TechRadar";
-  const tagline = state.config?.platform?.tagline || "Find the right tools to improve your research software quality";
+  const name = state.config?.platform?.name || "TechRadar";
+  const tagline =
+    state.config?.platform?.tagline ||
+    "Find the right tools to improve your research software quality";
   return `
     <div class="hero" role="search" aria-label="Search tools">
       <h1 class="hero-title">${name}</h1>
@@ -529,11 +558,31 @@ function aboutModal() {
 
 function howToUseModal() {
   const steps = [
-    { n: 1, title: "Identify your quality goal", body: "Use the Quality Dimension filter. Focus on what matters most right now: Reproducibility? FAIRness? Security?" },
-    { n: 2, title: "Narrow by context", body: "Apply Tier (Adopt = proven; Trial = promising) and your programming language to surface the most relevant tools." },
-    { n: 3, title: "Read the indicator", body: "Every tool card explains <em>exactly how</em> it measures quality — not just what it does, but what it checks and how." },
-    { n: 4, title: "Click for full details", body: "Open any tool card for all quality indicators, real use cases, licence, and a direct link to the tool website." },
-    { n: 5, title: "Can't find what you need?", body: "Click <strong>+ Suggest a Tool</strong> in the navigation bar. Fill the form, download the JSON, and open a GitHub PR." },
+    {
+      n: 1,
+      title: "Identify your quality goal",
+      body: "Use the Quality Dimension filter. Focus on what matters most right now: Reproducibility? FAIRness? Security?",
+    },
+    {
+      n: 2,
+      title: "Narrow by context",
+      body: "Apply Tier (Adopt = proven; Trial = promising) and your programming language to surface the most relevant tools.",
+    },
+    {
+      n: 3,
+      title: "Read the indicator",
+      body: "Every tool card explains <em>exactly how</em> it measures quality — not just what it does, but what it checks and how.",
+    },
+    {
+      n: 4,
+      title: "Click for full details",
+      body: "Open any tool card for all quality indicators, real use cases, licence, and a direct link to the tool website.",
+    },
+    {
+      n: 5,
+      title: "Can't find what you need?",
+      body: "Click <strong>+ Suggest a Tool</strong> in the navigation bar. Fill the form, download the JSON, and open a GitHub PR.",
+    },
   ];
 
   return `
@@ -543,14 +592,18 @@ function howToUseModal() {
         <h2 id="how-title" class="modal-title" style="color:var(--yellow)">How to Use TechRadar</h2>
         <p class="modal-meta">Find the right research software quality tool in under 3 minutes.</p>
         <ol class="how-steps" aria-label="Steps to find a tool">
-          ${steps.map(({ n, title, body }) => `
+          ${steps
+            .map(
+              ({ n, title, body }) => `
             <li class="how-step">
               <span class="step-n" aria-hidden="true">${n}</span>
               <div>
                 <strong class="step-title">${title}</strong>
                 <p class="step-body">${body}</p>
               </div>
-            </li>`).join("")}
+            </li>`,
+            )
+            .join("")}
         </ol>
         <button class="btn-primary" onclick="window.__tr.closeModal('how-modal')">Start Exploring →</button>
       </div>

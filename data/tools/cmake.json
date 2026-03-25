@@ -17,13 +17,13 @@
   "name": "CMake",
   "url": "https://cmake.org/",
   "indicators": {
-  "Maintainability": "measures Maintainability by simplifying and standardizing build configurations, reducing manual build complexity, and improving reproducibility of software builds across environments.",
-  "Compatibility": "measures Compatibility by enabling cross-platform builds across different operating systems, compilers, and architectures, ensuring consistent software behavior in diverse environments."
-},
-"useCases": [
-  "Configure and manage cross-platform builds for research software projects",
-  "Ensure consistent build processes across development, testing, and deployment environments",
-  "Simplify complex build configurations for multi-language or multi-module systems",
-  "Improve portability of software across operating systems and compilers"
-]
+    "Maintainability": "measures Maintainability by simplifying and standardizing build configurations, reducing manual build complexity, and improving reproducibility of software builds across environments.",
+    "Compatibility": "measures Compatibility by enabling cross-platform builds across different operating systems, compilers, and architectures, ensuring consistent software behavior in diverse environments."
+  },
+  "useCases": [
+    "Configure and manage cross-platform builds for research software projects",
+    "Ensure consistent build processes across development, testing, and deployment environments",
+    "Simplify complex build configurations for multi-language or multi-module systems",
+    "Improve portability of software across operating systems and compilers"
+  ]
 }
