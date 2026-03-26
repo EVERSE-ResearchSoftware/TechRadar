@@ -142,17 +142,6 @@ const Home = () => {
                     <Menu size={24} />
                 </button>
 
-                <div className="relative flex-1 w-full">
-                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={20} />
-                    <input
-                        type="text"
-                        placeholder="Search tools..."
-                        className="w-full bg-white border border-slate-200 rounded-lg pl-10 pr-4 py-2 text-slate-900 focus:outline-none focus:ring-2 focus:ring-sky-500 transition-all"
-                        value={search}
-                        onChange={(e) => setSearch(e.target.value)}
-                    />
-                </div>
-
                 <div className="relative min-w-[200px] w-full md:w-auto hidden md:block">
                     <Filter className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={20} />
                     <select
@@ -166,11 +155,23 @@ const Home = () => {
                         ))}
                     </select>
                 </div>
+
+                <div className="relative flex-1 w-full">
+                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={20} />
+                    <input
+                        type="text"
+                        placeholder="Search tools..."
+                        className="w-full bg-white border border-slate-200 rounded-lg pl-10 pr-4 py-2 text-slate-900 focus:outline-none focus:ring-2 focus:ring-sky-500 transition-all"
+                        value={search}
+                        onChange={(e) => setSearch(e.target.value)}
+                    />
+                </div>
+
             </div>
 
             <div className="flex flex-col md:flex-row gap-8 items-start">
                 {/* Mobile Sidebar Overlay */}
-                <div className={`md:hidden fixed inset-0 z-40 bg-white/95 transition-opacity ${showMobileFilters ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+                <div className={`md:hidden fixed inset-0 z-[60] bg-white/95 transition-opacity ${showMobileFilters ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
                     <div className="p-4 h-full overflow-y-auto">
                         <div className="flex justify-end mb-4">
                             <button onClick={() => setShowMobileFilters(false)} className="text-slate-900">
@@ -223,8 +224,8 @@ const Home = () => {
                                                 const dimName = dim['@id'].replace('dim:', '');
                                                 const color = getDimensionColor(dimName, dimensions);
                                                 return (
-                                                    <span 
-                                                        key={i} 
+                                                    <span
+                                                        key={i}
                                                         className="text-xs px-2 py-1 rounded-md border"
                                                         style={{
                                                             backgroundColor: `${color}10`, // 10% opacity

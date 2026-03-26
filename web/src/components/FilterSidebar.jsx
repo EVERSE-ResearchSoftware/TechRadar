@@ -118,30 +118,11 @@ const FilterSidebar = ({ options, filters, onFilterChange, onClear }) => {
                 </div>
 
                 <FilterSection
-                    title="How to Use the Tool"
-                    options={options.usage}
-                    selected={filters.usage}
-                    onChange={(newVal) => onFilterChange('usage', newVal)}
-                />
-
-                <FilterSection
                     title="Your Software's Programming Language"
                     options={options.languages || []}
                     selected={filters.languages || []}
                     onChange={(newVal) => onFilterChange('languages', newVal)}
                 />
-
-                <div className="mb-6 border-b border-slate-200 pb-6">
-                    <label className="flex items-center cursor-pointer group">
-                        <input
-                            type="checkbox"
-                            className="rounded border-slate-300 bg-white text-sky-600 focus:ring-sky-500 focus:ring-offset-white"
-                            checked={filters.free}
-                            onChange={(e) => onFilterChange('free', e.target.checked)}
-                        />
-                        <span className="ml-2 text-slate-700 group-hover:text-slate-900 font-semibold text-sm">Free to use</span>
-                    </label>
-                </div>
 
                 <div className="mb-6 last:border-0">
                     <h3 className="font-semibold text-slate-700 mb-3 text-sm">License of the Tool</h3>
@@ -158,6 +139,27 @@ const FilterSidebar = ({ options, filters, onFilterChange, onClear }) => {
                         ))}
                     </select>
                 </div>
+
+                <FilterSection
+                    title="How to Use the Tool"
+                    options={options.usage}
+                    selected={filters.usage}
+                    onChange={(newVal) => onFilterChange('usage', newVal)}
+                />
+
+
+                <div className="mb-6 border-b border-slate-200 pb-6">
+                    <label className="flex items-center cursor-pointer group">
+                        <input
+                            type="checkbox"
+                            className="rounded border-slate-300 bg-white text-sky-600 focus:ring-sky-500 focus:ring-offset-white"
+                            checked={filters.free}
+                            onChange={(e) => onFilterChange('free', e.target.checked)}
+                        />
+                        <span className="ml-2 text-slate-700 group-hover:text-slate-900 font-semibold text-sm">Free to use</span>
+                    </label>
+                </div>
+
             </div>
         </div>
     );

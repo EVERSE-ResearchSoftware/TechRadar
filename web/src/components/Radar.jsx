@@ -27,7 +27,7 @@ const Radar = ({ tools, dimensions, size = 500, onDimClick }) => {
         'fairness': 'FAIRness refers to the degree to which research software adheres to the FAIR principles: Findable, Accessible, Interoperable, and Reusable. These principles, adapted for research software, aim to enhance the discoverability, accessibility, interoperability, and reusability of software, thereby maximizing its value and impact in scientific research.',
         'functional_suitability': 'This characteristic represents the degree to which a product or system provides functions that meet stated and implied needs when used under specified conditions.',
         'interaction_capability': 'Degree to which a product or system can be interacted with by specified users to exchange information via the user interface to complete specific tasks in a variety of contexts of use.',
-        'openness': 'Open source software is software with source code that anyone can inspect, modify, and enhance.',
+        'open_source_software': 'Open source software is software with source code that anyone can inspect, modify, and enhance.',
         'safety': 'This characteristic represents the degree to which a product under defined conditions avoids a state in which human life, health, property, or the environment is endangered.'
     };
 
