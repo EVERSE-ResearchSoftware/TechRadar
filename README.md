@@ -78,6 +78,13 @@ npm install
 npm run lint-prettier:fix
 ```
 
-## Funding
-
 [EVERSE project](https://everse.software/) is funded by the [European Commission HORIZON-INFRA-2023-EOSC-01-02](https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-infra-2023-eosc-01-02).
+
+## License
+
+This project is dual-licensed:
+- The software and code (found in `web/`, `tests/`, etc.) are licensed under the [MIT License](LICENSES/MIT.txt).
+- The catalog data and content (found in `data/` and documentation) are licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC-BY-NC-SA-4.0) License](LICENSES/CC-BY-NC-SA-4.0.txt).
+
+This project complies with the [REUSE specification](https://reuse.software/). For more detailed information, please see the [REUSE.toml](REUSE.toml) file.
+
