@@ -12,7 +12,7 @@ const Layout = () => {
 
     return (
         <div className="min-h-screen flex flex-col">
-            <header className="glass-panel sticky top-4 z-50 mx-4 mt-4 mb-0 px-4 md:px-6 py-4 flex items-center justify-between max-w-7xl xl:mx-auto">
+            <header className="glass-panel sticky top-4 z-50 mt-4 mb-0 px-4 md:px-6 py-4 flex items-center justify-between w-[calc(100%-2rem)] max-w-[1168px] mx-auto">
                 <Link to="/" className="flex items-center gap-2 md:gap-3 hover:opacity-80 transition-opacity group min-w-0 flex-shrink">
                     <img src="https://everse.software/images/logos/EOSCEverse_PosColour_full.svg" alt="EVERSE Logo" className="h-8 md:h-10 flex-shrink-0" />
                     <span className="text-xl md:text-2xl font-bold tracking-tight whitespace-nowrap overflow-hidden text-ellipsis">
@@ -25,8 +25,8 @@ const Layout = () => {
                     <a href="#" className="text-slate-600 hover:text-slate-900 transition-colors">
                         About
                     </a>
-                    <button 
-                        onClick={() => { setShowSuggestForm(true); closeMenu(); }} 
+                    <button
+                        onClick={() => { setShowSuggestForm(true); closeMenu(); }}
                         className="text-slate-600 hover:text-slate-900 transition-colors bg-transparent border-none cursor-pointer font-inherit text-inherit"
                     >
                         Suggest a new tool
@@ -43,7 +43,7 @@ const Layout = () => {
                 </nav>
 
                 {/* Mobile Menu Toggle */}
-                <button 
+                <button
                     className="md:hidden p-2 text-slate-600 hover:text-slate-900 transition-colors"
                     onClick={toggleMenu}
                     aria-label="Toggle menu"
@@ -58,8 +58,8 @@ const Layout = () => {
                             <a href="#" onClick={closeMenu} className="text-lg font-medium text-slate-700 hover:text-indigo-600 py-2 border-b border-slate-100 last:border-0">
                                 About
                             </a>
-                            <button 
-                                onClick={() => { setShowSuggestForm(true); closeMenu(); }} 
+                            <button
+                                onClick={() => { setShowSuggestForm(true); closeMenu(); }}
                                 className="text-left text-lg font-medium text-slate-700 hover:text-indigo-600 py-2 border-b border-slate-100 last:border-0 bg-transparent border-none cursor-pointer font-inherit"
                             >
                                 Suggest a new tool
