@@ -198,7 +198,7 @@ const Radar = ({ tools, dimensions, size = 500, onDimClick }) => {
                 ))}
 
                 {/* 2. Tier Divider Rings (Grid) */}
-                {tiers.map((tier, i) => (
+                {tiers.map((tier) => (
                     <circle
                         key={tier.id}
                         cx={center}
