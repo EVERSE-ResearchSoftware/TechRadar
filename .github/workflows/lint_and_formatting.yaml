@@ -22,10 +22,13 @@ jobs:
         with:
           node-version: "16"
           cache: "npm"
+          cache-dependency-path: web/package-lock.json
 
       - name: Install dependencies
         run: npm ci
+        working-directory: web
 
-      - name: Check tools jsonld formatting with Prettier
+      - name: Run lint
         run: |
-          npm run lint-prettier:check
+          npm run lint
+        working-directory: web
