@@ -117,7 +117,7 @@ const Home = () => {
 
                 {/* Right: Radar Visualization (2/3 width) */}
                 <div className="flex-1 w-full lg:w-8/12 flex justify-center lg:justify-end overflow-visible">
-                    <div className="lg:-mr-24">
+                    <div className="lg:-mr-0">
                         <Radar
                             tools={tools}
                             dimensions={dimensions}

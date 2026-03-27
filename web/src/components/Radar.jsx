@@ -32,7 +32,7 @@ const Radar = ({ tools, dimensions, size = 500, onDimClick }) => {
     };
 
     const center = size / 2;
-    const radius = size / 2 - 90; // Padding for labels
+    const radius = size / 2 - 100; // Padding for labels
 
     // Tier Configuration
     // Labels: individuals, research teams, communities (hidden but kept for layout logic)
