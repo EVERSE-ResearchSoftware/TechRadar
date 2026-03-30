@@ -4,8 +4,8 @@ Welcome! This guide explains how to contribute to the EVERSE Technology Radar.
 
 ## TL;DR
 
-- Want to add or update a tool? Jump to the [Quick Start](#quick-start-add-or-update-a-tool)
-   - Check the [Inclusion criteria](#inclusion-criteria) before you submit
+- Want to add or update a tool? Use the “Suggest a Tool” button in the TechRadar UI or jump to the [Quick Start](#quick-start-add-or-update-a-tool)
+- Check the [Inclusion criteria](#inclusion-criteria) before you submit
 - Unsure? [Open an issue](https://github.com/EVERSE-ResearchSoftware/TechRadar/issues/new/choose) or start a [discussion](https://github.com/EVERSE-ResearchSoftware/TechRadar/discussions)
 
 ## Types of contributions
@@ -17,7 +17,27 @@ Welcome! This guide explains how to contribute to the EVERSE Technology Radar.
 
 ## Quick Start: Add or update a tool
 
+With the new TechRadar UI, you can **submit tools directly**:
+
+1. Visit the TechRadar platform [here](https://everse.software/TechRadar/).  
+2. Click the **Suggest a New Tool** button.  
+3. Fill in the submission form with required metadata:
+   - Tool/Service name  
+   - Description (what it improves, who benefits, and how)
+   - License  
+   - Quality Dimensions  
+   - Application Category: on which type of software this tool can be applied 
+   - Programming Languages (optional)  
+   - Used by Science Clusters (ENVRI, ESCAPE, LS-RI, PaNOSC, SSHOC, EOSC-Life)(optional)  
+   - Author (optional)  
+   - Maintainer (optional)
+4. Click **Copy to Clipboard**
+5. Open a Pull Request
+
 The TechRadar catalogue lives under `data/software-tools/` as one JSON file per tool using the RS metadata schema.
+All submissions go through a review by the curation team before they appear in the radar.
+
+You can also contribute via **JSON files** in the repository:
 
 <details>
    <summary><strong>New tool — step-by-step</strong></summary>
@@ -156,10 +176,8 @@ You can contribute to the TechRadar by reporting issues, suggesting improvements
 
 ## Technical contribution
 
-Our TechRadar is based on a fork of the [AOE technology radar](https://github.com/EVERSE-ResearchSoftware/aoe_technology_radar).
-
 For technical contributions, changes might need to be made to the underlying codebase in this repository. 
-In doubt, open an issue in the [TechRadar issue tracker](https://github.com/EVERSE-ResearchSoftware/TechRadar/issues/new/choose) and we will transfer it to the AOE repository if appropriate.
+In doubt, open an issue in the [TechRadar issue tracker](https://github.com/EVERSE-ResearchSoftware/TechRadar/issues/new/choose) and we will work on it if appropriate.
 
 ## FAQ
 
