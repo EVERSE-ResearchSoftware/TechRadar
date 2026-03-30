@@ -22,7 +22,7 @@ const Layout = () => {
                 </Link>
 
                 <nav className="hidden md:flex items-center gap-6">
-                    <a href="#" className="text-slate-600 hover:text-slate-900 transition-colors">
+                    <a href="/about" className="text-slate-600 hover:text-slate-900 transition-colors">
                         About
                     </a>
                     <button

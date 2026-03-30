@@ -4,14 +4,15 @@
 
 The EVERSE Technology Radar is developed as part of the [EVERSE](https://everse.software/) project to collect and classify tools and services that can measure or improve Research Software Quality.
 
+In it's latest(TechRadar v2) version, the TechRadar has evolved into an interactive web platform, providing a dynamic way for users to explore, filter, and inspect tools, beyond a static visual dashboard.
 
 ## What is the EVERSE Technology Radar?
 
-It contains:
-- a catalogue of tools and services for research software quality designed to assess, measure, and improve the quality of software developed for research purposes
-- the TechRadar, a visual dashboard to display the catalogue 
-
-The EVERSE Technology Radar offers a comprehensive overview of various research software quality tools and services. These tools and services are systematically categorised and presented in alignment with the established quality dimensions as segments. It is important to note that the radar does not encompass all existing tools and services; rather, it concentrates on tools that satisfy a set of criteria.
+The TechRadar combines a curated catalogue of tools and services with an interactive visual radar interface to support research software quality. It allows users to:
+- Explore tools and services mapped to specific quality dimensions
+- Filter and navigate by software tier or category
+- Inspect detailed information about each tool or service
+The radar does not aim to cover all existing tools; rather, it highlights tools that have been community-vetted and curated based on established criteria.
 
 ## How it is created
 
