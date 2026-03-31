@@ -21,10 +21,10 @@ const Layout = () => {
                     </span>
                 </Link>
 
-                <nav className="hidden md:flex items-center gap-6">
-                    <a href="/about" className="text-slate-600 hover:text-slate-900 transition-colors">
+                <nav className="hidden md:flex items-center gap-6">   
+                    <Link to="/about" className="text-slate-600 hover:text-slate-900 transition-colors">
                         About
-                    </a>
+                    </Link>
                     <button
                         onClick={() => { setShowSuggestForm(true); closeMenu(); }}
                         className="text-slate-600 hover:text-slate-900 transition-colors bg-transparent border-none cursor-pointer font-inherit text-inherit"
