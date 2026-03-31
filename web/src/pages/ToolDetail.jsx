@@ -22,15 +22,15 @@ const scoreRelated = (current, candidate) => {
 
     const currentDims = toArray(current.hasQualityDimension).map(getId);
     const candidateDims = toArray(candidate.hasQualityDimension).map(getId);
-    currentDims.forEach(d => { if (candidateDims.includes(d)) score += 3; });
+    currentDims.forEach(d => { if (candidateDims.includes(d)) score += 2; });
 
     const currentCats = toArray(current.applicationCategory).map(getId);
     const candidateCats = toArray(candidate.applicationCategory).map(getId);
-    currentCats.forEach(c => { if (candidateCats.includes(c)) score += 2; });
+    currentCats.forEach(c => { if (candidateCats.includes(c)) score += 1; });
 
     const currentInds = toArray(current.improvesQualityIndicator ?? current.hasQualityIndicator).map(getId);
     const candidateInds = toArray(candidate.improvesQualityIndicator ?? candidate.hasQualityIndicator).map(getId);
-    currentInds.forEach(i => { if (candidateInds.includes(i)) score += 1; });
+    currentInds.forEach(i => { if (candidateInds.includes(i)) score += 3; });
 
     return score;
 };
@@ -143,7 +143,32 @@ const ToolDetail = () => {
 
             {relatedTools.length > 0 && (
                 <div>
-                    <h2 className="text-2xl font-bold text-slate-900 mb-4">Related Tools</h2>
+                    <div className="flex items-center gap-2 mb-4">
+                        <h2 className="text-2xl font-bold text-slate-900">Related Tools</h2>
+                        <div className="relative group">
+                            <button
+                                type="button"
+                                aria-label="How related tools are selected"
+                                aria-describedby="related-tools-criteria"
+                                className="inline-flex items-center justify-center text-slate-400 hover:text-sky-600 focus-visible:outline-none focus-visibl:reing-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2 rounded-full"
+                            >
+                                <Info size={18} />
+                            </button>
+                            <div
+                                id="related-tools-criteria"
+                                role="tooltip"
+                                className="pointer-events-none absolute z-10 top-7 -left-4 w-80 max-w-[85vw] rounded-xl border border-slate-200 bg-white/95 backdrop-blur-sm p-4 shadow-xl text-xs text-slate-700 opacity-0 translate-y-1 transition-all duration-150 group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:translate-y-0"
+                            >
+                                {/* <p className="font-semibold text-slate-800 mb-1">How related tools are selected</p> */}
+                                <p className="text-slate-600">Related tools are seletected based on shared metadata:</p>
+                                <ul className="list-disc pl-4 mt-2 space-y-1 text-slate-600">
+                                    <li>Quality dimensions</li>
+                                    <li>Software tiers</li>
+                                    <li>Quality indicators</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {relatedTools.map(t => (
                             <Link
