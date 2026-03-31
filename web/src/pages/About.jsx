@@ -186,6 +186,8 @@ const About = () => {
                 </div>
                 <a
                     href="https://github.com/EVERSE-ResearchSoftware/TechRadar/blob/main/CONTRIBUTING.md"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex-shrink-0 flex items-center gap-2 px-6 py-3 bg-sky-600 hover:bg-sky-700 text-white font-medium rounded-lg transition-colors shadow-lg shadow-sky-200"
                 >
                     Contributing Guidelines
