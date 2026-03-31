@@ -54,13 +54,13 @@ body {
   box-sizing: border-box;
 }
 
-a {
+a:not([class*="text-"]) {
   color: var(--primary-color);
   text-decoration: none;
   transition: color 0.2s;
 }
 
-a:hover {
+a:not([class*="text-"]):hover {
   color: var(--secondary-color);
 }
 
