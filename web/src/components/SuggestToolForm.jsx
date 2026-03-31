@@ -196,7 +196,7 @@ const SuggestToolForm = ({ isOpen, onClose }) => {
             return;
         }
         const slug = slugify(form.name);
-        const url = `https://github.com/EVERSE-ResearchSoftware/TechRadar/new/main/data/software-tools?filename=${slug}.json`;
+        const url = `https://github.com/EVERSE-ResearchSoftware/TechRadar/new/main/quality-tools?filename=${slug}.json`;
         window.open(url, '_blank', 'noopener,noreferrer');
     };
 

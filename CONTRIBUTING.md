@@ -25,7 +25,7 @@ With the TechRadar UI, you can **submit tools directly**, considering you have y
 4. Click **Copy to Clipboard**
 5. Open a Pull Request
 
-The TechRadar catalogue lives under `data/software-tools/` as one JSON file per tool using the RS metadata schema.
+The TechRadar catalogue lives under `quality-tools/` as one JSON file per tool using the RS metadata schema.
 All submissions go through a review by the curation team before they appear in the radar.
 
 You can also contribute via **JSON files** in the repository:
@@ -34,7 +34,7 @@ You can also contribute via **JSON files** in the repository:
    <summary><strong>New tool — step-by-step</strong></summary>
 
 1) **Fork** this repository and **create a branch** for your change.
-2) **Create a JSON file** in `data/software-tools/` (use an existing file as a template) and follow the [RS metadata schema](https://github.com/EVERSE-ResearchSoftware/schemas/tree/main/software).
+2) **Create a JSON file** in `quality-tools/` (use an existing file as a template) and follow the [RS metadata schema](https://github.com/EVERSE-ResearchSoftware/schemas/tree/main/software).
 3) **Fill metadata carefully:** name, description (what it improves and for whom), URLs (homepage, repo, docs), quality dimensions, license, and how to use.
 4) (Optional) **Preview locally** to sanity-check: run a build and open the generated site.
 5) **Commit & push**, then **open a Pull Request** explaining the rationale and context.
@@ -45,7 +45,7 @@ You can also contribute via **JSON files** in the repository:
 <details>
    <summary><strong>Update existing tool — step-by-step</strong></summary>
 
-1) **Find the JSON** in `data/software-tools/` and make a new branch.
+1) **Find the JSON** in `quality-tools/` and make a new branch.
 2) **Edit fields** you want to improve (e.g., description, links, quality dimensions, tags).
 3) (Optional) **Preview locally** to verify formatting and links.
 4) **Commit & push**, then **open a Pull Request** with a concise changelog of what changed and why.

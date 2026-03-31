@@ -10,7 +10,7 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@software-tools': path.resolve(__dirname, '../data/software-tools'),
+      '@software-tools': path.resolve(__dirname, '../quality-tools'),
       '@': path.resolve(__dirname, './src'),
     },
   },

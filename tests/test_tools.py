@@ -9,6 +9,5 @@ def test_tools():
     """
     validate_json_files_using_schema(
         schema_file_path="tests/tools_validation_schema.json",
-        json_file_path="data/software-tools",
+        json_file_path="quality-tools",
     )
-

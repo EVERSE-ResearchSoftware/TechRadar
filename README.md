@@ -32,7 +32,7 @@ These tools aim to enhance the overall quality, reliability, and reusability of 
 
 We welcome content contributions to the catalogue (see our [contribution guidelines](CONTRIBUTING.md) in the form of JSON files describing tools and services for research software quality.
 
-After review from our curation team, the entry will be added to [our catalog](data/software-tools) as JSON file.
+After review from our curation team, the entry will be added to [our catalog](quality-tools) as JSON file.
 
 New versions of the TechRadar will be published regularly. You can find all the releases at the [releases](https://github.com/EVERSE-ResearchSoftware/TechRadar/releases) page.
 
@@ -64,7 +64,7 @@ npm install
 npm run build
 ```
 
-#### Run lint and formatting check on tools -> /data/software-tools/*.json
+#### Run lint and formatting check on tools -> /quality-tools/*.json
 
 ```bash
 npm install
