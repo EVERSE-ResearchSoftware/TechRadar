@@ -1,16 +1,117 @@
-# React + Vite
+# TechRadar Web App - Developer Documentation
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This folder contains the React + Vite frontend for the EVERSE TechRadar.
+It renders the interactive radar and tool catalog using JSON metadata stored in the repository.
 
-Currently, two official plugins are available:
+## Prerequisites
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Node.js 20+
+- npm 10+
 
-## React Compiler
+## Quick Start
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Run commands from this folder, not from the repository root:
 
-## Expanding the ESLint configuration
+```bash
+cd web
+npm install
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The app starts with Vite (typically at `http://localhost:5173`).
+
+## Available Scripts
+
+- `npm run dev`: Start local dev server with HMR
+- `npm run build`: Build production assets into `dist/`
+- `npm run preview`: Preview the production build locally
+- `npm run lint`: Run ESLint on JS/JSX files
+
+## Project Structure
+
+```text
+web/
+	src/
+		components/      # Reusable UI (layout, radar, filters, forms)
+		pages/           # Route-level pages (Home, ToolDetail, About)
+		data/            # Data loading and color helpers
+		App.jsx          # Router and route declarations
+		main.jsx         # React app entry point
+		index.css        # Global styles and Tailwind v4 theme tokens
+	public/            # Static assets served as-is
+	vite.config.js     # Build config, aliases, dev fs settings, base path
+```
+
+## Routing and Navigation
+
+- The app uses `HashRouter` (`#/...` routes), which is GitHub Pages-friendly.
+- Route mapping is defined in `src/App.jsx`:
+	- `/` -> catalog home
+	- `/tool/:id` -> tool detail view
+	- `/about` -> about page
+
+## Data Source and Loader
+
+Tool data comes from JSON files in `../quality-tools` (outside `web/`).
+
+- Vite alias: `@software-tools` -> `../quality-tools`
+- Loader file: `src/data/loader.js`
+- Import pattern: `import.meta.glob('@software-tools/*.json', { eager: true })`
+
+This means:
+
+- New/updated JSON files in `quality-tools/` are available to the UI at build time.
+- Tool IDs in URLs are based on filenames (stored as `_filename` in loader output).
+
+## Styling System
+
+- Tailwind CSS v4 is enabled via `@import "tailwindcss"` in `src/index.css`.
+- Custom theme tokens (colors) are declared in `@theme` in `src/index.css`.
+- Shared visual container style uses the `glass-panel` class.
+
+Note on links:
+
+- Global anchor styling is intentionally limited to anchors without explicit Tailwind text color classes, so component-level classes like `text-white` are preserved.
+
+## Adding or Updating Tool Data
+
+1. Add or edit JSON in `quality-tools/` (repository root folder).
+2. Ensure schema compatibility and consistent fields (`name`, `description`, `url`, quality dimensions, etc.).
+3. Start the app with `npm run dev` in `web/` and verify:
+	 - tool appears in catalog
+	 - filtering and detail page behavior are correct
+4. Run `npm run lint` and `npm run build` before opening a PR.
+
+## Development Workflow
+
+Recommended local checks before committing frontend changes:
+
+```bash
+cd web
+npm run lint
+npm run build
+```
+
+If `npm run dev` fails from the repository root, switch to `web/` and run it there.
+
+## Deployment Notes
+
+- `vite.config.js` sets `base: './'` for static hosting compatibility (including GitHub Pages).
+- `HashRouter` avoids server-side rewrite requirements for client routes.
+
+## Troubleshooting
+
+- Dependencies not found:
+	- Re-run `npm install` in `web/`
+- JSON changes not reflected:
+	- Restart `npm run dev`
+	- Check JSON syntax and file extension (`.json`)
+- Route opens blank page in static hosting:
+	- Ensure URL includes hash route (for example `#/about`)
+
+## Related Files
+
+- App entry and routes: `src/App.jsx`, `src/main.jsx`
+- Data loading: `src/data/loader.js`
+- Theme and global styles: `src/index.css`
+- Build and aliases: `vite.config.js`
