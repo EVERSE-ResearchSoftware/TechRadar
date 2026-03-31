@@ -214,7 +214,7 @@ const Home = () => {
                                     )}
                                 </div>
                                 <p className="text-slate-500 text-sm line-clamp-3 mb-4 flex-1">
-                                    {tool.description}
+                                    {tool.description?.replace(/\*\*|__|\*|_|`/g, '')}
                                 </p>
                                 <div className="flex flex-wrap gap-2 mt-auto">
                                     {tool.hasQualityDimension && (

@@ -2,6 +2,42 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { getToolById, getAllTools } from '../data/loader';
 import { ArrowLeft, ExternalLink, Tag, CheckCircle, Info } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
+
+// ---------------------------------------------------------------------------
+// Related tools scoring
+// ---------------------------------------------------------------------------
+// Scores each candidate tool against the current tool on three axes:
+//   - Shared quality dimensions  (weight 3 each)
+//   - Shared application category (weight 2)
+//   - Shared quality indicators   (weight 1 each)
+// Returns the top 3 highest-scoring tools (minimum score > 0).
+
+const toArray = (val) => (val ? (Array.isArray(val) ? val : [val]) : []);
+
+const getId = (obj) => (typeof obj === 'string' ? obj : obj?.['@id'] ?? '');
+
+const scoreRelated = (current, candidate) => {
+    let score = 0;
+
+    const currentDims = toArray(current.hasQualityDimension).map(getId);
+    const candidateDims = toArray(candidate.hasQualityDimension).map(getId);
+    currentDims.forEach(d => { if (candidateDims.includes(d)) score += 3; });
+
+    const currentCats = toArray(current.applicationCategory).map(getId);
+    const candidateCats = toArray(candidate.applicationCategory).map(getId);
+    currentCats.forEach(c => { if (candidateCats.includes(c)) score += 2; });
+
+    const currentInds = toArray(current.improvesQualityIndicator ?? current.hasQualityIndicator).map(getId);
+    const candidateInds = toArray(candidate.improvesQualityIndicator ?? candidate.hasQualityIndicator).map(getId);
+    currentInds.forEach(i => { if (candidateInds.includes(i)) score += 1; });
+
+    return score;
+};
+
+// ---------------------------------------------------------------------------
+// Component
+// ---------------------------------------------------------------------------
 
 const ToolDetail = () => {
     const { id } = useParams();
@@ -12,24 +48,16 @@ const ToolDetail = () => {
         return <div className="text-center py-12">Tool not found</div>;
     }
 
-    // Find related tools (share at least one dimension)
-    const relatedTools = allTools.filter(t => {
-        if (t._filename === tool._filename) return false;
+    // Score and sort all other tools, keep top 3
+    const relatedTools = allTools
+        .filter(t => t._filename !== tool._filename)
+        .map(t => ({ tool: t, score: scoreRelated(tool, t) }))
+        .filter(({ score }) => score > 0)
+        .sort((a, b) => b.score - a.score)
+        .slice(0, 3)
+        .map(({ tool: t }) => t);
 
-        const tDims = t.hasQualityDimension
-            ? (Array.isArray(t.hasQualityDimension) ? t.hasQualityDimension : [t.hasQualityDimension])
-            : [];
-
-        const currentDims = tool.hasQualityDimension
-            ? (Array.isArray(tool.hasQualityDimension) ? tool.hasQualityDimension : [tool.hasQualityDimension])
-            : [];
-
-        return tDims.some(td => currentDims.some(cd => cd['@id'] === td['@id']));
-    }).slice(0, 3);
-
-    const dimensions = tool.hasQualityDimension
-        ? (Array.isArray(tool.hasQualityDimension) ? tool.hasQualityDimension : [tool.hasQualityDimension])
-        : [];
+    const dimensions = toArray(tool.hasQualityDimension);
 
     return (
         <div className="max-w-4xl mx-auto">
@@ -43,9 +71,12 @@ const ToolDetail = () => {
                         <h1 className="text-3xl font-bold text-slate-900 mb-2">{tool.name}</h1>
                         <div className="flex flex-wrap gap-2">
                             {dimensions.map((dim, i) => (
-                                <span key={i} className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-50 text-indigo-700 border border-indigo-200">
+                                <span
+                                    key={i}
+                                    className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-50 text-indigo-700 border border-indigo-200"
+                                >
                                     <Tag size={12} className="mr-1" />
-                                    {dim['@id'].replace('dim:', '')}
+                                    {getId(dim).replace('dim:', '')}
                                 </span>
                             ))}
                         </div>
@@ -63,8 +94,13 @@ const ToolDetail = () => {
                     )}
                 </div>
 
-                <div className="prose prose-slate max-w-none mb-8">
-                    <p className="text-slate-600 text-lg leading-relaxed">{tool.description}</p>
+                {/* Description rendered as Markdown */}
+                <div className="prose prose-slate prose-sm max-w-none mb-8
+                    prose-headings:text-slate-800
+                    prose-a:text-sky-600 prose-a:no-underline hover:prose-a:underline
+                    prose-strong:text-slate-700
+                    prose-ul:text-slate-600 prose-li:marker:text-sky-400">
+                    <ReactMarkdown>{tool.description}</ReactMarkdown>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 border-t border-slate-200 pt-6">
@@ -89,6 +125,17 @@ const ToolDetail = () => {
                                     </span>
                                 </li>
                             )}
+                            {tool.applicationCategory && (
+                                <li className="flex items-start text-slate-600">
+                                    <Tag size={18} className="mr-2 text-sky-600 mt-0.5" />
+                                    <span>
+                                        <span className="text-slate-500 block text-xs">Software Tier</span>
+                                        {toArray(tool.applicationCategory)
+                                            .map(c => getId(c).replace('rs:', ''))
+                                            .join(', ')}
+                                    </span>
+                                </li>
+                            )}
                         </ul>
                     </div>
                 </div>
@@ -105,7 +152,20 @@ const ToolDetail = () => {
                                 className="glass-panel p-4 hover:bg-slate-50 transition-all hover:-translate-y-1"
                             >
                                 <h3 className="font-semibold text-sky-600 mb-2">{t.name}</h3>
-                                <p className="text-slate-500 text-sm line-clamp-2">{t.description}</p>
+                                {/* Strip markdown for the preview snippet */}
+                                <p className="text-slate-500 text-sm line-clamp-2">
+                                    {t.description?.replace(/\*\*|__|\*|_|`/g, '')}
+                                </p>
+                                <div className="flex flex-wrap gap-1 mt-3">
+                                    {toArray(t.hasQualityDimension).slice(0, 2).map((dim, i) => (
+                                        <span
+                                            key={i}
+                                            className="text-xs px-2 py-0.5 rounded-full bg-indigo-50 text-indigo-600 border border-indigo-100"
+                                        >
+                                            {getId(dim).replace('dim:', '')}
+                                        </span>
+                                    ))}
+                                </div>
                             </Link>
                         ))}
                     </div>
