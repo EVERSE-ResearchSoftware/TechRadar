@@ -95,8 +95,7 @@ const About = () => {
                         EVERSE
                     </a>{' '}
                     project to collect and classify tools and services that can measure or improve Research Software Quality.
-                    In its latest version (TechRadar v2), it has evolved into an interactive web platform providing a dynamic
-                    way to explore, filter, and inspect tools — beyond a static visual dashboard.
+                    {/* In its latest version (TechRadar v2), it has evolved into an interactive web platform providing a dynamic way to explore, filter, and inspect tools — beyond a static visual dashboard. */}
                 </p>
             </div>
 
@@ -186,7 +185,7 @@ const About = () => {
                     </p>
                 </div>
                 <a
-                    href="CONTRIBUTING.md"
+                    href="https://github.com/EVERSE-ResearchSoftware/TechRadar/blob/main/CONTRIBUTING.md"
                     className="flex-shrink-0 flex items-center gap-2 px-6 py-3 bg-sky-600 hover:bg-sky-700 text-white font-medium rounded-lg transition-colors shadow-lg shadow-sky-200"
                 >
                     Contributing Guidelines
