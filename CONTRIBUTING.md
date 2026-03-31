@@ -17,20 +17,11 @@ Welcome! This guide explains how to contribute to the EVERSE Technology Radar.
 
 ## Quick Start: Add or update a tool
 
-With the new TechRadar UI, you can **submit tools directly**:
+With the TechRadar UI, you can **submit tools directly**, considering you have your GitHub account.
 
 1. Visit the TechRadar platform [here](https://everse.software/TechRadar/).  
 2. Click the **Suggest a New Tool** button.  
-3. Fill in the submission form with required metadata:
-   - Tool/Service name  
-   - Description (what it improves, who benefits, and how)
-   - License  
-   - Quality Dimensions  
-   - Application Category: on which type of software this tool can be applied 
-   - Programming Languages (optional)  
-   - Used by Science Clusters (ENVRI, ESCAPE, LS-RI, PaNOSC, SSHOC, EOSC-Life)(optional)  
-   - Author (optional)  
-   - Maintainer (optional)
+3. Fill in the submission form with required metadata: e.g. Tool/Service name, Description (what it improves, who benefits, and how) etc
 4. Click **Copy to Clipboard**
 5. Open a Pull Request
 
