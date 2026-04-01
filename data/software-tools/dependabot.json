@@ -36,9 +36,9 @@
   "name": "Dependabot",
   "url": "https://github.com/dependabot",
   "measuresQualityIndicator": [
-    {
-      "@id": "https://w3id.org/everse/i/indicators/dependency_management",
-      "@type": "@id"
-    }
+      "https://w3id.org/everse/i/indicators/dependency_management",
+  ],
+  "rs:improvesQualityIndicator": [
+      "https://w3id.org/everse/i/indicators/static_analysis_common_vulnerabilities"
   ]
 }
