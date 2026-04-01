@@ -12,5 +12,11 @@
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/MIT",
   "name": "Somesy",
-  "url": "https://github.com/Materials-Data-Science-and-Informatics/somesy"
+  "url": "https://github.com/Materials-Data-Science-and-Informatics/somesy",
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/descriptive_metadata",
+      "@type": "@id"
+    }
+  ]
 }

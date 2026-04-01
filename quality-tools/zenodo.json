@@ -17,5 +17,19 @@
   "license": " https://ohwr.org/cernohl/",
   "name": "zenodo",
   "url": "https://zenodo.org/",
-  "usedBy": ["ENVRI", "ESCAPE", "EOSC-Life", "PaNOSC", "SSHOC"]
+  "usedBy": ["ENVRI", "ESCAPE", "EOSC-Life", "PaNOSC", "SSHOC"],
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/archived_in_scholarly_repository",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/persistent_and_unique_identifier",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/listed_in_registry",
+      "@type": "@id"
+    }
+  ]
 }

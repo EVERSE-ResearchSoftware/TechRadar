@@ -16,5 +16,11 @@
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/Apache-2.0",
   "name": "Hermes Workflows",
-  "url": "https://hermes.software-metadata.pub/en/latest/"
+  "url": "https://hermes.software-metadata.pub/en/latest/",
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/descriptive_metadata",
+      "@type": "@id"
+    }
+  ]
 }
