@@ -36,11 +36,11 @@ const Radar = ({ tools, dimensions, size = 500, onDimClick }) => {
 
     // Tier Configuration
     // Labels: individuals, research teams, communities (hidden but kept for layout logic)
-    const tiers = [
+    const tiers = useMemo(() => [
         { id: 'rs:AnalysisCode', label: 'individuals', radiusRatio: 0.33 },
         { id: 'rs:PrototypeTool', label: 'research teams', radiusRatio: 0.66 },
         { id: 'rs:ResearchInfrastructureSoftware', label: 'communities', radiusRatio: 1.0 }
-    ];
+    ], []);
 
     // Helper to get coordinates
     const getCoordinates = (angle, dist) => {
@@ -170,7 +170,7 @@ const Radar = ({ tools, dimensions, size = 500, onDimClick }) => {
             });
         });
         return pts;
-    }, [tools, dimensions, radius, center, sectorData]);
+    }, [tools, dimensions, radius, center, tiers]);
 
     const handleSectorClick = (sector) => {
         if (onDimClick) {

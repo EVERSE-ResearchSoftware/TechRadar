@@ -7,9 +7,12 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
+    "format:check": "prettier --check ../quality-tools",
+    "format:fix": "prettier --write ../quality-tools",
     "preview": "vite preview"
   },
   "dependencies": {
+    "prettier": "^3.6.2",
     "react": "^19.2.0",
     "react-dom": "^19.2.1",
     "react-markdown": "^8.0.7"
@@ -21,6 +24,7 @@
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.1.1",
     "autoprefixer": "^10.4.22",
+    "baseline-browser-mapping": "^2.10.13",
     "clsx": "^2.1.1",
     "eslint": "^9.39.1",
     "eslint-plugin-react-hooks": "^7.0.1",
