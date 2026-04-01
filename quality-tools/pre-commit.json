@@ -16,5 +16,31 @@
     { "@id": "dim:maintainability", "@type": "@id" }
   ],
   "howToUse": ["command-line"],
-  "license": "https://spdx.org/licenses/MIT.html"
+  "license": "https://spdx.org/licenses/MIT.html",
+  "measuresQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/no_leaked_credentials",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/has_no_linting_issues",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/repository_workflows",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/version_control_use",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/human_code_review_requirement",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/uses_tool_for_warnings_or_mistakes",
+      "@type": "@id"
+    }
+  ]
 }
