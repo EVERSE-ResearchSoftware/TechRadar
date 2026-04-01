@@ -68,7 +68,7 @@ export function resolveIndicators(refs, allIndicators) {
       };
     }
 
-    // Graceful fallback: humanise the URL slug
+    // Graceful fallback: humanise the URL slug e.g. "https://w3id.org/everse/i/indicators/dependency_management" -> "ependency_management"
     const slug = id.split('/').pop() ?? id;
     const name = slug.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
     return { id, name, abbreviation: slug, description: undefined, url: id };
