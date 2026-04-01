@@ -7,8 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "format:check": "prettier --check ../quality-tools",
-    "format:fix": "prettier --write ../quality-tools",
+    "format-json:check": "prettier --check ../quality-tools",
+    "format-json:fix": "prettier --write ../quality-tools",
     "preview": "vite preview"
   },
   "dependencies": {

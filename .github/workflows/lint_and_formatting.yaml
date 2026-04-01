@@ -32,3 +32,8 @@ jobs:
         run: |
           npm run lint
         working-directory: web
+
+      - name: Format JSON files
+        run: |
+          npm run format-json:check
+        working-directory: web
