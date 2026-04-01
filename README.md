@@ -32,7 +32,7 @@ These tools aim to enhance the overall quality, reliability, and reusability of 
 
 We welcome content contributions to the catalogue (see our [contribution guidelines](CONTRIBUTING.md) in the form of JSON files describing tools and services for research software quality.
 
-After review from our curation team, the entry will be added to [our catalog](data/software-tools) as JSON file.
+After review from our curation team, the entry will be added to [our catalog](quality-tools) as JSON file.
 
 New versions of the TechRadar will be published regularly. You can find all the releases at the [releases](https://github.com/EVERSE-ResearchSoftware/TechRadar/releases) page.
 
@@ -64,7 +64,7 @@ npm install
 npm run build
 ```
 
-#### Run lint and formatting check on tools -> /data/software-tools/*.json
+#### Run lint and formatting check on tools -> /quality-tools/*.json
 
 ```bash
 npm install
@@ -78,6 +78,13 @@ npm install
 npm run lint-prettier:fix
 ```
 
-## Funding
-
 [EVERSE project](https://everse.software/) is funded by the [European Commission HORIZON-INFRA-2023-EOSC-01-02](https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-infra-2023-eosc-01-02).
+
+## License
+
+This project is dual-licensed:
+- The software and code (found in `web/`, `tests/`, etc.) are licensed under the [MIT License](LICENSES/MIT.txt).
+- The catalog data and content (found in `data/` and documentation) are licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC-BY-NC-SA-4.0) License](LICENSES/CC-BY-NC-SA-4.0.txt).
+
+This project complies with the [REUSE specification](https://reuse.software/). For more detailed information, please see the [REUSE.toml](REUSE.toml) file.
+

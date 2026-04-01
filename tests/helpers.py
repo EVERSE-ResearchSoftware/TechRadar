@@ -33,6 +33,7 @@ FALLBACK_DIMENSIONS = [
     "dim:safety",
     "dim:security",
     "dim:sustainability",
+    "dim:open_source_software"
 ]
 
 

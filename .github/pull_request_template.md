@@ -5,7 +5,7 @@ Remove the part that does not concern your PR: TOOL ADDITION OR TECHNICAL DEVELO
 
 <!-- 
 TOOL ADDITION OR UPDATE
-To add a new tool or service, a JSON file describing the tool's metadata and following the [EVERSE research software schema](https://w3id.org/everse/rs) should be added in data/software-tools. See our CONTRIBUTING guidelines for more information.
+To add a new tool or service, a JSON file describing the tool's metadata and following the [EVERSE research software schema](https://w3id.org/everse/rs) should be added in quality-tools. See our CONTRIBUTING guidelines for more information.
 -->
 
 # 🆕 Tool
