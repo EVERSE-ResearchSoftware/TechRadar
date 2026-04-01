@@ -36,7 +36,7 @@
       "@type": "@id"
     }
   ],
-  "howToUse": ["command-line", "Graphical User Interface"],
+  "howToUse": ["command-line"],
   "license": "https://opensource.org/license/bsd-3-clause",
   "improvesQualityIndicator": [
     {
