@@ -13,5 +13,11 @@
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/BSD-2-Clause",
   "name": "sphinx",
-  "url": "https://www.sphinx-doc.org"
+  "url": "https://www.sphinx-doc.org",
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_has_documentation",
+      "@type": "@id"
+    }
+  ]
 }

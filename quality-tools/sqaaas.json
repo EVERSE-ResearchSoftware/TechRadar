@@ -9,5 +9,15 @@
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/AGPL-3.0-or-later",
   "name": "SQAaas",
-  "url": "https://sqaaas.eosc-synergy.eu/"
+  "url": "https://sqaaas.eosc-synergy.eu/",
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/dependency_management",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/requirements_specified",
+      "@type": "@id"
+    }
+  ]
 }
