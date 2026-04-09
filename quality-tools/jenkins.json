@@ -15,5 +15,19 @@
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/MIT",
   "name": "Jenkins",
-  "url": "https://www.jenkins.io/"
+  "url": "https://www.jenkins.io/",
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/repository_workflows",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/has_ci-tests",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_has_tests",
+      "@type": "@id"
+    }
+  ]
 }
