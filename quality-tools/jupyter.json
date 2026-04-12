@@ -16,5 +16,15 @@
   "license": "https://spdx.org/licenses/BSD-3-Clause",
   "name": "Jupyter",
   "appliesToProgrammingLanguage": ["Python", "R", "Julia"],
-  "url": "https://jupyter.org/"
+  "url": "https://jupyter.org/",
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_has_documentation",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/requirements_specified",
+      "@type": "@id"
+    }
+  ]
 }
