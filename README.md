@@ -1,5 +1,3 @@
-<img width="758" height="680" alt="Capture d’écran 2026-04-12 à 15 01 36" src="https://github.com/user-attachments/assets/13b5223f-d5e9-4119-80f2-4986afe912ed" />[![everse-logo]][everse-url]
-
 [![DOI][doi-badge]][doi-url]
 
 <!-- Badges links -->
