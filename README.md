@@ -28,7 +28,7 @@ These tools aim to enhance the overall quality, reliability, and reusability of 
 
 ### Content & publication process
 
-We welcome content contributions to the catalogue (see our [contribution guidelines](CONTRIBUTING.md) in the form of JSON files describing tools and services for research software quality.
+We welcome content contributions to the catalogue (see our [contribution guidelines](CONTRIBUTING.md)) in the form of JSON files describing tools and services for research software quality.
 
 After review from our curation team, the entry will be added to [our catalogue](quality-tools) as JSON file.
 
