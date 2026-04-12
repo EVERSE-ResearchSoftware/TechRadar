@@ -40,41 +40,9 @@ The catalogue of tools and services is presented in a visual dashboard at [https
 
 ### Development
 
-Make sure you install [Node.js](https://nodejs.org/en) on your system, as it will be needed to build and serve TechRadar.
-> [!WARNING]
-> The work is initial representation and is likely to be changed.
-> The current version of Technology Watch is a work in progress.
-> Any content should not be considered final at this stage.
+All developer setup, run, lint, build, formatting, and validation instructions are documented in [web/README.md](web/README.md).
 
-#### Build the TechRadar
-
-```bash
-npm install
-npm run serve
-```
-
-Then open here: <http://localhost:3000/techradar>
-
-#### Build with static files
-
-```bash
-npm install
-npm run build
-```
-
-#### Run lint and formatting check on tools -> /quality-tools/*.json
-
-```bash
-npm install
-npm run lint-prettier:check
-```
-
-#### Run lint and formatting fix
-
-```bash
-npm install
-npm run lint-prettier:fix
-```
+For contribution and review workflow, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 [EVERSE project](https://everse.software/) is funded by the [European Commission HORIZON-INFRA-2023-EOSC-01-02](https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-infra-2023-eosc-01-02).
 
@@ -82,7 +50,7 @@ npm run lint-prettier:fix
 
 This project is dual-licensed:
 - The software and code (found in `web/`, `tests/`, etc.) are licensed under the [MIT License](LICENSES/MIT.txt).
-- The catalog data and content (found in `data/` and documentation) are licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC-BY-NC-SA-4.0) License](LICENSES/CC-BY-NC-SA-4.0.txt).
+- The catalog data and content (found in `quality-tools/` and documentation) are licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC-BY-NC-SA-4.0) License](LICENSES/CC-BY-NC-SA-4.0.txt).
 
 This project complies with the [REUSE specification](https://reuse.software/). For more detailed information, please see the [REUSE.toml](REUSE.toml) file.
 
