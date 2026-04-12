@@ -1,4 +1,4 @@
-[![everse-logo]][everse-url]
+<img width="758" height="680" alt="Capture d’écran 2026-04-12 à 15 01 36" src="https://github.com/user-attachments/assets/13b5223f-d5e9-4119-80f2-4986afe912ed" />[![everse-logo]][everse-url]
 
 [![DOI][doi-badge]][doi-url]
 
@@ -10,9 +10,9 @@
 
 # EVERSE TechRadar
 
-The EVERSE TechRadar contains a [catalogue of _tools and services for research software quality_](#research-quality-tools-and-services-catalog) designed to assess, measure, and improve the quality of software developed for research purposes and the [TechRadar](#technology-radar-dashboard), a visual dashboard to display the catalog.
+The EVERSE TechRadar contains a [catalogue of _tools and services for research software quality_](#research-quality-tools-and-services-catalog) designed to assess, measure, and improve the quality of software developed for research purposes and a visual dashboard to display the catalogue.
 
-## Research Quality Tools and Services Catalog
+## Research Quality Tools and Services Catalogue
 
 The present catalogue includes tools and services that incorporate features that address the unique requirements of research software, including but not limited to:
 
@@ -24,7 +24,7 @@ The present catalogue includes tools and services that incorporate features that
 
 - Metrics and measurements tailored to assess both technical aspects and research-oriented factors.
 
-- Capabilities to analyze and improve research software quality throughout the research software lifecycle, from development to long-term sustainability.  
+- Capabilities to analyse and improve research software quality throughout the research software lifecycle, from development to long-term sustainability.  
 
 These tools aim to enhance the overall quality, reliability, and reusability of research software, ultimately contributing to the reproducibility and impact of scientific research.
 
@@ -32,17 +32,17 @@ These tools aim to enhance the overall quality, reliability, and reusability of 
 
 We welcome content contributions to the catalogue (see our [contribution guidelines](CONTRIBUTING.md) in the form of JSON files describing tools and services for research software quality.
 
-After review from our curation team, the entry will be added to [our catalog](quality-tools) as JSON file.
+After review from our curation team, the entry will be added to [our catalogue](quality-tools) as JSON file.
 
 New versions of the TechRadar will be published regularly. You can find all the releases at the [releases](https://github.com/EVERSE-ResearchSoftware/TechRadar/releases) page.
 
 ## EVERSE TechRadar dashboard
 
-The catalogue of tools and services is presented in a visual dashboard at <https://github.com/EVERSE-ResearchSoftware/TechRadar>.
-
+The catalogue of tools and services is presented in a visual dashboard at [https://everse.software/TechRadar/](https://everse.software/TechRadar/).
 
 ### Development
-Make sure you install [Node.js](https://nodejs.org/en) on your system as it will be needed to build and serve TechRadar.
+
+Make sure you install [Node.js](https://nodejs.org/en) on your system, as it will be needed to build and serve TechRadar.
 > [!WARNING]
 > The work is initial representation and is likely to be changed.
 > The current version of Technology Watch is a work in progress.
