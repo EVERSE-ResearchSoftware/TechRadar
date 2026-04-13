@@ -1,7 +1,21 @@
 import React, { useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
-import { Menu, SquareCode, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import SuggestToolForm from './SuggestToolForm';
+
+const GitHubIcon = ({ size = 20, className = '' }) => (
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width={size}
+        height={size}
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        aria-hidden="true"
+        className={className}
+    >
+        <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.85 10.9.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.19.69-3.87-1.54-3.87-1.54-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.69.08-.69 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.47.11-3.05 0 0 .97-.31 3.18 1.18.92-.26 1.91-.39 2.89-.4.98 0 1.97.13 2.89.4 2.21-1.49 3.18-1.18 3.18-1.18.62 1.58.23 2.76.11 3.05.73.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.26 5.69.41.36.78 1.08.78 2.18 0 1.57-.01 2.84-.01 3.23 0 .31.21.68.8.56 4.55-1.52 7.84-5.82 7.84-10.9C23.5 5.65 18.35.5 12 .5Z" />
+    </svg>
+);
 
 const Layout = () => {
     const [showSuggestForm, setShowSuggestForm] = useState(false);
@@ -38,7 +52,7 @@ const Layout = () => {
                         className="p-2 rounded-full hover:bg-black/5 transition-colors"
                         title="GitHub"
                     >
-                        <SquareCode size={20} />
+                        <GitHubIcon size={20} />
                     </a>
                 </nav>
 
@@ -71,7 +85,7 @@ const Layout = () => {
                                 onClick={closeMenu}
                                 className="flex items-center gap-2 text-lg font-medium text-slate-700 hover:text-indigo-600 py-2"
                             >
-                                <SquareCode size={20} />
+                                <GitHubIcon size={20} />
                                 GitHub Repository
                             </a>
                         </div>
