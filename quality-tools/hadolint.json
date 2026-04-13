@@ -17,7 +17,7 @@
     }
   ],
   "howToUse": ["command-line", "CI/CD"],
-  "license": "https://opensource.org/licenses/GPL-3.0",
+  "license": "https://spdx.org/licenses/GPL-3.0-only",
   "applicationCategory": [
     {
       "@id": "rs:AnalysisCode",

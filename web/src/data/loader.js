@@ -2,6 +2,13 @@
 // Load all JSON files from the software-tools directory
 const toolsModules = import.meta.glob('@software-tools/*.json', { eager: true });
 
+const normalizeLicense = (license) => {
+    if (!license || typeof license !== 'string') return license;
+    const trimmed = license.trim();
+    // Normalize malformed SPDX URLs like https://spdx.org/licenses/MIT.html
+    return trimmed.replace(/^https:\/\/spdx\.org\/licenses\/([^/]+)\.html$/i, 'https://spdx.org/licenses/$1');
+};
+
 export const getAllTools = () => {
     return Object.entries(toolsModules).map(([path, module]) => {
         const data = module.default || module;
@@ -9,6 +16,7 @@ export const getAllTools = () => {
         const filename = path.split('/').pop().replace('.json', '');
         return {
             ...data,
+            license: normalizeLicense(data.license),
             _filename: filename, // Internal ID based on filename
         };
     });

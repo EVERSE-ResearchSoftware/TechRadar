@@ -12,7 +12,7 @@
   ],
   "howToUse": ["command-line", "CI/CD"],
   "appliesToProgrammingLanguage": ["Python"],
-  "license": "https://opensource.org/licenses/BSD-2-Clause",
+  "license": "https://spdx.org/licenses/BSD-2-Clause",
   "applicationCategory": [
     {
       "@id": "rs:ResearchInfrastructureSoftware",

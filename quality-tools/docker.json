@@ -17,7 +17,7 @@
     { "@id": "dim:sustainability", "@type": "@id" }
   ],
   "howToUse": ["command-line", "online-service"],
-  "license": "https://www.apache.org/licenses/LICENSE-2.0",
+  "license": "https://spdx.org/licenses/Apache-2.0",
   "improvesQualityIndicator": [
     {
       "@id": "https://w3id.org/everse/i/indicators/dependency_management",

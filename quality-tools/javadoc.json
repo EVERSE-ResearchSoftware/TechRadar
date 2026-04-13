@@ -14,7 +14,7 @@
   ],
   "howToUse": ["CI/CD", "command-line"],
   "isAccessibleForFree": true,
-  "license": "https://www.oracle.com/downloads/licenses/no-fee-license",
+  "license": "https://www.oracle.com/downloads/licenses/javadoc-updater-license.html",
   "name": "javadoc",
   "url": "https://www.oracle.com/java/technologies/javase/javadoc-tool.html"
 }
