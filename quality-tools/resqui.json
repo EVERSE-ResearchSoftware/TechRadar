@@ -51,5 +51,5 @@
     }
   ],
   "howToUse": ["command-line"],
-  "license": "https://opensource.org/licenses/MIT"
+  "license": "https://spdx.org/licenses/MIT"
 }

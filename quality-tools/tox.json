@@ -26,7 +26,7 @@
   ],
   "howToUse": ["command-line", "CI/CD"],
   "appliesToProgrammingLanguage": ["Python"],
-  "license": "https://opensource.org/licenses/MIT",
+  "license": "https://spdx.org/licenses/MIT",
   "applicationCategory": {
     "@id": "rs:ResearchInfrastructureSoftware",
     "@type": "@id"
