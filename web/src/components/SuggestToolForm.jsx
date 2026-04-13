@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { X, AlertCircle, CheckCircle, Copy, ExternalLink, ChevronDown } from 'lucide-react';
+import { useIndicatorOptions } from '../hooks/useIndicators';
 
 const APPLICATION_CATEGORIES = [
     { id: 'rs:AnalysisCode', label: 'Analysis Code' },
@@ -16,8 +17,6 @@ const QUALITY_DIMENSIONS = [
 const HOW_TO_USE_OPTIONS = ['CI/CD', 'command-line', 'online-service', 'library'];
 
 const USED_BY_OPTIONS = ['ENVRI', 'ESCAPE', 'LS-RI', 'PaNOSC', 'SSHOC', 'EOSC-Life'];
-const INDICATORS_API_URL = 'https://everse.software/indicators/api/indicators.json';
-
 const INITIAL_FORM = {
     name: '',
     description: '',
@@ -48,13 +47,6 @@ function formatDimensionLabel(dim) {
         .split('_')
         .map(w => w.charAt(0).toUpperCase() + w.slice(1))
         .join(' ');
-}
-
-function formatIndicatorLabel(uri) {
-    const tail = uri.split('/').filter(Boolean).pop() || uri;
-    return tail
-        .replace(/[_-]+/g, ' ')
-        .replace(/\b\w/g, c => c.toUpperCase());
 }
 
 function buildJson(form) {
@@ -242,9 +234,7 @@ const SuggestToolForm = ({ isOpen, onClose }) => {
     const [errors, setErrors] = useState({});
     const [successMsg] = useState('');
     const [copied, setCopied] = useState(false);
-    const [indicatorOptions, setIndicatorOptions] = useState([]);
-    const [indicatorsLoading, setIndicatorsLoading] = useState(false);
-    const [indicatorsError, setIndicatorsError] = useState('');
+    const { options: indicatorOptions, loading: indicatorsLoading } = useIndicatorOptions();
     const backdropRef = useRef(null);
 
     // Close on Escape
@@ -264,30 +254,6 @@ const SuggestToolForm = ({ isOpen, onClose }) => {
             document.body.style.overflow = '';
         }
         return () => { document.body.style.overflow = ''; };
-    }, [isOpen]);
-
-    // Load indicator options from EVERSE API once when the modal first opens.
-    useEffect(() => {
-        if (!isOpen || indicatorsLoading || indicatorOptions.length > 0) return;
-
-        setIndicatorsLoading(true);
-        setIndicatorsError('');
-
-        fetch(INDICATORS_API_URL)
-            .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
-            .then(data => {
-                const options = (Array.isArray(data?.indicators) ? data.indicators : [])
-                    .map(ind => {
-                        const id = ind?.identifier?.['@id'];
-                        return id ? { id, label: ind?.name || formatIndicatorLabel(id) } : null;
-                    })
-                    .filter(Boolean)
-                    .sort((a, b) => a.label.localeCompare(b.label));
-                setIndicatorOptions(options);
-            })
-            .catch(() => setIndicatorsError('Could not load indicators from EVERSE API. You can still submit without them.'))
-            .finally(() => setIndicatorsLoading(false));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [isOpen]);
 
     if (!isOpen) return null;
@@ -626,7 +592,6 @@ const SuggestToolForm = ({ isOpen, onClose }) => {
                                 onChange={v => updateField('measuresQualityIndicator', v)}
                                 placeholder="Select indicators…"
                                 loading={indicatorsLoading}
-                                error={indicatorsError}
                             />
                         </div>
 
@@ -639,7 +604,6 @@ const SuggestToolForm = ({ isOpen, onClose }) => {
                                 onChange={v => updateField('improvesQualityIndicator', v)}
                                 placeholder="Select indicators…"
                                 loading={indicatorsLoading}
-                                error={indicatorsError}
                             />
                         </div>
 

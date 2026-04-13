@@ -95,3 +95,23 @@ export const getFilterOptions = () => {
         free: [true, false]
     };
 };
+
+/**
+ * Returns the sets of quality indicator IDs that actually appear in the catalog,
+ * separated by the field they come from.
+ */
+export const getQualityIndicatorIds = () => {
+    const tools = getAllTools();
+    const measures = new Set();
+    const improves = new Set();
+    const toIds = val =>
+        (Array.isArray(val) ? val : val ? [val] : []).map(i => i?.['@id']).filter(Boolean);
+    tools.forEach(tool => {
+        toIds(tool.measuresQualityIndicator).forEach(id => measures.add(id));
+        toIds(tool.improvesQualityIndicator).forEach(id => improves.add(id));
+    });
+    return {
+        measures: Array.from(measures).sort(),
+        improves: Array.from(improves).sort(),
+    };
+};
