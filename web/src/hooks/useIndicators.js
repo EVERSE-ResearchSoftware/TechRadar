@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 
 const INDICATORS_API = 'https://everse.software/indicators/api/indicators.json';
 
@@ -73,4 +73,30 @@ export function resolveIndicators(refs, allIndicators) {
     const name = slug.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
     return { id, name, abbreviation: slug, description: undefined, url: id };
   });
+}
+
+function slugToLabel(uri) {
+  const tail = uri.split('/').filter(Boolean).pop() || uri;
+  return tail.replace(/[_-]+/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+}
+
+/**
+ * Returns sorted indicator options ready for dropdowns and filters.
+ * { options: Array<{ id: string, label: string }>, loading: boolean }
+ */
+export function useIndicatorOptions() {
+  const { indicators, loading } = useIndicators();
+  const options = useMemo(
+    () =>
+      indicators
+        .map(ind => {
+          const id = ind?.identifier?.['@id'] ?? ind?.['@id'];
+          if (!id) return null;
+          return { id, label: ind.name || slugToLabel(id) };
+        })
+        .filter(Boolean)
+        .sort((a, b) => a.label.localeCompare(b.label)),
+    [indicators]
+  );
+  return { options, loading };
 }
