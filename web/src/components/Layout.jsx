@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
-import { Github, Menu, X } from 'lucide-react';
+import { Menu, SquareCode, X } from 'lucide-react';
 import SuggestToolForm from './SuggestToolForm';
 
 const Layout = () => {
@@ -21,7 +21,7 @@ const Layout = () => {
                     </span>
                 </Link>
 
-                <nav className="hidden md:flex items-center gap-6">   
+                <nav className="hidden md:flex items-center gap-6">
                     <Link to="/about" className="text-slate-600 hover:text-slate-900 transition-colors">
                         About
                     </Link>
@@ -38,7 +38,7 @@ const Layout = () => {
                         className="p-2 rounded-full hover:bg-black/5 transition-colors"
                         title="GitHub"
                     >
-                        <Github size={20} />
+                        <SquareCode size={20} />
                     </a>
                 </nav>
 
@@ -71,7 +71,7 @@ const Layout = () => {
                                 onClick={closeMenu}
                                 className="flex items-center gap-2 text-lg font-medium text-slate-700 hover:text-indigo-600 py-2"
                             >
-                                <Github size={20} />
+                                <SquareCode size={20} />
                                 GitHub Repository
                             </a>
                         </div>
