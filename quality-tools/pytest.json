@@ -1,0 +1,48 @@
+{
+  "@context": "https://w3id.org/everse/rs#",
+  "@id": "https://w3id.org/everse/tools/pytest",
+  "@type": "schema:SoftwareApplication",
+  "name": "pytest",
+  "description": "Comprehensive testing framework for Python that enhances research software reliability and maintainability through advanced testing capabilities, fixtures, and plugins, supporting test-driven development practices essential for research software quality assurance.",
+  "url": "https://docs.pytest.org/",
+  "isAccessibleForFree": true,
+  "hasQualityDimension": [
+    {
+      "@id": "dim:maintainability",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:reliability",
+      "@type": "@id"
+    }
+  ],
+  "howToUse": ["command-line", "CI/CD"],
+  "appliesToProgrammingLanguage": ["Python"],
+  "license": "https://opensource.org/licenses/MIT",
+  "applicationCategory": [
+    {
+      "@id": "rs:AnalysisCode",
+      "@type": "@id"
+    },
+    {
+      "@id": "rs:ResearchInfrastructureSoftware",
+      "@type": "@id"
+    }
+  ],
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/has_ci-tests",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_has_tests",
+      "@type": "@id"
+    }
+  ],
+  "measuresQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_test_coverage",
+      "@type": "@id"
+    }
+  ]
+}

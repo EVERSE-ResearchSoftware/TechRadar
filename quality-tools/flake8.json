@@ -1,0 +1,30 @@
+{
+  "@context": "https://w3id.org/everse/rs#",
+  "@id": "https://w3id.org/everse/tools/flake8",
+  "@type": "schema:SoftwareApplication",
+  "name": "flake8",
+  "description": "Python linting tool that combines multiple code quality checkers to identify style violations, programming errors, and complexity issues, improving research software maintainability through comprehensive code analysis.",
+  "url": "https://flake8.pycqa.org/",
+  "isAccessibleForFree": true,
+  "hasQualityDimension": {
+    "@id": "dim:maintainability",
+    "@type": "@id"
+  },
+  "howToUse": ["command-line", "CI/CD"],
+  "appliesToProgrammingLanguage": ["Python"],
+  "license": "https://opensource.org/licenses/MIT",
+  "applicationCategory": [
+    {
+      "@id": "rs:AnalysisCode",
+      "@type": "@id"
+    },
+    {
+      "@id": "rs:ResearchInfrastructureSoftware",
+      "@type": "@id"
+    },
+    {
+      "@id": "rs:PrototypeTool",
+      "@type": "@id"
+    }
+  ]
+}

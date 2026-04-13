@@ -1,0 +1,20 @@
+{
+  "@context": "https://w3id.org/everse/rs#",
+  "@id": "https://w3id.org/everse/tools/jupyter",
+  "@type": "SoftwareApplication",
+  "applicationCategory": {
+    "@id": "rs:ResearchInfrastructureSoftware",
+    "@type": "@id"
+  },
+  "description": "Open-source web application for creating and sharing live code, equations, visualizations, and narrative text, enhancing research software development and collaboration through interactive computing environments.",
+  "hasQualityDimension": [
+    { "@id": "dim:maintainability", "@type": "@id" },
+    { "@id": "dim:interaction_capability", "@type": "@id" }
+  ],
+  "howToUse": ["online-service"],
+  "isAccessibleForFree": true,
+  "license": "https://spdx.org/licenses/BSD-3-Clause",
+  "name": "Jupyter",
+  "appliesToProgrammingLanguage": ["Python", "R", "Julia"],
+  "url": "https://jupyter.org/"
+}
