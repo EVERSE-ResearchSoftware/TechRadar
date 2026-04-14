@@ -13,19 +13,5 @@
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/0BSD",
   "name": "Score-P",
-  "url": "https://gitlab.com/score-p/scorep",
-  "improvesQualityIndicator": [
-    {
-      "@id": "https://w3id.org/everse/i/indicators/software_has_tests",
-      "@type": "@id"
-    },
-    {
-      "@id": "https://w3id.org/everse/i/indicators/repository_workflows",
-      "@type": "@id"
-    },
-    {
-      "@id": "https://w3id.org/everse/i/indicators/software_has_documentation",
-      "@type": "@id"
-    }
-  ]
+  "url": "https://gitlab.com/score-p/scorep"
 }
