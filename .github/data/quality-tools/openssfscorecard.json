@@ -15,6 +15,6 @@
   "howToUse": ["CI/CD", "command-line"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/Apache-2.0",
-  "name": "scorecard",
+  "name": "OpenSSF Scorecard",
   "url": "https://github.com/ossf/scorecard"
 }
