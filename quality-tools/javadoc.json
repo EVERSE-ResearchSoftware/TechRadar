@@ -16,5 +16,15 @@
   "isAccessibleForFree": true,
   "license": "https://www.oracle.com/downloads/licenses/javadoc-updater-license.html",
   "name": "javadoc",
-  "url": "https://www.oracle.com/java/technologies/javase/javadoc-tool.html"
+  "url": "https://www.oracle.com/java/technologies/javase/javadoc-tool.html",
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_has_documentation",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/descriptive_metadata",
+      "@type": "@id"
+    }
+  ]
 }
