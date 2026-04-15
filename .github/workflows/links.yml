@@ -24,6 +24,7 @@ jobs:
         id: lychee_strict
         uses: lycheeverse/lychee-action@v2
         with:
+          args: --verbose --no-progress 'web/**/*.jsx' 'web/**/*.html' './**/*.md' './quality-tools/**/*.json'
           fail: true
 
       - name: Link Checker (scheduled report)
@@ -31,6 +32,7 @@ jobs:
         id: lychee_schedule
         uses: lycheeverse/lychee-action@v2
         with:
+          args: --verbose --no-progress 'web/**/*.jsx' 'web/**/*.html' './**/*.md' './quality-tools/**/*.json'
           fail: false
 
       - name: Create Issue From File
