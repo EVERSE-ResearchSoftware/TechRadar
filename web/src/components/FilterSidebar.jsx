@@ -47,7 +47,7 @@ const FilterSidebar = ({ options, filters, onFilterChange, onClear }) => {
             <div className="glass-panel p-4 sticky top-24">
                 <div className="flex items-center justify-between mb-4">
                     <h2 className="font-bold text-slate-900">Filters</h2>
-                    {(filters.categories.length > 0 || filters.usage.length > 0 || filters.languages.length > 0 || filters.licenses !== '' || filters.free) && (
+                    {(filters.categories.length > 0 || filters.usage.length > 0 || filters.languages.length > 0 || filters.licenses !== '' || filters.free || filters.measuresIndicators?.length > 0 || filters.improvesIndicators?.length > 0) && (
                         <button
                             onClick={onClear}
                             className="text-xs text-sky-600 hover:text-sky-700 flex items-center"
@@ -159,6 +159,26 @@ const FilterSidebar = ({ options, filters, onFilterChange, onClear }) => {
                         <span className="ml-2 text-slate-700 group-hover:text-slate-900 font-semibold text-sm">Free to use</span>
                     </label>
                 </div>
+
+                {(options.measuresIndicators || []).length > 0 && (
+                    <FilterSection
+                        title="Measures Quality Indicator"
+                        options={(options.measuresIndicators || []).map(o => o.id)}
+                        selected={filters.measuresIndicators || []}
+                        onChange={(newVal) => onFilterChange('measuresIndicators', newVal)}
+                        renderOption={id => (options.measuresIndicators || []).find(o => o.id === id)?.label ?? id.split('/').pop()}
+                    />
+                )}
+
+                {(options.improvesIndicators || []).length > 0 && (
+                    <FilterSection
+                        title="Improves Quality Indicator"
+                        options={(options.improvesIndicators || []).map(o => o.id)}
+                        selected={filters.improvesIndicators || []}
+                        onChange={(newVal) => onFilterChange('improvesIndicators', newVal)}
+                        renderOption={id => (options.improvesIndicators || []).find(o => o.id === id)?.label ?? id.split('/').pop()}
+                    />
+                )}
 
             </div>
         </div>

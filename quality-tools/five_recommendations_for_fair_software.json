@@ -8,7 +8,7 @@
   "isAccessibleForFree": true,
   "hasQualityDimension": { "@id": "dim:fairness", "@type": "@id" },
   "howToUse": ["online-service"],
-  "license": "NA",
+  "license": "https://spdx.org/licenses/CC-BY-4.0",
   "applicationCategory": [
     { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" },
     { "@id": "rs:PrototypeTool", "@type": "@id" },

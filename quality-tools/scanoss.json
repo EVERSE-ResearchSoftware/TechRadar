@@ -15,5 +15,23 @@
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/MPL-2.0",
   "name": "SCANOSS",
-  "url": "https://www.scanoss.com/"
+  "url": "https://www.scanoss.com/",
+  "measuresQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_has_license",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/no_critical_vulnerability",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/dependency_management",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/descriptive_metadata",
+      "@type": "@id"
+    }
+  ]
 }

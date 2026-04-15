@@ -26,6 +26,8 @@ The app starts with Vite (typically at `http://localhost:5173`).
 - `npm run build`: Build production assets into `dist/`
 - `npm run preview`: Preview the production build locally
 - `npm run lint`: Run ESLint on JS/JSX files
+- `npm run format-json:check`: Check formatting for `../quality-tools/*.json`
+- `npm run format-json:fix`: Auto-fix formatting for `../quality-tools/*.json`
 
 ## Project Structure
 
@@ -93,6 +95,35 @@ npm run build
 ```
 
 If `npm run dev` fails from the repository root, switch to `web/` and run it there.
+
+## Repository Validation Checks
+
+Use these checks when contributing catalog entries or repository-level changes.
+
+### Catalog JSON formatting
+
+Run from `web/`:
+
+```bash
+cd web
+npm run format-json:check
+```
+
+Auto-fix formatting:
+
+```bash
+cd web
+npm run format-json:fix
+```
+
+### JSON validation tests (Python)
+
+Run from the repository root:
+
+```bash
+pip install -r tests/requirements.txt
+python -m pytest tests/
+```
 
 ## Deployment Notes
 

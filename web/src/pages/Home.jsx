@@ -1,15 +1,27 @@
 import React, { useState, useMemo } from 'react';
-import { getAllTools, getQualityDimensions, getFilterOptions } from '../data/loader';
+import { getAllTools, getQualityDimensions, getFilterOptions, getQualityIndicatorIds } from '../data/loader';
 import { getDimensionColor } from '../data/colors';
 import { Link } from 'react-router-dom';
 import { Search, Filter, Menu, X } from 'lucide-react';
 import FilterSidebar from '../components/FilterSidebar';
 import Radar from '../components/Radar';
+import { useIndicatorOptions } from '../hooks/useIndicators';
 
 const Home = () => {
     const tools = getAllTools();
     const dimensions = getQualityDimensions();
     const filterOptions = useMemo(() => getFilterOptions(), []);
+    const catalogIndicatorIds = useMemo(() => getQualityIndicatorIds(), []);
+    const { options: allIndicatorOptions } = useIndicatorOptions();
+    const filterOptionsWithIndicators = useMemo(() => ({
+        ...filterOptions,
+        measuresIndicators: catalogIndicatorIds.measures.map(
+            id => allIndicatorOptions.find(o => o.id === id) ?? { id, label: id.split('/').pop().replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase()) }
+        ),
+        improvesIndicators: catalogIndicatorIds.improves.map(
+            id => allIndicatorOptions.find(o => o.id === id) ?? { id, label: id.split('/').pop().replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase()) }
+        ),
+    }), [filterOptions, catalogIndicatorIds, allIndicatorOptions]);
 
     const [search, setSearch] = useState('');
     const [selectedDim, setSelectedDim] = useState('');
@@ -20,7 +32,9 @@ const Home = () => {
         usage: [],
         licenses: '',
         languages: [],
-        free: false
+        free: false,
+        measuresIndicators: [],
+        improvesIndicators: [],
     });
 
     const handleFilterChange = (key, value) => {
@@ -33,7 +47,9 @@ const Home = () => {
             usage: [],
             licenses: '',
             languages: [],
-            free: false
+            free: false,
+            measuresIndicators: [],
+            improvesIndicators: [],
         });
         setSelectedDim('');
         setSearch('');
@@ -86,6 +102,22 @@ const Home = () => {
             // Free
             if (filters.free) {
                 if (tool.isAccessibleForFree !== true) return false;
+            }
+
+            // Measures indicators
+            if (filters.measuresIndicators.length > 0) {
+                const toolMeasures = tool.measuresQualityIndicator
+                    ? (Array.isArray(tool.measuresQualityIndicator) ? tool.measuresQualityIndicator : [tool.measuresQualityIndicator])
+                    : [];
+                if (!toolMeasures.some(i => filters.measuresIndicators.includes(i['@id']))) return false;
+            }
+
+            // Improves indicators
+            if (filters.improvesIndicators.length > 0) {
+                const toolImproves = tool.improvesQualityIndicator
+                    ? (Array.isArray(tool.improvesQualityIndicator) ? tool.improvesQualityIndicator : [tool.improvesQualityIndicator])
+                    : [];
+                if (!toolImproves.some(i => filters.improvesIndicators.includes(i['@id']))) return false;
             }
 
             return true;
@@ -179,7 +211,7 @@ const Home = () => {
                             </button>
                         </div>
                         <FilterSidebar
-                            options={filterOptions}
+                            options={filterOptionsWithIndicators}
                             filters={filters}
                             onFilterChange={handleFilterChange}
                             onClear={clearFilters}
@@ -190,7 +222,7 @@ const Home = () => {
                 {/* Desktop Sidebar */}
                 <div className="hidden md:block sticky top-24">
                     <FilterSidebar
-                        options={filterOptions}
+                        options={filterOptionsWithIndicators}
                         filters={filters}
                         onFilterChange={handleFilterChange}
                         onClear={clearFilters}

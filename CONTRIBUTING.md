@@ -11,7 +11,7 @@ Welcome! This guide explains how to contribute to the EVERSE Technology Radar.
 ## Types of contributions
 
 - **Content contributions:** Add a new tool/service or improve an existing entry. See the [Quick Start](#quick-start-add-or-update-a-tool).
-- **Technical contributions:** Improve the radar UI, scripts, or CI. Our stack is based on the [AOE Technology Radar](https://github.com/AOEpeople/aoe_technology_radar/).
+- **Technical contributions:** Improve the radar UI, scripts, or CI in this repository (mainly under `web/`, tests, and project automation files).
 - **General contributions:** Report issues, suggest improvements, or share feedback via [issues](https://github.com/EVERSE-ResearchSoftware/TechRadar/issues/new/choose) or [discussions](https://github.com/EVERSE-ResearchSoftware/TechRadar/discussions).
 - **Join the curation team:** See [Joining the curation team](#joining-the-curation-team).
 

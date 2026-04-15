@@ -28,7 +28,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: 24
           cache: "npm"
           cache-dependency-path: web/package-lock.json
 
@@ -41,7 +41,7 @@ jobs:
         working-directory: web
 
       - name: Setup Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v6
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4

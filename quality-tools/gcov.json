@@ -19,7 +19,7 @@
     { "@id": "dim:sustainability", "@type": "@id" }
   ],
   "howToUse": ["CI/CD", "command-line"],
-  "license": "https://spdx.org/licenses/GPL-2.0-only.html",
+  "license": "https://spdx.org/licenses/GPL-2.0-only",
   "measuresQualityIndicator": [
     {
       "@id": "https://w3id.org/everse/i/indicators/software_has_tests",

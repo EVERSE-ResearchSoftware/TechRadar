@@ -12,7 +12,7 @@
   ],
   "howToUse": ["command-line"],
   "appliesToProgrammingLanguage": ["Java"],
-  "license": "https://opensource.org/licenses/EPL-2.0",
+  "license": "https://spdx.org/licenses/EPL-2.0",
   "applicationCategory": {
     "@id": "rs:ResearchInfrastructureSoftware",
     "@type": "@id"
