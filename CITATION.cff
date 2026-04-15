@@ -59,6 +59,7 @@ keywords:
   - software quality
   - research software
   - RSE
+# double licensing, while valid for CITATION.cff, fails during Zenodo release
 license: CC-BY-NC-SA-4.0
 identifiers:
   - type: doi
