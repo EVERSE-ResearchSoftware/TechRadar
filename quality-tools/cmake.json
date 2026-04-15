@@ -30,6 +30,14 @@
     {
       "@id": "https://w3id.org/everse/i/indicators/requirements_specified",
       "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_has_tests",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/uses_tool_for_warnings_or_mistakes",
+      "@type": "@id"
     }
   ]
 }
