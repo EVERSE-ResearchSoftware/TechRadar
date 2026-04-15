@@ -50,6 +50,10 @@ authors:
     orcid: 'https://orcid.org/0009-0008-9084-064X' 
   - family-names: Garijo
     given-names: Daniel
+  - given-names: Vincent
+    family-names: Pollet
+    email: vincent.pollet@lapp.in2p3.fr
+    affiliation: 'LAPP, CNRS'
 repository-code: 'https://github.com/EVERSE-ResearchSoftware/TechRadar/'
 url: 'https://everse.software/TechRadar/'
 abstract: >-
