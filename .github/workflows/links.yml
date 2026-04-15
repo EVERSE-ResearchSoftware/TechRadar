@@ -7,7 +7,7 @@ on:
     - cron: "00 18 * * *"
   push:
     branches:
-      - main  
+      - main
   pull_request:
     branches:
       - main
@@ -19,17 +19,24 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
-      - name: Link Checker
-        id: lychee
+      - name: Link Checker (CI strict)
+        if: github.event_name != 'schedule'
+        id: lychee_strict
+        uses: lycheeverse/lychee-action@v2
+        with:
+          fail: true
+
+      - name: Link Checker (scheduled report)
+        if: github.event_name == 'schedule'
+        id: lychee_schedule
         uses: lycheeverse/lychee-action@v2
         with:
           fail: false
 
       - name: Create Issue From File
-        if: steps.lychee.outputs.exit_code != 0
+        if: github.event_name == 'schedule' && steps.lychee_schedule.outputs.exit_code != 0
         uses: peter-evans/create-issue-from-file@v5
         with:
           title: Link Checker Report
           content-filepath: ./lychee/out.md
           labels: report, automated issue
- 
