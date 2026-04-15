@@ -1,0 +1,31 @@
+{
+  "@context": "https://w3id.org/everse/rs#",
+  "@id": "https://w3id.org/everse/tools/REUSE",
+  "@type": "SoftwareApplication",
+  "name": "REUSE",
+  "description": "Automate the declaring of copyright and licensing for software projects with SPDX Tags.",
+  "url": "https://reuse.software",
+  "isAccessibleForFree": true,
+  "applicationCategory": [
+    {
+      "@id": "rs:ResearchInfrastructureSoftware",
+      "@type": "@id"
+    },
+    {
+      "@id": "rs:PrototypeTool",
+      "@type": "@id"
+    }
+  ],
+  "hasQualityDimension": {
+    "@id": "dim:fairness",
+    "@type": "@id"
+  },
+  "license": "https://spdx.org/licenses/GPL-3.0-only",
+  "howToUse": ["command-line", "online-service", "CI/CD"],
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_has_license",
+      "@type": "@id"
+    }
+  ]
+}

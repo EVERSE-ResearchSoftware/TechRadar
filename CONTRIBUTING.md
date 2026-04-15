@@ -4,26 +4,37 @@ Welcome! This guide explains how to contribute to the EVERSE Technology Radar.
 
 ## TL;DR
 
-- Want to add or update a tool? Jump to the [Quick Start](#quick-start-add-or-update-a-tool)
-   - Check the [Inclusion criteria](#inclusion-criteria) before you submit
+- Want to add or update a tool? Use the “Suggest a Tool” button in the TechRadar UI or jump to the [Quick Start](#quick-start-add-or-update-a-tool)
+- Check the [Inclusion criteria](#inclusion-criteria) before you submit
 - Unsure? [Open an issue](https://github.com/EVERSE-ResearchSoftware/TechRadar/issues/new/choose) or start a [discussion](https://github.com/EVERSE-ResearchSoftware/TechRadar/discussions)
 
 ## Types of contributions
 
 - **Content contributions:** Add a new tool/service or improve an existing entry. See the [Quick Start](#quick-start-add-or-update-a-tool).
-- **Technical contributions:** Improve the radar UI, scripts, or CI. Our stack is based on the [AOE Technology Radar](https://github.com/AOEpeople/aoe_technology_radar/).
+- **Technical contributions:** Improve the radar UI, scripts, or CI in this repository (mainly under `web/`, tests, and project automation files).
 - **General contributions:** Report issues, suggest improvements, or share feedback via [issues](https://github.com/EVERSE-ResearchSoftware/TechRadar/issues/new/choose) or [discussions](https://github.com/EVERSE-ResearchSoftware/TechRadar/discussions).
 - **Join the curation team:** See [Joining the curation team](#joining-the-curation-team).
 
 ## Quick Start: Add or update a tool
 
-The TechRadar catalogue lives under `data/software-tools/` as one JSON file per tool using the RS metadata schema.
+With the TechRadar UI, you can **submit tools directly**, considering you have your GitHub account.
+
+1. Visit the TechRadar platform [here](https://everse.software/TechRadar/).  
+2. Click the **Suggest a New Tool** button.  
+3. Fill in the submission form with required metadata: e.g. Tool/Service name, Description (what it improves, who benefits, and how) etc
+4. Click **Copy to Clipboard**
+5. Open a Pull Request
+
+The TechRadar catalogue lives under `quality-tools/` as one JSON file per tool using the RS metadata schema.
+All submissions go through a review by the curation team before they appear in the radar.
+
+You can also contribute via **JSON files** in the repository:
 
 <details>
    <summary><strong>New tool — step-by-step</strong></summary>
 
 1) **Fork** this repository and **create a branch** for your change.
-2) **Create a JSON file** in `data/software-tools/` (use an existing file as a template) and follow the [RS metadata schema](https://github.com/EVERSE-ResearchSoftware/schemas/tree/main/software).
+2) **Create a JSON file** in `quality-tools/` (use an existing file as a template) and follow the [RS metadata schema](https://github.com/EVERSE-ResearchSoftware/schemas/tree/main/software).
 3) **Fill metadata carefully:** name, description (what it improves and for whom), URLs (homepage, repo, docs), quality dimensions, license, and how to use.
 4) (Optional) **Preview locally** to sanity-check: run a build and open the generated site.
 5) **Commit & push**, then **open a Pull Request** explaining the rationale and context.
@@ -34,7 +45,7 @@ The TechRadar catalogue lives under `data/software-tools/` as one JSON file per 
 <details>
    <summary><strong>Update existing tool — step-by-step</strong></summary>
 
-1) **Find the JSON** in `data/software-tools/` and make a new branch.
+1) **Find the JSON** in `quality-tools/` and make a new branch.
 2) **Edit fields** you want to improve (e.g., description, links, quality dimensions, tags).
 3) (Optional) **Preview locally** to verify formatting and links.
 4) **Commit & push**, then **open a Pull Request** with a concise changelog of what changed and why.
@@ -156,10 +167,8 @@ You can contribute to the TechRadar by reporting issues, suggesting improvements
 
 ## Technical contribution
 
-Our TechRadar is based on a fork of the [AOE technology radar](https://github.com/EVERSE-ResearchSoftware/aoe_technology_radar).
-
 For technical contributions, changes might need to be made to the underlying codebase in this repository. 
-In doubt, open an issue in the [TechRadar issue tracker](https://github.com/EVERSE-ResearchSoftware/TechRadar/issues/new/choose) and we will transfer it to the AOE repository if appropriate.
+In doubt, open an issue in the [TechRadar issue tracker](https://github.com/EVERSE-ResearchSoftware/TechRadar/issues/new/choose) and we will work on it if appropriate.
 
 ## FAQ
 
