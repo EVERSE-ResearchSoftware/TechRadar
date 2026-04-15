@@ -125,7 +125,7 @@ const FilterSidebar = ({ options, filters, onFilterChange, onClear }) => {
                 />
 
                 <div className="mb-6 last:border-0">
-                    <h3 className="font-semibold text-slate-700 mb-3 text-sm">License of the Tool</h3>
+                    <h3 className="font-semibold text-slate-700 mb-3">License of the Tool</h3>
                     <select
                         className="w-full bg-white border border-slate-300 rounded-lg p-2 text-sm text-slate-700 focus:outline-none focus:ring-2 focus:ring-sky-500"
                         value={filters.licenses}
