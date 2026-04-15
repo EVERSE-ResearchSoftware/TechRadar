@@ -10,7 +10,7 @@
   "hasQualityDimension": [
     { "@id": "dim:security", "@type": "@id" },
     { "@id": "dim:maintainability", "@type": "@id" },
-    { "@id": "dim:Sustainability", "@type": "@id" }
+    { "@id": "dim:sustainability", "@type": "@id" }
   ],
   "howToUse": ["CI/CD", "command-line"],
   "isAccessibleForFree": true,
