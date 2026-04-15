@@ -5,12 +5,12 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "00 18 * * *"
-  push:
-    branches:
-      - main  
-  pull_request:
-    branches:
-      - main
+  # push:
+  #   branches:
+  #     - main  
+  # pull_request:
+  #   branches:
+  #     - main
 jobs:
   linkChecker:
     runs-on: ubuntu-latest
