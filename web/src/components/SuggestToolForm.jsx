@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { X, AlertCircle, CheckCircle, Copy, ExternalLink } from 'lucide-react';
+import { X, AlertCircle, CheckCircle, Copy, ExternalLink, ChevronDown } from 'lucide-react';
+import { useIndicatorOptions } from '../hooks/useIndicators';
 
 const APPLICATION_CATEGORIES = [
     { id: 'rs:AnalysisCode', label: 'Analysis Code' },
@@ -16,7 +17,6 @@ const QUALITY_DIMENSIONS = [
 const HOW_TO_USE_OPTIONS = ['CI/CD', 'command-line', 'online-service', 'library'];
 
 const USED_BY_OPTIONS = ['ENVRI', 'ESCAPE', 'LS-RI', 'PaNOSC', 'SSHOC', 'EOSC-Life'];
-
 const INITIAL_FORM = {
     name: '',
     description: '',
@@ -24,6 +24,8 @@ const INITIAL_FORM = {
     license: '',
     applicationCategory: [],
     hasQualityDimension: [],
+    measuresQualityIndicator: [],
+    improvesQualityIndicator: [],
     isAccessibleForFree: false,
     howToUse: [],
     appliesToProgrammingLanguage: '',
@@ -85,6 +87,20 @@ function buildJson(form) {
         obj.hasQualityDimension = form.hasQualityDimension.map(d => ({ '@id': `dim:${d}`, '@type': '@id' }));
     }
 
+    // measuresQualityIndicator
+    if (form.measuresQualityIndicator.length === 1) {
+        obj.measuresQualityIndicator = { '@id': form.measuresQualityIndicator[0], '@type': '@id' };
+    } else if (form.measuresQualityIndicator.length > 1) {
+        obj.measuresQualityIndicator = form.measuresQualityIndicator.map(i => ({ '@id': i, '@type': '@id' }));
+    }
+
+    // improvesQualityIndicator
+    if (form.improvesQualityIndicator.length === 1) {
+        obj.improvesQualityIndicator = { '@id': form.improvesQualityIndicator[0], '@type': '@id' };
+    } else if (form.improvesQualityIndicator.length > 1) {
+        obj.improvesQualityIndicator = form.improvesQualityIndicator.map(i => ({ '@id': i, '@type': '@id' }));
+    }
+
     // howToUse
     if (form.howToUse.length > 0) {
         obj.howToUse = form.howToUse;
@@ -109,11 +125,116 @@ function buildJson(form) {
     return obj;
 }
 
+const MultiSelectDropdown = ({ options, value, onChange, placeholder, loading, error }) => {
+    const [isOpen, setIsOpen] = useState(false);
+    const [search, setSearch] = useState('');
+    const containerRef = useRef(null);
+
+    useEffect(() => {
+        if (!isOpen) return;
+        const handler = (e) => {
+            if (containerRef.current && !containerRef.current.contains(e.target)) {
+                setIsOpen(false);
+                setSearch('');
+            }
+        };
+        document.addEventListener('mousedown', handler);
+        return () => document.removeEventListener('mousedown', handler);
+    }, [isOpen]);
+
+    const filtered = options.filter(o =>
+        !search || o.label.toLowerCase().includes(search.toLowerCase())
+    );
+
+    const toggle = (id) => {
+        onChange(value.includes(id) ? value.filter(v => v !== id) : [...value, id]);
+    };
+
+    return (
+        <div ref={containerRef} className="relative">
+            <button
+                type="button"
+                onClick={() => setIsOpen(v => !v)}
+                className="w-full border border-slate-200 rounded-lg px-4 py-2.5 bg-white text-sm text-left flex items-center justify-between focus:outline-none focus:ring-2 focus:ring-sky-500 transition-all"
+            >
+                <span className={value.length === 0 ? 'text-slate-400' : 'text-slate-700'}>
+                    {loading ? 'Loading indicators…' : value.length === 0 ? placeholder : `${value.length} indicator${value.length > 1 ? 's' : ''} selected`}
+                </span>
+                <ChevronDown size={16} className={`text-slate-400 flex-shrink-0 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+            </button>
+
+            {value.length > 0 && (
+                <div className="flex flex-wrap gap-1.5 mt-2">
+                    {value.map(id => {
+                        const opt = options.find(o => o.id === id);
+                        return (
+                            <span key={id} className="inline-flex items-center gap-1 px-2 py-0.5 bg-sky-50 text-sky-700 border border-sky-200 rounded-full text-xs">
+                                {opt?.label ?? id}
+                                <button type="button" onClick={() => toggle(id)} aria-label={`Remove ${opt?.label ?? id}`}>
+                                    <X size={10} />
+                                </button>
+                            </span>
+                        );
+                    })}
+                </div>
+            )}
+
+            {isOpen && (
+                <div className="absolute z-50 w-full mt-1 bg-white border border-slate-200 rounded-lg shadow-xl overflow-hidden">
+                    <div className="p-2 border-b border-slate-100">
+                        <input
+                            type="text"
+                            autoFocus
+                            className="w-full px-3 py-1.5 text-sm border border-slate-200 rounded-md focus:outline-none focus:ring-1 focus:ring-sky-400"
+                            placeholder="Search indicators…"
+                            value={search}
+                            onChange={e => setSearch(e.target.value)}
+                        />
+                    </div>
+                    <div className="max-h-52 overflow-y-auto">
+                        {filtered.length === 0 ? (
+                            <p className="px-4 py-3 text-xs text-slate-400">No results</p>
+                        ) : (
+                            filtered.map(opt => (
+                                <label
+                                    key={opt.id}
+                                    className={`flex items-center gap-3 px-4 py-2.5 cursor-pointer hover:bg-slate-50 text-sm ${value.includes(opt.id) ? 'bg-sky-50/60' : ''}`}
+                                >
+                                    <input
+                                        type="checkbox"
+                                        className="sr-only"
+                                        checked={value.includes(opt.id)}
+                                        onChange={() => toggle(opt.id)}
+                                    />
+                                    <span className={`w-4 h-4 rounded border-2 flex-shrink-0 flex items-center justify-center transition-all ${value.includes(opt.id) ? 'border-sky-500 bg-sky-500' : 'border-slate-300'}`}>
+                                        {value.includes(opt.id) && (
+                                            <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                                            </svg>
+                                        )}
+                                    </span>
+                                    <span className="text-slate-700">{opt.label}</span>
+                                </label>
+                            ))
+                        )}
+                    </div>
+                    {error && <p className="px-4 py-2 text-xs text-amber-700 border-t border-slate-100">{error}</p>}
+                </div>
+            )}
+
+            {error && !isOpen && options.length === 0 && (
+                <p className="text-amber-700 text-xs mt-1">{error}</p>
+            )}
+        </div>
+    );
+};
+
 const SuggestToolForm = ({ isOpen, onClose }) => {
     const [form, setForm] = useState(INITIAL_FORM);
     const [errors, setErrors] = useState({});
     const [successMsg] = useState('');
     const [copied, setCopied] = useState(false);
+    const { options: indicatorOptions, loading: indicatorsLoading } = useIndicatorOptions();
     const backdropRef = useRef(null);
 
     // Close on Escape
@@ -460,6 +581,30 @@ const SuggestToolForm = ({ isOpen, onClose }) => {
                                     </label>
                                 ))}
                             </div>
+                        </div>
+
+                        {/* Measures Quality Indicators */}
+                        <div className="mb-5">
+                            <label className="block text-sm font-medium text-slate-700 mb-2">Measures Quality Indicator</label>
+                            <MultiSelectDropdown
+                                options={indicatorOptions}
+                                value={form.measuresQualityIndicator}
+                                onChange={v => updateField('measuresQualityIndicator', v)}
+                                placeholder="Select indicators…"
+                                loading={indicatorsLoading}
+                            />
+                        </div>
+
+                        {/* Improves Quality Indicators */}
+                        <div className="mb-5">
+                            <label className="block text-sm font-medium text-slate-700 mb-2">Improves Quality Indicator</label>
+                            <MultiSelectDropdown
+                                options={indicatorOptions}
+                                value={form.improvesQualityIndicator}
+                                onChange={v => updateField('improvesQualityIndicator', v)}
+                                placeholder="Select indicators…"
+                                loading={indicatorsLoading}
+                            />
                         </div>
 
                         {/* Author */}

@@ -14,7 +14,7 @@
   ],
   "howToUse": ["CI/CD", "command-line", "online-service"],
   "isAccessibleForFree": true,
-  "license": " https://ohwr.org/cernohl/",
+  "license": "https://spdx.org/licenses/GPL-2.0-only",
   "name": "zenodo",
   "url": "https://zenodo.org/",
   "usedBy": ["ENVRI", "ESCAPE", "EOSC-Life", "PaNOSC", "SSHOC"],

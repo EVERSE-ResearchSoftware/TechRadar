@@ -59,9 +59,8 @@ keywords:
   - software quality
   - research software
   - RSE
-license:
-  - MIT
-  - CC-BY-NC-SA-4.0
+# double licensing, while valid for CITATION.cff, fails during Zenodo release
+license: CC-BY-NC-SA-4.0
 identifiers:
   - type: doi
     value: 10.5281/zenodo.17036276

@@ -12,7 +12,7 @@
   },
   "howToUse": ["command-line", "CI/CD"],
   "appliesToProgrammingLanguage": ["Java"],
-  "license": "https://opensource.org/licenses/LGPL-2.1",
+  "license": "https://spdx.org/licenses/LGPL-2.1-only",
   "applicationCategory": [
     { "@id": "rs:PrototypeTool", "@type": "@id" },
     { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" },

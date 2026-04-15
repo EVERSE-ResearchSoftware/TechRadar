@@ -19,5 +19,5 @@
     { "@id": "dim:sustainability", "@type": "@id" }
   ],
   "howToUse": ["CI/CD", "command-line"],
-  "license": "https://choosealicense.com/licenses/gpl-2.0/"
+  "license": "https://spdx.org/licenses/GPL-2.0-only"
 }

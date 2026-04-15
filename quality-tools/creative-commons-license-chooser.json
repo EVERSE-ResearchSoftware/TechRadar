@@ -13,7 +13,7 @@
   },
   "howToUse": ["command-line"],
   "isAccessibleForFree": true,
-  "license": "https://creativecommons.org/publicdomain/zero/1.0",
+  "license": "https://spdx.org/licenses/CC0-1.0",
   "name": "Creative Commons License Chooser",
   "url": "https://chooser-beta.creativecommons.org/",
   "improvesQualityIndicator": [

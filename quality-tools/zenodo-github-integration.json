@@ -7,7 +7,7 @@
   "url": "https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content",
   "isAccessibleForFree": true,
   "hasQualityDimension": { "@id": "dim:sustainability", "@type": "@id" },
-  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "license": "https://spdx.org/licenses/CC-BY-4.0",
   "howToUse": ["CI/CD", "online-service"],
   "applicationCategory": [
     { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" },

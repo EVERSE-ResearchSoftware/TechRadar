@@ -34,10 +34,6 @@
       "@type": "@id"
     },
     {
-      "@id": "https://w3id.org/everse/i/indicators/software_has_tests",
-      "@type": "@id"
-    },
-    {
       "@id": "https://w3id.org/everse/i/indicators/no_leaked_credentials",
       "@type": "@id"
     }
