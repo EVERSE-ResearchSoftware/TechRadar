@@ -1,0 +1,36 @@
+{
+  "@context": "https://w3id.org/everse/rs#",
+  "@id": "https://w3id.org/everse/tools/pylint",
+  "@type": "schema:SoftwareApplication",
+  "name": "Pylint",
+  "description": "Comprehensive Python static analysis tool that identifies programming errors, enforces coding standards, and suggests improvements, enhancing research software maintainability and code quality.",
+  "url": "https://pylint.pycqa.org/",
+  "isAccessibleForFree": true,
+  "hasQualityDimension": {
+    "@id": "dim:maintainability",
+    "@type": "@id"
+  },
+  "howToUse": ["command-line", "CI/CD"],
+  "appliesToProgrammingLanguage": ["Python"],
+  "license": "https://spdx.org/licenses/GPL-2.0-only",
+  "applicationCategory": [
+    {
+      "@id": "rs:AnalysisCode",
+      "@type": "@id"
+    },
+    {
+      "@id": "rs:ResearchInfrastructureSoftware",
+      "@type": "@id"
+    },
+    {
+      "@id": "rs:PrototypeTool",
+      "@type": "@id"
+    }
+  ],
+  "measuresQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/has_no_linting_issues",
+      "@type": "@id"
+    }
+  ]
+}

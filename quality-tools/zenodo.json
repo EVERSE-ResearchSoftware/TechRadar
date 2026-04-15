@@ -1,0 +1,35 @@
+{
+  "@context": "https://w3id.org/everse/rs#",
+  "@id": "https://w3id.org/everse/tools/zenodo",
+  "@type": "SoftwareApplication",
+  "applicationCategory": {
+    "@id": "rs:ResearchInfrastructureSoftware",
+    "@type": "@id"
+  },
+  "description": "Open research repository that provides persistent identifiers (DOIs) for research software and data, enabling long-term preservation, discoverability, and citation of research outputs, supporting software sustainability and FAIRness principles.",
+  "hasQualityDimension": [
+    { "@id": "dim:sustainability", "@type": "@id" },
+    { "@id": "dim:fairness", "@type": "@id" },
+    { "@id": "dim:open_source_software", "@type": "@id" }
+  ],
+  "howToUse": ["CI/CD", "command-line", "online-service"],
+  "isAccessibleForFree": true,
+  "license": "https://spdx.org/licenses/GPL-2.0-only",
+  "name": "zenodo",
+  "url": "https://zenodo.org/",
+  "usedBy": ["ENVRI", "ESCAPE", "EOSC-Life", "PaNOSC", "SSHOC"],
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/archived_in_scholarly_repository",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/persistent_and_unique_identifier",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/listed_in_registry",
+      "@type": "@id"
+    }
+  ]
+}
