@@ -4,8 +4,13 @@
   "@type": "SoftwareApplication",
   "applicationCategory": { "@id": "rs:PrototypeTool", "@type": "@id" },
   "appliesToProgrammingLanguage": ["Python"],
-  "description": "Netherlands eScience Center Python Template",
-  "hasQualityDimension": { "@id": "dim:FAIRness", "@type": "@id" },
+  "description": "Template for Python research software projects that improves software quality by providing a reusable project structure with packaging configuration, automated testing, linting, continuous integration, and project metadata. These best-practice components help researchers build more maintainable, reliable, sustainable, and reusable software from the start.",
+  "hasQualityDimension": [
+    { "@id": "dim:FAIRness", "@type": "@id" },
+    { "@id": "dim:Maintainability", "@type": "@id" },
+    { "@id": "dim:Reliability", "@type": "@id" },
+    { "@id": "dim:Sustainability", "@type": "@id" }
+  ],
   "howToUse": ["command-line"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/Apache-2.0",
