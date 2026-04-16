@@ -174,7 +174,7 @@ const FilterSidebar = ({ options, filters, onFilterChange, onClear }) => {
                         onChange={(newVal) => onFilterChange('measuresIndicators', newVal)}
                         renderOption={id => (options.measuresIndicators || []).find(o => o.id === id)?.label ?? id.split('/').pop()}
                         infoHref="https://everse.software/indicators/website/indicators.html"
-                        infoTooltip="A quality indicator is a specific, measurable aspect of research software (e.g. test coverage, license presence, FAIRness). Tools in this category actively measure such indicators. Click to see all indicators."
+                        infoTooltip="A research software quality indicator represents a specific software aspect that can be measured (e.g., FAIRness, test coverage, documentation coverage, etc.). Select the indicators that this tool actively measures. Click to see definitions of all indicators."
                     />
                 )}
 
@@ -186,7 +186,7 @@ const FilterSidebar = ({ options, filters, onFilterChange, onClear }) => {
                         onChange={(newVal) => onFilterChange('improvesIndicators', newVal)}
                         renderOption={id => (options.improvesIndicators || []).find(o => o.id === id)?.label ?? id.split('/').pop()}
                         infoHref="https://everse.software/indicators/website/indicators.html"
-                        infoTooltip="A quality indicator is a specific, measurable aspect of research software (e.g. documentation, reproducibility, FAIRness). Tools in this category actively help improve such indicators. Click to see all indicators."
+                        infoTooltip="A research software quality indicator represents a specific software aspect that can be measured (e.g., FAIRness, test coverage, documentation coverage, etc.). Select the indicators that this tool actively helps improve. Click to see definitions of all indicators."
                     />
                 )}
 
