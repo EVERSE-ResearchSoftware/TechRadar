@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { X, AlertCircle, CheckCircle, Copy, ExternalLink, ChevronDown } from 'lucide-react';
 import { useIndicatorOptions } from '../hooks/useIndicators';
+import InfoTooltip from './InfoTooltip';
 
 const APPLICATION_CATEGORIES = [
     { id: 'rs:AnalysisCode', label: 'Analysis Code' },
@@ -585,7 +586,13 @@ const SuggestToolForm = ({ isOpen, onClose }) => {
 
                         {/* Measures Quality Indicators */}
                         <div className="mb-5">
-                            <label className="block text-sm font-medium text-slate-700 mb-2">Measures Quality Indicator</label>
+                            <label className="flex items-center gap-1.5 text-sm font-medium text-slate-700 mb-2">
+                                Measures Quality Indicator
+                                <InfoTooltip
+                                    href="https://everse.software/indicators/website/indicators.html"
+                                    tooltip="A research software quality indicator represents a specific software aspect that can be measured (e.g., FAIRness, test coverage, documentation coverage, etc.). Select the indicators that this tool actively measures."
+                                />
+                            </label>
                             <MultiSelectDropdown
                                 options={indicatorOptions}
                                 value={form.measuresQualityIndicator}
@@ -597,7 +604,13 @@ const SuggestToolForm = ({ isOpen, onClose }) => {
 
                         {/* Improves Quality Indicators */}
                         <div className="mb-5">
-                            <label className="block text-sm font-medium text-slate-700 mb-2">Improves Quality Indicator</label>
+                            <label className="flex items-center gap-1.5 text-sm font-medium text-slate-700 mb-2">
+                                Improves Quality Indicator
+                                <InfoTooltip
+                                    href="https://everse.software/indicators/website/indicators.html"
+                                    tooltip="A research software quality indicator represents a specific software aspect that can be measured (e.g., FAIRness, test coverage, documentation coverage, etc.). Select the indicators that this tool actively helps improve."
+                                />
+                            </label>
                             <MultiSelectDropdown
                                 options={indicatorOptions}
                                 value={form.improvesQualityIndicator}
