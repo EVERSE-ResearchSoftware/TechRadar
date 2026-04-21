@@ -1,7 +1,10 @@
 name: Check Links
 
 on:
+  repository_dispatch:
   workflow_dispatch:
+  # schedule:
+  #   - cron: "00 18 * * *"
   push:
     branches:
       - fix-link-checker-errors
@@ -10,7 +13,7 @@ jobs:
   linkChecker:
     runs-on: ubuntu-latest
     permissions:
-      issues: write
+      issues: write # required for peter-evans/create-issue-from-file
     steps:
       - uses: actions/checkout@v6
 
@@ -19,8 +22,6 @@ jobs:
         uses: lycheeverse/lychee-action@v2
         with:
           fail: false
-          args: >
-            --exclude '^/.*'
 
       - name: Create Issue From File
         if: steps.lychee.outputs.exit_code != 0
