@@ -34,11 +34,6 @@
     },
 
     {
-      "@id": "https://w3id.org/everse/i/indicators/archived_in_software_heritage",
-      "@type": "@id"
-    },
-
-    {
       "@id": "https://w3id.org/everse/i/indicators/archived_in_scholarly_repository",
       "@type": "@id"
     },
