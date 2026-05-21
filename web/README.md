@@ -24,6 +24,7 @@ The app starts with Vite (typically at `http://localhost:5173`).
 
 - `npm run dev`: Start local dev server with HMR
 - `npm run build`: Build production assets into `dist/`
+- `npm run build:api`: Generate aggregated tools API JSON at `public/api/tools.json`
 - `npm run preview`: Preview the production build locally
 - `npm run lint`: Run ESLint on JS/JSX files
 - `npm run format-json:check`: Check formatting for `../quality-tools/*.json`
@@ -64,6 +65,16 @@ This means:
 
 - New/updated JSON files in `quality-tools/` are available to the UI at build time.
 - Tool IDs in URLs are based on filenames (stored as `_filename` in loader output).
+
+### Aggregated JSON API
+
+The build process also creates a static aggregated API payload from all files in `../quality-tools`:
+
+- Build artifact path: `dist/api/tools.json`
+- URL on deployed docs site: `.../api/tools.json`
+- Payload keys: `generatedAt`, `source`, `count`, `files`, `tools`
+
+Because this file is generated during `npm run build`, the deployed docs always include an up-to-date machine-readable API of the catalogue.
 
 ## Styling System
 
