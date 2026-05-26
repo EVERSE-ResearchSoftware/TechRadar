@@ -1,0 +1,60 @@
+{
+  "@context": "https://w3id.org/everse/rs#",
+  "@id": "https://w3id.org/everse/tools/fairsoft-evaluator",
+  "@type": "SoftwareApplication",
+  "applicationCategory": {
+    "@id": "rs:ResearchInfrastructureSoftware",
+    "@type": "@id"
+  },
+  "appliesToProgrammingLanguage": [
+    "Python",
+    "Node"
+  ],
+  "author": "Barcelona Supercomputing Center",
+  "description": "Assess the FAIRness of a software tool from its metadata. Load metadata from the Software Observatory, a GitHub repository, or a metadata file, then review it and compute FAIRsoft indicators. ",
+  "hasQualityDimension": [
+    {
+      "@id": "dim:fairness",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:open_source_software",
+      "@type": "@id"
+    }
+  ],
+  "measuresQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/descriptive_metadata",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_has_documentation",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_has_license",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/listed_in_registry",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_has_citation",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/persistent_and_unique_identifier",
+      "@type": "@id"
+    }
+  ],
+  "howToUse": [
+    "library",
+    "online-service"
+  ],
+  "isAccessibleForFree": true,
+  "license": "https://spdx.org/licenses/MIT",
+  "maintainer": "Eva Martin Del Pico",
+  "name": "FAIRsoft Evaluator",
+  "url": "https://openebench.bsc.es/observatory/Evaluation"
+}
