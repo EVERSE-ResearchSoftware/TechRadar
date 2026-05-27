@@ -7,10 +7,7 @@
     "@id": "rs:AnalysisCode",
     "@type": "@id"
   },
-  "appliesToProgrammingLanguage": [
-    "TypeScript",
-    "R"
-  ],
+  "appliesToProgrammingLanguage": ["TypeScript", "R"],
   "author": "Florian Sihler",
   "description": "A static dataflow analysis framework for R with extensions for VS Code, Positron and R Studio.",
   "hasQualityDimension": [
@@ -183,11 +180,7 @@
       "@type": "@id"
     }
   ],
-  "howToUse": [
-    "CI/CD",
-    "command-line",
-    "library"
-  ],
+  "howToUse": ["CI/CD", "command-line", "library"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/GPL-3.0-or-later.html",
   "maintainer": "Florian Sihler, flowR Group",
