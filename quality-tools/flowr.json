@@ -2,6 +2,7 @@
   "@context": "https://w3id.org/everse/rs#",
   "@id": "https://w3id.org/everse/tools/flowr",
   "@type": "SoftwareApplication",
+  "identifier": "https://github.com/flowr-analysis/flowr",
   "applicationCategory": {
     "@id": "rs:AnalysisCode",
     "@type": "@id"
