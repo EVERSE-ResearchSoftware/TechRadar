@@ -8,7 +8,6 @@
   },
   "description": "SOMEF Vider is a web application designed to visualize which metadata fields can be automatically retrieved from a software source code repository. It uses SOMEF (https://github.com/KnowledgeCaptureAndDiscovery/somef) as the main extraction tool.",
   "hasQualityDimension": { "@id": "dim:fairness", "@type": "@id" },
-  ,
   "measuresQualityIndicator": [
     {
       "@id": "https://w3id.org/everse/i/indicators/software_has_license",
