@@ -2,60 +2,63 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ExternalLink, Mail } from 'lucide-react';
 
+const BASE = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 const teamMembers = [
     {
         name: 'Thomas Vuillaume',
         org: 'LAPP, CNRS',
         email: 'thomas.vuillaume@lapp.in2p3.fr',
         orcid: 'https://orcid.org/0000-0002-5686-2078',
-        image: '/images/team_images/thomas_vuillaume.jpg',
+        image: `${BASE}/images/team_images/thomas_vuillaume.jpg`,
     },
     {
         name: 'Shraddha Bajare',
-        org: 'Square Kilometre Array Observatory',
+        org: 'Square Kilometre Array Observatory SKAO',
         email: 'shraddha.bajare@skao.int',
-        image: '/images/team_images/roundedshraddha.jpg',
+        orcid: 'https://orcid.org/0009-0002-4488-7697',
+        image: `${BASE}/images/team_images/roundedshraddha.jpg`,
     },
     {
         name: 'Nikos Pechlivanis',
         org: 'Centre for Research and Technology Hellas',
         email: 'nikosp41@certh.gr',
         orcid: 'https://orcid.org/0000-0003-2502-612X',
-        image: '/images/team_images/roundednikos.jpg',
+        image: `${BASE}/images/team_images/roundednikos.jpg`,
     },
     {
         name: 'Faruk Diblen',
         org: 'Netherlands eScience Center',
         orcid: 'https://orcid.org/0000-0002-0989-929X',
-        image: '/images/team_images/faruk_diblen.jpg',
+        image: `${BASE}/images/team_images/faruk_diblen.jpg`,
     },
     {
         name: 'Azza Gamgami',
         org: 'LAPP, CNRS',
         email: 'azza.gamgami@lapp.in2p3.fr',
         orcid: 'https://orcid.org/0009-0003-7084-3900',
-        image: '/images/team_images/roundedazza.jpg',
+        image: `${BASE}/images/team_images/roundedazza.jpg`,
     },
     {
         name: 'Elena Breitmoser',
         org: 'University of Edinburgh',
         email: 'e.breitmoser@epcc.ed.ac.uk',
         orcid: 'https://orcid.org/0000-0003-1295-9326',
-        image: '/images/team_images/roundedelena.jpg',
+        image: `${BASE}/images/team_images/roundedelena.jpg`,
     },
     {
         name: 'Srobona Ghosh',
         org: 'Helmholtz-Zentrum Dresden-Rossendorf',
         email: 'srobona.ghosh@hzdr.de',
         orcid: 'https://orcid.org/0009-0008-9084-064X',
-        image: '/images/team_images/roundedsrobona1.png',
+        image: `${BASE}/images/team_images/roundedsrobona1.png`,
     },
     {
         name: 'Daniel Garijo',
         org: 'Universidad Politecnica de Madrid',
         email: 'daniel.garijo@upm.es',
         orcid: 'https://orcid.org/0000-0003-0454-7145',
-        image: '/images/team_images/roundeddaniel.png',
+        image: `${BASE}/images/team_images/roundeddaniel.png`,
     },
 ];
 
@@ -210,8 +213,17 @@ const About = () => {
                                 className="w-20 h-20 rounded-full object-cover ring-2 ring-sky-100"
                                 onError={(e) => {
                                     e.target.style.display = 'none';
+                                    const placeholder = e.target.nextSibling;
+                                    if (placeholder) placeholder.style.display = 'flex';
                                 }}
                             />
+                            <span
+                                className="w-20 h-20 rounded-full ring-2 ring-sky-100 bg-sky-100 text-sky-700 font-bold text-xl items-center justify-center flex-shrink-0"
+                                style={{ display: 'none' }}
+                                aria-hidden="true"
+                            >
+                                {member.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
+                            </span>
                             <div>
                                 <p className="font-semibold text-slate-800">{member.name}</p>
                                 <p className="text-xs text-slate-500 mt-0.5 leading-snug">{member.org}</p>

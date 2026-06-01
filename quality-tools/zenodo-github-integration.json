@@ -6,11 +6,41 @@
   "description": "Zenodo archives your repository and issues a new DOI each time you create a new GitHub release",
   "url": "https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content",
   "isAccessibleForFree": true,
-  "hasQualityDimension": { "@id": "dim:sustainability", "@type": "@id" },
+  "hasQualityDimension": [
+    { "@id": "dim:sustainability", "@type": "@id" },
+    { "@id": "dim:open_source_software", "@type": "@id" },
+    { "@id": "dim:fairness", "@type": "@id" }
+  ],
   "license": "https://spdx.org/licenses/CC-BY-4.0",
   "howToUse": ["CI/CD", "online-service"],
   "applicationCategory": [
     { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" },
     { "@id": "rs:PrototypeTool", "@type": "@id" }
+  ],
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/project_is_active",
+      "@type": "@id"
+    },
+
+    {
+      "@id": "https://w3id.org/everse/i/indicators/has_releases",
+      "@type": "@id"
+    },
+
+    {
+      "@id": "https://w3id.org/everse/i/indicators/persistent_and_unique_identifier",
+      "@type": "@id"
+    },
+
+    {
+      "@id": "https://w3id.org/everse/i/indicators/archived_in_scholarly_repository",
+      "@type": "@id"
+    },
+
+    {
+      "@id": "https://w3id.org/everse/i/indicators/listed_in_registry",
+      "@type": "@id"
+    }
   ]
 }

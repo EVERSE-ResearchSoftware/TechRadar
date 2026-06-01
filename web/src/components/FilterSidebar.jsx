@@ -1,7 +1,8 @@
 import React from 'react';
 import { ChevronDown, ChevronRight, X } from 'lucide-react';
+import InfoTooltip from './InfoTooltip';
 
-const FilterSection = ({ title, options, selected, onChange, renderOption }) => {
+const FilterSection = ({ title, options, selected, onChange, renderOption, infoHref, infoTooltip }) => {
     const [isOpen, setIsOpen] = React.useState(true);
 
     return (
@@ -10,7 +11,12 @@ const FilterSection = ({ title, options, selected, onChange, renderOption }) => 
                 className="flex items-center justify-between w-full text-left mb-3 group"
                 onClick={() => setIsOpen(!isOpen)}
             >
-                <h3 className="font-semibold text-slate-700 group-hover:text-slate-900 transition-colors">{title}</h3>
+                <span className="flex items-center gap-1.5">
+                    <h3 className="font-semibold text-slate-700 group-hover:text-slate-900 transition-colors">{title}</h3>
+                    {infoHref && (
+                        <InfoTooltip tooltip={infoTooltip} href={infoHref} />
+                    )}
+                </span>
                 {isOpen ? <ChevronDown size={16} className="text-slate-400" /> : <ChevronRight size={16} className="text-slate-400" />}
             </button>
 
@@ -167,6 +173,8 @@ const FilterSidebar = ({ options, filters, onFilterChange, onClear }) => {
                         selected={filters.measuresIndicators || []}
                         onChange={(newVal) => onFilterChange('measuresIndicators', newVal)}
                         renderOption={id => (options.measuresIndicators || []).find(o => o.id === id)?.label ?? id.split('/').pop()}
+                        infoHref="https://everse.software/indicators/website/indicators.html"
+                        infoTooltip="A research software quality indicator represents a specific software aspect that can be measured (e.g., FAIRness, test coverage, documentation coverage, etc.). Select the indicators that this tool actively measures. Click to see definitions of all indicators."
                     />
                 )}
 
@@ -177,6 +185,8 @@ const FilterSidebar = ({ options, filters, onFilterChange, onClear }) => {
                         selected={filters.improvesIndicators || []}
                         onChange={(newVal) => onFilterChange('improvesIndicators', newVal)}
                         renderOption={id => (options.improvesIndicators || []).find(o => o.id === id)?.label ?? id.split('/').pop()}
+                        infoHref="https://everse.software/indicators/website/indicators.html"
+                        infoTooltip="A research software quality indicator represents a specific software aspect that can be measured (e.g., FAIRness, test coverage, documentation coverage, etc.). Select the indicators that this tool actively helps improve. Click to see definitions of all indicators."
                     />
                 )}
 
