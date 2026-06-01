@@ -259,9 +259,6 @@ simulation:
 * Ensure metadata is accurate and reflects current tool status
 * Enforce schema compliance across all catalog entries
 
-## Workflow & Guidelines
-This agent follows the **[Catalog Curator Guide](docs/CATALOG_CURATOR_GUIDE.md)**, which defines the agnostic workflow for deep semantic reviews, PR delivery, and indicator selection principles.
-
 ## Critical Rules
 ### Data Provenance
 * Every change must be backed by a verifiable source (URL)
