@@ -25,8 +25,14 @@
     { "@id": "dim:maintainability", "@type": "@id" }
   ],
   "improvesQualityIndicator": [
-    { "@id": "https://w3id.org/everse/i/indicators/dependency_management", "@type": "@id" },
-    { "@id": "https://w3id.org/everse/i/indicators/no_critical_vulnerability", "@type": "@id" }
+    {
+      "@id": "https://w3id.org/everse/i/indicators/dependency_management",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/no_critical_vulnerability",
+      "@type": "@id"
+    }
   ],
   "howToUse": ["CI/CD", "command-line"],
   "isAccessibleForFree": true,
