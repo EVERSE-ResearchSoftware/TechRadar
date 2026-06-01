@@ -27,6 +27,7 @@
   "howToUse": ["command-line", "CI/CD"],
   "appliesToProgrammingLanguage": ["Python"],
   "license": "https://spdx.org/licenses/MIT",
+  "measuresQualityIndicator": { "@id": "https://w3id.org/everse/i/indicators/software_has_tests" }
   "applicationCategory": {
     "@id": "rs:ResearchInfrastructureSoftware",
     "@type": "@id"
