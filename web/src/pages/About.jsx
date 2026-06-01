@@ -74,6 +74,8 @@ const segments = [
     { name: 'Safety', desc: 'Tools that evaluate how well a product avoids situations that could endanger life, health, or the environment.' },
     { name: 'Security', desc: 'Tools that measure how well a product defends against attacks and manages data access appropriately.' },
     { name: 'Sustainability', desc: 'Tools that assess software longevity and its ability to meet evolving needs over time.' },
+    { name: 'Open Source Software', desc: 'Tools that evaluate the openness of a product’s source code and its implications for quality.' }
+
 ];
 
 const rings = [
