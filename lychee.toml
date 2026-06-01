@@ -5,3 +5,5 @@ exclude = [
   "%7Bslug%7D",
   "^https://www\\.doxygen\\.nl/?$",
 ]
+
+max_redirects = 10
