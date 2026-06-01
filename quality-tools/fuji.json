@@ -13,5 +13,7 @@
   "license": "https://spdx.org/licenses/0BSD",
   "name": "F-UJI",
   "url": "https://github.com/softwaresaved/fuji/",
-  "measuresQualityIndicator": { "@id": "https://w3id.org/everse/i/indicators/software_has_license" }
+  "measuresQualityIndicator": {
+    "@id": "https://w3id.org/everse/i/indicators/software_has_license"
+  }
 }
