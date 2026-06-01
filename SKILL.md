@@ -28,6 +28,7 @@ For a specific tool (e.g., `bandit.json`):
 3.  **Implementation**:
     -   Apply changes to the JSON file in `quality-tools/`.
     -   Validate with `pytest tests/test_tools.py`.
+    -   Format the JSON to pass CI linting: `cd web && npm run format-json:fix && cd ..`
 4.  **Delivery**:
     -   Commit: `git add . && git commit -m "catalog: update <tool-name> metadata and indicators"`.
     -   Push: `git push origin catalog/update-<tool-name>`.
