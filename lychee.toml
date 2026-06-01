@@ -1,0 +1,9 @@
+# Centralized Lychee configuration for CI and local checks.
+# Excludes are regex patterns.
+exclude = [
+  "\\$\\{slug\\}",
+  "%7Bslug%7D",
+  "^https://www\\.doxygen\\.nl/?$",
+]
+
+max_redirects = 10
