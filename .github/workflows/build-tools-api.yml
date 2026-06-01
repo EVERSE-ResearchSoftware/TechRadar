@@ -1,0 +1,36 @@
+name: Build Aggregated Tools API
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_tools_api:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+          cache: "npm"
+          cache-dependency-path: web/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: web
+
+      - name: Generate aggregated API
+        run: npm run build:api
+        working-directory: web
+
+      - name: Upload tools API artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: tools-api-json
+          path: web/public/api/tools.json
+          if-no-files-found: error

@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm run build:api && vite build",
+    "build:api": "node ./scripts/generate-tools-api.mjs",
     "lint": "eslint .",
     "format-json:check": "prettier --check ../quality-tools",
     "format-json:fix": "prettier --write ../quality-tools",
