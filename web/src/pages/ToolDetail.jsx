@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { getToolById, getAllTools } from '../data/loader';
-import { ArrowLeft, ExternalLink, Tag, CheckCircle, Info } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Tag, CheckCircle, Info, Code2 } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import ToolIndicators from '../components/ToolIndicators';  // ← NEW
 
@@ -134,6 +134,15 @@ const ToolDetail = () => {
                                         {toArray(tool.applicationCategory)
                                             .map(c => getId(c).replace('rs:', ''))
                                             .join(', ')}
+                                    </span>
+                                </li>
+                            )}
+                            {tool.appliesToProgrammingLanguage && (
+                                <li className="flex items-start text-slate-600">
+                                    <Code2 size={18} className="mr-2 text-sky-600 mt-0.5" />
+                                    <span>
+                                        <span className="text-slate-500 block text-xs">Programming Languages</span>
+                                        {toArray(tool.appliesToProgrammingLanguage).join(', ')}
                                     </span>
                                 </li>
                             )}
