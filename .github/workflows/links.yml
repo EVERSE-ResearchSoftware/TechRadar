@@ -26,6 +26,8 @@ jobs:
         with:
           args: --config lychee.toml --verbose --no-progress --root-dir ${{ github.workspace }} 'web/**/*.jsx' './**/*.md' './quality-tools/**/*.json'
           fail: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Link Checker (scheduled report)
         if: github.event_name == 'schedule'
@@ -34,6 +36,8 @@ jobs:
         with:
           args: --config lychee.toml --verbose --no-progress --root-dir ${{ github.workspace }} 'web/**/*.jsx' './**/*.md' './quality-tools/**/*.json'
           fail: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create Issue From File
         if: github.event_name == 'schedule' && steps.lychee_schedule.outputs.exit_code != 0

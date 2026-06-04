@@ -8,3 +8,9 @@ exclude = [
 
 max_redirects = 10
 accept = [200, 203, 206, 300, 301, 302, 303, 307, 308]
+
+# Robustness settings for transient network issues
+timeout = 40
+max_retries = 3
+retry_wait_time = 2
+max_concurrency = 10
