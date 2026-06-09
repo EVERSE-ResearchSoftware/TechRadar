@@ -24,13 +24,7 @@
     "@id": "dim:fairness",
     "@type": "@id"
   },
-  "howToUse": [
-    "CI/CD",
-    "command-line",
-    "online-service"
-  ],
-  "usedBy": [
-    "ESCAPE"
-  ],
+  "howToUse": ["CI/CD", "command-line", "online-service"],
+  "usedBy": ["ESCAPE"],
   "license": "https://spdx.org/licenses/MIT"
 }

@@ -37,7 +37,5 @@
       "@type": "@id"
     }
   ],
-  "howToUse": [
-    "CI/CD"
-  ]
+  "howToUse": ["CI/CD"]
 }

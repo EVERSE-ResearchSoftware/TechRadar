@@ -17,10 +17,7 @@
       "@type": "@id"
     }
   ],
-  "howToUse": [
-    "CI/CD",
-    "command-line"
-  ],
+  "howToUse": ["CI/CD", "command-line"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/Apache-2.0",
   "name": "DVC",

@@ -27,8 +27,5 @@
       "@type": "@id"
     }
   ],
-  "howToUse": [
-    "CI/CD",
-    "command-line"
-  ]
+  "howToUse": ["CI/CD", "command-line"]
 }

@@ -25,7 +25,5 @@
     "@type": "@id"
   },
   "license": "https://github.com/customer-terms/github-copilot-product-specific-terms",
-  "howToUse": [
-    "online-service"
-  ]
+  "howToUse": ["online-service"]
 }

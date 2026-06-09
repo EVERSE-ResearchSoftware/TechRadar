@@ -25,10 +25,7 @@
     "@id": "dim:maintainability",
     "@type": "@id"
   },
-  "howToUse": [
-    "CI/CD",
-    "command-line"
-  ],
+  "howToUse": ["CI/CD", "command-line"],
   "improvesQualityIndicator": [
     {
       "@id": "https://w3id.org/everse/i/indicators/has_no_linting_issues",

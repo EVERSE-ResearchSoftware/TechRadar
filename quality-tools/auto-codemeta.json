@@ -11,10 +11,7 @@
     "@id": "dim:fairness",
     "@type": "@id"
   },
-  "howToUse": [
-    "CI/CD",
-    "command-line"
-  ],
+  "howToUse": ["CI/CD", "command-line"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/AGPL-3.0-or-later",
   "name": "Auto-CodeMeta Generator",

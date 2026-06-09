@@ -10,9 +10,7 @@
     "@id": "dim:fairness",
     "@type": "@id"
   },
-  "howToUse": [
-    "online-service"
-  ],
+  "howToUse": ["online-service"],
   "license": "https://spdx.org/licenses/Apache-2.0",
   "applicationCategory": [
     {

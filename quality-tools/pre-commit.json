@@ -30,8 +30,6 @@
       "@type": "@id"
     }
   ],
-  "howToUse": [
-    "command-line"
-  ],
+  "howToUse": ["command-line"],
   "license": "https://spdx.org/licenses/MIT"
 }

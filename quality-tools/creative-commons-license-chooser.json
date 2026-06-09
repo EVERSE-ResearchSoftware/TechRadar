@@ -11,9 +11,7 @@
     "@id": "dim:fairness",
     "@type": "@id"
   },
-  "howToUse": [
-    "command-line"
-  ],
+  "howToUse": ["command-line"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/CC0-1.0",
   "name": "Creative Commons License Chooser",

@@ -31,11 +31,7 @@
       "@type": "@id"
     }
   ],
-  "howToUse": [
-    "CI/CD",
-    "command-line",
-    "online-service"
-  ],
+  "howToUse": ["CI/CD", "command-line", "online-service"],
   "isAccessibleForFree": false,
   "license": "https://spdx.org/licenses/MIT",
   "name": "GitLab CI/CD",

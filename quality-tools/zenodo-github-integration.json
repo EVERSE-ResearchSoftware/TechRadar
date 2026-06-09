@@ -21,10 +21,7 @@
     }
   ],
   "license": "https://spdx.org/licenses/CC-BY-4.0",
-  "howToUse": [
-    "CI/CD",
-    "online-service"
-  ],
+  "howToUse": ["CI/CD", "online-service"],
   "applicationCategory": [
     {
       "@id": "rs:ResearchInfrastructureSoftware",

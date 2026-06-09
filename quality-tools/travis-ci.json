@@ -17,10 +17,7 @@
       "@type": "@id"
     }
   ],
-  "howToUse": [
-    "CI/CD",
-    "online-service"
-  ],
+  "howToUse": ["CI/CD", "online-service"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/MIT",
   "name": "Travis CI",

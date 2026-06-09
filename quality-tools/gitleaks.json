@@ -31,10 +31,7 @@
       "@type": "@id"
     }
   ],
-  "howToUse": [
-    "CI/CD",
-    "command-line"
-  ],
+  "howToUse": ["CI/CD", "command-line"],
   "measuresQualityIndicator": [
     {
       "@id": "https://w3id.org/everse/i/indicators/no_leaked_credentials",

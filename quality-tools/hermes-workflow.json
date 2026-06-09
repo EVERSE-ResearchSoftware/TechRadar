@@ -21,10 +21,7 @@
       "@type": "@id"
     }
   ],
-  "howToUse": [
-    "command-line",
-    "CI/CD"
-  ],
+  "howToUse": ["command-line", "CI/CD"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/Apache-2.0",
   "name": "Hermes Workflows",

@@ -25,9 +25,7 @@
     "@id": "dim:sustainability",
     "@type": "@id"
   },
-  "howToUse": [
-    "online-service"
-  ],
+  "howToUse": ["online-service"],
   "improvesQualityIndicator": [
     {
       "@id": "https://w3id.org/everse/i/indicators/software_has_license",
