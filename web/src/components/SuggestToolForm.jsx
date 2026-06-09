@@ -299,6 +299,15 @@ const SuggestToolForm = ({ isOpen, onClose }) => {
                                 value={form.name}
                                 onChange={e => updateField('name', e.target.value)}
                             />
+                            {form.name && !errors.name && (
+                                <p className="text-slate-500 text-xs mt-1.5 flex items-center gap-1.5 bg-slate-50 p-2 rounded-md border border-slate-100">
+                                    <span className="font-semibold text-slate-400 uppercase tracking-tighter text-[10px]">Slug:</span>
+                                    <code className="bg-slate-200/50 px-1 rounded text-sky-700">{slugify(form.name)}</code>
+                                    <span className="text-slate-300">|</span>
+                                    <span className="font-semibold text-slate-400 uppercase tracking-tighter text-[10px]">File:</span>
+                                    <code className="bg-slate-200/50 px-1 rounded text-sky-700">{slugify(form.name)}.json</code>
+                                </p>
+                            )}
                             {errors.name && <p className="text-red-500 text-xs mt-1 flex items-center gap-1"><AlertCircle size={12} />{errors.name}</p>}
                         </div>
 
