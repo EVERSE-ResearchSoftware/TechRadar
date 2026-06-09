@@ -105,6 +105,7 @@ Please follow below naming conventions for ``tool.json``:
 - **Descriptive names**: File names should be short yet descriptive, reflecting the tool or content clearly.
 - **Optional Category Prefix**: If the file belongs to a specific category (e.g., AI, cloud), consider adding a category prefix for clarity.
 - **Slug stability**: The filename is used as the slug in the URL (e.g., `tool-name.json` becomes `everse.software/TechRadar/#/tool/tool-name`). Use a stable and descriptive slug.
+- **Internal ID**: The `@id` property within the JSON MUST be in the format `https://w3id.org/everse/tools/{slug}` where `{slug}` matches the filename (without `.json`).
 
 - Examples: `jupyter-notebook.json` , `docker-devops.json`
 

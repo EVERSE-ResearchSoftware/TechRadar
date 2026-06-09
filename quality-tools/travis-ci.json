@@ -1,6 +1,6 @@
 {
   "@context": "https://w3id.org/everse/rs#",
-  "@id": "https://w3id.org/everse/tools/travis",
+  "@id": "https://w3id.org/everse/tools/travis-ci",
   "@type": "SoftwareApplication",
   "applicationCategory": {
     "@id": "rs:ResearchInfrastructureSoftware",
@@ -17,7 +17,10 @@
       "@type": "@id"
     }
   ],
-  "howToUse": ["CI/CD", "online-service"],
+  "howToUse": [
+    "CI/CD",
+    "online-service"
+  ],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/MIT",
   "name": "Travis CI",

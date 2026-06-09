@@ -1,6 +1,6 @@
 {
   "@context": "https://w3id.org/everse/rs#",
-  "@id": "https://w3id.org/everse/tools/auto-codemeta-generator",
+  "@id": "https://w3id.org/everse/tools/auto-codemeta",
   "@type": "SoftwareApplication",
   "applicationCategory": {
     "@id": "rs:PrototypeTool",
@@ -11,7 +11,10 @@
     "@id": "dim:fairness",
     "@type": "@id"
   },
-  "howToUse": ["CI/CD", "command-line"],
+  "howToUse": [
+    "CI/CD",
+    "command-line"
+  ],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/AGPL-3.0-or-later",
   "name": "Auto-CodeMeta Generator",

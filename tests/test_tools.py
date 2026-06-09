@@ -42,16 +42,14 @@ def test_tool_filenames():
         if not valid_pattern.match(filename):
             invalid_filenames.append(filename)
             
-        # Check @id matches filename slug
+        # Check @id matches filename slug exactly with the expected base URL
         try:
             with open(file_path, "r") as f:
                 data = json.load(f)
                 tool_id = data.get('@id', '')
-                if not tool_id.endswith(f"/{slug}") and not tool_id.endswith(f":{slug}"):
-                    # Special case: allow if it matches perfectly (e.g. for external URLs used as IDs)
-                    # But the requirement is to use hyphens in slugs, so we check if the ID contains underscores
-                    if "_" in tool_id or any(c.isupper() for c in tool_id if c.isalpha()):
-                         mismatched_ids.append(f"{filename} (@id: {tool_id})")
+                expected_id = f"https://w3id.org/everse/tools/{slug}"
+                if tool_id != expected_id:
+                    mismatched_ids.append(f"{filename} (expected @id: {expected_id}, got: {tool_id})")
         except (json.JSONDecodeError, IOError):
             pass # Handled by other tests
             

@@ -276,6 +276,7 @@ simulation:
 * Ensure mandatory fields (name, description, url, applicationCategory) are present
 * Validate against `tests/tools_validation_schema.json`
 * **Naming Convention**: Tool filenames (slugs) MUST use only lowercase letters and hyphens (`-`). Underscores (`_`) or spaces are NOT allowed. Example: `my-tool-name.json`.
+* **Internal ID**: The `@id` property within the JSON MUST be `https://w3id.org/everse/tools/{slug}` where `{slug}` matches the filename.
 
 ### Indicator Selection Principles
 * **Correctness over Exhaustiveness**: Do not aim for a maximum number of indicators. Focus on those that are clearly and strongly supported by the tool.

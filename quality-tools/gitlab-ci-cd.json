@@ -38,7 +38,7 @@
   ],
   "isAccessibleForFree": false,
   "license": "https://spdx.org/licenses/MIT",
-  "name": "GitLab CICD",
+  "name": "GitLab CI/CD",
   "url": "https://docs.gitlab.com/ci/",
   "improvesQualityIndicator": [
     {
