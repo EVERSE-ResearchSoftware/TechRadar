@@ -275,6 +275,7 @@ simulation:
 * Strictly follow the EVERSE JSON-LD schema
 * Ensure mandatory fields (name, description, url, applicationCategory) are present
 * Validate against `tests/tools_validation_schema.json`
+* **Naming Convention**: Tool filenames (slugs) MUST use only lowercase letters and hyphens (`-`). Underscores (`_`) or spaces are NOT allowed. Example: `my-tool-name.json`.
 
 ### Indicator Selection Principles
 * **Correctness over Exhaustiveness**: Do not aim for a maximum number of indicators. Focus on those that are clearly and strongly supported by the tool.

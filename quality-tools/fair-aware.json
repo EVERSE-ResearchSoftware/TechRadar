@@ -1,11 +1,11 @@
 {
   "@context": "https://w3id.org/everse/rs#",
-  "@id": "https://example.org/FAIR_aware_tool",
+  "@id": "https://example.org/fair-aware-tool",
   "@type": "SoftwareApplication",
   "name": "FAIR-Aware tool",
   "description": "Guided approach to assess the FAIRness of data",
   "url": "https://fairaware.dans.knaw.nl/",
-  "identifier": { "@id": "https://example.org/FAIR_aware_tool" },
+  "identifier": { "@id": "https://example.org/fair-aware-tool" },
   "isAccessibleForFree": true,
   "hasQualityDimension": { "@id": "dim:fairness", "@type": "@id" },
   "howToUse": ["online-service"],

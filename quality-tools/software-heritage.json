@@ -1,6 +1,6 @@
 {
   "@context": "https://w3id.org/everse/rs#",
-  "@id": "https://w3id.org/everse/tools/software_heritage",
+  "@id": "https://w3id.org/everse/tools/software-heritage",
   "@type": "SoftwareApplication",
   "applicationCategory": {
     "@id": "rs:ResearchInfrastructureSoftware",

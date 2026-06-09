@@ -1,6 +1,6 @@
 {
   "@context": "https://w3id.org/everse/rs#",
-  "@id": "https://w3id.org/everse/tools/hermes_workflow",
+  "@id": "https://w3id.org/everse/tools/hermes-workflow",
   "@type": "SoftwareApplication",
   "applicationCategory": {
     "@id": "rs:ResearchInfrastructureSoftware",

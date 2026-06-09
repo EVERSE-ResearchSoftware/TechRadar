@@ -101,9 +101,10 @@ Aim for clarity, completeness, and evidence. Prefer concise, user-focused descri
 
 Please follow below naming conventions for ``tool.json``:
 - **Lowercase letters**: Use only lowercase letters in file names.
-- **Hyphens for separation**: Use hyphens (`-`) to separate words (avoid spaces or underscores).
+- **Hyphens for separation**: Use hyphens (`-`) to separate words. **Underscores (`_`) or spaces are not allowed.**
 - **Descriptive names**: File names should be short yet descriptive, reflecting the tool or content clearly.
 - **Optional Category Prefix**: If the file belongs to a specific category (e.g., AI, cloud), consider adding a category prefix for clarity.
+- **Slug stability**: The filename is used as the slug in the URL (e.g., `tool-name.json` becomes `everse.software/TechRadar/#/tool/tool-name`). Use a stable and descriptive slug.
 
 - Examples: `jupyter-notebook.json` , `docker-devops.json`
 
