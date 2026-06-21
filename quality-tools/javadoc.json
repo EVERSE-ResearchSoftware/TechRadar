@@ -14,7 +14,7 @@
   ],
   "howToUse": ["CI/CD", "command-line"],
   "isAccessibleForFree": true,
-  "license": "https://www.oracle.com/downloads/licenses/javadoc-updater-license.html",
+  "license": "https://spdx.org/licenses/GPL-2.0-with-classpath-exception",
   "name": "javadoc",
   "url": "https://www.oracle.com/java/technologies/javase/javadoc-tool.html",
   "improvesQualityIndicator": [
@@ -23,7 +23,7 @@
       "@type": "@id"
     },
     {
-      "@id": "https://w3id.org/everse/i/indicators/descriptive_metadata",
+      "@id": "https://w3id.org/everse/i/indicators/code_documentation_coverage_ok",
       "@type": "@id"
     }
   ]
