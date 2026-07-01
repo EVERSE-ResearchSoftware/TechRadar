@@ -1,6 +1,6 @@
 {
   "@context": "https://w3id.org/everse/rs#",
-  "@id": "https://github.com/features/actions",
+  "@id": "https://w3id.org/everse/tools/github-actions",
   "@type": "schema:SoftwareApplication",
   "name": "GitHub Actions",
   "description": "CI/CD platform integrated with GitHub that automates research software testing, building, and deployment, improving software reliability and sustainability through automated quality checks.",
@@ -8,12 +8,24 @@
   "isAccessibleForFree": true,
   "license": "https://docs.github.com/en/site-policy/github-terms/github-terms-for-additional-products-and-features",
   "applicationCategory": [
-    { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" },
-    { "@id": "rs:PrototypeTool", "@type": "@id" }
+    {
+      "@id": "rs:ResearchInfrastructureSoftware",
+      "@type": "@id"
+    },
+    {
+      "@id": "rs:PrototypeTool",
+      "@type": "@id"
+    }
   ],
   "hasQualityDimension": [
-    { "@id": "dim:sustainability", "@type": "@id" },
-    { "@id": "dim:reliability", "@type": "@id" }
+    {
+      "@id": "dim:sustainability",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:reliability",
+      "@type": "@id"
+    }
   ],
   "improvesQualityIndicator": [
     {

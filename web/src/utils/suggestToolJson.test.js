@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import prettier from 'prettier';
-import { buildSuggestedToolJson, stringifySuggestedToolJson } from './suggestToolJson.js';
+import { buildSuggestedToolJson, stringifySuggestedToolJson, slugify } from './suggestToolJson.js';
 
 const sampleForm = {
     name: 'Test Tool',
@@ -19,6 +19,15 @@ const sampleForm = {
     author: 'Example Author',
     maintainer: 'Example Maintainer',
 };
+
+test('slugify converts to lowercase and replaces spaces/underscores with hyphens', () => {
+    assert.equal(slugify('Test Tool'), 'test-tool');
+    assert.equal(slugify('Test_Tool'), 'test-tool');
+    assert.equal(slugify('  Test   Tool  '), 'test-tool');
+    assert.equal(slugify('Test-Tool'), 'test-tool');
+    assert.equal(slugify('Test@Tool!'), 'test-tool');
+    assert.equal(slugify('Test Tool 123'), 'test-tool-123');
+});
 
 test('stringifySuggestedToolJson ends with a trailing newline', async () => {
     const json = await stringifySuggestedToolJson(sampleForm);

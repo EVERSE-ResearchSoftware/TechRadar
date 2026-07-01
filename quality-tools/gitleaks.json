@@ -1,6 +1,6 @@
 {
   "@context": "https://w3id.org/everse/rs#",
-  "@id": "https://gitleaks.io/",
+  "@id": "https://w3id.org/everse/tools/gitleaks",
   "@type": "schema:SoftwareApplication",
   "name": "Gitleaks",
   "description": "Security-focused scanner that detects secrets, passwords, and sensitive information in git repositories and files, helping protect research software and data from accidental exposure of confidential information.",

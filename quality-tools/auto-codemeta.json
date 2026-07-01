@@ -1,6 +1,6 @@
 {
   "@context": "https://w3id.org/everse/rs#",
-  "@id": "https://w3id.org/everse/tools/auto-codemeta_generator",
+  "@id": "https://w3id.org/everse/tools/auto-codemeta",
   "@type": "SoftwareApplication",
   "applicationCategory": {
     "@id": "rs:PrototypeTool",

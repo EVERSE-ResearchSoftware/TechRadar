@@ -1,6 +1,6 @@
 {
   "@context": "https://w3id.org/everse/rs#",
-  "@id": "https://w3id.org/everse/tools/gitlab_cicd",
+  "@id": "https://w3id.org/everse/tools/gitlab-ci-cd",
   "@type": "SoftwareApplication",
   "applicationCategory": {
     "@id": "rs:ResearchInfrastructureSoftware",
@@ -34,7 +34,7 @@
   "howToUse": ["CI/CD", "command-line", "online-service"],
   "isAccessibleForFree": false,
   "license": "https://spdx.org/licenses/MIT",
-  "name": "GitLab CICD",
+  "name": "GitLab CI/CD",
   "url": "https://docs.gitlab.com/ci/",
   "improvesQualityIndicator": [
     {

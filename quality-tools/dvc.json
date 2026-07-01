@@ -1,6 +1,6 @@
 {
   "@context": "https://w3id.org/everse/rs#",
-  "@id": "https://dvc.org/",
+  "@id": "https://w3id.org/everse/tools/dvc",
   "@type": "SoftwareApplication",
   "applicationCategory": {
     "@id": "rs:ResearchInfrastructureSoftware",
@@ -8,8 +8,14 @@
   },
   "description": "Data version control system that tracks large files, datasets, and machine learning models, enabling reproducible research workflows and enhancing research software sustainability through proper data and model versioning.",
   "hasQualityDimension": [
-    { "@id": "dim:sustainability", "@type": "@id" },
-    { "@id": "dim:fairness", "@type": "@id" }
+    {
+      "@id": "dim:sustainability",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:fairness",
+      "@type": "@id"
+    }
   ],
   "howToUse": ["CI/CD", "command-line"],
   "isAccessibleForFree": true,

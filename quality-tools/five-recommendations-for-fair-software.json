@@ -1,6 +1,6 @@
 {
   "@context": "https://w3id.org/everse/rs#",
-  "@id": "https://w3id.org/everse/tools/Five_Recommendations_for_FAIR_Software",
+  "@id": "https://w3id.org/everse/tools/five-recommendations-for-fair-software",
   "@type": "SoftwareApplication",
   "name": "Five Recommendations for FAIR Software",
   "description": "Guided approaches to assess the FAIRness of research software: Asking a series of questions to a human. You assess yourself as to whether your resources satisfy FAIR principles. Does not explicitly use FAIR4RS principles.",

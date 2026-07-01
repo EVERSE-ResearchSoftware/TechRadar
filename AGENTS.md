@@ -275,6 +275,9 @@ simulation:
 * Strictly follow the EVERSE JSON-LD schema
 * Ensure mandatory fields (name, description, url, applicationCategory) are present
 * Validate against `tests/tools_validation_schema.json`
+* **Naming Convention**: Tool filenames (slugs) MUST use only lowercase letters and hyphens (`-`). Underscores (`_`) or spaces are NOT allowed. Example: `my-tool-name.json`.
+* **Internal ID**: The `@id` property within the JSON MUST be `https://w3id.org/everse/tools/{slug}` where `{slug}` matches the filename.
+* **RSQKit Alignment**: When adding or reviewing a new tool, check if it exists in the [RSQKit tool list](https://github.com/EVERSE-ResearchSoftware/RSQKit/blob/main/_data/tool_and_resource_list.yml). If it exists, enforce the use of the same `id` as the filename and internal slug.
 
 ### Indicator Selection Principles
 * **Correctness over Exhaustiveness**: Do not aim for a maximum number of indicators. Focus on those that are clearly and strongly supported by the tool.

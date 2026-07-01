@@ -1,6 +1,6 @@
 {
   "@context": "https://w3id.org/everse/rs#",
-  "@id": "https://w3id.org/everse/tools/hermes_workflow",
+  "@id": "https://w3id.org/everse/tools/hermes-workflow",
   "@type": "SoftwareApplication",
   "applicationCategory": {
     "@id": "rs:ResearchInfrastructureSoftware",
@@ -8,9 +8,18 @@
   },
   "description": "Workflow system for automated publication of rich research software metadata and artifacts, improving software sustainability and FAIRness through comprehensive metadata management and automated publication workflows.",
   "hasQualityDimension": [
-    { "@id": "dim:maintainability", "@type": "@id" },
-    { "@id": "dim:sustainability", "@type": "@id" },
-    { "@id": "dim:fairness", "@type": "@id" }
+    {
+      "@id": "dim:maintainability",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:sustainability",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:fairness",
+      "@type": "@id"
+    }
   ],
   "howToUse": ["command-line", "CI/CD"],
   "isAccessibleForFree": true,
