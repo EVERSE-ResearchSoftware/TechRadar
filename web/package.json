@@ -33,7 +33,7 @@
     "gh-pages": "^6.3.0",
     "globals": "^17.6.0",
     "lucide-react": "^1.23.0",
-    "postcss": "^8.5.16",
+    "postcss": "^8.5.19",
     "react-router-dom": "^7.18.1",
     "tailwindcss": "^4.3.1",
     "vite": "^8.1.3"
