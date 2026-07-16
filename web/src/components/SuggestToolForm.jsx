@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { X, AlertCircle, CheckCircle, Copy, ExternalLink, ChevronDown } from 'lucide-react';
 import { useIndicatorOptions } from '../hooks/useIndicators';
 import InfoTooltip from './InfoTooltip';
+import { slugify, buildSuggestedToolJson, stringifySuggestedToolJson } from '../utils/suggestToolJson';
 
 const APPLICATION_CATEGORIES = [
     { id: 'rs:AnalysisCode', label: 'Analysis Code' },
@@ -35,95 +36,11 @@ const INITIAL_FORM = {
     maintainer: '',
 };
 
-function slugify(str) {
-    return str
-        .toLowerCase()
-        .trim()
-        .replace(/[^a-z0-9]+/g, '-')
-        .replace(/(^-|-$)/g, '');
-}
-
 function formatDimensionLabel(dim) {
     return dim
         .split('_')
         .map(w => w.charAt(0).toUpperCase() + w.slice(1))
         .join(' ');
-}
-
-function buildJson(form) {
-    const slug = slugify(form.name);
-    const obj = {
-        '@context': 'https://w3id.org/everse/rs#',
-        '@id': `https://w3id.org/everse/tools/${slug}`,
-        '@type': 'SoftwareApplication',
-    };
-
-    // applicationCategory
-    if (form.applicationCategory.length === 1) {
-        obj.applicationCategory = { '@id': form.applicationCategory[0], '@type': '@id' };
-    } else if (form.applicationCategory.length > 1) {
-        obj.applicationCategory = form.applicationCategory.map(id => ({ '@id': id, '@type': '@id' }));
-    }
-
-    // Programming languages
-    const langs = form.appliesToProgrammingLanguage
-        .split(',')
-        .map(l => l.trim())
-        .filter(Boolean);
-    if (langs.length > 0) {
-        obj.appliesToProgrammingLanguage = langs;
-    }
-
-    // author
-    if (form.author.trim()) {
-        obj.author = form.author.trim();
-    }
-
-    obj.description = form.description;
-
-    // hasQualityDimension
-    if (form.hasQualityDimension.length === 1) {
-        obj.hasQualityDimension = { '@id': `dim:${form.hasQualityDimension[0]}`, '@type': '@id' };
-    } else if (form.hasQualityDimension.length > 1) {
-        obj.hasQualityDimension = form.hasQualityDimension.map(d => ({ '@id': `dim:${d}`, '@type': '@id' }));
-    }
-
-    // measuresQualityIndicator
-    if (form.measuresQualityIndicator.length === 1) {
-        obj.measuresQualityIndicator = { '@id': form.measuresQualityIndicator[0], '@type': '@id' };
-    } else if (form.measuresQualityIndicator.length > 1) {
-        obj.measuresQualityIndicator = form.measuresQualityIndicator.map(i => ({ '@id': i, '@type': '@id' }));
-    }
-
-    // improvesQualityIndicator
-    if (form.improvesQualityIndicator.length === 1) {
-        obj.improvesQualityIndicator = { '@id': form.improvesQualityIndicator[0], '@type': '@id' };
-    } else if (form.improvesQualityIndicator.length > 1) {
-        obj.improvesQualityIndicator = form.improvesQualityIndicator.map(i => ({ '@id': i, '@type': '@id' }));
-    }
-
-    // howToUse
-    if (form.howToUse.length > 0) {
-        obj.howToUse = form.howToUse;
-    }
-
-    obj.isAccessibleForFree = form.isAccessibleForFree;
-    obj.license = form.license;
-
-    // maintainer
-    if (form.maintainer.trim()) {
-        obj.maintainer = form.maintainer.trim();
-    }
-
-    obj.name = form.name;
-    obj.url = form.url;
-
-    // usedBy
-    if (form.usedBy.length > 0) {
-        obj.usedBy = form.usedBy;
-    }
-
-    return obj;
 }
 
 const MultiSelectDropdown = ({ options, value, onChange, placeholder, loading, error }) => {
@@ -301,8 +218,8 @@ const SuggestToolForm = ({ isOpen, onClose }) => {
         return errs;
     };
 
-    const handleCopyToClipboard = () => {
-        const json = JSON.stringify(buildJson(form), null, 2);
+    const handleCopyToClipboard = async () => {
+        const json = await stringifySuggestedToolJson(form);
         navigator.clipboard.writeText(json).then(() => {
             setCopied(true);
             setTimeout(() => setCopied(false), 2000);
@@ -326,7 +243,7 @@ const SuggestToolForm = ({ isOpen, onClose }) => {
         if (e.target === backdropRef.current) onClose();
     };
 
-    const jsonPreview = JSON.stringify(buildJson(form), null, 2);
+    const jsonPreview = JSON.stringify(buildSuggestedToolJson(form), null, 2);
 
     return (
         <div

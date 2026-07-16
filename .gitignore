@@ -40,3 +40,7 @@ yarn-error.log*
 dist
 dist-ssr
 *.local
+
+# AI Agent
+.gemini/
+scripts/review_status.json

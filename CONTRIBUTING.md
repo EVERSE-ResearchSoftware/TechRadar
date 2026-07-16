@@ -70,9 +70,10 @@ Aim for clarity, completeness, and evidence. Prefer concise, user-focused descri
 - **description:** State what the tool improves (e.g., maintainability, security), for whom, and how. Extra information is welcome but keep it focused.
 - **url:** Link to the official homepage or repository.
 - **hasQualityDimension:** Quality dimension related to the tool, must exist in [EVERSE Quality Dimensions](https://everse.software/indicators/website/dimensions.html).
-- **hasQualityIndicator:** Quality indicator related to the tool, must exist in [EVERSE Quality Indicators](https://everse.software/indicators/website/indicators.html).
+- **measuresQualityIndicator:** Quality indicator(s) the tool measures, must exist in [EVERSE Quality Indicators](https://everse.software/indicators/website/indicators.html).
+- **improvesQualityIndicator:**Quality indicator(s) the tool improves, must exist in [EVERSE Quality Indicators](https://everse.software/indicators/website/indicators.html).
 - **license:** Provide URL to the license file.
-- **howToUse:** List the means to use the tool using the following terminology: `online-service`, `command-line`, `CI/CD`.
+- **howToUse:** List the means to use the tool using the following terminology: `online-service`, `command-line`, `CI/CD`, `library`.
 - **applicationCategory:** Specify the relevant research software tiers on which the tool operates: `rs:AnalysisCode`, `rs:PrototypeTool`, or `rs:ResearchInfrastructureSoftware`. For example, `AnalysisCode` means the tool is suitable to improve or assess the quality of software in that tier.
 
 <details>

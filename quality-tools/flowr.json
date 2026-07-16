@@ -1,0 +1,89 @@
+{
+  "@context": "https://w3id.org/everse/rs#",
+  "@id": "https://w3id.org/everse/tools/flowr",
+  "@type": "SoftwareApplication",
+  "identifier": "https://github.com/flowr-analysis/flowr",
+  "applicationCategory": {
+    "@id": "rs:AnalysisCode",
+    "@type": "@id"
+  },
+  "appliesToProgrammingLanguage": ["TypeScript", "R"],
+  "author": "Florian Sihler",
+  "description": "A static dataflow analysis framework for R with extensions for VS Code, Positron and R Studio.",
+  "hasQualityDimension": [
+    {
+      "@id": "dim:reliability",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:maintainability",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:security",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:open_source_software",
+      "@type": "@id"
+    }
+  ],
+  "measuresQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/code_duplication_ok",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/code_smells_ok",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/static_analysis_common_vulnerabilities",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/functional_correctness",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/no_leaked_credentials",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/coupling_between_objects_ok",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_has_tests",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/dependency_management",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_has_license",
+      "@type": "@id"
+    }
+  ],
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/code_smells_ok",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/static_analysis_common_vulnerabilities",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/no_leaked_credentials",
+      "@type": "@id"
+    }
+  ],
+  "howToUse": ["CI/CD", "command-line", "library"],
+  "isAccessibleForFree": true,
+  "license": "https://spdx.org/licenses/GPL-3.0-or-later.html",
+  "maintainer": "Florian Sihler, flowR Group",
+  "name": "flowR",
+  "url": "https://github.com/flowr-analysis/flowr"
+}
