@@ -70,11 +70,12 @@ This means:
 
 The build process also creates a static aggregated API payload from all files in `../quality-tools`:
 
-- Build artifact path: `dist/api/tools.json`
-- URL on deployed docs site: `.../api/tools.json`
+- Generator script: `scripts/generate-tools-api.mjs` (run via `npm run build:api`, and automatically as part of `npm run build`)
+- Build artifact path: `dist/api/tools.json` (source is written to `public/api/tools.json`, which Vite copies into `dist/` as-is)
+- Deployed URL: [https://everse.software/TechRadar/api/tools.json](https://everse.software/TechRadar/api/tools.json)
 - Payload keys: `generatedAt`, `source`, `count`, `files`, `tools`
 
-Because this file is generated during `npm run build`, the deployed docs always include an up-to-date machine-readable API of the catalogue.
+Because this file is generated during `npm run build`, and `main` is rebuilt/redeployed by `.github/workflows/deploy.yml` on every push, the deployed docs always include an up-to-date machine-readable API of the catalogue. A separate `.github/workflows/build-tools-api.yml` workflow also regenerates and uploads `tools.json` as a CI artifact on every push to `main`, independent of the Pages deploy.
 
 ## Styling System
 

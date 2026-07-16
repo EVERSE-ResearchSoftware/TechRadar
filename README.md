@@ -38,6 +38,14 @@ New versions of the TechRadar will be published regularly. You can find all the 
 
 The catalogue of tools and services is presented in a visual dashboard at [https://everse.software/TechRadar/](https://everse.software/TechRadar/).
 
+### API
+
+The full catalogue is also published online as a machine-readable JSON API, generated from the same [tools and services data](quality-tools) as the dashboard:
+
+[https://everse.software/TechRadar/api/tools.json](https://everse.software/TechRadar/api/tools.json)
+
+It is regenerated and redeployed automatically whenever the catalogue changes on `main`, so it always reflects the current dashboard content.
+
 ### Development
 
 All developer setup, run, lint, build, formatting, and validation instructions are documented in [web/README.md](web/README.md).
