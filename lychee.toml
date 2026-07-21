@@ -4,6 +4,7 @@ exclude = [
   "\\$\\{slug\\}",
   "%7Bslug%7D",
   "^https://www\\.doxygen\\.nl/?$",
+  "https://github.com/customer-terms/github-copilot-product-specific-terms",
 ]
 
 max_redirects = 10
