@@ -1,10 +1,16 @@
+[![Online][online-badge]][online-url]
+[![License: MIT][license-badge]][license-url]
 [![DOI][doi-badge]][doi-url]
 
 <!-- Badges links -->
 [everse-logo]: https://everse.software/images/logos/EOSCEverse_PosColour.svg "EVERSE project"
 [everse-url]: https://everse.software/
-[doi-badge]: https://zenodo.org/badge/DOI/10.5281/zenodo.17036276.svg
-[doi-url]: https://doi.org/10.5281/zenodo.17036276
+[doi-badge]: https://zenodo.org/badge/DOI/10.5281/zenodo.19389279.svg
+[doi-url]: https://doi.org/10.5281/zenodo.19389279
+[online-badge]: https://img.shields.io/github/actions/workflow/status/EVERSE-ResearchSoftware/TechRadar/deploy.yml?branch=main&label=online
+[online-url]: https://github.com/EVERSE-ResearchSoftware/TechRadar/actions/workflows/deploy.yml
+[license-badge]: https://img.shields.io/badge/license-MIT-blue.svg
+[license-url]: https://github.com/EVERSE-ResearchSoftware/TechRadar/blob/main/LICENSES/MIT.txt
 
 # EVERSE TechRadar
 
