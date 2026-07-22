@@ -97,12 +97,20 @@ const Radar = ({ tools, dimensions, size = 500, onDimClick }) => {
                 ? (Array.isArray(tool.applicationCategory) ? tool.applicationCategory : [tool.applicationCategory])
                 : [];
 
-            let itemTiers = [];
-            if (toolTiers.some(t => t['@id'] === 'rs:PrototypeTool')) itemTiers.push(1);
-            if (toolTiers.some(t => t['@id'] === 'rs:ResearchInfrastructureSoftware')) itemTiers.push(2);
-            if (toolTiers.some(t => t['@id'] === 'rs:AnalysisCode')) itemTiers.push(0);
+            const tierMap = {
+                'rs:AnalysisCode': 0,
+                'rs:PrototypeTool': 1,
+                'rs:ResearchInfrastructureSoftware': 2,
+            };
+            const allTierIndices = toolTiers
+                .map(t => tierMap[t['@id']])
+                .filter(i => i !== undefined);
 
-            if (itemTiers.length === 0) return;
+            if (allTierIndices.length === 0) return;
+
+            // Place tool in its lowest (innermost) applicable tier only,
+            // consistent with the About page description.
+            const itemTiers = [Math.min(...allTierIndices)];
 
             // Determine Dimension(s)
             const toolDims = tool.hasQualityDimension
