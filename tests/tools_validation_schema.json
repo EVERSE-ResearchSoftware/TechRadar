@@ -151,7 +151,7 @@
       "type": [ "string", "array" ],
       "items": {
         "type": "string",
-        "enum": [ "CI/CD", "command-line", "online-service" ]
+        "enum": [ "CI/CD", "command-line", "online-service", "library" ]
       }
     },
     "usedBy": {

@@ -1,0 +1,52 @@
+{
+  "@context": "https://w3id.org/everse/rs#",
+  "@id": "https://w3id.org/everse/tools/fair-python-cookiecutter",
+  "@type": "SoftwareApplication",
+  "applicationCategory": { "@id": "rs:PrototypeTool", "@type": "@id" },
+  "appliesToProgrammingLanguage": ["Python"],
+  "description": "Opinionated cookiecutter template to kickstart modern best-practice Python research projects with FAIR metadata, providing standardized project structure and quality tools for sustainable research software development.",
+  "hasQualityDimension": { "@id": "dim:fairness", "@type": "@id" },
+  "howToUse": ["CI/CD", "command-line", "online-service"],
+  "isAccessibleForFree": true,
+  "license": "https://spdx.org/licenses/MIT",
+  "name": "Fair Python Cookiecutter",
+  "url": "https://github.com/Materials-Data-Science-and-Informatics/fair-python-cookiecutter",
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_has_license",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_has_license_for_file_types",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_has_citation",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/descriptive_metadata",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/requirements_specified",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_has_documentation",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/repository_workflows",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_has_tests",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/has_contribution_guidelines",
+      "@type": "@id"
+    }
+  ]
+}

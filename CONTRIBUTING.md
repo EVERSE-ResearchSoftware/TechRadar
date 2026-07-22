@@ -4,26 +4,37 @@ Welcome! This guide explains how to contribute to the EVERSE Technology Radar.
 
 ## TL;DR
 
-- Want to add or update a tool? Jump to the [Quick Start](#quick-start-add-or-update-a-tool)
-   - Check the [Inclusion criteria](#inclusion-criteria) before you submit
+- Want to add or update a tool? Use the “Suggest a Tool” button in the TechRadar UI or jump to the [Quick Start](#quick-start-add-or-update-a-tool)
+- Check the [Inclusion criteria](#inclusion-criteria) before you submit
 - Unsure? [Open an issue](https://github.com/EVERSE-ResearchSoftware/TechRadar/issues/new/choose) or start a [discussion](https://github.com/EVERSE-ResearchSoftware/TechRadar/discussions)
 
 ## Types of contributions
 
 - **Content contributions:** Add a new tool/service or improve an existing entry. See the [Quick Start](#quick-start-add-or-update-a-tool).
-- **Technical contributions:** Improve the radar UI, scripts, or CI. Our stack is based on the [AOE Technology Radar](https://github.com/AOEpeople/aoe_technology_radar/).
+- **Technical contributions:** Improve the radar UI, scripts, or CI in this repository (mainly under `web/`, tests, and project automation files).
 - **General contributions:** Report issues, suggest improvements, or share feedback via [issues](https://github.com/EVERSE-ResearchSoftware/TechRadar/issues/new/choose) or [discussions](https://github.com/EVERSE-ResearchSoftware/TechRadar/discussions).
 - **Join the curation team:** See [Joining the curation team](#joining-the-curation-team).
 
 ## Quick Start: Add or update a tool
 
-The TechRadar catalogue lives under `data/software-tools/` as one JSON file per tool using the RS metadata schema.
+With the TechRadar UI, you can **submit tools directly**, considering you have your GitHub account.
+
+1. Visit the TechRadar platform [here](https://everse.software/TechRadar/).  
+2. Click the **Suggest a New Tool** button.  
+3. Fill in the submission form with required metadata: e.g. Tool/Service name, Description (what it improves, who benefits, and how) etc
+4. Click **Copy to Clipboard**
+5. Open a Pull Request
+
+The TechRadar catalogue lives under `quality-tools/` as one JSON file per tool using the RS metadata schema.
+All submissions go through a review by the curation team before they appear in the radar.
+
+You can also contribute via **JSON files** in the repository:
 
 <details>
    <summary><strong>New tool — step-by-step</strong></summary>
 
 1) **Fork** this repository and **create a branch** for your change.
-2) **Create a JSON file** in `data/software-tools/` (use an existing file as a template) and follow the [RS metadata schema](https://github.com/EVERSE-ResearchSoftware/schemas/tree/main/software).
+2) **Create a JSON file** in `quality-tools/` (use an existing file as a template) and follow the [RS metadata schema](https://github.com/EVERSE-ResearchSoftware/schemas/tree/main/software).
 3) **Fill metadata carefully:** name, description (what it improves and for whom), URLs (homepage, repo, docs), quality dimensions, license, and how to use.
 4) (Optional) **Preview locally** to sanity-check: run a build and open the generated site.
 5) **Commit & push**, then **open a Pull Request** explaining the rationale and context.
@@ -34,7 +45,7 @@ The TechRadar catalogue lives under `data/software-tools/` as one JSON file per 
 <details>
    <summary><strong>Update existing tool — step-by-step</strong></summary>
 
-1) **Find the JSON** in `data/software-tools/` and make a new branch.
+1) **Find the JSON** in `quality-tools/` and make a new branch.
 2) **Edit fields** you want to improve (e.g., description, links, quality dimensions, tags).
 3) (Optional) **Preview locally** to verify formatting and links.
 4) **Commit & push**, then **open a Pull Request** with a concise changelog of what changed and why.
@@ -59,9 +70,10 @@ Aim for clarity, completeness, and evidence. Prefer concise, user-focused descri
 - **description:** State what the tool improves (e.g., maintainability, security), for whom, and how. Extra information is welcome but keep it focused.
 - **url:** Link to the official homepage or repository.
 - **hasQualityDimension:** Quality dimension related to the tool, must exist in [EVERSE Quality Dimensions](https://everse.software/indicators/website/dimensions.html).
-- **hasQualityIndicator:** Quality indicator related to the tool, must exist in [EVERSE Quality Indicators](https://everse.software/indicators/website/indicators.html).
+- **measuresQualityIndicator:** Quality indicator(s) the tool measures, must exist in [EVERSE Quality Indicators](https://everse.software/indicators/website/indicators.html).
+- **improvesQualityIndicator:**Quality indicator(s) the tool improves, must exist in [EVERSE Quality Indicators](https://everse.software/indicators/website/indicators.html).
 - **license:** Provide URL to the license file.
-- **howToUse:** List the means to use the tool using the following terminology: `online-service`, `command-line`, `CI/CD`.
+- **howToUse:** List the means to use the tool using the following terminology: `online-service`, `command-line`, `CI/CD`, `library`.
 - **applicationCategory:** Specify the relevant research software tiers on which the tool operates: `rs:AnalysisCode`, `rs:PrototypeTool`, or `rs:ResearchInfrastructureSoftware`. For example, `AnalysisCode` means the tool is suitable to improve or assess the quality of software in that tier.
 
 <details>
@@ -89,9 +101,12 @@ Aim for clarity, completeness, and evidence. Prefer concise, user-focused descri
 
 Please follow below naming conventions for ``tool.json``:
 - **Lowercase letters**: Use only lowercase letters in file names.
-- **Hyphens for separation**: Use hyphens (`-`) to separate words (avoid spaces or underscores).
+- **Hyphens for separation**: Use hyphens (`-`) to separate words. **Underscores (`_`) or spaces are not allowed.**
 - **Descriptive names**: File names should be short yet descriptive, reflecting the tool or content clearly.
 - **Optional Category Prefix**: If the file belongs to a specific category (e.g., AI, cloud), consider adding a category prefix for clarity.
+- **Slug stability**: The filename is used as the slug in the URL (e.g., `tool-name.json` becomes `everse.software/TechRadar/#/tool/tool-name`). Use a stable and descriptive slug.
+- **Internal ID**: The `@id` property within the JSON MUST be in the format `https://w3id.org/everse/tools/{slug}` where `{slug}` matches the filename (without `.json`).
+- **RSQKit Alignment**: When adding a new tool, first check if it exists in the [RSQKit list](https://github.com/EVERSE-ResearchSoftware/RSQKit/blob/main/_data/tool_and_resource_list.yml). If the tool is listed there, you MUST use the same `id` from RSQKit as your filename and `@id` slug to ensure cross-project consistency.
 
 - Examples: `jupyter-notebook.json` , `docker-devops.json`
 
@@ -156,10 +171,8 @@ You can contribute to the TechRadar by reporting issues, suggesting improvements
 
 ## Technical contribution
 
-Our TechRadar is based on a fork of the [AOE technology radar](https://github.com/EVERSE-ResearchSoftware/aoe_technology_radar).
-
 For technical contributions, changes might need to be made to the underlying codebase in this repository. 
-In doubt, open an issue in the [TechRadar issue tracker](https://github.com/EVERSE-ResearchSoftware/TechRadar/issues/new/choose) and we will transfer it to the AOE repository if appropriate.
+In doubt, open an issue in the [TechRadar issue tracker](https://github.com/EVERSE-ResearchSoftware/TechRadar/issues/new/choose) and we will work on it if appropriate.
 
 ## FAQ
 
