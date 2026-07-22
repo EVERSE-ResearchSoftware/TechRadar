@@ -1,6 +1,6 @@
 {
   "@context": "https://w3id.org/everse/rs#",
-  "@id": "https://w3id.org/everse/tools/creative_commons_license_chooser",
+  "@id": "https://w3id.org/everse/tools/creative-commons-license-chooser",
   "@type": "SoftwareApplication",
   "applicationCategory": {
     "@id": "rs:ResearchInfrastructureSoftware",

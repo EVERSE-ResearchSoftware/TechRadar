@@ -1,6 +1,6 @@
 {
   "@context": "https://w3id.org/everse/rs#",
-  "@id": "https://choosealicense.com/",
+  "@id": "https://w3id.org/everse/tools/choosealicense",
   "@type": "schema:SoftwareApplication",
   "name": "Choose a License",
   "description": "Choose a License is a website that helps developers understand and select open-source software licenses. It provides clear explanations of common licenses, their permissions and limitations, making it easier to choose the right one for your project.",

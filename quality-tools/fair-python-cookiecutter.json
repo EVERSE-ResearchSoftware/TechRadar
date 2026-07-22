@@ -1,6 +1,6 @@
 {
   "@context": "https://w3id.org/everse/rs#",
-  "@id": "https://w3id.org/everse/tools/fair_python_cookiecutter",
+  "@id": "https://w3id.org/everse/tools/fair-python-cookiecutter",
   "@type": "SoftwareApplication",
   "applicationCategory": { "@id": "rs:PrototypeTool", "@type": "@id" },
   "appliesToProgrammingLanguage": ["Python"],

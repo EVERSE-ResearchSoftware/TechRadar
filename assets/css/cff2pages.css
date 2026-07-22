@@ -1,0 +1,184 @@
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    display: flex; /* Aktiviert Flexbox */
+    /* justify-content: center; /* Verteilt den Raum zwischen den Elementen */
+    /*align-items: flex-start;  Ausrichtung der Elemente am Anfang */
+}
+
+.citation {
+    /* Stilisierung des Zitierkästchens */
+    padding: 20px;
+    max-width: 200px;
+    border: 1px solid #ccc; /* Beispielrahmen */
+    border-radius: 10px; /* Abgerundete Ecken */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    height: fit-content;
+    /* Anpassen nach Bedarf */
+}
+
+#copyButton {
+    background-color: #f0f0f0; /* Sehr helles Grau */
+    color: #666; /* Dunkelgrau für den Text */
+    border: 1px solid #ddd; /* Feiner Rahmen */
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Weiche Übergänge */
+}
+
+#copyButton:hover {
+    background-color: #e0e0e0; /* Etwas dunkler beim Hover */
+    color: #444; /* Dunklerer Text beim Hover */
+}
+
+.notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none; /* Verhindert Interaktion, damit es den Inhalt darunter nicht blockiert */
+}
+
+
+.content {
+    max-width: 800px;
+    margin: 0 0 0 20%;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding: 2rem 0;
+}
+
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.blog-title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.keyword-container {
+    margin-bottom: 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.keyword-list {
+    display: inline-flex;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+}
+
+.keyword-item {
+    margin: 0 0.5rem 0.5rem 0;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.9rem;
+    background-color: #f5f5f5;
+    border-radius: 2px;
+}
+
+.keyword-item a {
+    color: #333;
+    text-decoration: none;
+}
+
+.keyword-item a:hover {
+    color: #666;
+}
+
+.badges {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.badge-item {
+    margin-right: 0.5rem;
+}
+
+.badge-item img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.references-container {
+    margin: 20px 0;
+    max-width: 800px;
+}
+
+.references-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.reference-item {
+    margin-bottom: 10px;
+}
+
+.reference-icon {
+    margin-right: 3px;
+    font-size: 1.2em;
+}
+
+.reference-author {
+    font-style: italic;
+}
+
+.reference-title {
+    font-weight: bold;
+}
+
+.reference-year {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.reference-doi a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.reference-doi a:hover {
+    text-decoration: underline;
+}
+
+
+.footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #333;
+}
