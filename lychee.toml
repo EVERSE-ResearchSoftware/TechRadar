@@ -1,0 +1,18 @@
+# Centralized Lychee configuration for CI and local checks.
+# Excludes are regex patterns.
+exclude = [
+  "\\$\\{slug\\}",
+  "%7Bslug%7D",
+  "^https://www\\.doxygen\\.nl/?$",
+  "https://github.com/customer-terms/github-copilot-product-specific-terms",
+  "https://sylabs.io/singularity/",
+]
+
+max_redirects = 10
+accept = [200, 203, 206, 300, 301, 302, 303, 307, 308]
+
+# Robustness settings for transient network issues
+timeout = 40
+max_retries = 3
+retry_wait_time = 2
+max_concurrency = 10

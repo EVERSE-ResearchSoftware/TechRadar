@@ -1,40 +1,36 @@
 version = 1
 
-# TechRadar content (Documentation and assets)
+# Software and configurations
 [[annotations]]
 path = [
-    "radar/**",
+    "web/**",
+    "tests/**", 
+    "scripts/**", 
+    ".github/**",
+    "package.json",
+    "package-lock.json",
+    "config.json",
+    "REUSE.toml",
+    ".gitignore",
+    ".mailmap"
+]
+SPDX-FileCopyrightText = "2025 TechRadar Curators and Organisations, including curators in CITATION.cff, https://everse.software/about/consortium/"
+SPDX-License-Identifier = "MIT"
+SPDX-Year = "2025"
+SPDX-FileType = "Software"
+
+# TechRadar content (Data, Documentation and assets)
+[[annotations]]
+path = [
+    "data/**",
+    "web/public/**",
     "CONTRIBUTING.md",
     "README.md",
-    "public/favicon.ico",
-    "public/logo.svg",
-    "about.md"
+    "about.md",
+    "CITATION.cff",
+    "radar/**"
 ]
 SPDX-FileCopyrightText = "2025 TechRadar Curators and Organisations, including curators in CITATION.cff, https://everse.software/about/consortium/"
 SPDX-License-Identifier = "CC-BY-NC-SA-4.0"
 SPDX-Year = "2025"
 SPDX-FileType = "Documentation"
-
-# Software and configurations
-[[annotations]]
-path = [
-    "package.json",
-    "tests/**", 
-    "scripts/**", 
-    "data/**", 
-    ".github/**",
-    "config.json"
-]
-SPDX-FileCopyrightText = "2025 TechRadar Curators and Organisations, including curators in CITATION.cff, https://everse.software/about/consortium/"
-SPDX-License-Identifier = "CC-BY-NC-SA-4.0"
-SPDX-Year = "2025"
-SPDX-FileType = "Configuration"
-
-# Metadata files
-[[annotations]]
-path = [
-    "CITATION.cff",
-    ".gitignore"
-]
-SPDX-FileCopyrightText = "2025 TechRadar Curators and Organisations, including curators in CITATION.cff, https://everse.software/about/consortium/"
-SPDX-License-Identifier = "CC-BY-NC-SA-4.0"

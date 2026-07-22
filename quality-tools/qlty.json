@@ -1,0 +1,53 @@
+{
+  "@context": "https://w3id.org/everse/rs#",
+  "@id": "https://w3id.org/everse/tools/qlty",
+  "@type": "schema:SoftwareApplication",
+  "name": "Qlty",
+  "description": "Lightweight, modular framework for writing high-quality shell scripts with reusable components and utilities to improve script structure, error handling, and maintainability in computing environments and automation workflows.",
+  "url": "https://github.com/qltysh/qlty",
+  "isAccessibleForFree": true,
+  "license": "https://spdx.org/licenses/BUSL-1.1",
+  "applicationCategory": [
+    {
+      "@id": "rs:PrototypeTool",
+      "@type": "@id"
+    },
+    {
+      "@id": "rs:ResearchInfrastructureSoftware",
+      "@type": "@id"
+    },
+    {
+      "@id": "rs:AnalysisCode",
+      "@type": "@id"
+    }
+  ],
+  "hasQualityDimension": {
+    "@id": "dim:maintainability",
+    "@type": "@id"
+  },
+  "howToUse": ["CI/CD", "command-line"],
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/has_no_linting_issues",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/uses_tool_for_warnings_and_mistakes",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/static_analysis_common_vulnerabilities",
+      "@type": "@id"
+    }
+  ],
+  "measuresQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/no_critical_vulnerability",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/no_leaked_credentials",
+      "@type": "@id"
+    }
+  ]
+}
