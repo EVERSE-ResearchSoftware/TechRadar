@@ -28,7 +28,7 @@
     "autoprefixer": "^10.5.3",
     "baseline-browser-mapping": "^2.10.43",
     "clsx": "^2.1.1",
-    "eslint": "^9.39.4",
+    "eslint": "^10.7.0",
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.3",
     "gh-pages": "^6.3.0",
