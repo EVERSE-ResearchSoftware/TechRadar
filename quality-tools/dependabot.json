@@ -21,8 +21,20 @@
   ],
   "description": "Automated dependency management service that continuously monitors software dependencies for security vulnerabilities and updates, maintaining software security and reducing technical debt for long-term sustainability.",
   "hasQualityDimension": [
-    { "@id": "dim:security", "@type": "@id" },
-    { "@id": "dim:maintainability", "@type": "@id" }
+    {
+      "@id": "dim:security",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:maintainability",
+      "@type": "@id"
+    }
+  ],
+  "measuresQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/static_analysis_common_vulnerabilities",
+      "@type": "@id"
+    }
   ],
   "improvesQualityIndicator": [
     {
@@ -31,6 +43,10 @@
     },
     {
       "@id": "https://w3id.org/everse/i/indicators/no_critical_vulnerability",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/static_analysis_common_vulnerabilities",
       "@type": "@id"
     }
   ],
