@@ -1,0 +1,42 @@
+{
+  "@context": "https://w3id.org/everse/rs#",
+  "@id": "https://w3id.org/everse/tools/mkdocs-material",
+  "@type": "SoftwareApplication",
+  "applicationCategory": [
+    {
+      "@id": "rs:PrototypeTool",
+      "@type": "@id"
+    },
+    {
+      "@id": "rs:ResearchInfrastructureSoftware",
+      "@type": "@id"
+    }
+  ],
+  "appliesToProgrammingLanguage": [
+    "Python"
+  ],
+  "author": "Martin Donath",
+  "description": "Material for MkDocs is a modern, highly customisable theme for MkDocs that makes it easy to create professional documentation websites from Markdown files. It provides features such as built-in search, dark mode, navigation tabs, versioning support, code highlighting, diagrams, and extensive customisation, making it a popular choice for documenting software projects, APIs, and technical guides.",
+  "hasQualityDimension": [
+    {
+      "@id": "dim:maintainability",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:interaction_capability",
+      "@type": "@id"
+    }
+  ],
+  "improvesQualityIndicator": {
+    "@id": "https://w3id.org/everse/i/indicators/software_has_documentation",
+    "@type": "@id"
+  },
+  "howToUse": [
+    "library",
+    "CI/CD"
+  ],
+  "isAccessibleForFree": true,
+  "license": "https://opensource.org/license/mit",
+  "name": "mkdocs-material",
+  "url": "https://squidfunk.github.io/mkdocs-material/"
+}
