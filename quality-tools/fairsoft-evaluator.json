@@ -8,7 +8,7 @@
   },
   "appliesToProgrammingLanguage": [
     "Python",
-    "Node"
+    "JavaScript"
   ],
   "author": "Barcelona Supercomputing Center",
   "description": "Assess the FAIRness of a software tool from its metadata. Load metadata from the Software Observatory, a GitHub repository, or a metadata file, then review it and compute FAIRsoft indicators. ",
