@@ -34,25 +34,13 @@ jobs:
         id: lychee_schedule
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --config lychee.toml --verbose --no-progress --root-dir ${{ github.workspace }} 'web/**/*.jsx' './**/*.md' './quality-tools/**/*.json'
+          args: --config lychee.toml --verbose --no-progress --accept-timeouts --root-dir ${{ github.workspace }} 'web/**/*.jsx' './**/*.md' './quality-tools/**/*.json'
           fail: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Check for actual broken links (ignoring timeouts)
-        id: check_errors
-        if: github.event_name == 'schedule' && steps.lychee_schedule.outputs.exit_code != 0
-        run: |
-          # Extract the error count from the lychee summary table (e.g. "| 🚫 Errors      | 5     |")
-          errors=$(grep -oP 'Errors\s+\|\s+\K\d+' ./lychee/out.md || echo "0")
-          if [ "$errors" -gt 0 ]; then
-            echo "has_errors=true" >> $GITHUB_OUTPUT
-          else
-            echo "has_errors=false" >> $GITHUB_OUTPUT
-          fi
-
       - name: Create Issue From File
-        if: github.event_name == 'schedule' && steps.check_errors.outputs.has_errors == 'true'
+        if: github.event_name == 'schedule' && steps.lychee_schedule.outputs.exit_code != 0
         uses: peter-evans/create-issue-from-file@v6
         with:
           title: Link Checker Report
