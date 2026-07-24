@@ -6,10 +6,7 @@
     "@id": "rs:ResearchInfrastructureSoftware",
     "@type": "@id"
   },
-  "appliesToProgrammingLanguage": [
-    "Python",
-    "JavaScript"
-  ],
+  "appliesToProgrammingLanguage": ["Python", "JavaScript"],
   "author": "Barcelona Supercomputing Center",
   "description": "Assess the FAIRness of a software tool from its metadata. Load metadata from the Software Observatory, a GitHub repository, or a metadata file, then review it and compute FAIRsoft indicators. ",
   "hasQualityDimension": [
@@ -48,10 +45,7 @@
       "@type": "@id"
     }
   ],
-  "howToUse": [
-    "library",
-    "online-service"
-  ],
+  "howToUse": ["library", "online-service"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/MIT",
   "maintainer": "Eva Martin Del Pico",
