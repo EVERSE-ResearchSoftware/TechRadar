@@ -28,7 +28,9 @@ path = [
     "README.md",
     "about.md",
     "CITATION.cff",
-    "radar/**"
+    "radar/**",
+    "AGENTS.md",
+    "SKILL.md",
 ]
 SPDX-FileCopyrightText = "2025 TechRadar Curators and Organisations, including curators in CITATION.cff, https://everse.software/about/consortium/"
 SPDX-License-Identifier = "CC-BY-NC-SA-4.0"
