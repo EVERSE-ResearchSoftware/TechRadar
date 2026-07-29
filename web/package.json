@@ -35,7 +35,7 @@
     "globals": "^17.8.0",
     "lucide-react": "^1.27.0",
     "postcss": "^8.5.25",
-    "react-router-dom": "^7.18.1",
+    "react-router-dom": "^7.18.2",
     "tailwindcss": "^4.3.3",
     "vite": "^8.1.5"
   }
