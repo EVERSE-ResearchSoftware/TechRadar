@@ -168,7 +168,7 @@ const FilterSidebar = ({ options, filters, onFilterChange, onClear }) => {
 
                 {(options.measuresIndicators || []).length > 0 && (
                     <FilterSection
-                        title="Measures Quality Indicator"
+                        title="Measures the following quality indicator(s) of your software"
                         options={(options.measuresIndicators || []).map(o => o.id)}
                         selected={filters.measuresIndicators || []}
                         onChange={(newVal) => onFilterChange('measuresIndicators', newVal)}
@@ -180,7 +180,7 @@ const FilterSidebar = ({ options, filters, onFilterChange, onClear }) => {
 
                 {(options.improvesIndicators || []).length > 0 && (
                     <FilterSection
-                        title="Improves Quality Indicator"
+                        title="Improves the following quality indicator(s) of your software"
                         options={(options.improvesIndicators || []).map(o => o.id)}
                         selected={filters.improvesIndicators || []}
                         onChange={(newVal) => onFilterChange('improvesIndicators', newVal)}
