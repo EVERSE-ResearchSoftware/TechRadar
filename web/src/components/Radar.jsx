@@ -35,11 +35,10 @@ const Radar = ({ tools, dimensions, size = 500, onDimClick }) => {
     const radius = size / 2 - 100; // Padding for labels
 
     // Tier Configuration
-    // Labels: individuals, research teams, communities (hidden but kept for layout logic)
     const tiers = useMemo(() => [
-        { id: 'rs:AnalysisCode', label: 'individuals', radiusRatio: 0.33 },
-        { id: 'rs:PrototypeTool', label: 'research teams', radiusRatio: 0.66 },
-        { id: 'rs:ResearchInfrastructureSoftware', label: 'communities', radiusRatio: 1.0 }
+        { id: 'rs:AnalysisCode', label: 'Analysis Code', radiusRatio: 0.33 },
+        { id: 'rs:PrototypeTool', label: 'Prototype Tool', radiusRatio: 0.66 },
+        { id: 'rs:ResearchInfrastructureSoftware', label: 'Research Infrastructure Software', radiusRatio: 1.0 }
     ], []);
 
     // Helper to get coordinates
