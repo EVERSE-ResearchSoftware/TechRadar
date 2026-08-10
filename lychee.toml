@@ -6,6 +6,8 @@ exclude = [
   "^https://www\\.doxygen\\.nl/?$",
   "https://github.com/customer-terms/github-copilot-product-specific-terms",
   "https://sylabs.io/singularity/",
+  # Trusted site; its certificate chain is not in lychee's bundled root store.
+  "^https://www\\.softwareheritage\\.org",
 ]
 
 max_redirects = 10
