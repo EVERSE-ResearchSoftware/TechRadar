@@ -59,7 +59,7 @@ const Home = () => {
         usage: [],
         licenses: '',
         languages: [],
-        free: '',
+        free: false,
         measuresIndicators: [],
         improvesIndicators: [],
     });
@@ -74,7 +74,7 @@ const Home = () => {
             usage: [],
             licenses: '',
             languages: [],
-            free: '',
+            free: false,
             measuresIndicators: [],
             improvesIndicators: [],
         });
@@ -130,11 +130,9 @@ const Home = () => {
                 if (tool.license !== filters.licenses) return false;
             }
 
-            // Pricing (free vs paid — no filtering until the user picks one)
-            if (filters.free === 'free') {
+            // Free
+            if (filters.free) {
                 if (tool.isAccessibleForFree !== true) return false;
-            } else if (filters.free === 'paid') {
-                if (tool.isAccessibleForFree !== false) return false;
             }
 
             // Measures indicators
@@ -272,14 +270,9 @@ const Home = () => {
                             >
                                 <div className="flex justify-between items-start mb-4">
                                     <h3 className="text-xl font-semibold text-sky-600 group-hover:text-sky-700">{tool.name}</h3>
-                                    {tool.isAccessibleForFree === true && (
+                                    {tool.isAccessibleForFree && (
                                         <span className="flex-shrink-0 ml-2 px-2 py-1 text-xs rounded-full bg-green-100 text-green-700 border border-green-200">
                                             Free
-                                        </span>
-                                    )}
-                                    {tool.isAccessibleForFree === false && (
-                                        <span className="flex-shrink-0 ml-2 px-2 py-1 text-xs rounded-full bg-amber-100 text-amber-700 border border-amber-200">
-                                            Paid
                                         </span>
                                     )}
                                 </div>
