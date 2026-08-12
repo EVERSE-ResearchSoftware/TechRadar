@@ -88,7 +88,9 @@ const FilterSidebar = ({ options, filters, onFilterChange, onClear }) => {
                                 return (
                                     <div key={cat} className="relative flex items-center group cursor-pointer"
                                         onClick={() => {
-                                            const newCats = isActive ? [] : [cat];
+                                            const newCats = isActive
+                                                ? filters.categories.filter(c => c !== cat)
+                                                : [...filters.categories, cat];
                                             onFilterChange('categories', newCats);
                                         }}
                                     >
