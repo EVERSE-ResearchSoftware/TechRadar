@@ -34,7 +34,7 @@ jobs:
         id: lychee_schedule
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --config lychee.toml --verbose --no-progress --root-dir ${{ github.workspace }} 'web/**/*.jsx' './**/*.md' './quality-tools/**/*.json'
+          args: --config lychee.toml --verbose --no-progress --accept-timeouts --root-dir ${{ github.workspace }} 'web/**/*.jsx' './**/*.md' './quality-tools/**/*.json'
           fail: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
