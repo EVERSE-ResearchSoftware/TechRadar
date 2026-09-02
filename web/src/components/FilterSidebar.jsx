@@ -53,7 +53,7 @@ const FilterSidebar = ({ options, filters, onFilterChange, onClear }) => {
             <div className="glass-panel p-4 sticky top-24">
                 <div className="flex items-center justify-between mb-4">
                     <h2 className="font-bold text-slate-900">Filters</h2>
-                    {(filters.categories.length > 0 || filters.usage.length > 0 || filters.languages.length > 0 || filters.licenses !== '' || filters.free || filters.measuresIndicators?.length > 0 || filters.improvesIndicators?.length > 0) && (
+                    {(filters.categories.length > 0 || filters.usage.length > 0 || filters.languages.length > 0 || filters.licenses !== '' || filters.free !== '' || filters.measuresIndicators?.length > 0 || filters.improvesIndicators?.length > 0) && (
                         <button
                             onClick={onClear}
                             className="text-xs text-sky-600 hover:text-sky-700 flex items-center"
@@ -65,7 +65,7 @@ const FilterSidebar = ({ options, filters, onFilterChange, onClear }) => {
 
                 <div className="mb-6 border-b border-slate-200 pb-6">
                     <div className="flex items-center justify-between mb-4">
-                        <h3 className="font-semibold text-slate-700">Your software's type</h3>
+                        <h3 className="font-semibold text-slate-700">Your software's targets</h3>
                         <a
                             href="https://everse.software/RSQKit/three_tier_view"
                             target="_blank"
@@ -157,15 +157,30 @@ const FilterSidebar = ({ options, filters, onFilterChange, onClear }) => {
 
 
                 <div className="mb-6 border-b border-slate-200 pb-6">
-                    <label className="flex items-center cursor-pointer group">
-                        <input
-                            type="checkbox"
-                            className="rounded border-slate-300 bg-white text-sky-600 focus:ring-sky-500 focus:ring-offset-white"
-                            checked={filters.free}
-                            onChange={(e) => onFilterChange('free', e.target.checked)}
-                        />
-                        <span className="ml-2 text-slate-700 group-hover:text-slate-900 font-semibold text-sm">Free to use</span>
-                    </label>
+                    <h3 className="font-semibold text-slate-700 mb-3 text-sm">Pricing</h3>
+                    <div className="flex gap-2" role="group" aria-label="Filter by pricing">
+                        {[
+                            { value: 'free', label: 'Free' },
+                            { value: 'paid', label: 'Not free' },
+                        ].map(({ value, label }) => {
+                            const isActive = filters.free === value;
+                            return (
+                                <button
+                                    key={label}
+                                    type="button"
+                                    aria-pressed={isActive}
+                                    onClick={() => onFilterChange('free', isActive ? '' : value)}
+                                    className={`flex-1 px-3 py-1.5 rounded-lg text-sm font-medium border transition-colors ${
+                                        isActive
+                                            ? 'bg-sky-600 border-sky-600 text-white'
+                                            : 'bg-white border-slate-300 text-slate-600 hover:border-sky-400 hover:text-slate-900'
+                                    }`}
+                                >
+                                    {label}
+                                </button>
+                            );
+                        })}
+                    </div>
                 </div>
 
                 {(options.measuresIndicators || []).length > 0 && (
