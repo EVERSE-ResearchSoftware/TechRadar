@@ -65,7 +65,7 @@ const FilterSidebar = ({ options, filters, onFilterChange, onClear }) => {
 
                 <div className="mb-6 border-b border-slate-200 pb-6">
                     <div className="flex items-center justify-between mb-4">
-                        <h3 className="font-semibold text-slate-700">Your software's type</h3>
+                        <h3 className="font-semibold text-slate-700">Your software's targets</h3>
                         <a
                             href="https://everse.software/RSQKit/three_tier_view"
                             target="_blank"
@@ -79,9 +79,9 @@ const FilterSidebar = ({ options, filters, onFilterChange, onClear }) => {
                         <div className="relative flex flex-col gap-4 w-full">
                             {['ResearchInfrastructureSoftware', 'PrototypeTool', 'AnalysisCode'].map((cat, index, arr) => {
                                 const mapping = {
-                                    'AnalysisCode': 'Analysis Code',
-                                    'PrototypeTool': 'Prototype Tool',
-                                    'ResearchInfrastructureSoftware': 'Research Infrastructure Software'
+                                    'AnalysisCode': 'individuals',
+                                    'PrototypeTool': 'research teams',
+                                    'ResearchInfrastructureSoftware': 'communities'
                                 };
                                 const isActive = filters.categories.includes(cat);
                                 const isLast = index === arr.length - 1;
@@ -161,7 +161,7 @@ const FilterSidebar = ({ options, filters, onFilterChange, onClear }) => {
                     <div className="flex gap-2" role="group" aria-label="Filter by pricing">
                         {[
                             { value: 'free', label: 'Free' },
-                            { value: 'paid', label: 'Paid' },
+                            { value: 'paid', label: 'Not free' },
                         ].map(({ value, label }) => {
                             const isActive = filters.free === value;
                             return (
@@ -185,7 +185,7 @@ const FilterSidebar = ({ options, filters, onFilterChange, onClear }) => {
 
                 {(options.measuresIndicators || []).length > 0 && (
                     <FilterSection
-                        title="Measures the following quality indicator(s) of your software"
+                        title="Measures Quality Indicator"
                         options={(options.measuresIndicators || []).map(o => o.id)}
                         selected={filters.measuresIndicators || []}
                         onChange={(newVal) => onFilterChange('measuresIndicators', newVal)}
@@ -197,7 +197,7 @@ const FilterSidebar = ({ options, filters, onFilterChange, onClear }) => {
 
                 {(options.improvesIndicators || []).length > 0 && (
                     <FilterSection
-                        title="Improves the following quality indicator(s) of your software"
+                        title="Improves Quality Indicator"
                         options={(options.improvesIndicators || []).map(o => o.id)}
                         selected={filters.improvesIndicators || []}
                         onChange={(newVal) => onFilterChange('improvesIndicators', newVal)}
