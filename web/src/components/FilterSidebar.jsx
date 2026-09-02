@@ -79,9 +79,9 @@ const FilterSidebar = ({ options, filters, onFilterChange, onClear }) => {
                         <div className="relative flex flex-col gap-4 w-full">
                             {['ResearchInfrastructureSoftware', 'PrototypeTool', 'AnalysisCode'].map((cat, index, arr) => {
                                 const mapping = {
-                                    'AnalysisCode': 'individuals',
-                                    'PrototypeTool': 'research teams',
-                                    'ResearchInfrastructureSoftware': 'communities'
+                                    'AnalysisCode': 'Analysis Code',
+                                    'PrototypeTool': 'Prototype Tool',
+                                    'ResearchInfrastructureSoftware': 'Research Infrastructure Software'
                                 };
                                 const isActive = filters.categories.includes(cat);
                                 const isLast = index === arr.length - 1;
@@ -185,7 +185,7 @@ const FilterSidebar = ({ options, filters, onFilterChange, onClear }) => {
 
                 {(options.measuresIndicators || []).length > 0 && (
                     <FilterSection
-                        title="Measures Quality Indicator"
+                        title="Measures the following quality indicator(s) of your software"
                         options={(options.measuresIndicators || []).map(o => o.id)}
                         selected={filters.measuresIndicators || []}
                         onChange={(newVal) => onFilterChange('measuresIndicators', newVal)}
@@ -197,7 +197,7 @@ const FilterSidebar = ({ options, filters, onFilterChange, onClear }) => {
 
                 {(options.improvesIndicators || []).length > 0 && (
                     <FilterSection
-                        title="Improves Quality Indicator"
+                        title="Improves the following quality indicator(s) of your software"
                         options={(options.improvesIndicators || []).map(o => o.id)}
                         selected={filters.improvesIndicators || []}
                         onChange={(newVal) => onFilterChange('improvesIndicators', newVal)}
