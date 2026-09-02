@@ -11,10 +11,17 @@ exclude = [
 ]
 
 max_redirects = 10
-accept = [200, 203, 206, 300, 301, 302, 303, 307, 308]
+# 418 added: freedesktop.org rejects the automated checker with a joke
+# "I'm a teapot" status even though the page itself loads fine in a browser.
+accept = [200, 203, 206, 300, 301, 302, 303, 307, 308, 418]
 
 # Robustness settings for transient network issues
 timeout = 40
-max_retries = 3
-retry_wait_time = 2
+# max_retries and retry_wait_time bumped: zenodo.org intermittently returns
+# 504 Gateway Timeout under load; more attempts with a longer backoff give
+# it a better chance to recover before we report it as broken.
+max_retries = 5
+retry_wait_time = 5
 max_concurrency = 10
+
+
