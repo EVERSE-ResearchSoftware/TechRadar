@@ -29,8 +29,11 @@ src/
 
 ## The design system as it actually exists
 
-**Tailwind v4, no config-file theme.** Tokens are declared in `@theme` inside
-`src/index.css`. There is no `tailwind.config.js` theme extension to edit — it is CSS.
+**Tailwind v4, tokens in CSS.** Design tokens are declared in `@theme` inside
+`src/index.css`. `tailwind.config.js` still exists with an empty `theme.extend`, but v4
+does not auto-load it — `index.css` has no `@config` directive, so nothing in that file
+reaches the build. Verified: a colour added to its `theme.extend` never appears in the
+compiled CSS. It is a v3 leftover. Edit the CSS, not the config.
 
 **The EVERSE palette is mapped onto Tailwind's `sky` and `indigo` scales.** `sky-*` is
 EVERSE purple (`--color-sky-700: #6a3c82` is the brand main), `indigo-*` is EVERSE blue

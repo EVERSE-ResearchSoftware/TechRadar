@@ -15,7 +15,8 @@ tool pages, and `https://everse.software/TechRadar/api/tools.json` are all rende
 it, and `main` deploys on every push. A wrong indicator is live within minutes and gets
 cited by people choosing tools for real projects.
 
-Schema: `../tests/tools_validation_schema.json`, enforced by `pytest ../tests/`.
+Schema: `tests/tools_validation_schema.json`, enforced by `python -m pytest tests/`
+(paths from the repository root, as everywhere below).
 
 ---
 
