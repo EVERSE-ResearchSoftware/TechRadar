@@ -111,8 +111,10 @@ gracefully step aside on narrow screens; the filter sidebar must be reachable th
 **Performance**: `loader.js` eagerly imports every tool JSON at build time, so the payload
 grows with the catalogue. Watch the bundle when you add anything that touches all tools.
 
-**Routing**: `HashRouter` with `base: './'` for GitHub Pages. Every internal link is a
-hash route. Don't introduce a router feature that needs server rewrites.
+**Routing**: `HashRouter`, with no `basename` — every internal link is a hash route
+(`#/tool/<id>`). Separately, Vite sets `base: './'` in `vite.config.js` so built assets
+resolve under the GitHub Pages subpath. Both exist so the site needs no server-side
+rewrites; don't introduce a router feature that would.
 
 ---
 

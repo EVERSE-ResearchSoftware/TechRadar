@@ -117,25 +117,28 @@ documentation page that supports it. "It seemed to fit" is not a source.
 **One PR per tool.** No batching — a reviewer must be able to accept or reject each tool's
 metadata on its own evidence.
 
+Run everything from the **repository root** — `review_tracker.py` resolves its paths
+against the working directory, so it only works from there.
+
 ```bash
 git checkout main && git pull origin main
 git checkout -b catalog/update-<tool-name>
 
 # edit quality-tools/<tool-name>.json
 
-python -m pytest ../tests/test_tools.py        # schema validation
-cd ../web && npm run format-json:fix && cd ..  # prettier; CI checks this
+python -m pytest tests/test_tools.py          # schema validation
+cd web && npm run format-json:fix && cd ..    # prettier; CI checks this
 
 git commit -m "catalog: update <tool-name> metadata and indicators"
 git push origin catalog/update-<tool-name>
 gh pr create
 ```
 
-Then update `../scripts/review_status.json`.
+Then update `scripts/review_status.json`.
 
-`python ../scripts/review_tracker.py` names the next unreviewed tools. Work through them
-one at a time. Note that the tracker file is gitignored, so its state is local to your
-machine and a few of its entries predate the current slug convention.
+`python scripts/review_tracker.py` names the next unreviewed tools. Work through them one
+at a time. Note that the tracker file is gitignored, so its state is local to your machine
+and a few of its entries predate the current slug convention.
 
 ### PR description template
 
