@@ -1,7 +1,7 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect, useCallback } from 'react';
 import { getAllTools, getQualityDimensions, getFilterOptions, getQualityIndicatorIds } from '../data/loader';
 import { getDimensionColor } from '../data/colors';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { Search, Filter, Menu, X } from 'lucide-react';
 import FilterSidebar from '../components/FilterSidebar';
 import Radar from '../components/Radar';
@@ -23,16 +23,43 @@ const Home = () => {
         ),
     }), [filterOptions, catalogIndicatorIds, allIndicatorOptions]);
 
+    // Support deep-linking to a specific dimension, e.g. /#/?dimension=community
+    // The `dimension` query param is the single source of truth for the selected
+    // dimension, so links (from RSQKit or elsewhere) work without any extra state.
+    const [searchParams, setSearchParams] = useSearchParams();
+    const selectedDim = searchParams.get('dimension') || '';
+
     const [search, setSearch] = useState('');
-    const [selectedDim, setSelectedDim] = useState('');
     const [showMobileFilters, setShowMobileFilters] = useState(false);
+
+    const selectDimension = useCallback((dim) => {
+        setSearchParams(prev => {
+            const next = new URLSearchParams(prev);
+            if (dim) {
+                next.set('dimension', dim);
+            } else {
+                next.delete('dimension');
+            }
+            return next;
+        }, { replace: true });
+    }, [setSearchParams]);
+
+    // Land directly on the filtered catalog when arriving via a dimension deep link.
+    useEffect(() => {
+        if (selectedDim) {
+            document.getElementById('browse-tools')?.scrollIntoView({ behavior: 'smooth' });
+        }
+        // Only run on initial mount - subsequent dimension changes are user-driven
+        // (dropdown / radar click) and already handle their own scrolling.
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     const [filters, setFilters] = useState({
         categories: [],
         usage: [],
         licenses: '',
         languages: [],
-        free: false,
+        free: '',
         measuresIndicators: [],
         improvesIndicators: [],
     });
@@ -47,11 +74,11 @@ const Home = () => {
             usage: [],
             licenses: '',
             languages: [],
-            free: false,
+            free: '',
             measuresIndicators: [],
             improvesIndicators: [],
         });
-        setSelectedDim('');
+        selectDimension('');
         setSearch('');
     };
 
@@ -66,7 +93,11 @@ const Home = () => {
             const toolDims = tool.hasQualityDimension
                 ? (Array.isArray(tool.hasQualityDimension) ? tool.hasQualityDimension : [tool.hasQualityDimension])
                 : [];
-            const matchesDim = selectedDim === '' || toolDims.some(d => d['@id'] && d['@id'].includes(selectedDim));
+            // Normalize so external deep links (e.g. ?dimension=Open-Source-Software) still
+            // match dimension slugs stored as "dim:open_source_software".
+            const normalizeDim = (val) => val.toLowerCase().replace(/[\s-]+/g, '_');
+            const normalizedSelectedDim = normalizeDim(selectedDim);
+            const matchesDim = selectedDim === '' || toolDims.some(d => d['@id'] && normalizeDim(d['@id']).includes(normalizedSelectedDim));
             if (!matchesDim) return false;
 
             // Categories
@@ -99,9 +130,11 @@ const Home = () => {
                 if (tool.license !== filters.licenses) return false;
             }
 
-            // Free
-            if (filters.free) {
+            // Pricing (free vs paid — no filtering until the user picks one)
+            if (filters.free === 'free') {
                 if (tool.isAccessibleForFree !== true) return false;
+            } else if (filters.free === 'paid') {
+                if (tool.isAccessibleForFree !== false) return false;
             }
 
             // Measures indicators
@@ -155,7 +188,7 @@ const Home = () => {
                             dimensions={dimensions}
                             size={800}
                             onDimClick={(dim) => {
-                                setSelectedDim(dim);
+                                selectDimension(dim);
                                 document.getElementById('browse-tools')?.scrollIntoView({ behavior: 'smooth' });
                             }}
                         />
@@ -179,7 +212,7 @@ const Home = () => {
                     <select
                         className="w-full bg-white border border-slate-200 rounded-lg pl-10 pr-4 py-2 text-slate-900 focus:outline-none focus:ring-2 focus:ring-sky-500 appearance-none cursor-pointer transition-all"
                         value={selectedDim}
-                        onChange={(e) => setSelectedDim(e.target.value)}
+                        onChange={(e) => selectDimension(e.target.value)}
                     >
                         <option value="">All Dimensions</option>
                         {dimensions.map(dim => (
@@ -239,9 +272,14 @@ const Home = () => {
                             >
                                 <div className="flex justify-between items-start mb-4">
                                     <h3 className="text-xl font-semibold text-sky-600 group-hover:text-sky-700">{tool.name}</h3>
-                                    {tool.isAccessibleForFree && (
+                                    {tool.isAccessibleForFree === true && (
                                         <span className="flex-shrink-0 ml-2 px-2 py-1 text-xs rounded-full bg-green-100 text-green-700 border border-green-200">
                                             Free
+                                        </span>
+                                    )}
+                                    {tool.isAccessibleForFree === false && (
+                                        <span className="flex-shrink-0 ml-2 px-2 py-1 text-xs rounded-full bg-amber-100 text-amber-700 border border-amber-200">
+                                            Not free
                                         </span>
                                     )}
                                 </div>

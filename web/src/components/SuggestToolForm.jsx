@@ -513,7 +513,7 @@ const SuggestToolForm = ({ isOpen, onClose }) => {
                         {/* Measures Quality Indicators */}
                         <div className="mb-5">
                             <label className="flex items-center gap-1.5 text-sm font-medium text-slate-700 mb-2">
-                                Measures Quality Indicator
+                                Measures the following quality indicator(s) of your software
                                 <InfoTooltip
                                     href="https://everse.software/indicators/website/indicators.html"
                                     tooltip="A research software quality indicator represents a specific software aspect that can be measured (e.g., FAIRness, test coverage, documentation coverage, etc.). Select the indicators that this tool actively measures."
@@ -531,7 +531,7 @@ const SuggestToolForm = ({ isOpen, onClose }) => {
                         {/* Improves Quality Indicators */}
                         <div className="mb-5">
                             <label className="flex items-center gap-1.5 text-sm font-medium text-slate-700 mb-2">
-                                Improves Quality Indicator
+                                Improves the following quality indicator(s) of your software
                                 <InfoTooltip
                                     href="https://everse.software/indicators/website/indicators.html"
                                     tooltip="A research software quality indicator represents a specific software aspect that can be measured (e.g., FAIRness, test coverage, documentation coverage, etc.). Select the indicators that this tool actively helps improve."

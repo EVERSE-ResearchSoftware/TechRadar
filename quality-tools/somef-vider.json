@@ -12,7 +12,7 @@
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/MIT",
   "name": "SOMEF-Vider",
-  "url": "https://somef.linkeddata.es/",
+  "url": "https://github.com/SoftwareUnderstanding/SOMEF-Vider/",
   "measuresQualityIndicator": [
     {
       "@id": "https://w3id.org/everse/i/indicators/software_has_license",

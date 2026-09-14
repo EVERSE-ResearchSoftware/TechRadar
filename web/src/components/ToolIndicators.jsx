@@ -34,7 +34,7 @@ const ToolIndicators = ({ improvesRefs, measuresRefs }) => {
       {!loading && improves.length > 0 && (
         <IndicatorGroup
           icon={<TrendingUp size={14} />}
-          label="Improves Quality Indicators"
+          label="Improves the following quality indicator(s) of your software"
           items={improves}
           chipClass="bg-purple-50 text-purple-700 border-purple-200 hover:bg-purple-100 hover:border-purple-300"
         />
@@ -44,7 +44,7 @@ const ToolIndicators = ({ improvesRefs, measuresRefs }) => {
       {!loading && measures.length > 0 && (
         <IndicatorGroup
           icon={<Ruler size={14} />}
-          label="Measures Quality Indicators"
+          label="Measures the following quality indicator(s) of your software"
           items={measures}
           chipClass="bg-sky-50 text-sky-700 border-sky-200 hover:bg-sky-100 hover:border-sky-300"
         />

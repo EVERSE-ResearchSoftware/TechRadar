@@ -39,8 +39,20 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Create Issue From File
+      - name: Check for real errors (ignore timeout-only reports)
         if: github.event_name == 'schedule' && steps.lychee_schedule.outputs.exit_code != 0
+        id: check_errors
+        run: |
+          if grep -q "^## Errors per input" ./lychee/out.md; then
+            echo "Real errors found (not just timeouts) — will open an issue."
+            echo "has_errors=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Only timeouts/redirects, no hard errors — skipping issue creation."
+            echo "has_errors=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Create Issue From File
+        if: github.event_name == 'schedule' && steps.check_errors.outputs.has_errors == 'true'
         uses: peter-evans/create-issue-from-file@v6
         with:
           title: Link Checker Report
