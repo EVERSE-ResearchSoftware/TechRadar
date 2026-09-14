@@ -6,6 +6,8 @@ exclude = [
   "^https://www\\.doxygen\\.nl/?$",
   "https://github.com/customer-terms/github-copilot-product-specific-terms",
   "https://sylabs.io/singularity/",
+  "https://somef.linkeddata.es/",
+  "https://cmake.org/",
 ]
 
 max_redirects = 10
