@@ -13,7 +13,10 @@
     }
   ],
   "appliesToProgrammingLanguage": ["Python"],
-  "author": "Martin Donath",
+  "author": {
+    "@id": "https://github.com/squidfunk",
+    "@type": "schema:Person"
+  },
   "description": "Material for MkDocs is a modern, highly customisable theme for MkDocs that makes it easy to create professional documentation websites from Markdown files. It provides features such as built-in search, dark mode, navigation tabs, versioning support, code highlighting, diagrams, and extensive customisation, making it a popular choice for documenting software projects, APIs, and technical guides.",
   "hasQualityDimension": [
     {
