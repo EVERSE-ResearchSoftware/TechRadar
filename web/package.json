@@ -14,7 +14,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "prettier": "^3.9.6",
+    "prettier": "^3.9.8",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
     "react-markdown": "^10.1.0"
