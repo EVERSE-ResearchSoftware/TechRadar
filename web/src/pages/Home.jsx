@@ -1,6 +1,7 @@
 import React, { useState, useMemo, useEffect, useCallback } from 'react';
 import { getAllTools, getQualityDimensions, getFilterOptions, getQualityIndicatorIds } from '../data/loader';
 import { getDimensionColor } from '../data/colors';
+import { getLicenseGroup } from '../data/licenses';
 import { Link, useSearchParams } from 'react-router-dom';
 import { Search, Filter, Menu, X } from 'lucide-react';
 import FilterSidebar from '../components/FilterSidebar';
@@ -125,8 +126,10 @@ const Home = () => {
                 if (!hasLang) return false;
             }
 
-            // License
-            if (filters.licenses) {
+            // License: either a whole group ("group:permissive") or one license URL
+            if (filters.licenses.startsWith('group:')) {
+                if (getLicenseGroup(tool.license) !== filters.licenses.slice('group:'.length)) return false;
+            } else if (filters.licenses) {
                 if (tool.license !== filters.licenses) return false;
             }
 

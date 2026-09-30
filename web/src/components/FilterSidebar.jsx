@@ -1,6 +1,7 @@
 import React from 'react';
 import { ChevronDown, ChevronRight, X } from 'lucide-react';
 import InfoTooltip from './InfoTooltip';
+import { getLicenseName } from '../data/licenses';
 
 const FilterSection = ({ title, options, selected, onChange, renderOption, infoHref, infoTooltip }) => {
     const [isOpen, setIsOpen] = React.useState(true);
@@ -133,19 +134,42 @@ const FilterSidebar = ({ options, filters, onFilterChange, onClear }) => {
                 />
 
                 <div className="mb-6 last:border-0">
-                    <h3 className="font-semibold text-slate-700 mb-3">License of the Tool</h3>
+                    <h3 id="license-filter-label" className="font-semibold text-slate-700 mb-3">License of the Tool</h3>
                     <select
+                        aria-labelledby="license-filter-label"
                         className="w-full bg-white border border-slate-300 rounded-lg p-2 text-sm text-slate-700 focus:outline-none focus:ring-2 focus:ring-sky-500"
                         value={filters.licenses}
                         onChange={(e) => onFilterChange('licenses', e.target.value)}
                     >
                         <option value="">All Licenses</option>
-                        {options.licenses.map(license => (
-                            <option key={license} value={license}>
-                                {license.split('/').pop()}
-                            </option>
+                        <optgroup label="License type">
+                            {options.licenseGroups.map(group => (
+                                <option key={group.id} value={`group:${group.id}`}>
+                                    Any {group.label.toLowerCase()} license
+                                </option>
+                            ))}
+                        </optgroup>
+                        {options.licenseGroups.map(group => (
+                            <optgroup key={group.id} label={group.label}>
+                                {group.licenses.map(license => (
+                                    <option key={license} value={license}>
+                                        {getLicenseName(license)}
+                                    </option>
+                                ))}
+                            </optgroup>
                         ))}
                     </select>
+                    <p className="text-xs text-slate-500 mt-2">
+                        License types follow{' '}
+                        <a
+                            href="https://scancode-licensedb.aboutcode.org/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sky-600 hover:text-sky-700 underline"
+                        >
+                            ScanCode LicenseDB
+                        </a>.
+                    </p>
                 </div>
 
                 <FilterSection
