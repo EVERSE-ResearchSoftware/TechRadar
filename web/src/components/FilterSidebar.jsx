@@ -142,25 +142,39 @@ const FilterSidebar = ({ options, filters, onFilterChange, onClear }) => {
                         onChange={(e) => onFilterChange('licenses', e.target.value)}
                     >
                         <option value="">All Licenses</option>
-                        <optgroup label="License type">
-                            {options.licenseGroups.map(group => (
-                                <option key={group.id} value={`group:${group.id}`}>
-                                    Any {group.label.toLowerCase()} license
-                                </option>
-                            ))}
-                        </optgroup>
-                        {options.licenseGroups.map(group => (
-                            <optgroup key={group.id} label={group.label}>
-                                {group.licenses.map(license => (
-                                    <option key={license} value={license}>
-                                        {getLicenseName(license)}
-                                    </option>
+                        {options.licenseGroups ? (
+                            <>
+                                <optgroup label="License type">
+                                    {options.licenseGroups.map(group => (
+                                        <option key={group.id} value={`group:${group.id}`}>
+                                            Any {group.label.toLowerCase()} license
+                                        </option>
+                                    ))}
+                                </optgroup>
+                                {options.licenseGroups.map(group => (
+                                    <optgroup key={group.id} label={group.label}>
+                                        {group.licenses.map(license => (
+                                            <option key={license} value={license}>
+                                                {getLicenseName(license)}
+                                            </option>
+                                        ))}
+                                    </optgroup>
                                 ))}
-                            </optgroup>
-                        ))}
+                            </>
+                        ) : (
+                            options.licenses.map(license => (
+                                <option key={license} value={license}>
+                                    {getLicenseName(license)}
+                                </option>
+                            ))
+                        )}
                     </select>
-                    <p className="text-xs text-slate-500 mt-2">
-                        License types follow{' '}
+                    <p className="text-xs text-slate-500 mt-2" aria-live="polite">
+                        {options.licenseGroupsLoading
+                            ? 'Loading license types from '
+                            : options.licenseGroups
+                                ? 'License types from '
+                                : 'License types unavailable: could not reach '}
                         <a
                             href="https://scancode-licensedb.aboutcode.org/"
                             target="_blank"

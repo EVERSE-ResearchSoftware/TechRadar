@@ -1,6 +1,4 @@
 
-import { LICENSE_GROUPS, getLicenseGroup } from './licenses';
-
 // Load all JSON files from the software-tools directory
 const toolsModules = import.meta.glob('@software-tools/*.json', { eager: true });
 
@@ -66,16 +64,6 @@ export const getProgrammingLanguages = () => {
     return Array.from(languages).sort();
 };
 
-// Groups license URLs by LICENSE_GROUPS order, dropping groups with no license.
-const groupLicenses = (licenses) =>
-    LICENSE_GROUPS
-        .map(group => ({
-            id: group.id,
-            label: group.label,
-            licenses: licenses.filter(l => getLicenseGroup(l) === group.id),
-        }))
-        .filter(group => group.licenses.length > 0);
-
 export const getFilterOptions = () => {
     const tools = getAllTools();
     const options = {
@@ -110,7 +98,7 @@ export const getFilterOptions = () => {
     return {
         categories: Array.from(options.categories).sort(),
         usage: Array.from(options.usage).sort(),
-        licenseGroups: groupLicenses(Array.from(options.licenses).sort()),
+        licenses: Array.from(options.licenses).sort(),
         languages: getProgrammingLanguages(),
         free: [true, false]
     };

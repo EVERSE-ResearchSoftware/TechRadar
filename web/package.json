@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "npm run build:api && vite build",
     "build:api": "node ./scripts/generate-tools-api.mjs",
-    "test": "node --test src/utils/suggestToolJson.test.js src/data/licenses.test.js",
+    "test": "node --test 'src/**/*.test.js'",
     "lint": "eslint .",
     "format-json:check": "prettier --check ../quality-tools",
     "format-json:fix": "prettier --write ../quality-tools",
