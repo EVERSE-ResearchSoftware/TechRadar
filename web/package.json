@@ -37,6 +37,6 @@
     "postcss": "^8.5.28",
     "react-router-dom": "^7.18.4",
     "tailwindcss": "^4.3.3",
-    "vite": "^8.3.0"
+    "vite": "^8.3.1"
   }
 }
