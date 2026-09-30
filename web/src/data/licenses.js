@@ -41,9 +41,12 @@ export const buildCategoryBySpdx = (scancodeIndex) => {
     return map;
 };
 
-/** Fetches the ScanCode index and returns the { spdxId: category } map. */
+/**
+ * Fetches the ScanCode index and returns the { spdxId: category } map. Rejects after
+ * 10 s, including a stalled response body, so callers fall back instead of waiting.
+ */
 export const fetchCategoryBySpdx = async () => {
-    const res = await fetch(SCANCODE_INDEX_URL);
+    const res = await fetch(SCANCODE_INDEX_URL, { signal: AbortSignal.timeout(10_000) });
     if (!res.ok) throw new Error(`ScanCode LicenseDB returned HTTP ${res.status}`);
     return buildCategoryBySpdx(await res.json());
 };
