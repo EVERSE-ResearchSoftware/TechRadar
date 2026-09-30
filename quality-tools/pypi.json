@@ -3,7 +3,7 @@
   "@id": "https://w3id.org/everse/tools/pypi",
   "@type": "schema:SoftwareApplication",
   "name": "pypi",
-  "description": "The Python Package Index (PyPI) is the official third-party software repository for software for the Python programming language and helps find and install software developed and shared by the Python community. ",
+  "description": "The Python Package Index (PyPI) is the official third-party software repository for software for the Python programming language and helps find and install software developed and shared by the Python community.",
   "url": "https://pypi.org/",
   "isAccessibleForFree": true,
   "applicationCategory": [
@@ -31,6 +31,10 @@
   "improvesQualityIndicator": [
     {
       "@id": "https://w3id.org/everse/i/indicators/has_published_package",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/listed_in_registry",
       "@type": "@id"
     }
   ]
