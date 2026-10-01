@@ -1,0 +1,22 @@
+{
+  "@context": "https://w3id.org/everse/rs#",
+  "@id": "https://w3id.org/everse/tools/yamllint",
+  "@type": "schema:SoftwareApplication",
+  "name": "yamllint",
+  "description": "Linter for YAML files that checks syntax and style, such as key duplicates, indentation and line length. Helps keep the CI, workflow and configuration files of research software consistent.",
+  "url": "https://github.com/adrienverge/yamllint",
+  "isAccessibleForFree": true,
+  "hasQualityDimension": [{ "@id": "dim:maintainability", "@type": "@id" }],
+  "howToUse": ["command-line", "CI/CD"],
+  "license": "https://spdx.org/licenses/GPL-3.0-only",
+  "applicationCategory": [
+    { "@id": "rs:AnalysisCode", "@type": "@id" },
+    { "@id": "rs:PrototypeTool", "@type": "@id" }
+  ],
+  "measuresQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/has_no_linting_issues",
+      "@type": "@id"
+    }
+  ]
+}
