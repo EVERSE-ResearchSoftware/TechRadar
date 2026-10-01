@@ -1,0 +1,22 @@
+{
+  "@context": "https://w3id.org/everse/rs#",
+  "@id": "https://w3id.org/everse/tools/markdownlint",
+  "@type": "schema:SoftwareApplication",
+  "name": "Markdownlint",
+  "description": "Linter for Markdown files that checks structure and style, such as heading levels, list formatting and trailing whitespace. Keeps README and documentation files of research software consistent and readable.",
+  "url": "https://github.com/DavidAnson/markdownlint",
+  "isAccessibleForFree": true,
+  "hasQualityDimension": [{ "@id": "dim:maintainability", "@type": "@id" }],
+  "howToUse": ["command-line", "CI/CD"],
+  "license": "https://spdx.org/licenses/MIT",
+  "applicationCategory": [
+    { "@id": "rs:AnalysisCode", "@type": "@id" },
+    { "@id": "rs:PrototypeTool", "@type": "@id" }
+  ],
+  "measuresQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/has_no_linting_issues",
+      "@type": "@id"
+    }
+  ]
+}
