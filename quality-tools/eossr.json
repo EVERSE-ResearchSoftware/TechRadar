@@ -24,6 +24,22 @@
     "@id": "dim:fairness",
     "@type": "@id"
   },
+  "measuresQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/codemeta_completeness",
+      "@type": "@id"
+    }
+  ],
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/archived_in_scholarly_repository",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/listed_in_registry",
+      "@type": "@id"
+    }
+  ],
   "howToUse": ["CI/CD", "command-line", "online-service"],
   "usedBy": ["ESCAPE"],
   "license": "https://spdx.org/licenses/MIT"
