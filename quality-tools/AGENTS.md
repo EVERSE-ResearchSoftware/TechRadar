@@ -91,9 +91,13 @@ same: adding indicators because they _could_ apply.
   what the tool's core functionality clearly and strongly supports.
 - **Drop the borderline ones.** If justifying an indicator takes a paragraph of
   qualification, it does not belong.
-- **`measures` vs `improves`.** `measuresQualityIndicator` = the tool reports or checks
-  this. `improvesQualityIndicator` = using the tool makes it better. A formatter _improves_
-  linting cleanliness; a linter _measures_ it. Don't list both reflexively.
+- **`measures` vs `improves`.** `measuresQualityIndicator` = the tool reports a value for
+  this indicator or checks it. `improvesQualityIndicator` = using the tool makes it true or
+  better. A formatter _improves_ linting cleanliness; a linter _measures_ it. If the
+  indicator is a yes/no fact about the project (it uses a tool, has CI, has tests), nothing
+  can measure it, so use `improves`. A linter can measure `has_no_linting_issues` and
+  improve `uses_tool_for_warnings_and_mistakes`; listing both is correct there. Don't list
+  both on the same indicator reflexively.
 - **A dimension needs backing.** `hasQualityDimension` reflects what the tool actually
   works on, not the neighbourhood it's in.
 
