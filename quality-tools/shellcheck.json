@@ -1,0 +1,23 @@
+{
+  "@context": "https://w3id.org/everse/rs#",
+  "@id": "https://w3id.org/everse/tools/shellcheck",
+  "@type": "schema:SoftwareApplication",
+  "name": "ShellCheck",
+  "description": "Static analysis tool for shell scripts that flags syntax errors, quoting mistakes and common logic pitfalls in sh, bash, dash and ksh scripts. Useful for the build, install and job-submission scripts that research software depends on.",
+  "url": "https://www.shellcheck.net/",
+  "isAccessibleForFree": true,
+  "hasQualityDimension": [{ "@id": "dim:maintainability", "@type": "@id" }],
+  "howToUse": ["command-line", "CI/CD"],
+  "appliesToProgrammingLanguage": ["Shell"],
+  "license": "https://spdx.org/licenses/GPL-3.0-only",
+  "applicationCategory": [
+    { "@id": "rs:AnalysisCode", "@type": "@id" },
+    { "@id": "rs:PrototypeTool", "@type": "@id" }
+  ],
+  "measuresQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/has_no_linting_issues",
+      "@type": "@id"
+    }
+  ]
+}
