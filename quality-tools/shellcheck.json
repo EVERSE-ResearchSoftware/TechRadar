@@ -9,7 +9,7 @@
   "hasQualityDimension": [{ "@id": "dim:maintainability", "@type": "@id" }],
   "howToUse": ["command-line", "CI/CD"],
   "appliesToProgrammingLanguage": ["Shell"],
-  "license": "https://spdx.org/licenses/GPL-3.0-only",
+  "license": "https://spdx.org/licenses/GPL-3.0-or-later",
   "applicationCategory": [
     { "@id": "rs:AnalysisCode", "@type": "@id" },
     { "@id": "rs:PrototypeTool", "@type": "@id" }
