@@ -1,11 +1,13 @@
 import React, { useState, useMemo, useEffect, useCallback } from 'react';
 import { getAllTools, getQualityDimensions, getFilterOptions, getQualityIndicatorIds } from '../data/loader';
 import { getDimensionColor } from '../data/colors';
+import { getLicenseGroup, groupLicenses } from '../data/licenses';
 import { Link, useSearchParams } from 'react-router-dom';
 import { Search, Filter, Menu, X } from 'lucide-react';
 import FilterSidebar from '../components/FilterSidebar';
 import Radar from '../components/Radar';
 import { useIndicatorOptions } from '../hooks/useIndicators';
+import { useLicenseCategories } from '../hooks/useLicenseCategories';
 
 const Home = () => {
     const tools = getAllTools();
@@ -13,15 +15,19 @@ const Home = () => {
     const filterOptions = useMemo(() => getFilterOptions(), []);
     const catalogIndicatorIds = useMemo(() => getQualityIndicatorIds(), []);
     const { options: allIndicatorOptions } = useIndicatorOptions();
+    const { categoryBySpdx, loading: licenseGroupsLoading } = useLicenseCategories();
     const filterOptionsWithIndicators = useMemo(() => ({
         ...filterOptions,
+        // null until ScanCode LicenseDB answers; the sidebar then shows a flat list
+        licenseGroups: categoryBySpdx ? groupLicenses(filterOptions.licenses, categoryBySpdx) : null,
+        licenseGroupsLoading,
         measuresIndicators: catalogIndicatorIds.measures.map(
             id => allIndicatorOptions.find(o => o.id === id) ?? { id, label: id.split('/').pop().replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase()) }
         ),
         improvesIndicators: catalogIndicatorIds.improves.map(
             id => allIndicatorOptions.find(o => o.id === id) ?? { id, label: id.split('/').pop().replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase()) }
         ),
-    }), [filterOptions, catalogIndicatorIds, allIndicatorOptions]);
+    }), [filterOptions, catalogIndicatorIds, allIndicatorOptions, categoryBySpdx, licenseGroupsLoading]);
 
     // Support deep-linking to a specific dimension, e.g. /#/?dimension=community
     // The `dimension` query param is the single source of truth for the selected
@@ -125,8 +131,11 @@ const Home = () => {
                 if (!hasLang) return false;
             }
 
-            // License
-            if (filters.licenses) {
+            // License: either a whole group ("group:permissive") or one license URL
+            if (filters.licenses.startsWith('group:')) {
+                // Group options only exist once ScanCode has answered
+                if (categoryBySpdx && getLicenseGroup(tool.license, categoryBySpdx) !== filters.licenses.slice('group:'.length)) return false;
+            } else if (filters.licenses) {
                 if (tool.license !== filters.licenses) return false;
             }
 
@@ -155,7 +164,7 @@ const Home = () => {
 
             return true;
         });
-    }, [tools, search, selectedDim, filters]);
+    }, [tools, search, selectedDim, filters, categoryBySpdx]);
 
     return (
         <div>

@@ -38,6 +38,11 @@ jobs:
           npm run lint
         working-directory: web
 
+      - name: Run tests
+        run: |
+          npm test
+        working-directory: web
+
       - name: Format JSON files
         run: |
           npm run format-json:check
