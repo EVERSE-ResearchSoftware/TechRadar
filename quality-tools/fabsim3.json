@@ -1,0 +1,84 @@
+{
+  "@context": "https://w3id.org/everse/rs#",
+  "@id": "https://w3id.org/everse/tools/fabsim3",
+  "@type": "SoftwareApplication",
+  "applicationCategory": {
+    "@id": "rs:AnalysisCode",
+    "@type": "@id"
+  },
+  "appliesToProgrammingLanguage": [
+    "Python"
+  ],
+  "author": "SEAVEA Consortium",
+  "description": "FabSim3 is a workflow-automation toolkit which can be flexibly applied to different domains using a plugin system. It provides support with the validation of model ensembles as well as a tool to verify input files for models and simulations.",
+  "hasQualityDimension": [
+    {
+      "@id": "dim:reliability",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:maintainability",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:flexibility",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:sustainability",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:performance_efficiency",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:compatibility",
+      "@type": "@id"
+    }
+  ],
+  "measuresQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/requirements_specified",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/dependency_management",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/version_control_use",
+      "@type": "@id"
+    }
+  ],
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/coupling_between_objects_ok",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/functional_correctness",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/listed_in_registry",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/requirements_specified",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/passed_tests_ok",
+      "@type": "@id"
+    }
+  ],
+  "howToUse": [
+    "command-line"
+  ],
+  "isAccessibleForFree": true,
+  "license": "https://spdx.org/licenses/BSD-3-Clause.html",
+  "maintainer": "Derek Groen",
+  "name": "FabSim3",
+  "url": "https://fabsim3.readthedocs.io"
+}
