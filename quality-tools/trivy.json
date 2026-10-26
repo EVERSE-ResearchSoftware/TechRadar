@@ -7,16 +7,11 @@
   "url": "https://github.com/aquasecurity/trivy",
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/Apache-2.0",
-  "applicationCategory": [
-    {
-      "@id": "rs:PrototypeTool",
-      "@type": "@id"
-    },
+  "applicationCategory":
     {
       "@id": "rs:ResearchInfrastructureSoftware",
       "@type": "@id"
-    }
-  ],
+    },
   "hasQualityDimension": {
     "@id": "dim:security",
     "@type": "@id"
