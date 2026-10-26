@@ -81,7 +81,7 @@ const segments = [
 const rings = [
     { name: 'Analysis Code', desc: 'Scripts and notebooks used for exploratory or one-off analyses.' },
     { name: 'Prototype Tools', desc: 'More structured software shared within a research group or community.' },
-    { name: 'Research Infrastructure Software', desc: 'Mature, widely-used software underpinning research infrastructure.' },
+    { name: 'Research Software Infrastructure', desc: 'Mature, widely-used software underpinning research infrastructure.' },
 ];
 
 const About = () => {
@@ -163,7 +163,7 @@ const About = () => {
                             className="text-sky-600 hover:text-sky-700 underline underline-offset-2">
                             three-tier model of research software
                         </a>.
-                        Not all research software needs to meet the same quality requirements —
+                        Not all research software needs to meet the same quality requirements, and
                         the appropriate level of quality assurance depends on how broadly a tool is used and how critical it is.
                         A tool may be relevant across several tiers; in that case it appears as a dot in <strong>each applicable tier</strong>,
                         reflecting the breadth of its applicability rather than a single fixed placement.
