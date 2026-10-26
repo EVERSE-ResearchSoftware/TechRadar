@@ -81,7 +81,7 @@ const segments = [
 const rings = [
     { name: 'Analysis Code', desc: 'Scripts and notebooks used for exploratory or one-off analyses.' },
     { name: 'Prototype Tools', desc: 'More structured software shared within a research group or community.' },
-    { name: 'Research Software Infrastructure', desc: 'Mature, widely-used software underpinning research infrastructure.' },
+    { name: 'Research Infrastructure Software', desc: 'Mature, widely-used software underpinning research infrastructure.' },
 ];
 
 const About = () => {
