@@ -37,7 +37,7 @@ const Radar = ({ tools, dimensions, size = 500, onDimClick }) => {
     // Tier Configuration
     const tiers = useMemo(() => [
         { id: 'rs:AnalysisCode', label: 'Analysis Code', radiusRatio: 0.33 },
-        { id: 'rs:PrototypeTool', label: 'Prototype Tool', radiusRatio: 0.66 },
+        { id: 'rs:PrototypeTool', label: 'Prototype Tools', radiusRatio: 0.66 },
         { id: 'rs:ResearchInfrastructureSoftware', label: 'Research Infrastructure Software', radiusRatio: 1.0 }
     ], []);
 
@@ -291,22 +291,46 @@ const Radar = ({ tools, dimensions, size = 500, onDimClick }) => {
                     </g>
                 ))}
 
-                {/* 6. Tier Labels - HIDDEN per user request */}
-                {/* To re-enable tier labels, uncomment the block below:
+                {/* 6. Tier Ring Labels - curved along each ring circle,
+                    centred on the 0° divider (between Sustainability and Compatibility, 12 o'clock) */}
+                <defs>
+                    {tiers.map((tier, i) => {
+                        const r = tier.radiusRatio * radius;
+                        // Arc sweep centered on 0° (straight up).
+                        // toRad: our angle convention is 0°=top, so we subtract 90° before converting.
+                        const toRad = (d) => (d - 90) * (Math.PI / 180);
+                        const startDeg = -30;  // 30° left of 12 o'clock
+                        const endDeg   =  30;  // 30° right of 12 o'clock
+                        const x1 = center + r * Math.cos(toRad(startDeg));
+                        const y1 = center + r * Math.sin(toRad(startDeg));
+                        const x2 = center + r * Math.cos(toRad(endDeg));
+                        const y2 = center + r * Math.sin(toRad(endDeg));
+                        // sweep-flag=1 → clockwise (goes over the top of the circle)
+                        return (
+                            <path
+                                key={`arc-def-${i}`}
+                                id={`tier-arc-${i}`}
+                                d={`M ${x1} ${y1} A ${r} ${r} 0 0 1 ${x2} ${y2}`}
+                                fill="none"
+                            />
+                        );
+                    })}
+                </defs>
                 {tiers.map((tier, i) => (
-                    <g key={`tier-label-${i}`} className="pointer-events-none">
-                        <text
-                            x={center}
-                            y={center - (tier.radiusRatio * radius) + 12}
-                            textAnchor="middle"
-                            className="text-[10px] font-extrabold fill-slate-800 uppercase tracking-widest"
-                            style={{ textShadow: '0 2px 4px rgba(255,255,255,0.9)' }}
-                        >
+                    <text
+                        key={`tier-label-${i}`}
+                        fill="#64748b"
+                        fontSize="13"
+                        fontStyle="italic"
+                        fontFamily="Georgia, 'Times New Roman', serif"
+                        opacity="0.85"
+                        style={{ pointerEvents: 'none' }}
+                    >
+                        <textPath href={`#tier-arc-${i}`} startOffset="50%" textAnchor="middle">
                             {tier.label}
-                        </text>
-                    </g>
+                        </textPath>
+                    </text>
                 ))}
-                */}
 
             </svg>
 

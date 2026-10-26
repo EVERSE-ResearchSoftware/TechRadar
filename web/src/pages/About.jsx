@@ -163,8 +163,12 @@ const About = () => {
                             className="text-sky-600 hover:text-sky-700 underline underline-offset-2">
                             three-tier model of research software
                         </a>.
-                        Not all research software needs to meet the same quality requirements.
-                        If a tool applies to multiple tiers, it is placed in the <strong>lowest applicable tier</strong>.
+                        Not all research software needs to meet the same quality requirements, and
+                        the appropriate level of quality assurance depends on how broadly a tool is used and how critical it is.
+                        A tool may be relevant across several tiers; in that case it appears as a dot in <strong>each applicable tier</strong>,
+                        reflecting the breadth of its applicability rather than a single fixed placement.
+                        Note that when filtering by a radar segment, each tool appears <strong>once</strong> in the catalogue list
+                        regardless of how many tiers it covers.
                     </p>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
