@@ -38,7 +38,7 @@ const Radar = ({ tools, dimensions, size = 500, onDimClick }) => {
     const tiers = useMemo(() => [
         { id: 'rs:AnalysisCode', label: 'Analysis Code', radiusRatio: 0.33 },
         { id: 'rs:PrototypeTool', label: 'Prototype Tools', radiusRatio: 0.66 },
-        { id: 'rs:ResearchInfrastructureSoftware', label: 'Research Software Infrastructure', radiusRatio: 1.0 }
+        { id: 'rs:ResearchInfrastructureSoftware', label: 'Research Infrastructure Software', radiusRatio: 1.0 }
     ], []);
 
     // Helper to get coordinates
