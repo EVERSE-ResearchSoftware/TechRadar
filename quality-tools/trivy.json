@@ -1,7 +1,7 @@
 {
   "@context": "https://w3id.org/everse/rs#",
   "@id": "https://w3id.org/everse/tools/trivy",
-  "@type": "schema:SoftwareApplication",
+  "@type": "SoftwareApplication",
   "name": "Trivy",
   "description": "Open-source security scanner that detects vulnerabilities, exposed secrets, infrastructure misconfigurations, and license issues in software repositories, container images, filesystems, and other targets.",
   "url": "https://github.com/aquasecurity/trivy",
