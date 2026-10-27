@@ -16,10 +16,15 @@
       "@type": "@id"
     }
   ],
-  "hasQualityDimension": {
-    "@id": "dim:reproducibility",
-    "@type": "@id"
-  },
+  "hasQualityDimension": [{
+      "@id": "dim:maintainability",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:sustainability",
+      "@type": "@id"
+    }
+  ],
   "improvesQualityIndicator": [
     {
       "@id": "https://w3id.org/everse/i/indicators/dependency_management",
