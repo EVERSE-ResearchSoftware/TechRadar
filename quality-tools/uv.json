@@ -1,7 +1,7 @@
 {
   "@context": "https://w3id.org/everse/rs#",
   "@id": "https://w3id.org/everse/tools/uv",
-  "@type": "SoftwareApplication",
+  "@type": "schema:SoftwareApplication",
   "name": "uv",
   "description": "An extremely fast Python package and project manager written in Rust. It manages Python versions, dependencies, virtual environments, lockfiles, project metadata, and package building and publishing to support reproducible software development.",
   "url": "https://github.com/astral-sh/uv",
