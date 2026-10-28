@@ -15,7 +15,7 @@
     "C#",
     "TypeScript"
   ],
-  "description": "Static analyzer that measures complexity, maintainability, coupling and size of a codebase across several languages, and flags in pull requests only what got worse.",
+  "description": "Static analyzer that measures complexity, maintainability, coupling and size of a codebase in several languages, helping researchers and developers keep their software maintainable. In pull requests it flags only what got worse.",
   "hasQualityDimension": {
     "@id": "dim:maintainability",
     "@type": "@id"
@@ -23,7 +23,7 @@
   "howToUse": ["CI/CD", "command-line"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/MIT",
-  "name": "ast-metrics",
+  "name": "AST Metrics",
   "url": "https://github.com/Halleck45/ast-metrics",
   "measuresQualityIndicator": [
     {
