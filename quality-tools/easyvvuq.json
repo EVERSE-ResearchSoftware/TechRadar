@@ -1,0 +1,56 @@
+{
+  "@context": "https://w3id.org/everse/rs#",
+  "@id": "https://w3id.org/everse/tools/easyvvuq",
+  "@type": "SoftwareApplication",
+  "applicationCategory": {
+    "@id": "rs:AnalysisCode",
+    "@type": "@id"
+  },
+  "appliesToProgrammingLanguage": [
+    "Python"
+  ],
+  "author": "SEAVEA Consortium",
+  "description": "EasyVVUQ is a Python Library that supports users in performing Uncertainty Quantification and Sensitivity Analysis with their favourite applications.",
+  "hasQualityDimension": [
+    {
+      "@id": "dim:reliability",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:sustainability",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:functional_suitability",
+      "@type": "@id"
+    }
+  ],
+  "measuresQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/static_analysis_common_vulnerabilities",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/functional_correctness",
+      "@type": "@id"
+    }
+  ],
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/functional_correctness",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/static_analysis_common_vulnerabilities",
+      "@type": "@id"
+    }
+  ],
+  "howToUse": [
+    "command-line"
+  ],
+  "isAccessibleForFree": true,
+  "license": "https://spdx.org/licenses/LGPL-3.0-or-later.html",
+  "maintainer": "Derek Groen",
+  "name": "EasyVVUQ",
+  "url": "https://easyvvuq.readthedocs.io"
+}
