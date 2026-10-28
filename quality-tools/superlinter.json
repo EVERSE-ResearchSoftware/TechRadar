@@ -1,0 +1,31 @@
+{
+  "@context": "https://w3id.org/everse/rs#",
+  "@id": "https://w3id.org/everse/tools/superlinter",
+  "@type": "SoftwareApplication",
+  "applicationCategory": {
+    "@id": "rs:AnalysisCode",
+    "@type": "@id"
+  },
+  "description": "Ready-to-run collection of linters and code analyzers for many languages that checks source code for errors and style problems, as a GitHub Action or in a container.",
+  "hasQualityDimension": {
+    "@id": "dim:maintainability",
+    "@type": "@id"
+  },
+  "howToUse": ["CI/CD", "command-line"],
+  "isAccessibleForFree": true,
+  "license": "https://spdx.org/licenses/MIT",
+  "name": "Super-Linter",
+  "url": "https://github.com/super-linter/super-linter",
+  "measuresQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/has_no_linting_issues",
+      "@type": "@id"
+    }
+  ],
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/uses_tool_for_warnings_and_mistakes",
+      "@type": "@id"
+    }
+  ]
+}
