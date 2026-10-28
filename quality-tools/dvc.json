@@ -21,5 +21,15 @@
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/Apache-2.0",
   "name": "DVC",
-  "url": "https://dvc.org/"
+  "url": "https://dvc.org/",
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/dependency_management",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/requirements_specified",
+      "@type": "@id"
+    }
+  ]
 }
