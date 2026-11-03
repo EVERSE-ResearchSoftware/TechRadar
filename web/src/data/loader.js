@@ -2,11 +2,13 @@
 // Load all JSON files from the software-tools directory
 const toolsModules = import.meta.glob('@software-tools/*.json', { eager: true });
 
+// A tool may declare one license or several (dual-licensed). Always return an array of strings.
 const normalizeLicense = (license) => {
-    if (!license || typeof license !== 'string') return license;
-    const trimmed = license.trim();
-    // Normalize malformed SPDX URLs like https://spdx.org/licenses/MIT.html
-    return trimmed.replace(/^https:\/\/spdx\.org\/licenses\/([^/]+)\.html$/i, 'https://spdx.org/licenses/$1');
+    const list = Array.isArray(license) ? license : [license];
+    return list
+        .filter(l => typeof l === 'string' && l.trim())
+        // Normalize malformed SPDX URLs like https://spdx.org/licenses/MIT.html
+        .map(l => l.trim().replace(/^https:\/\/spdx\.org\/licenses\/([^/]+)\.html$/i, 'https://spdx.org/licenses/$1'));
 };
 
 export const getAllTools = () => {
@@ -90,9 +92,7 @@ export const getFilterOptions = () => {
         }
 
         // License
-        if (tool.license) {
-            options.licenses.add(tool.license);
-        }
+        tool.license.forEach(l => options.licenses.add(l));
     });
 
     return {

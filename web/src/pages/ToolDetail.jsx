@@ -108,12 +108,12 @@ const ToolDetail = () => {
                     <div>
                         <h3 className="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-3">Details</h3>
                         <ul className="space-y-3">
-                            {tool.license && (
+                            {tool.license.length > 0 && (
                                 <li className="flex items-start text-slate-600">
                                     <Info size={18} className="mr-2 text-sky-600 mt-0.5" />
                                     <span>
                                         <span className="text-slate-500 block text-xs">License</span>
-                                        {tool.license.split('/').pop()}
+                                        {tool.license.map(l => l.split('/').pop()).join(', ')}
                                     </span>
                                 </li>
                             )}

@@ -127,7 +127,7 @@ const Home = () => {
 
             // License
             if (filters.licenses) {
-                if (tool.license !== filters.licenses) return false;
+                if (!tool.license.includes(filters.licenses)) return false;
             }
 
             // Pricing (free vs paid — no filtering until the user picks one)
