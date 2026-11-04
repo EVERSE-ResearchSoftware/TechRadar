@@ -30,6 +30,12 @@ Schema: `tests/tools_validation_schema.json`, enforced by `python -m pytest test
   "name": "Black",
   "description": "…", // what it does, and why a researcher cares
   "url": "https://github.com/psf/black",
+  "primaryPurpose": "Format Python code consistently.",
+  "featureList": ["Formats Python source code"],
+  "targetUsers": ["Python developers"],
+  "keywords": ["formatter", "Python"],
+  "documentationUrl": "https://black.readthedocs.io/",
+  "codeRepository": "https://github.com/psf/black",
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/MIT", // SPDX URL, no .html suffix
   "applicationCategory": [{ "@id": "rs:PrototypeTool", "@type": "@id" }],
@@ -43,6 +49,12 @@ Schema: `tests/tools_validation_schema.json`, enforced by `python -m pytest test
 
 **Required**: `@context`, `@id`, `name`, `description`, `license`, `url`,
 `applicationCategory`, `hasQualityDimension`.
+
+The comparison metadata fields (`primaryPurpose`, `featureList`, `targetUsers`,
+`keywords`, `documentationUrl`, and `codeRepository`) are optional. Add them only when
+supported by the tool's own documentation or repository. Missing values are shown as
+unspecified rather than inferred. GitHub stars and last code update are retrieved live
+from `codeRepository` when available.
 
 **Closed vocabularies** — anything else fails validation:
 

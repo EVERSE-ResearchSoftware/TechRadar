@@ -3,6 +3,7 @@ import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import ToolDetail from './pages/ToolDetail';
+import CompareTools from './pages/CompareTools';
 import About from './pages/About';
 
 function ScrollToTop() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="tool/:id" element={<ToolDetail />} />
+          <Route path="compare" element={<CompareTools />} />
           <Route path="/about" element={<About />} />
         </Route>
       </Routes>

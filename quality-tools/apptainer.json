@@ -5,6 +5,19 @@
   "name": "Apptainer",
   "description": "High-performance container platform designed for scientific computing and HPC environments. Enhances **Compatibility** by enabling co-existence of different software stacks on HPC systems and providing interoperability across diverse computing infrastructures without requiring root privileges. Improves **Flexibility** through high adaptability to HPC and scientific computing environments, scalability from laptops to supercomputers, simplified installability with single-file container images, and easy replaceability of software environments. Strengthens **Reliability** by providing fault tolerance through container isolation, improved availability via consistent execution across different systems, and enhanced recoverability with immutable container images. Supports **Sustainability** by ensuring scientific software remains functional across evolving HPC platforms, meeting long-term computational research needs, and maintaining reproducible research environments over time.",
   "url": "https://apptainer.org/",
+  "primaryPurpose": "Build and run portable software containers for scientific computing and HPC environments.",
+  "featureList": [
+    "Build and run containers without root privileges",
+    "Sign and encrypt container images",
+    "Support containerized workloads across systems, including GPU and MPI environments"
+  ],
+  "targetUsers": [
+    "Researchers running software on HPC systems",
+    "HPC administrators"
+  ],
+  "keywords": ["containers", "HPC", "scientific computing", "reproducibility"],
+  "codeRepository": "https://github.com/apptainer/apptainer",
+  "documentationUrl": "https://apptainer.org/docs/user/latest/",
   "applicationCategory": {
     "@id": "rs:ResearchInfrastructureSoftware",
     "@type": "@id"

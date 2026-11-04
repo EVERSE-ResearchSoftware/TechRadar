@@ -75,6 +75,45 @@
       "type": "string",
       "format": "uri"
     },
+    "codeRepository": {
+      "description": "URL of the source-code repository",
+      "type": "string",
+      "format": "uri"
+    },
+    "documentationUrl": {
+      "description": "URL of the tool's documentation",
+      "type": "string",
+      "format": "uri"
+    },
+    "primaryPurpose": {
+      "description": "A concise statement of the tool's primary purpose",
+      "type": "string",
+      "minLength": 1
+    },
+    "featureList": {
+      "description": "Key features of the tool",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "targetUsers": {
+      "description": "People or roles the tool is intended for",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "keywords": {
+      "description": "Tags describing the tool",
+      "type": [ "string", "array" ],
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
     "identifier": {
       "description": "An identifier for the software tool",
       "type": [ "string", "array", "object" ],
