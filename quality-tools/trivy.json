@@ -33,14 +33,6 @@
     {
       "@id": "https://w3id.org/everse/i/indicators/no_leaked_credentials",
       "@type": "@id"
-    },
-    {
-      "@id": "https://w3id.org/everse/i/indicators/uses_tool_for_warnings_and_mistakes",
-      "@type": "@id"
-    },
-    {
-      "@id": "https://w3id.org/everse/i/indicators/static_analysis_common_vulnerabilities",
-      "@type": "@id"
     }
   ],
   "howToUse": ["CI/CD", "command-line"]
