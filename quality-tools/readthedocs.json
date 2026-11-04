@@ -1,0 +1,29 @@
+{
+  "@context": "https://w3id.org/everse/rs#",
+  "@id": "https://w3id.org/everse/tools/readthedocs",
+  "@type": "schema:SoftwareApplication",
+  "name": "Read the Docs",
+  "description": "Read the Docs builds, versions, and hosts project documentation from Git repositories, automatically rebuilding it as code changes. By keeping user and developer documentation available and current, it supports the interaction capability and maintainability of research software.",
+  "url": "https://about.readthedocs.com/",
+  "isAccessibleForFree": true,
+  "license": "https://spdx.org/licenses/MIT",
+  "applicationCategory": {
+    "@id": "rs:ResearchInfrastructureSoftware",
+    "@type": "@id"
+  },
+  "hasQualityDimension": [
+    {
+      "@id": "dim:interaction_capability",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:maintainability",
+      "@type": "@id"
+    }
+  ],
+  "improvesQualityIndicator": {
+    "@id": "https://w3id.org/everse/i/indicators/software_has_documentation",
+    "@type": "@id"
+  },
+  "howToUse": ["online-service", "CI/CD"]
+}
