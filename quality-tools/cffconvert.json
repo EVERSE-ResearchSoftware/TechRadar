@@ -1,0 +1,26 @@
+{
+  "@context": "https://w3id.org/everse/rs#",
+  "@id": "https://w3id.org/everse/tools/cffconvert",
+  "@type": "SoftwareApplication",
+  "applicationCategory": {
+    "@id": "rs:ResearchInfrastructureSoftware",
+    "@type": "@id"
+  },
+  "appliesToProgrammingLanguage": ["Python"],
+  "description": "Command line program that validates CITATION.cff files and converts them to BibTeX, CodeMeta, RIS, EndNote, schema.org and Zenodo formats, so a software citation is written once and reused.",
+  "hasQualityDimension": {
+    "@id": "dim:fairness",
+    "@type": "@id"
+  },
+  "howToUse": ["command-line"],
+  "isAccessibleForFree": true,
+  "license": "https://spdx.org/licenses/Apache-2.0",
+  "name": "cffconvert",
+  "url": "https://github.com/citation-file-format/cffconvert",
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_has_citation",
+      "@type": "@id"
+    }
+  ]
+}
