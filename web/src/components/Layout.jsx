@@ -46,6 +46,14 @@ const Layout = () => {
                         Suggest a new tool
                     </button>
                     <a
+                        href="https://github.com/EVERSE-ResearchSoftware/TechRadar/issues/new/choose"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-slate-600 hover:text-slate-900 transition-colors"
+                    >
+                        Report an error
+                    </a>
+                    <a
                         href="https://github.com/EVERSE-ResearchSoftware/TechRadar"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -78,6 +86,15 @@ const Layout = () => {
                             >
                                 Suggest a new tool
                             </button>
+                            <a
+                                href="https://github.com/EVERSE-ResearchSoftware/TechRadar/issues/new/choose"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={closeMenu}
+                                className="text-lg font-medium text-slate-700 hover:text-indigo-600 py-2 border-b border-slate-100 last:border-0"
+                            >
+                                Report an error
+                            </a>
                             <a
                                 href="https://github.com/EVERSE-ResearchSoftware/TechRadar"
                                 target="_blank"
