@@ -1,0 +1,30 @@
+{
+  "@context": "https://w3id.org/everse/rs#",
+  "@id": "https://w3id.org/everse/tools/cffconvert",
+  "@type": "SoftwareApplication",
+  "applicationCategory": {
+    "@id": "rs:ResearchInfrastructureSoftware",
+    "@type": "@id"
+  },
+  "description": "Command-line tool and Python library for validating and converting CITATION.cff files into common citation formats, helping researchers generate well-structured software citations and maintain up-to-date metadata.",
+  "hasQualityDimension": { "@id": "dim:fairness", "@type": "@id" },
+  "howToUse": ["command-line", "library"],
+  "isAccessibleForFree": true,
+  "license": "https://spdx.org/licenses/Apache-2.0",
+  "name": "cffconvert",
+  "url": "https://github.com/citation-file-format/cffconvert",
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/software_has_citation",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/descriptive_metadata",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/metadata_is_up_to_date",
+      "@type": "@id"
+    }
+  ]
+}
