@@ -79,13 +79,6 @@ const ValueList = ({ values }) => {
     );
 };
 
-const sharedTags = tools => {
-    if (tools.length === 0) return [];
-    const tagsForEachTool = tools.map(tool => new Set(getDimensionTags(tool)));
-    return Array.from(tagsForEachTool[0])
-        .filter(tag => tagsForEachTool.slice(1).every(tags => tags.has(tag)));
-};
-
 const MissingValue = () => (
     <span className="text-slate-400">Not specified in catalog</span>
 );
@@ -174,7 +167,6 @@ const CompareTools = () => {
         );
     }
 
-    const commonTags = sharedTags(tools);
     const getGitHubValue = (tool, field) => {
         const repository = getGitHubRepository(tool);
         const metadata = githubMetadata[tool._filename];
