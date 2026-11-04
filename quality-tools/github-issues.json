@@ -1,0 +1,35 @@
+{
+  "@context": "https://w3id.org/everse/rs#",
+  "@id": "https://w3id.org/everse/tools/github-issues",
+  "@type": "schema:SoftwareApplication",
+  "name": "GitHub Issues",
+  "description": "GitHub Issues lets teams plan and track tasks, bugs, ideas, and feedback alongside their repositories. Research software teams can use it to coordinate maintenance and support work throughout a project's lifecycle.",
+  "url": "https://docs.github.com/en/issues",
+  "isAccessibleForFree": true,
+  "license": "https://docs.github.com/en/site-policy/github-terms/github-terms-of-service",
+  "applicationCategory": [
+    {
+      "@id": "rs:PrototypeTool",
+      "@type": "@id"
+    },
+    {
+      "@id": "rs:ResearchInfrastructureSoftware",
+      "@type": "@id"
+    }
+  ],
+  "hasQualityDimension": [
+    {
+      "@id": "dim:maintainability",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:sustainability",
+      "@type": "@id"
+    }
+  ],
+  "improvesQualityIndicator": {
+    "@id": "https://w3id.org/everse/i/indicators/support_issue_tracking",
+    "@type": "@id"
+  },
+  "howToUse": ["online-service"]
+}
