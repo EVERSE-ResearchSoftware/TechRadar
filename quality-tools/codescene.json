@@ -1,0 +1,40 @@
+{
+  "@context": "https://w3id.org/everse/rs#",
+  "@id": "https://w3id.org/everse/tools/codescene",
+  "@type": "schema:SoftwareApplication",
+  "name": "CodeScene",
+  "description": "Commercial code analysis service that scores code health from complexity, duplication and cohesion, and flags hotspots in version control history. Free for open source projects. Reports problems on pull requests and in the IDE, so maintainers can see where research code is getting harder to change.",
+  "url": "https://codescene.com/",
+  "isAccessibleForFree": false,
+  "hasQualityDimension": [{ "@id": "dim:maintainability", "@type": "@id" }],
+  "howToUse": ["online-service", "CI/CD"],
+  "license": "https://codescene.com/hubfs/web_docs/CodeScene_Terms-and-Conditions.pdf",
+  "applicationCategory": [
+    { "@id": "rs:AnalysisCode", "@type": "@id" },
+    { "@id": "rs:PrototypeTool", "@type": "@id" }
+  ],
+  "measuresQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/code_smells_ok",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/cyclomatic_complexity_ok",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/code_duplication_ok",
+      "@type": "@id"
+    },
+    {
+      "@id": "https://w3id.org/everse/i/indicators/internal_cohesion_ok",
+      "@type": "@id"
+    }
+  ],
+  "improvesQualityIndicator": [
+    {
+      "@id": "https://w3id.org/everse/i/indicators/uses_tool_for_warnings_and_mistakes",
+      "@type": "@id"
+    }
+  ]
+}
