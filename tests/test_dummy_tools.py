@@ -109,8 +109,29 @@ def test_valid_tool():
     validate(instance=valid_tool, schema=schema)
 
 
+def test_optional_comparison_metadata():
+    """Optional comparison fields are accepted without being required."""
+    tool = {
+        **valid_tool,
+        "codeRepository": "https://github.com/example/tool",
+        "documentationUrl": "https://example.com/docs",
+        "primaryPurpose": "Analyze software.",
+        "featureList": ["Reports metrics."],
+        "targetUsers": ["Researchers"],
+        "keywords": ["analysis", "research"],
+    }
+    validate(instance=tool, schema=schema)
+
+
 @pytest.mark.parametrize("tool", invalid_tools)
 def test_invalid_tools(tool):
     """Tests that invalid tools fail validation."""
+    with pytest.raises(ValidationError):
+        validate(instance=tool, schema=schema)
+
+
+def test_invalid_optional_comparison_metadata():
+    """Optional comparison fields still enforce their declared types."""
+    tool = {**valid_tool, "featureList": "Not an array"}
     with pytest.raises(ValidationError):
         validate(instance=tool, schema=schema)
