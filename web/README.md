@@ -53,6 +53,15 @@ web/
 	- `/tool/:id` -> tool detail view
 	- `/about` -> about page
 
+## Analytics and privacy
+
+The Matomo tracker in `index.html` records the initial page view for site ID 12.
+`MatomoTracker` in `src/App.jsx` records subsequent in-app route changes, including the
+URL for each hash route. The provided Matomo snippet's default cookie behavior is enabled;
+this integration does not add a separate consent banner. The site links to the
+[EVERSE privacy policy](https://everse.software/privacy/), which states that anonymized
+usage data is collected and cookies may be set.
+
 ## Data Source and Loader
 
 Tool data comes from JSON files in `../quality-tools` (outside `web/`).
