@@ -50,7 +50,8 @@ web/
 - The app uses `HashRouter` (`#/...` routes), which is GitHub Pages-friendly.
 - Route mapping is defined in `src/App.jsx`:
 	- `/` -> catalog home
-	- `/tool/:id` -> tool detail view
+	- `/tool/:id` -> tool detail
+	- `/compare?tools=<id,...>` -> compare selected catalog tools view
 	- `/about` -> about page
 
 ## Analytics and privacy

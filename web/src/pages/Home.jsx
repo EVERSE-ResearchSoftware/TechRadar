@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useEffect, useCallback } from 'react';
 import { getAllTools, getQualityDimensions, getFilterOptions, getQualityIndicatorIds } from '../data/loader';
 import { getDimensionColor } from '../data/colors';
-import { Link, useSearchParams } from 'react-router-dom';
+import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { Search, Filter, Menu, X } from 'lucide-react';
 import FilterSidebar from '../components/FilterSidebar';
 import Radar from '../components/Radar';
@@ -27,7 +27,13 @@ const Home = () => {
     // The `dimension` query param is the single source of truth for the selected
     // dimension, so links (from RSQKit or elsewhere) work without any extra state.
     const [searchParams, setSearchParams] = useSearchParams();
+    const navigate = useNavigate();
     const selectedDim = searchParams.get('dimension') || '';
+    const availableToolIds = new Set(tools.map(tool => tool._filename));
+    const selectedToolIds = Array.from(new Set(
+        (searchParams.get('tools') || '').split(',').filter(Boolean)
+    )).filter(id => availableToolIds.has(id));
+    const selectedToolIdSet = new Set(selectedToolIds);
 
     const [search, setSearch] = useState('');
     const [showMobileFilters, setShowMobileFilters] = useState(false);
@@ -43,6 +49,32 @@ const Home = () => {
             return next;
         }, { replace: true });
     }, [setSearchParams]);
+
+    const toggleCompareTool = (toolId) => {
+        setSearchParams(prev => {
+            const next = new URLSearchParams(prev);
+            const selected = new Set(
+                (next.get('tools') || '').split(',').filter(id => availableToolIds.has(id))
+            );
+            if (selected.has(toolId)) {
+                selected.delete(toolId);
+            } else {
+                selected.add(toolId);
+            }
+
+            if (selected.size > 0) {
+                next.set('tools', Array.from(selected).join(','));
+            } else {
+                next.delete('tools');
+            }
+            return next;
+        }, { replace: true });
+    };
+
+    const openComparison = () => {
+        const params = new URLSearchParams({ tools: selectedToolIds.join(',') });
+        navigate({ pathname: '/compare', search: `?${params.toString()}` });
+    };
 
     // Land directly on the filtered catalog when arriving via a dimension deep link.
     useEffect(() => {
@@ -263,53 +295,101 @@ const Home = () => {
                 </div>
 
                 <div className="flex-1 w-full">
+                    <div className="glass-panel p-4 mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                        <p className="text-sm text-slate-600" aria-live="polite">
+                            {selectedToolIds.length === 0
+                                ? 'Want to compare tools? Select at least two tools to compare their capabilities.'
+                                : `${selectedToolIds.length} ${selectedToolIds.length === 1 ? 'tool' : 'tools'} selected`}
+                        </p>
+                        <div className="flex items-center gap-3">
+                            {selectedToolIds.length > 0 && (
+                                <button
+                                    type="button"
+                                    onClick={() => setSearchParams(prev => {
+                                        const next = new URLSearchParams(prev);
+                                        next.delete('tools');
+                                        return next;
+                                    }, { replace: true })}
+                                    className="text-sm font-medium text-slate-600 hover:text-slate-900 underline"
+                                >
+                                    Clear selection
+                                </button>
+                            )}
+                            <button
+                                type="button"
+                                onClick={openComparison}
+                                disabled={selectedToolIds.length < 2}
+                                className="px-4 py-2 bg-sky-700 hover:bg-sky-800 disabled:bg-slate-300 disabled:cursor-not-allowed text-white font-medium rounded-lg transition-colors"
+                            >
+                                Compare tools
+                            </button>
+                        </div>
+                    </div>
                     <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
                         {filteredTools.map(tool => (
-                            <Link
+                            <article
                                 key={tool._filename}
-                                to={`/tool/${tool._filename}`}
-                                className="glass-panel p-6 hover:bg-slate-50 transition-all duration-300 hover:-translate-y-1 group flex flex-col"
+                                className="glass-panel p-6 hover:bg-slate-50 transition-all duration-300 hover:-translate-y-1 flex flex-col"
                             >
-                                <div className="flex justify-between items-start mb-4">
-                                    <h3 className="text-xl font-semibold text-sky-600 group-hover:text-sky-700">{tool.name}</h3>
-                                    {tool.isAccessibleForFree === true && (
-                                        <span className="flex-shrink-0 ml-2 px-2 py-1 text-xs rounded-full bg-green-100 text-green-700 border border-green-200">
-                                            Free
-                                        </span>
-                                    )}
-                                    {tool.isAccessibleForFree === false && (
-                                        <span className="flex-shrink-0 ml-2 px-2 py-1 text-xs rounded-full bg-amber-100 text-amber-700 border border-amber-200">
-                                            Not free
-                                        </span>
-                                    )}
+                                <div className="flex justify-between items-start gap-3 mb-4">
+                                    <Link to={`/tool/${tool._filename}`} className="group min-w-0">
+                                        <h3 className="text-xl font-semibold text-sky-600 group-hover:text-sky-700">{tool.name}</h3>
+                                    </Link>
+                                    <div className="flex flex-col items-end gap-2 flex-shrink-0">
+                                        <label className="inline-flex items-center gap-1.5 text-xs font-medium text-slate-600 cursor-pointer">
+                                            <input
+                                                type="checkbox"
+                                                checked={selectedToolIdSet.has(tool._filename)}
+                                                onChange={() => toggleCompareTool(tool._filename)}
+                                                aria-label={`Select ${tool.name} to compare`}
+                                                className="h-4 w-4 rounded border-slate-300 accent-sky-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-500 focus-visible:ring-offset-2"
+                                            />
+                                            Compare
+                                        </label>
+                                        {tool.isAccessibleForFree === true && (
+                                            <span className="px-2 py-1 text-xs rounded-full bg-green-100 text-green-700 border border-green-200">
+                                                Free
+                                            </span>
+                                        )}
+                                        {tool.isAccessibleForFree === false && (
+                                            <span className="px-2 py-1 text-xs rounded-full bg-amber-100 text-amber-700 border border-amber-200">
+                                                Not free
+                                            </span>
+                                        )}
+                                    </div>
                                 </div>
-                                <p className="text-slate-500 text-sm line-clamp-3 mb-4 flex-1">
-                                    {tool.description?.replace(/\*\*|__|\*|_|`/g, '')}
-                                </p>
-                                <div className="flex flex-wrap gap-2 mt-auto">
-                                    {tool.hasQualityDimension && (
-                                        (Array.isArray(tool.hasQualityDimension) ? tool.hasQualityDimension : [tool.hasQualityDimension])
-                                            .slice(0, 3)
-                                            .map((dim, i) => {
-                                                const dimName = dim['@id'].replace('dim:', '');
-                                                const color = getDimensionColor(dimName, dimensions);
-                                                return (
-                                                    <span
-                                                        key={i}
-                                                        className="text-xs px-2 py-1 rounded-md border"
-                                                        style={{
-                                                            backgroundColor: `${color}10`, // 10% opacity
-                                                            borderColor: `${color}40`,     // 40% opacity
-                                                            color: color
-                                                        }}
-                                                    >
-                                                        {dimName}
-                                                    </span>
-                                                );
-                                            })
-                                    )}
-                                </div>
-                            </Link>
+                                <Link
+                                    to={`/tool/${tool._filename}`}
+                                    className="flex flex-col flex-1"
+                                >
+                                    <p className="text-slate-500 text-sm line-clamp-3 mb-4 flex-1">
+                                        {tool.description?.replace(/\*\*|__|\*|_|`/g, '')}
+                                    </p>
+                                    <div className="flex flex-wrap gap-2 mt-auto">
+                                        {tool.hasQualityDimension && (
+                                            (Array.isArray(tool.hasQualityDimension) ? tool.hasQualityDimension : [tool.hasQualityDimension])
+                                                .slice(0, 3)
+                                                .map((dim, i) => {
+                                                    const dimName = dim['@id'].replace('dim:', '');
+                                                    const color = getDimensionColor(dimName, dimensions);
+                                                    return (
+                                                        <span
+                                                            key={i}
+                                                            className="text-xs px-2 py-1 rounded-md border"
+                                                            style={{
+                                                                backgroundColor: `${color}10`,
+                                                                borderColor: `${color}40`,
+                                                                color: color
+                                                            }}
+                                                        >
+                                                            {dimName}
+                                                        </span>
+                                                    );
+                                                })
+                                        )}
+                                    </div>
+                                </Link>
+                            </article>
                         ))}
                     </div>
 

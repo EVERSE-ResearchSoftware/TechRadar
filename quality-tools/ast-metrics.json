@@ -20,6 +20,16 @@
     "@id": "dim:maintainability",
     "@type": "@id"
   },
+  "primaryPurpose": "Measure code quality and highlight regressions in pull requests.",
+  "featureList": [
+    "Measures complexity, architecture, coupling, bus factor, and test quality",
+    "Flags only metrics that have worsened in a pull request",
+    "Runs offline with deterministic results"
+  ],
+  "targetUsers": ["Researchers and developers maintaining codebases"],
+  "keywords": ["static analysis", "code metrics", "pull request review"],
+  "codeRepository": "https://github.com/ast-metrics/ast-metrics",
+  "documentationUrl": "https://ast-metrics.dev/",
   "howToUse": ["CI/CD", "command-line"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/MIT",
