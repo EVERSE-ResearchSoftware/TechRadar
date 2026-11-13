@@ -1,0 +1,35 @@
+{
+  "@context": "https://w3id.org/everse/rs#",
+  "@id": "https://w3id.org/everse/tools/slack",
+  "@type": "schema:SoftwareApplication",
+  "name": "Slack",
+  "description": "Slack is an online messaging platform that organizes team conversations into channels and supports sharing files and integrating project tools. Research software teams can use it to maintain communication channels for coordination and community engagement.",
+  "url": "https://slack.com/",
+  "isAccessibleForFree": true,
+  "license": "https://slack.com/terms-of-service",
+  "applicationCategory": [
+    {
+      "@id": "rs:PrototypeTool",
+      "@type": "@id"
+    },
+    {
+      "@id": "rs:ResearchInfrastructureSoftware",
+      "@type": "@id"
+    }
+  ],
+  "hasQualityDimension": [
+    {
+      "@id": "dim:community",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:sustainability",
+      "@type": "@id"
+    }
+  ],
+  "improvesQualityIndicator": {
+    "@id": "https://w3id.org/everse/i/indicators/has_active_communication_channels",
+    "@type": "@id"
+  },
+  "howToUse": ["online-service"]
+}
