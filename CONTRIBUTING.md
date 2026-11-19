@@ -69,12 +69,11 @@ Aim for clarity, completeness, and evidence. Prefer concise, user-focused descri
 - **name:** Use the official tool/service name; ensure the file name is unique and stable.
 - **description:** State what the tool improves (e.g., maintainability, security), for whom, and how. Extra information is welcome but keep it focused.
 - **url:** Link to the official homepage or repository.
-- **Optional comparison metadata:** Add `primaryPurpose` (string), `featureList` (array of
-  strings), `targetUsers` (array of strings), `keywords` (string or array),
-  `documentationUrl` (URL), and `codeRepository` (URL) when the tool's official
-  documentation supports them. These fields are optional and can be added incrementally.
-  GitHub stars and last code update are fetched from `codeRepository` rather than stored
-  as values that would quickly become stale.
+- **Optional comparison metadata:** `codeRepository` and `documentation` (URLs),
+  `keywords`, and optionally `featureList` (strings). These fields can be added
+  incrementally when supported by the tool's official sources. GitHub stars and last code
+  update are fetched from `codeRepository` rather than stored as values that would quickly
+  become stale.
 - **hasQualityDimension:** Quality dimension related to the tool, must exist in [EVERSE Quality Dimensions](https://everse.software/indicators/website/dimensions.html).
 - **measuresQualityIndicator:** Quality indicator(s) the tool measures, must exist in [EVERSE Quality Indicators](https://everse.software/indicators/website/indicators.html).
 - **improvesQualityIndicator:**Quality indicator(s) the tool improves, must exist in [EVERSE Quality Indicators](https://everse.software/indicators/website/indicators.html).

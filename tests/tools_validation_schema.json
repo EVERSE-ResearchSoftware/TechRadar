@@ -80,26 +80,13 @@
       "type": "string",
       "format": "uri"
     },
-    "documentationUrl": {
+    "documentation": {
       "description": "URL of the tool's documentation",
       "type": "string",
       "format": "uri"
     },
-    "primaryPurpose": {
-      "description": "A concise statement of the tool's primary purpose",
-      "type": "string",
-      "minLength": 1
-    },
     "featureList": {
       "description": "Key features of the tool",
-      "type": "array",
-      "items": {
-        "type": "string",
-        "minLength": 1
-      }
-    },
-    "targetUsers": {
-      "description": "People or roles the tool is intended for",
       "type": "array",
       "items": {
         "type": "string",

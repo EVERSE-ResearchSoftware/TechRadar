@@ -187,19 +187,15 @@ const CompareTools = () => {
             render: tool => tool.description || <MissingValue />,
         },
         {
-            label: 'Primary purpose',
-            render: tool => tool.primaryPurpose || <MissingValue />,
-        },
-        {
             label: 'Key features',
             render: tool => tool.featureList?.length
                 ? <ValueList values={tool.featureList} />
                 : <MissingValue />,
         },
         {
-            label: 'Target users',
-            render: tool => tool.targetUsers?.length
-                ? <ValueList values={tool.targetUsers} />
+            label: 'Keywords',
+            render: tool => tool.keywords
+                ? <ValueList values={tool.keywords} />
                 : <MissingValue />,
         },
         {
@@ -237,8 +233,8 @@ const CompareTools = () => {
         },
         {
             label: 'Documentation',
-            render: tool => tool.documentationUrl
-                ? <span className="inline-flex flex-wrap items-center gap-2"><span aria-label="Documentation available">✓ Yes</span><Website url={tool.documentationUrl} label="Read documentation" /></span>
+            render: tool => tool.documentation
+                ? <span className="inline-flex flex-wrap items-center gap-2"><span aria-label="Documentation available">✓ Yes</span><Website url={tool.documentation} label="Read documentation" /></span>
                 : <span aria-label="Documentation not specified">Not specified in catalog</span>,
         },
         {

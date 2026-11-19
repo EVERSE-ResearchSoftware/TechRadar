@@ -114,10 +114,8 @@ def test_optional_comparison_metadata():
     tool = {
         **valid_tool,
         "codeRepository": "https://github.com/example/tool",
-        "documentationUrl": "https://example.com/docs",
-        "primaryPurpose": "Analyze software.",
+        "documentation": "https://example.com/docs",
         "featureList": ["Reports metrics."],
-        "targetUsers": ["Researchers"],
         "keywords": ["analysis", "research"],
     }
     validate(instance=tool, schema=schema)
