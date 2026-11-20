@@ -10,6 +10,20 @@
   "license": "https://spdx.org/licenses/AGPL-3.0-or-later",
   "name": "SQAaas",
   "url": "https://sqaaas.eosc-synergy.eu/",
+  "codeRepository": "https://github.com/EOSC-synergy/SQAaaS",
+  "documentation": "https://github.com/EOSC-synergy/SQAaaS#readme",
+  "keywords": [
+    "software quality assurance",
+    "quality pipelines",
+    "API",
+    "web GUI",
+    "Kubernetes"
+  ],
+  "featureList": [
+    "Provides a web GUI and API server",
+    "Uses Jenkins pipeline components and reporting plugins",
+    "Includes Kubernetes manifests for API deployment"
+  ],
   "improvesQualityIndicator": [
     {
       "@id": "https://w3id.org/everse/i/indicators/dependency_management",

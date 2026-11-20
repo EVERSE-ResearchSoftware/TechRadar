@@ -16,6 +16,9 @@
   "license": "https://spdx.org/licenses/MPL-2.0",
   "name": "SCANOSS",
   "url": "https://www.scanoss.com/",
+  "codeRepository": "https://github.com/scanoss/engine",
+  "keywords": ["open-source inventory", "source code", "software components"],
+  "featureList": ["Provides an open-source inventory engine"],
   "measuresQualityIndicator": [
     {
       "@id": "https://w3id.org/everse/i/indicators/software_has_license",

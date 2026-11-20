@@ -13,6 +13,18 @@
   "license": "https://spdx.org/licenses/0BSD",
   "name": "F-UJI",
   "url": "https://github.com/softwaresaved/fuji/",
+  "codeRepository": "https://github.com/pangaea-data-publisher/fuji",
+  "documentation": "https://github.com/pangaea-data-publisher/fuji#readme",
+  "keywords": [
+    "FAIR assessment",
+    "research data",
+    "metadata",
+    "assessment service"
+  ],
+  "featureList": [
+    "Programmatically assess FAIRness of research data objects using metrics",
+    "Aggregate metadata from object pages and related services"
+  ],
   "measuresQualityIndicator": {
     "@id": "https://w3id.org/everse/i/indicators/software_has_license"
   }

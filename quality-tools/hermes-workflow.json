@@ -26,6 +26,19 @@
   "license": "https://spdx.org/licenses/Apache-2.0",
   "name": "Hermes Workflows",
   "url": "https://hermes.software-metadata.pub/en/latest/",
+  "codeRepository": "https://github.com/hermes-hmc/hermes",
+  "documentation": "https://hermes.software-metadata.pub/en/latest/",
+  "keywords": [
+    "research software",
+    "software publishing",
+    "metadata",
+    "continuous integration"
+  ],
+  "featureList": [
+    "Automates research software publication through CI workflows",
+    "Harvests, collates, and prepares metadata for curation",
+    "Supports submission to publication repositories"
+  ],
   "improvesQualityIndicator": [
     {
       "@id": "https://w3id.org/everse/i/indicators/descriptive_metadata",

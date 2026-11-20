@@ -5,6 +5,12 @@
   "name": "Five Recommendations for FAIR Software",
   "description": "Guided approaches to assess the FAIRness of research software: Asking a series of questions to a human. You assess yourself as to whether your resources satisfy FAIR principles. Does not explicitly use FAIR4RS principles.",
   "url": "https://fair-software.nl/",
+  "documentation": "https://fair-software.nl/",
+  "keywords": [
+    "FAIR software",
+    "software recommendations",
+    "research software"
+  ],
   "isAccessibleForFree": true,
   "hasQualityDimension": { "@id": "dim:fairness", "@type": "@id" },
   "howToUse": ["online-service"],

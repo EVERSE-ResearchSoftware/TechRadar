@@ -5,6 +5,20 @@
   "name": "MkDocs",
   "description": "Static site generator designed for project documentation that creates professional documentation websites from Markdown files, improving research software usability and interaction capability through clear documentation.",
   "url": "https://www.mkdocs.org/",
+  "codeRepository": "https://github.com/mkdocs/mkdocs",
+  "documentation": "https://www.mkdocs.org/",
+  "keywords": [
+    "static site generator",
+    "project documentation",
+    "Markdown",
+    "Python"
+  ],
+  "featureList": [
+    "Builds static HTML project documentation from Markdown",
+    "Uses a YAML configuration file",
+    "Provides a live-reloading development server",
+    "Supports themes and plugins"
+  ],
   "isAccessibleForFree": true,
   "hasQualityDimension": [
     { "@id": "dim:interaction_capability", "@type": "@id" },

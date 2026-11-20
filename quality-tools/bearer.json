@@ -25,6 +25,14 @@
   "license": "https://spdx.org/licenses/Elastic-2.0",
   "name": "bearer",
   "url": "https://github.com/bearer/bearer",
+  "codeRepository": "https://github.com/bearer/bearer",
+  "documentation": "https://docs.bearer.com/",
+  "keywords": ["SAST", "data flow", "security", "privacy"],
+  "featureList": [
+    "Scans source code for security and privacy risks",
+    "Analyzes data flows",
+    "Generates privacy and data-flow reports"
+  ],
   "measuresQualityIndicator": [
     {
       "@id": "https://w3id.org/everse/i/indicators/no_critical_vulnerability",

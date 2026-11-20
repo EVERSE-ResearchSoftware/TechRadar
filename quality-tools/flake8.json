@@ -5,6 +5,14 @@
   "name": "flake8",
   "description": "Python linting tool that combines multiple code quality checkers to identify style violations, programming errors, and complexity issues, improving research software maintainability through comprehensive code analysis.",
   "url": "https://flake8.pycqa.org/",
+  "codeRepository": "https://github.com/PyCQA/flake8",
+  "documentation": "https://flake8.pycqa.org/",
+  "keywords": ["Python", "linting", "style guide", "code quality"],
+  "featureList": [
+    "Combine PyFlakes, pycodestyle, and McCabe checks",
+    "Support plugins",
+    "Allow warnings to be ignored or selected"
+  ],
   "isAccessibleForFree": true,
   "hasQualityDimension": {
     "@id": "dim:maintainability",

@@ -5,6 +5,18 @@
   "name": "Zenodo GitHub Integration",
   "description": "Zenodo archives your repository and issues a new DOI each time you create a new GitHub release",
   "url": "https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content",
+  "documentation": "https://support.zenodo.org/help/en-gb/24-github-integration",
+  "keywords": [
+    "GitHub integration",
+    "Zenodo",
+    "DOI",
+    "software archiving",
+    "citation"
+  ],
+  "featureList": [
+    "Archives a GitHub repository and issues a DOI",
+    "Creates a new DOI for each GitHub release"
+  ],
   "isAccessibleForFree": true,
   "hasQualityDimension": [
     {

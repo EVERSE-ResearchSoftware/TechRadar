@@ -5,6 +5,14 @@
   "name": "poetry",
   "description": "Python packaging and dependency management made easy",
   "url": "https://python-poetry.org/",
+  "codeRepository": "https://github.com/python-poetry/poetry",
+  "documentation": "https://python-poetry.org/docs/",
+  "keywords": ["Python", "dependency management", "packaging", "lockfile"],
+  "featureList": [
+    "Manages Python project dependencies",
+    "Provides lockfiles for repeatable installs",
+    "Builds and publishes Python packages"
+  ],
   "isAccessibleForFree": true,
   "hasQualityDimension": [
     {

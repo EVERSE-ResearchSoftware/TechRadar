@@ -13,6 +13,18 @@
   "license": "https://spdx.org/licenses/GPL-2.0-only",
   "name": "Git",
   "url": "https://git-scm.com/",
+  "codeRepository": "https://git.kernel.org/pub/scm/git/git.git",
+  "documentation": "https://git-scm.com/docs",
+  "keywords": [
+    "version control",
+    "distributed",
+    "source code",
+    "collaboration"
+  ],
+  "featureList": [
+    "Distributed version control",
+    "Handles projects from small to very large"
+  ],
   "improvesQualityIndicator": [
     {
       "@id": "https://w3id.org/everse/i/indicators/has_releases",

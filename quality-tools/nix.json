@@ -17,6 +17,19 @@
   "license": "https://spdx.org/licenses/LGPL-2.1-or-later",
   "name": "Nix",
   "url": "https://nixos.org/",
+  "codeRepository": "https://github.com/NixOS/nix",
+  "documentation": "https://nix.dev/manual/nix/latest/",
+  "keywords": [
+    "package manager",
+    "functional",
+    "reproducible builds",
+    "declarative"
+  ],
+  "featureList": [
+    "Builds packages in isolation",
+    "Supports multiple package versions and atomic rollbacks",
+    "Provides multi-user package management"
+  ],
   "improvesQualityIndicator": [
     {
       "@id": "https://w3id.org/everse/i/indicators/dependency_management",

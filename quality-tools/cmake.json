@@ -22,6 +22,15 @@
   "license": "https://spdx.org/licenses/BSD-3-Clause",
   "name": "CMake",
   "url": "https://cmake.org/",
+  "codeRepository": "https://gitlab.kitware.com/cmake/cmake",
+  "documentation": "https://cmake.org/documentation/",
+  "keywords": ["build system", "C++", "cross-platform", "testing"],
+  "featureList": [
+    "Supports single-source builds across platforms",
+    "Provides out-of-source builds",
+    "Supports multiple target build systems",
+    "Includes cross-platform packaging, installation, and testing systems"
+  ],
   "improvesQualityIndicator": [
     {
       "@id": "https://w3id.org/everse/i/indicators/dependency_management",

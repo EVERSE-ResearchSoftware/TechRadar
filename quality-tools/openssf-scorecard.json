@@ -32,6 +32,19 @@
   "license": "https://spdx.org/licenses/Apache-2.0",
   "name": "OpenSSF Scorecard",
   "url": "https://github.com/ossf/scorecard",
+  "codeRepository": "https://github.com/ossf/scorecard",
+  "documentation": "https://scorecard.dev/",
+  "keywords": [
+    "open source security",
+    "security checks",
+    "supply chain",
+    "risk assessment"
+  ],
+  "featureList": [
+    "Runs automated checks to assess open-source project security risks",
+    "Can run from the command line or as a GitHub Action",
+    "Returns a score and risk level for each check"
+  ],
   "improvesQualityIndicator": [
     {
       "@id": "https://w3id.org/everse/i/indicators/no_critical_vulnerability",

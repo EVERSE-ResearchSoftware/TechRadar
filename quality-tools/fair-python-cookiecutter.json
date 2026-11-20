@@ -11,6 +11,19 @@
   "license": "https://spdx.org/licenses/MIT",
   "name": "Fair Python Cookiecutter",
   "url": "https://github.com/Materials-Data-Science-and-Informatics/fair-python-cookiecutter",
+  "codeRepository": "https://github.com/Materials-Data-Science-and-Informatics/fair-python-cookiecutter",
+  "documentation": "https://materials-data-science-and-informatics.github.io/fair-python-cookiecutter/",
+  "keywords": [
+    "Python project template",
+    "FAIR metadata",
+    "Cookiecutter",
+    "research software"
+  ],
+  "featureList": [
+    "Generate a Python project from an interactive template",
+    "Support project metadata standards including REUSE, CITATION.cff, and CodeMeta",
+    "Offer optional example CLI and API code"
+  ],
   "improvesQualityIndicator": [
     {
       "@id": "https://w3id.org/everse/i/indicators/software_has_license",

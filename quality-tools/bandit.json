@@ -11,6 +11,14 @@
   "license": "https://spdx.org/licenses/Apache-2.0",
   "name": "bandit",
   "url": "https://github.com/PyCQA/bandit",
+  "codeRepository": "https://github.com/PyCQA/bandit",
+  "documentation": "https://bandit.readthedocs.io/en/latest/",
+  "keywords": ["Python", "security", "static analysis", "AST"],
+  "featureList": [
+    "Scans Python code for common security issues",
+    "Runs plugins against Python AST nodes",
+    "Generates scan reports"
+  ],
   "improvesQualityIndicator": [
     {
       "@id": "https://w3id.org/everse/i/indicators/static_analysis_common_vulnerabilities",

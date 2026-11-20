@@ -17,6 +17,20 @@
   "license": "https://spdx.org/licenses/Apache-2.0",
   "name": "Kubernetes",
   "url": "https://kubernetes.io/",
+  "codeRepository": "https://github.com/kubernetes/kubernetes",
+  "documentation": "https://kubernetes.io/docs/",
+  "keywords": [
+    "container orchestration",
+    "deployment",
+    "scaling",
+    "cluster management"
+  ],
+  "featureList": [
+    "Automates deployment, scaling, and management of containerized workloads",
+    "Provides service discovery and load balancing",
+    "Supports automated rollouts and rollbacks",
+    "Provides storage orchestration and self-healing"
+  ],
   "improvesQualityIndicator": [
     {
       "@id": "https://w3id.org/everse/i/indicators/requirements_specified",

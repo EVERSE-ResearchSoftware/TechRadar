@@ -16,6 +16,12 @@
   "license": "https://spdx.org/licenses/AGPL-3.0-or-later",
   "name": "Auto-CodeMeta Generator",
   "url": "https://w3id.org/autocodemeta",
+  "documentation": "https://w3id.org/autocodemeta",
+  "keywords": ["CodeMeta", "software metadata", "repository metadata", "JSON"],
+  "featureList": [
+    "Completes metadata from a repository URL",
+    "Generates a CodeMeta file"
+  ],
   "improvesQualityIndicator": [
     {
       "@id": "https://w3id.org/everse/i/indicators/descriptive_metadata",

@@ -54,5 +54,13 @@
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/MIT",
   "name": "Dependabot",
-  "url": "https://docs.github.com/en/code-security/dependabot"
+  "url": "https://docs.github.com/en/code-security/dependabot",
+  "codeRepository": "https://github.com/dependabot/dependabot-core",
+  "documentation": "https://docs.github.com/en/code-security/dependabot",
+  "keywords": [
+    "dependency updates",
+    "supply-chain security",
+    "security updates"
+  ],
+  "featureList": ["Creates pull requests for dependency updates"]
 }

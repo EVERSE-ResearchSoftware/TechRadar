@@ -5,6 +5,13 @@
   "name": "CppUnit",
   "description": "Unit testing framework for C++ that enables systematic testing of research software components, improving code reliability and maintainability through automated test execution and comprehensive testing capabilities.",
   "url": "https://www.freedesktop.org/wiki/Software/cppunit/",
+  "documentation": "https://www.freedesktop.org/wiki/Software/cppunit/",
+  "keywords": ["C++", "unit testing", "test framework", "XML"],
+  "featureList": [
+    "Provides a C++ unit-testing framework",
+    "Supports XML output for automated testing",
+    "Supports GUI-based output for supervised tests"
+  ],
   "applicationCategory": [
     { "@id": "rs:PrototypeTool", "@type": "@id" },
     { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" }

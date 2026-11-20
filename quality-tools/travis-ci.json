@@ -22,6 +22,18 @@
   "license": "https://spdx.org/licenses/MIT",
   "name": "Travis CI",
   "url": "https://travis-ci.com/",
+  "documentation": "https://docs.travis-ci.com/",
+  "keywords": [
+    "continuous integration",
+    "CI/CD",
+    "testing",
+    "deployment",
+    "build automation"
+  ],
+  "featureList": [
+    "Builds testing and deployment pipelines",
+    "Supports parallel and multi-environment builds"
+  ],
   "improvesQualityIndicator": [
     {
       "@id": "https://w3id.org/everse/i/indicators/repository_workflows",

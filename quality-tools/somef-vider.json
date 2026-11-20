@@ -13,6 +13,16 @@
   "license": "https://spdx.org/licenses/MIT",
   "name": "SOMEF-Vider",
   "url": "https://github.com/SoftwareUnderstanding/SOMEF-Vider/",
+  "codeRepository": "https://github.com/SoftwareUnderstanding/SOMEF-Vider",
+  "documentation": "https://github.com/SoftwareUnderstanding/SOMEF-Vider#readme",
+  "keywords": [
+    "software metadata",
+    "metadata visualization",
+    "web application",
+    "Vue.js",
+    "Flask"
+  ],
+  "featureList": ["Visualizes metadata retrieved from the SOMEF API"],
   "measuresQualityIndicator": [
     {
       "@id": "https://w3id.org/everse/i/indicators/software_has_license",

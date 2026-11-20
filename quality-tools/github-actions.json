@@ -5,6 +5,13 @@
   "name": "GitHub Actions",
   "description": "CI/CD platform integrated with GitHub that automates research software testing, building, and deployment, improving software reliability and sustainability through automated quality checks.",
   "url": "https://github.com/features/actions",
+  "documentation": "https://docs.github.com/actions",
+  "keywords": ["CI/CD", "workflow automation", "build", "test", "deploy"],
+  "featureList": [
+    "Builds, tests, and deploys code from GitHub",
+    "Runs workflows in response to GitHub events",
+    "Uses hosted or self-hosted runners and matrix builds"
+  ],
   "isAccessibleForFree": true,
   "license": "https://docs.github.com/en/site-policy/github-terms/github-terms-for-additional-products-and-features",
   "applicationCategory": [

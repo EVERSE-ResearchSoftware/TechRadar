@@ -16,6 +16,12 @@
   "license": "https://spdx.org/licenses/CC0-1.0",
   "name": "Creative Commons License Chooser",
   "url": "https://chooser-beta.creativecommons.org/",
+  "keywords": ["Creative Commons", "license chooser", "CC0", "attribution"],
+  "featureList": [
+    "Guides users through license selection",
+    "Offers attribution and commercial-use options",
+    "Provides license marks in HTML and plain text"
+  ],
   "improvesQualityIndicator": [
     {
       "@id": "https://w3id.org/everse/i/indicators/software_has_license",
