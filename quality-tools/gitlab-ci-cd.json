@@ -17,20 +17,6 @@
       "@type": "@id"
     }
   ],
-  "improvesQualityIndicator": [
-    {
-      "@id": "https://w3id.org/everse/i/indicators/repository_workflows",
-      "@type": "@id"
-    },
-    {
-      "@id": "https://w3id.org/everse/i/indicators/software_has_tests",
-      "@type": "@id"
-    },
-    {
-      "@id": "https://w3id.org/everse/i/indicators/has_ci-tests",
-      "@type": "@id"
-    }
-  ],
   "howToUse": ["CI/CD", "command-line", "online-service"],
   "isAccessibleForFree": false,
   "license": "https://spdx.org/licenses/MIT",
@@ -46,7 +32,7 @@
       "@type": "@id"
     },
     {
-      "@id": "https://w3id.org/everse/i/indicators/has_ci-tests",
+      "@id": "https://w3id.org/everse/i/indicators/has_ci_tests",
       "@type": "@id"
     }
   ]
