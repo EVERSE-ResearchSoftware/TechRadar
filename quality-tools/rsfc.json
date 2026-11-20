@@ -13,6 +13,18 @@
   "license": "https://spdx.org/licenses/MIT",
   "name": "RSFC",
   "url": "https://github.com/oeg-upm/rsfc",
+  "codeRepository": "https://github.com/oeg-upm/rsfc",
+  "documentation": "https://oeg-upm.github.io/rsfc/doc/catalog.html",
+  "keywords": [
+    "research software",
+    "FAIRness",
+    "quality indicators",
+    "repository assessment"
+  ],
+  "featureList": [
+    "Assesses GitHub or GitLab repositories against research software quality indicators",
+    "Runs checks remotely or in local offline mode"
+  ],
   "measuresQualityIndicator": [
     {
       "@id": "https://w3id.org/everse/i/indicators/software_has_license",

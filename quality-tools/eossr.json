@@ -5,6 +5,14 @@
   "name": "eOSSR",
   "description": "Python library for programmatically managing the ESCAPE Open Source Software Repository (OSSR) that includes CodeMeta generator and validator tools, supporting research software FAIRness and metadata management for scientific code repositories.",
   "url": "https://gitlab.com/escape-ossr/eossr",
+  "codeRepository": "https://gitlab.com/escape-ossr/eossr",
+  "documentation": "https://escape-ossr.gitlab.io/eossr/",
+  "keywords": ["Python library", "ESCAPE OSSR", "Zenodo", "CodeMeta"],
+  "featureList": [
+    "Access Zenodo and OSSR records and publish content",
+    "Convert CodeMeta metadata to Zenodo metadata",
+    "Validate CodeMeta files against OSSR requirements"
+  ],
   "applicationCategory": [
     {
       "@id": "rs:PrototypeTool",

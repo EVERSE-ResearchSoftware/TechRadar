@@ -13,6 +13,20 @@
   "license": "https://spdx.org/licenses/MIT",
   "name": "Somesy",
   "url": "https://github.com/Materials-Data-Science-and-Informatics/somesy",
+  "codeRepository": "https://github.com/Materials-Data-Science-and-Informatics/somesy",
+  "documentation": "https://materials-data-science-and-informatics.github.io/somesy/main/",
+  "keywords": [
+    "software metadata synchronization",
+    "FAIR software",
+    "CLI",
+    "CodeMeta",
+    "CITATION.cff"
+  ],
+  "featureList": [
+    "Harvests project metadata from supported files and Git history",
+    "Synchronizes metadata across supported project files",
+    "Creates or updates CITATION.cff and codemeta.json"
+  ],
   "improvesQualityIndicator": [
     {
       "@id": "https://w3id.org/everse/i/indicators/descriptive_metadata",

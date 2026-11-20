@@ -5,6 +5,12 @@
   "name": "MAQAO",
   "description": "MAQAO (Modular Assembly Quality Analyzer and Optimizer) is a performance analysis and optimization framework operating at binary level with a focus on core performance. Its main goal is to guide application developers along the optimization process through synthetic reports and hints.",
   "url": "https://maqao.org/",
+  "keywords": ["performance analysis", "binary analysis", "profiling", "HPC"],
+  "featureList": [
+    "Analyzes and optimizes application performance at the binary level",
+    "Profiles time spent in functions and loops",
+    "Analyzes compiler-generated code quality and provides hints"
+  ],
   "isAccessibleForFree": true,
   "applicationCategory": [
     {

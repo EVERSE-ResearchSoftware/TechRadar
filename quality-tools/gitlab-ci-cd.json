@@ -36,6 +36,13 @@
   "license": "https://spdx.org/licenses/MIT",
   "name": "GitLab CI/CD",
   "url": "https://docs.gitlab.com/ci/",
+  "documentation": "https://docs.gitlab.com/ci/",
+  "keywords": ["CI/CD", "pipelines", "jobs", "runners", "automation"],
+  "featureList": [
+    "Defines pipelines using a CI configuration file",
+    "Organizes jobs into stages",
+    "Runs jobs using runners"
+  ],
   "improvesQualityIndicator": [
     {
       "@id": "https://w3id.org/everse/i/indicators/repository_workflows",

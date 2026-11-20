@@ -26,6 +26,19 @@
   "license": "https://spdx.org/licenses/GPL-3.0-or-later",
   "name": "GNU Guix",
   "url": "https://guix.gnu.org/",
+  "codeRepository": "https://git.guix.gnu.org/guix.git",
+  "documentation": "https://guix.gnu.org/manual/en/html_node/",
+  "keywords": [
+    "package manager",
+    "reproducible environments",
+    "GNU Guile",
+    "system configuration"
+  ],
+  "featureList": [
+    "Manages packages independently for users without superuser privileges",
+    "Creates reproducible shell environments, containers, and systems",
+    "Defines packages and system configurations using Guile Scheme"
+  ],
   "improvesQualityIndicator": [
     {
       "@id": "https://w3id.org/everse/i/indicators/has_published_package",

@@ -5,6 +5,13 @@
   "name": "JUnit",
   "description": "Comprehensive unit testing framework for Java that enables systematic testing of research software components, improving code reliability and maintainability through automated test execution and reporting.",
   "url": "https://junit.org/",
+  "codeRepository": "https://github.com/junit-team/junit-framework",
+  "documentation": "https://docs.junit.org/current/user-guide/",
+  "keywords": ["testing framework", "Java", "JVM", "developer testing"],
+  "featureList": [
+    "Provides a foundation for developer-side testing on the JVM",
+    "Enables multiple styles of testing"
+  ],
   "isAccessibleForFree": true,
   "hasQualityDimension": [
     { "@id": "dim:maintainability", "@type": "@id" },

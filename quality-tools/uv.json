@@ -5,6 +5,21 @@
   "name": "uv",
   "description": "An extremely fast Python package and project manager written in Rust. It manages Python versions, dependencies, virtual environments, lockfiles, project metadata, and package building and publishing to support reproducible software development.",
   "url": "https://github.com/astral-sh/uv",
+  "codeRepository": "https://github.com/astral-sh/uv",
+  "documentation": "https://docs.astral.sh/uv/",
+  "keywords": [
+    "Python package manager",
+    "project manager",
+    "dependency management",
+    "Python versions",
+    "Rust"
+  ],
+  "featureList": [
+    "Manages project dependencies, environments, lockfiles, and workspaces",
+    "Runs scripts and installs Python package tools",
+    "Installs and manages Python versions",
+    "Provides a pip-compatible interface"
+  ],
   "isAccessibleForFree": true,
   "license": [
     "https://spdx.org/licenses/Apache-2.0",

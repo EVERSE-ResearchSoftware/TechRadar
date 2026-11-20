@@ -5,6 +5,10 @@
   "name": "gcov",
   "description": "Gcov is a test coverage analysis tool, it considers which lines are actually executed and how often",
   "url": "https://gcc.gnu.org/onlinedocs/gcc/Gcov.html",
+  "codeRepository": "https://gcc.gnu.org/git/gcc.git",
+  "documentation": "https://gcc.gnu.org/onlinedocs/gcc/Gcov.html",
+  "keywords": ["GCC", "test coverage", "code coverage", "profiling"],
+  "featureList": ["Measures program code coverage in conjunction with GCC"],
   "isAccessibleForFree": true,
   "applicationCategory": [
     { "@id": "rs:PrototypeTool", "@type": "@id" },

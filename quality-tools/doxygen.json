@@ -29,5 +29,18 @@
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/GPL-2.0-only",
   "name": "doxygen",
-  "url": "https://www.doxygen.nl/"
+  "url": "https://www.doxygen.nl/",
+  "codeRepository": "https://github.com/doxygen/doxygen",
+  "documentation": "https://www.doxygen.nl/manual/",
+  "keywords": [
+    "documentation generator",
+    "source code",
+    "API documentation",
+    "diagrams"
+  ],
+  "featureList": [
+    "Generates documentation in HTML, PDF, RTF, and XML formats",
+    "Supports multiple programming languages",
+    "Generates cross-references and diagrams"
+  ]
 }

@@ -21,5 +21,18 @@
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/Apache-2.0",
   "name": "DVC",
-  "url": "https://dvc.org/"
+  "url": "https://dvc.org/",
+  "codeRepository": "https://github.com/treeverse/dvc",
+  "documentation": "https://dvc.org/doc",
+  "keywords": [
+    "data versioning",
+    "machine learning",
+    "data pipelines",
+    "experiment tracking"
+  ],
+  "featureList": [
+    "Version data and models",
+    "Define and run data pipelines",
+    "Track machine-learning experiments"
+  ]
 }

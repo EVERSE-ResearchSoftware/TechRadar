@@ -5,6 +5,12 @@
   "name": "GitHub Copilot",
   "description": "GitHub Copilot is an AI-powered code completion and automatic programming assistant developed by GitHub and OpenAI. It supports users across multiple integrated development environments (IDEs) including Visual Studio Code, Visual Studio, Neovim, and JetBrains by providing intelligent code suggestions and autocompletion to boost developer productivity.",
   "url": "https://github.com/features/copilot",
+  "documentation": "https://docs.github.com/en/copilot",
+  "keywords": ["AI coding assistant", "coding agent", "CLI", "IDE"],
+  "featureList": [
+    "Provides an AI coding agent",
+    "Offers a CLI and IDE integrations"
+  ],
   "applicationCategory": [
     {
       "@id": "rs:PrototypeTool",

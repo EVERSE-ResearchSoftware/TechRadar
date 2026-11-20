@@ -5,6 +5,19 @@
   "name": "pre-commit",
   "description": "A framework for managing and maintaining multi-language pre-commit hooks.",
   "url": "https://pre-commit.com/",
+  "codeRepository": "https://github.com/pre-commit/pre-commit",
+  "documentation": "https://pre-commit.com/",
+  "keywords": [
+    "Git hooks",
+    "multi-language",
+    "hook management",
+    "code quality"
+  ],
+  "featureList": [
+    "Installs and runs configured hooks before commits",
+    "Manages hook environments across programming languages",
+    "Runs hooks on changed files or the full repository"
+  ],
   "isAccessibleForFree": true,
   "applicationCategory": [
     {

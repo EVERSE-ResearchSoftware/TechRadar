@@ -5,6 +5,20 @@
   "name": "pixi",
   "description": "Pixi is a fast, modern, and reproducible package management tool for developers of all backgrounds. It is based on the conda ecosystem and allows creating reproducible software development environments and workflows for all platforms.",
   "url": "https://pixi.prefix.dev/latest/",
+  "codeRepository": "https://github.com/prefix-dev/pixi",
+  "documentation": "https://pixi.prefix.dev/latest/",
+  "keywords": [
+    "package management",
+    "reproducible environments",
+    "lockfiles",
+    "task runner"
+  ],
+  "featureList": [
+    "Manages reproducible environments with lock files",
+    "Supports multiple platforms and languages",
+    "Provides task and workspace management",
+    "Supports multiple environments in one manifest"
+  ],
   "isAccessibleForFree": true,
   "hasQualityDimension": [
     {

@@ -5,6 +5,14 @@
   "name": "Cppcheck",
   "description": "Static analysis tool for C/C++ that focuses on detecting undefined behavior, dangerous coding constructs, and real defects with low false positives; supports coding standards like MISRA and CERT, improving maintainability, reliability, security, and safety of research software.",
   "url": "https://cppcheck.sourceforge.io/",
+  "codeRepository": "https://github.com/cppcheck-opensource/cppcheck",
+  "documentation": "https://cppcheck.sourceforge.io/",
+  "keywords": ["C", "C++", "static analysis", "bug detection"],
+  "featureList": [
+    "Analyzes C and C++ code for bugs and undefined behavior",
+    "Provides command-line and graphical interfaces",
+    "Supports analysis of non-standard syntax"
+  ],
   "isAccessibleForFree": true,
   "hasQualityDimension": [
     { "@id": "dim:maintainability", "@type": "@id" },

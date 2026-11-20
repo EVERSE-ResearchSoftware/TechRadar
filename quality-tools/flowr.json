@@ -85,5 +85,14 @@
   "license": "https://spdx.org/licenses/GPL-3.0-or-later.html",
   "maintainer": "Florian Sihler, flowR Group",
   "name": "flowR",
-  "url": "https://github.com/flowr-analysis/flowr"
+  "url": "https://github.com/flowr-analysis/flowr",
+  "codeRepository": "https://github.com/flowr-analysis/flowr",
+  "documentation": "https://flowr-analysis.github.io/flowr/",
+  "keywords": ["R", "static analysis", "dataflow", "program slicing"],
+  "featureList": [
+    "Analyze dependencies in R projects",
+    "Perform forward and backward program slicing",
+    "Lint R code",
+    "Resolve values and origins"
+  ]
 }

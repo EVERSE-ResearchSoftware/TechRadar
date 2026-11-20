@@ -5,6 +5,10 @@
   "name": "Gitleaks",
   "description": "Security-focused scanner that detects secrets, passwords, and sensitive information in git repositories and files, helping protect research software and data from accidental exposure of confidential information.",
   "url": "https://github.com/gitleaks/gitleaks",
+  "codeRepository": "https://github.com/gitleaks/gitleaks",
+  "documentation": "https://gitleaks.io/",
+  "keywords": ["secret scanning", "Git", "security", "CLI"],
+  "featureList": ["Scans Git repositories, files, and directories for secrets"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/MIT",
   "applicationCategory": [

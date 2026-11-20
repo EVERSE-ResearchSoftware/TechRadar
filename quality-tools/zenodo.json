@@ -17,6 +17,20 @@
   "license": "https://spdx.org/licenses/GPL-2.0-only",
   "name": "zenodo",
   "url": "https://zenodo.org/",
+  "codeRepository": "https://github.com/zenodo/zenodo-rdm",
+  "documentation": "https://help.zenodo.org/",
+  "keywords": [
+    "research repository",
+    "open science",
+    "research data",
+    "software",
+    "citable records"
+  ],
+  "featureList": [
+    "Supports sharing, curation, and publication of research data and software",
+    "Makes research outputs citable",
+    "Provides an API for third-party tools and services"
+  ],
   "usedBy": ["ENVRI", "ESCAPE", "EOSC-Life", "PaNOSC", "SSHOC"],
   "improvesQualityIndicator": [
     {

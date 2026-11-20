@@ -26,5 +26,19 @@
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/AGPL-3.0-only",
   "name": "Renovate",
-  "url": "https://docs.renovatebot.com/"
+  "url": "https://docs.renovatebot.com/",
+  "codeRepository": "https://github.com/renovatebot/renovate",
+  "documentation": "https://docs.renovatebot.com/",
+  "keywords": [
+    "dependency updates",
+    "automation",
+    "lockfiles",
+    "package management"
+  ],
+  "featureList": [
+    "Creates pull requests for dependency and lockfile updates",
+    "Schedules update pull requests",
+    "Discovers package files, including in monorepos",
+    "Creates replacement pull requests for deprecated dependencies"
+  ]
 }

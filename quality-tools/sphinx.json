@@ -14,6 +14,20 @@
   "license": "https://spdx.org/licenses/BSD-2-Clause",
   "name": "sphinx",
   "url": "https://www.sphinx-doc.org",
+  "codeRepository": "https://github.com/sphinx-doc/sphinx",
+  "documentation": "https://www.sphinx-doc.org/en/master/",
+  "keywords": [
+    "documentation generator",
+    "reStructuredText",
+    "MyST Markdown",
+    "API documentation",
+    "HTML"
+  ],
+  "featureList": [
+    "Builds documentation in formats including HTML, LaTeX, and ePub",
+    "Supports cross-references within and across projects",
+    "Provides extensions and automatic API documentation generation"
+  ],
   "improvesQualityIndicator": [
     {
       "@id": "https://w3id.org/everse/i/indicators/software_has_documentation",
