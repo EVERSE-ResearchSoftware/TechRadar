@@ -5,6 +5,13 @@
   "name": "Pylint",
   "description": "Comprehensive Python static analysis tool that identifies programming errors, enforces coding standards, and suggests improvements, enhancing research software maintainability and code quality.",
   "url": "https://pylint.pycqa.org/",
+  "codeRepository": "https://github.com/pylint-dev/pylint",
+  "documentation": "https://pylint.readthedocs.io/en/stable/",
+  "keywords": ["linting", "static analysis"],
+  "featureList": [
+    "Lints and statically analyzes Python code",
+    "Reports diagnostics for code issues"
+  ],
   "isAccessibleForFree": true,
   "hasQualityDimension": {
     "@id": "dim:maintainability",

@@ -27,6 +27,14 @@
   "name": "SonarQube",
   "appliesToProgrammingLanguage": ["Java", "Python", "JavaScript", "C#", "C++"],
   "url": "https://www.sonarqube.org/",
+  "codeRepository": "https://github.com/SonarSource/sonarqube",
+  "documentation": "https://docs.sonarsource.com/sonarqube-server/",
+  "keywords": ["static analysis", "code metrics", "quality assessment"],
+  "featureList": [
+    "Analyzes code for bugs, vulnerabilities, code smells, and architecture issues",
+    "Integrates with CI pipelines",
+    "Supports quality gates"
+  ],
   "improvesQualityIndicator": [
     {
       "@id": "https://w3id.org/everse/i/indicators/no_critical_vulnerability",

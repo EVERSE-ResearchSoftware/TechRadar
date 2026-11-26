@@ -16,6 +16,9 @@
   "license": "https://spdx.org/licenses/Apache-2.0",
   "name": "cffinit",
   "url": "https://citation-file-format.github.io/cffinit",
+  "codeRepository": "https://github.com/citation-file-format/cff-initializer-javascript",
+  "keywords": ["citation", "software metadata"],
+  "featureList": ["Initializes CITATION.cff files with a web form"],
   "improvesQualityIndicator": [
     {
       "@id": "https://w3id.org/everse/i/indicators/software_has_citation",

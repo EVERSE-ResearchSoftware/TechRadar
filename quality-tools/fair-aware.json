@@ -5,6 +5,13 @@
   "name": "FAIR-Aware tool",
   "description": "Guided approach to assess the FAIRness of data",
   "url": "https://fairaware.dans.knaw.nl/",
+  "codeRepository": "https://github.com/DANS-KNAW/fair-aware",
+  "documentation": "https://fairaware.dans.knaw.nl/",
+  "keywords": ["FAIR assessment", "guidelines"],
+  "featureList": [
+    "Assess awareness and willingness regarding FAIR data practices",
+    "Provide guidance based on responses"
+  ],
   "isAccessibleForFree": true,
   "hasQualityDimension": {
     "@id": "dim:fairness",

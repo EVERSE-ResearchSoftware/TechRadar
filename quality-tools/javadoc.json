@@ -17,6 +17,12 @@
   "license": "https://www.oracle.com/downloads/licenses/javadoc-updater-license.html",
   "name": "javadoc",
   "url": "https://www.oracle.com/java/technologies/javase/javadoc-tool.html",
+  "documentation": "https://www.oracle.com/java/technologies/javase/javadoc-tool.html",
+  "keywords": ["documentation generation"],
+  "featureList": [
+    "Generates HTML API documentation from source-code doc comments",
+    "Supports custom doclets and taglets"
+  ],
   "improvesQualityIndicator": [
     {
       "@id": "https://w3id.org/everse/i/indicators/software_has_documentation",

@@ -71,6 +71,8 @@ All tools/services added to the TechRadar must satisfy these criteria:
 | **security** | Degree to which a product defends against attacks and protects data access according to authorization levels. | - Confidentiality  - Integrity  - Non-repudiation  - Accountability  - Authenticity  - Resistance | [ISO/IEC 25010](https://iso25000.com/index.php/en/iso-25000-standards/iso-25010) |
 | **sustainability** | Capacity of the software to endure, remain functional on new platforms, and meet new needs. | None | [Defining Software Sustainability](https://danielskatzblog.wordpress.com/2016/09/13/defining-software-sustainability/) |
 
+- **`keywords`** (optional): check that the 1–3 terms describe what the tool does and come from the keyword list in `tests/tools_validation_schema.json` (`definitions.keyword`). Flag keywords that repeat programming languages, quality dimensions, `howToUse` values or platform names. If the PR adds a new term to the list, check that the PR explains why no existing term fits; if an existing term would do, suggest it instead.
+
 
 > ✅ **Example improvement:**
 > - Original description: "Tool for testing."

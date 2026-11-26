@@ -43,7 +43,43 @@
   },
   "required": ["@id"],
   "comment": "The enum of valid indicator URIs is populated dynamically by helpers.py. If unavailable, validation is skipped."
-}
+},
+    "keyword": {
+      "description": "A term from the TechRadar keyword list, describing what the tool does. To add a term, append an entry here with a one-line description and justify it in the pull request (see CONTRIBUTING.md).",
+      "type": "string",
+      "oneOf": [
+        { "const": "linting", "description": "Checks source code or configuration files against style and correctness rules." },
+        { "const": "code formatting", "description": "Rewrites source code to a consistent layout.", "$comment": "wikidata:Q115910931" },
+        { "const": "static analysis", "description": "Analyses source code without running it, e.g. to find bugs or dead code.", "$comment": "wikidata:Q1329550" },
+        { "const": "dynamic analysis", "description": "Analyses a program while it runs, e.g. to find memory or threading errors.", "$comment": "wikidata:Q2499307" },
+        { "const": "code metrics", "description": "Computes measures of the code such as complexity, size or duplication.", "$comment": "wikidata:Q657339" },
+        { "const": "security scanning", "description": "Looks for vulnerabilities, leaked secrets or insecure configuration.", "$comment": "wikidata:Q283770" },
+        { "const": "test framework", "description": "Provides a way to write, organise and run automated tests.", "$comment": "wikidata:Q7705752" },
+        { "const": "code coverage", "description": "Measures which parts of the code the tests execute.", "$comment": "wikidata:Q1211721" },
+        { "const": "performance profiling", "description": "Measures run time, memory use or other resources of a program.", "$comment": "wikidata:Q1138496" },
+        { "const": "continuous integration", "description": "Builds and tests code automatically on every change.", "$comment": "wikidata:Q965769" },
+        { "const": "git hooks", "description": "Runs checks automatically at Git events such as commit or push." },
+        { "const": "dependency updates", "description": "Proposes updates of a project's dependencies automatically." },
+        { "const": "build system", "description": "Automates compiling and assembling software from source.", "$comment": "wikidata:Q114900460" },
+        { "const": "package management", "description": "Installs and resolves dependencies and manages software environments.", "$comment": "wikidata:Q891055" },
+        { "const": "containerization", "description": "Packages software with its dependencies into portable containers." },
+        { "const": "container orchestration", "description": "Deploys, scales and manages containers across machines." },
+        { "const": "package publishing", "description": "Distributes software packages through a public index or registry." },
+        { "const": "version control", "description": "Records the history of changes to source code.", "$comment": "wikidata:Q189439" },
+        { "const": "data versioning", "description": "Records versions of data and models alongside code." },
+        { "const": "software archiving", "description": "Preserves software long term and assigns persistent identifiers (DOI, SWHID)." },
+        { "const": "documentation generation", "description": "Builds documentation from source code or text files.", "$comment": "wikidata:Q2164323" },
+        { "const": "software metadata", "description": "Creates, extracts or synchronises machine-readable software metadata (e.g. CodeMeta)." },
+        { "const": "citation", "description": "Helps make software citable, e.g. with CITATION.cff files." },
+        { "const": "licensing", "description": "Helps choose, declare or check licenses and copyright." },
+        { "const": "FAIR assessment", "description": "Evaluates software or data against the FAIR principles." },
+        { "const": "quality assessment", "description": "Evaluates software against a set of quality indicators or checks." },
+        { "const": "guidelines", "description": "Gives written recommendations or guidance rather than running checks." },
+        { "const": "project templates", "description": "Generates a new project from a template that follows good practices." },
+        { "const": "interactive notebooks", "description": "Provides notebooks that mix code, results and text." },
+        { "const": "AI coding assistant", "description": "Uses AI models to suggest, write or review code." }
+      ]
+    }
   },
   "properties": {
     "@context": {
@@ -74,6 +110,24 @@
       "description": "URL of the software tool",
       "type": "string",
       "format": "uri"
+    },
+    "codeRepository": {
+      "description": "URL of the source-code repository",
+      "type": "string",
+      "format": "uri"
+    },
+    "documentation": {
+      "description": "URL of the tool's documentation",
+      "type": "string",
+      "format": "uri"
+    },
+    "featureList": {
+      "description": "Key features of the tool",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
     },
     "identifier": {
       "description": "An identifier for the software tool",
@@ -168,6 +222,13 @@
       "items": {
         "type": "string"
       }
+    },
+    "keywords": {
+      "description": "What the tool does, as terms from the TechRadar keyword list (definitions/keyword)",
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "$ref": "#/definitions/keyword" }
     }
   },
   "required": [

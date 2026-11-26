@@ -5,6 +5,15 @@
   "name": "SingularityCE",
   "description": "Container platform designed for high-performance computing environments that provides secure, portable, and reproducible containers for scientific computing workflows, enabling research software deployment across different HPC systems.",
   "url": "https://sylabs.io/singularity/",
+  "codeRepository": "https://github.com/sylabs/singularity",
+  "documentation": "https://docs.sylabs.io/guides/latest/user-guide/",
+  "keywords": ["containerization"],
+  "featureList": [
+    "Builds and runs containers",
+    "Signs and verifies container images",
+    "Encrypts containers",
+    "Supports GPU and high-speed interconnects"
+  ],
   "applicationCategory": {
     "@id": "rs:ResearchInfrastructureSoftware",
     "@type": "@id"

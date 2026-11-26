@@ -16,6 +16,14 @@
   "license": "https://spdx.org/licenses/MIT",
   "name": "Jenkins",
   "url": "https://www.jenkins.io/",
+  "codeRepository": "https://github.com/jenkinsci/jenkins",
+  "documentation": "https://www.jenkins.io/doc/",
+  "keywords": ["continuous integration"],
+  "featureList": [
+    "Automates software building, testing, delivery, and deployment",
+    "Extends functionality through plugins",
+    "Distributes work across multiple machines"
+  ],
   "improvesQualityIndicator": [
     {
       "@id": "https://w3id.org/everse/i/indicators/repository_workflows",

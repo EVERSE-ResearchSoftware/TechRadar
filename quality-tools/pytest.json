@@ -5,6 +5,15 @@
   "name": "pytest",
   "description": "Comprehensive testing framework for Python that enhances research software reliability and maintainability through advanced testing capabilities, fixtures, and plugins, supporting test-driven development practices essential for research software quality assurance.",
   "url": "https://docs.pytest.org/",
+  "codeRepository": "https://github.com/pytest-dev/pytest",
+  "documentation": "https://docs.pytest.org/",
+  "keywords": ["test framework"],
+  "featureList": [
+    "Discovers and runs tests",
+    "Provides fixtures and parametrization",
+    "Supports plugins and custom hooks",
+    "Runs doctests"
+  ],
   "isAccessibleForFree": true,
   "hasQualityDimension": [
     {

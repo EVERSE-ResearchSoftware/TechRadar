@@ -5,6 +5,15 @@
   "name": "REUSE",
   "description": "Automate the declaring of copyright and licensing for software projects with SPDX Tags.",
   "url": "https://reuse.software",
+  "codeRepository": "https://codeberg.org/fsfe/reuse-tool",
+  "documentation": "https://reuse.readthedocs.io/en/stable/",
+  "keywords": ["licensing"],
+  "featureList": [
+    "Downloads license texts",
+    "Adds copyright and licensing information to file headers",
+    "Checks REUSE compliance with a linter",
+    "Generates a software bill of materials"
+  ],
   "isAccessibleForFree": true,
   "applicationCategory": [
     {

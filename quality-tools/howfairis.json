@@ -34,5 +34,11 @@
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/Apache-2.0",
   "name": "howfairis",
-  "url": "https://github.com/fair-software/howfairis"
+  "url": "https://github.com/fair-software/howfairis",
+  "codeRepository": "https://github.com/fair-software/howfairis",
+  "documentation": "https://github.com/fair-software/howfairis#readme",
+  "keywords": ["FAIR assessment"],
+  "featureList": [
+    "Analyzes GitHub and GitLab repositories against fair-software.eu recommendations"
+  ]
 }

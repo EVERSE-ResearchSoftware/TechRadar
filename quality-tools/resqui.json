@@ -5,6 +5,14 @@
   "name": "resqui",
   "description": "Comprehensive research software quality assessment framework developed by EVERSE that evaluates repositories across all quality dimensions including maintainability, security, FAIRness, and sustainability, providing actionable insights for improving research software throughout its lifecycle.",
   "url": "https://github.com/EVERSE-ResearchSoftware/QualityPipelines",
+  "codeRepository": "https://github.com/EVERSE-ResearchSoftware/QualityPipelines",
+  "documentation": "https://everse.software/QualityPipelines/",
+  "keywords": ["quality assessment"],
+  "featureList": [
+    "Analyzes a Git repository against configurable quality indicators",
+    "Produces a JSON-LD assessment report",
+    "Runs quality pipelines through a GitHub Action"
+  ],
   "applicationCategory": [
     { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" },
     { "@id": "rs:AnalysisCode", "@type": "@id" },

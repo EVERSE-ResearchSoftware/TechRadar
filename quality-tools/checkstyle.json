@@ -5,6 +5,13 @@
   "name": "Checkstyle",
   "description": "Java code style checker that enforces coding standards and best practices in research software projects, improving code maintainability and readability through automated style analysis.",
   "url": "https://checkstyle.sourceforge.io/",
+  "codeRepository": "https://github.com/checkstyle/checkstyle",
+  "documentation": "https://checkstyle.sourceforge.io/",
+  "keywords": ["linting", "static analysis"],
+  "featureList": [
+    "Checks configurable Java rules for naming, imports, Javadoc, formatting, class design, and coding practices",
+    "Integrates with build tools and CI"
+  ],
   "isAccessibleForFree": true,
   "hasQualityDimension": {
     "@id": "dim:maintainability",

@@ -20,6 +20,14 @@
     "@id": "dim:maintainability",
     "@type": "@id"
   },
+  "featureList": [
+    "Measures complexity, architecture, coupling, bus factor, and test quality",
+    "Flags only metrics that have worsened in a pull request",
+    "Runs offline with deterministic results"
+  ],
+  "keywords": ["static analysis", "code metrics"],
+  "codeRepository": "https://github.com/ast-metrics/ast-metrics",
+  "documentation": "https://ast-metrics.dev/",
   "howToUse": ["CI/CD", "command-line"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/MIT",

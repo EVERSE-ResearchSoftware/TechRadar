@@ -17,6 +17,14 @@
   "name": "Jupyter",
   "appliesToProgrammingLanguage": ["Python", "R", "Julia"],
   "url": "https://jupyter.org/",
+  "codeRepository": "https://github.com/jupyter/jupyter",
+  "documentation": "https://docs.jupyter.org/en/latest/",
+  "keywords": ["interactive notebooks"],
+  "featureList": [
+    "Provides notebook interfaces for interactive computing",
+    "Supports notebooks combining code, prose, data, and rich visualizations",
+    "Supports multiple programming languages and rich interactive output"
+  ],
   "improvesQualityIndicator": [
     {
       "@id": "https://w3id.org/everse/i/indicators/software_has_documentation",

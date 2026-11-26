@@ -5,6 +5,14 @@
   "name": "valgrind",
   "description": "Detects memory management and threading bugs, run profiling to see how to speed up your programs",
   "url": "https://valgrind.org/",
+  "codeRepository": "https://sourceware.org/git/valgrind.git",
+  "documentation": "https://valgrind.org/docs/manual/manual.html",
+  "keywords": ["dynamic analysis", "performance profiling"],
+  "featureList": [
+    "Detects memory-management and threading bugs",
+    "Profiles programs",
+    "Provides an instrumentation framework for building dynamic-analysis tools"
+  ],
   "isAccessibleForFree": true,
   "applicationCategory": [
     {

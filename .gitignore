@@ -5,6 +5,7 @@ dist-ssr/
 build/
 .techradar/
 **/__pycache__/
+web/public/api/
 
 # Logs
 logs

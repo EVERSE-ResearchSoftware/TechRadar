@@ -16,6 +16,12 @@
   "license": "https://spdx.org/licenses/AGPL-3.0-or-later",
   "name": "CodeMeta Generator",
   "url": "https://codemeta.github.io/codemeta-generator",
+  "codeRepository": "https://github.com/codemeta/codemeta-generator",
+  "documentation": "https://codemeta.github.io/codemeta-generator/",
+  "keywords": ["software metadata"],
+  "featureList": [
+    "Generates CodeMeta documents with a client-side web application"
+  ],
   "improvesQualityIndicator": [
     {
       "@id": "https://w3id.org/everse/i/indicators/descriptive_metadata",

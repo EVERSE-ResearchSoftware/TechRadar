@@ -5,6 +5,10 @@
   "name": "Hadolint",
   "description": "Dockerfile linter that analyzes Docker build files for best practices, security issues, and optimization opportunities, improving research software containerization quality and deployment reliability.",
   "url": "https://github.com/hadolint/hadolint",
+  "codeRepository": "https://github.com/hadolint/hadolint",
+  "documentation": "https://github.com/hadolint/hadolint#readme",
+  "keywords": ["linting"],
+  "featureList": ["Lints Dockerfiles", "Validates inline Bash"],
   "isAccessibleForFree": true,
   "hasQualityDimension": [
     {

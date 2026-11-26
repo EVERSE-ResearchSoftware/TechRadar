@@ -5,6 +5,15 @@
   "name": "Ruff",
   "description": "High-performance Python linter that quickly identifies code quality issues and style violations, enabling rapid feedback for research software development and improving overall code maintainability.",
   "url": "https://docs.astral.sh/ruff/",
+  "codeRepository": "https://github.com/astral-sh/ruff",
+  "documentation": "https://docs.astral.sh/ruff/",
+  "keywords": ["linting", "code formatting"],
+  "featureList": [
+    "Lints and formats Python code",
+    "Automatically fixes supported issues",
+    "Caches analysis of unchanged files",
+    "Provides built-in lint rules and editor integrations"
+  ],
   "isAccessibleForFree": true,
   "hasQualityDimension": {
     "@id": "dim:maintainability",

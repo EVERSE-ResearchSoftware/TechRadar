@@ -5,6 +5,13 @@
   "name": "Black",
   "description": "Deterministic Python code formatter that enforces consistent coding style across software projects, improving code readability, maintainability, and collaboration in research teams.",
   "url": "https://github.com/psf/black",
+  "codeRepository": "https://github.com/psf/black",
+  "documentation": "https://black.readthedocs.io/en/stable/",
+  "keywords": ["code formatting"],
+  "featureList": [
+    "Formats Python code automatically",
+    "Checks that reformatted code has an effectively equivalent AST"
+  ],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/MIT",
   "applicationCategory": [

@@ -54,5 +54,12 @@
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/MIT",
   "name": "SOMEF",
-  "url": "https://github.com/KnowledgeCaptureAndDiscovery/somef"
+  "url": "https://github.com/KnowledgeCaptureAndDiscovery/somef",
+  "codeRepository": "https://github.com/KnowledgeCaptureAndDiscovery/somef",
+  "documentation": "https://somef.readthedocs.io/en/latest/",
+  "keywords": ["software metadata"],
+  "featureList": [
+    "Extracts metadata from README files and code repositories",
+    "Recognizes metadata including authors, citations, documentation, features, and continuous integration"
+  ]
 }

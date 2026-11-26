@@ -30,5 +30,13 @@
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/AGPL-3.0-or-later",
   "name": "Software Heritage",
-  "url": "https://www.softwareheritage.org"
+  "url": "https://www.softwareheritage.org",
+  "documentation": "https://docs.softwareheritage.org/",
+  "keywords": ["software archiving"],
+  "featureList": [
+    "Browses and searches archived source code and development history",
+    "Allows source-code archiving requests",
+    "Downloads reconstructed source bundles",
+    "Provides persistent identifiers and API access"
+  ]
 }
