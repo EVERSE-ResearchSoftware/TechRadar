@@ -52,5 +52,5 @@
   "name": "FAIRsoft Evaluator",
   "url": "https://openebench.bsc.es/observatory/Evaluation",
   "documentation": "https://openebench.bsc.es/observatory/Evaluation",
-  "keywords": ["FAIR software", "software evaluation", "OpenEBench"]
+  "keywords": ["FAIR assessment"]
 }

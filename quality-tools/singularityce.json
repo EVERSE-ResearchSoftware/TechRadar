@@ -7,7 +7,7 @@
   "url": "https://sylabs.io/singularity/",
   "codeRepository": "https://github.com/sylabs/singularity",
   "documentation": "https://docs.sylabs.io/guides/latest/user-guide/",
-  "keywords": ["containers", "HPC", "container images", "reproducibility"],
+  "keywords": ["containerization"],
   "featureList": [
     "Builds and runs containers",
     "Signs and verifies container images",

@@ -32,12 +32,7 @@
   "name": "Software Heritage",
   "url": "https://www.softwareheritage.org",
   "documentation": "https://docs.softwareheritage.org/",
-  "keywords": [
-    "source code archive",
-    "software preservation",
-    "SWHID",
-    "research software"
-  ],
+  "keywords": ["software archiving"],
   "featureList": [
     "Browses and searches archived source code and development history",
     "Allows source-code archiving requests",

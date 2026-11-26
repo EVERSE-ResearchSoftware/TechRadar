@@ -17,7 +17,7 @@
   "name": "Auto-CodeMeta Generator",
   "url": "https://w3id.org/autocodemeta",
   "documentation": "https://w3id.org/autocodemeta",
-  "keywords": ["CodeMeta", "software metadata", "repository metadata", "JSON"],
+  "keywords": ["software metadata"],
   "featureList": [
     "Completes metadata from a repository URL",
     "Generates a CodeMeta file"

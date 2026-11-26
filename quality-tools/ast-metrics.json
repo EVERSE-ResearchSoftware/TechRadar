@@ -25,7 +25,7 @@
     "Flags only metrics that have worsened in a pull request",
     "Runs offline with deterministic results"
   ],
-  "keywords": ["static analysis", "code metrics", "pull request review"],
+  "keywords": ["static analysis", "code metrics"],
   "codeRepository": "https://github.com/ast-metrics/ast-metrics",
   "documentation": "https://ast-metrics.dev/",
   "howToUse": ["CI/CD", "command-line"],

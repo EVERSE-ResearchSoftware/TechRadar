@@ -7,7 +7,7 @@
   "url": "https://gitlab.com/escape-ossr/eossr",
   "codeRepository": "https://gitlab.com/escape-ossr/eossr",
   "documentation": "https://escape-ossr.gitlab.io/eossr/",
-  "keywords": ["Python library", "ESCAPE OSSR", "Zenodo", "CodeMeta"],
+  "keywords": ["software metadata", "software archiving"],
   "featureList": [
     "Access Zenodo and OSSR records and publish content",
     "Convert CodeMeta metadata to Zenodo metadata",

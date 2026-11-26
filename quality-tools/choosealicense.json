@@ -7,11 +7,7 @@
   "url": "https://choosealicense.com/",
   "codeRepository": "https://github.com/github/choosealicense.com",
   "documentation": "https://choosealicense.com/",
-  "keywords": [
-    "open-source licensing",
-    "license selection",
-    "license guidance"
-  ],
+  "keywords": ["licensing", "guidelines"],
   "featureList": [
     "Provides guided license-selection advice",
     "Describes common open-source license choices"

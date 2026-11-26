@@ -7,7 +7,7 @@
   "url": "https://docs.astral.sh/ruff/",
   "codeRepository": "https://github.com/astral-sh/ruff",
   "documentation": "https://docs.astral.sh/ruff/",
-  "keywords": ["Python", "linting", "formatting", "static analysis"],
+  "keywords": ["linting", "code formatting"],
   "featureList": [
     "Lints and formats Python code",
     "Automatically fixes supported issues",

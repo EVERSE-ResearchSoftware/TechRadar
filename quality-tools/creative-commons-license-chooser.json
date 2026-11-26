@@ -16,7 +16,7 @@
   "license": "https://spdx.org/licenses/CC0-1.0",
   "name": "Creative Commons License Chooser",
   "url": "https://chooser-beta.creativecommons.org/",
-  "keywords": ["Creative Commons", "license chooser", "CC0", "attribution"],
+  "keywords": ["licensing"],
   "featureList": [
     "Guides users through license selection",
     "Offers attribution and commercial-use options",

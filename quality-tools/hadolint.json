@@ -7,7 +7,7 @@
   "url": "https://github.com/hadolint/hadolint",
   "codeRepository": "https://github.com/hadolint/hadolint",
   "documentation": "https://github.com/hadolint/hadolint#readme",
-  "keywords": ["Dockerfile", "linter", "static analysis", "Haskell"],
+  "keywords": ["linting"],
   "featureList": ["Lints Dockerfiles", "Validates inline Bash"],
   "isAccessibleForFree": true,
   "hasQualityDimension": [

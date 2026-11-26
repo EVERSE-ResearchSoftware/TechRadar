@@ -29,12 +29,7 @@
   "url": "https://docs.renovatebot.com/",
   "codeRepository": "https://github.com/renovatebot/renovate",
   "documentation": "https://docs.renovatebot.com/",
-  "keywords": [
-    "dependency updates",
-    "automation",
-    "lockfiles",
-    "package management"
-  ],
+  "keywords": ["dependency updates"],
   "featureList": [
     "Creates pull requests for dependency and lockfile updates",
     "Schedules update pull requests",

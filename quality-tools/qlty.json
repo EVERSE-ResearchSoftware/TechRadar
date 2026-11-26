@@ -7,7 +7,7 @@
   "url": "https://github.com/qltysh/qlty",
   "codeRepository": "https://github.com/qltysh/qlty",
   "documentation": "https://docs.qlty.sh/",
-  "keywords": ["code quality", "linting", "formatting", "code coverage"],
+  "keywords": ["linting", "code formatting", "code coverage"],
   "featureList": [
     "Lints and auto-formats code",
     "Scans for security issues",

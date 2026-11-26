@@ -7,13 +7,7 @@
   "url": "https://github.com/aquasecurity/trivy",
   "codeRepository": "https://github.com/aquasecurity/trivy",
   "documentation": "https://trivy.dev/docs/latest/",
-  "keywords": [
-    "security scanner",
-    "vulnerability scanning",
-    "SBOM",
-    "misconfiguration",
-    "secrets"
-  ],
+  "keywords": ["security scanning"],
   "featureList": [
     "Scans containers, filesystems, Git repositories, virtual machine images, and Kubernetes",
     "Detects vulnerabilities, misconfigurations, secrets, and software licenses",

@@ -37,12 +37,7 @@
   "url": "https://github.com/fair-software/howfairis",
   "codeRepository": "https://github.com/fair-software/howfairis",
   "documentation": "https://github.com/fair-software/howfairis#readme",
-  "keywords": [
-    "FAIR software",
-    "research software",
-    "repository analysis",
-    "command-line tool"
-  ],
+  "keywords": ["FAIR assessment"],
   "featureList": [
     "Analyzes GitHub and GitLab repositories against fair-software.eu recommendations"
   ]

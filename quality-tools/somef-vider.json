@@ -15,13 +15,7 @@
   "url": "https://github.com/SoftwareUnderstanding/SOMEF-Vider/",
   "codeRepository": "https://github.com/SoftwareUnderstanding/SOMEF-Vider",
   "documentation": "https://github.com/SoftwareUnderstanding/SOMEF-Vider#readme",
-  "keywords": [
-    "software metadata",
-    "metadata visualization",
-    "web application",
-    "Vue.js",
-    "Flask"
-  ],
+  "keywords": ["software metadata"],
   "featureList": ["Visualizes metadata retrieved from the SOMEF API"],
   "measuresQualityIndicator": [
     {

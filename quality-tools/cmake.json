@@ -24,7 +24,7 @@
   "url": "https://cmake.org/",
   "codeRepository": "https://gitlab.kitware.com/cmake/cmake",
   "documentation": "https://cmake.org/documentation/",
-  "keywords": ["build system", "C++", "cross-platform", "testing"],
+  "keywords": ["build system"],
   "featureList": [
     "Supports single-source builds across platforms",
     "Provides out-of-source builds",

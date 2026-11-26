@@ -15,13 +15,7 @@
   "url": "https://github.com/Materials-Data-Science-and-Informatics/somesy",
   "codeRepository": "https://github.com/Materials-Data-Science-and-Informatics/somesy",
   "documentation": "https://materials-data-science-and-informatics.github.io/somesy/main/",
-  "keywords": [
-    "software metadata synchronization",
-    "FAIR software",
-    "CLI",
-    "CodeMeta",
-    "CITATION.cff"
-  ],
+  "keywords": ["software metadata", "citation"],
   "featureList": [
     "Harvests project metadata from supported files and Git history",
     "Synchronizes metadata across supported project files",

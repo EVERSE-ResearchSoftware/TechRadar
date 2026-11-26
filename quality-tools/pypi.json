@@ -7,12 +7,7 @@
   "url": "https://pypi.org/",
   "codeRepository": "https://github.com/pypi/warehouse",
   "documentation": "https://docs.pypi.org/",
-  "keywords": [
-    "Python packages",
-    "package index",
-    "package publishing",
-    "package discovery"
-  ],
+  "keywords": ["package publishing"],
   "featureList": [
     "Hosts Python projects, releases, and package files",
     "Searches and browses Python packages",

@@ -7,7 +7,7 @@
   "url": "https://flake8.pycqa.org/",
   "codeRepository": "https://github.com/PyCQA/flake8",
   "documentation": "https://flake8.pycqa.org/",
-  "keywords": ["Python", "linting", "style guide", "code quality"],
+  "keywords": ["linting"],
   "featureList": [
     "Combine PyFlakes, pycodestyle, and McCabe checks",
     "Support plugins",

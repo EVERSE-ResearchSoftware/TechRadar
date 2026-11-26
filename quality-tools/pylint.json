@@ -7,7 +7,7 @@
   "url": "https://pylint.pycqa.org/",
   "codeRepository": "https://github.com/pylint-dev/pylint",
   "documentation": "https://pylint.readthedocs.io/en/stable/",
-  "keywords": ["Python", "linting", "static analysis", "code quality"],
+  "keywords": ["linting", "static analysis"],
   "featureList": [
     "Lints and statically analyzes Python code",
     "Reports diagnostics for code issues"

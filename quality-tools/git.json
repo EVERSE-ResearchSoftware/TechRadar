@@ -15,12 +15,7 @@
   "url": "https://git-scm.com/",
   "codeRepository": "https://git.kernel.org/pub/scm/git/git.git",
   "documentation": "https://git-scm.com/docs",
-  "keywords": [
-    "version control",
-    "distributed",
-    "source code",
-    "collaboration"
-  ],
+  "keywords": ["version control"],
   "featureList": [
     "Distributed version control",
     "Handles projects from small to very large"

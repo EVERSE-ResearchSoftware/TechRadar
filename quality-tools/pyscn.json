@@ -19,12 +19,7 @@
   "url": "https://github.com/ludo-technologies/pyscn",
   "codeRepository": "https://github.com/ludo-technologies/pyscn",
   "documentation": "https://docs.codescan.dev/pyscn/",
-  "keywords": [
-    "Python",
-    "static analysis",
-    "dead-code detection",
-    "clone detection"
-  ],
+  "keywords": ["static analysis", "code metrics"],
   "featureList": [
     "Detects unreachable code and duplicate code",
     "Measures cyclomatic complexity, coupling, and cohesion",

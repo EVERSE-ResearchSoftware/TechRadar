@@ -18,7 +18,7 @@
   "url": "https://www.jenkins.io/",
   "codeRepository": "https://github.com/jenkinsci/jenkins",
   "documentation": "https://www.jenkins.io/doc/",
-  "keywords": ["automation server", "CI/CD", "pipelines", "plugins"],
+  "keywords": ["continuous integration"],
   "featureList": [
     "Automates software building, testing, delivery, and deployment",
     "Extends functionality through plugins",

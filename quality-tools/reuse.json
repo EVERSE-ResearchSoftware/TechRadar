@@ -7,7 +7,7 @@
   "url": "https://reuse.software",
   "codeRepository": "https://codeberg.org/fsfe/reuse-tool",
   "documentation": "https://reuse.readthedocs.io/en/stable/",
-  "keywords": ["licensing", "copyright", "compliance", "SPDX"],
+  "keywords": ["licensing"],
   "featureList": [
     "Downloads license texts",
     "Adds copyright and licensing information to file headers",

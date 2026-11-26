@@ -7,7 +7,7 @@
   "url": "https://cppcheck.sourceforge.io/",
   "codeRepository": "https://github.com/cppcheck-opensource/cppcheck",
   "documentation": "https://cppcheck.sourceforge.io/",
-  "keywords": ["C", "C++", "static analysis", "bug detection"],
+  "keywords": ["static analysis"],
   "featureList": [
     "Analyzes C and C++ code for bugs and undefined behavior",
     "Provides command-line and graphical interfaces",

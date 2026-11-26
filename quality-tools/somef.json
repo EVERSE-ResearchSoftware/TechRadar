@@ -57,12 +57,7 @@
   "url": "https://github.com/KnowledgeCaptureAndDiscovery/somef",
   "codeRepository": "https://github.com/KnowledgeCaptureAndDiscovery/somef",
   "documentation": "https://somef.readthedocs.io/en/latest/",
-  "keywords": [
-    "software metadata extraction",
-    "research software",
-    "README analysis",
-    "machine-readable metadata"
-  ],
+  "keywords": ["software metadata"],
   "featureList": [
     "Extracts metadata from README files and code repositories",
     "Recognizes metadata including authors, citations, documentation, features, and continuous integration"

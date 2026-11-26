@@ -29,13 +29,7 @@
   "url": "https://www.sonarqube.org/",
   "codeRepository": "https://github.com/SonarSource/sonarqube",
   "documentation": "https://docs.sonarsource.com/sonarqube-server/",
-  "keywords": [
-    "static analysis",
-    "code quality",
-    "code security",
-    "automated code review",
-    "quality gates"
-  ],
+  "keywords": ["static analysis", "code metrics", "quality assessment"],
   "featureList": [
     "Analyzes code for bugs, vulnerabilities, code smells, and architecture issues",
     "Integrates with CI pipelines",

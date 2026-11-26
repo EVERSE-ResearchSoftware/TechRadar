@@ -7,7 +7,7 @@
   "url": "https://gcc.gnu.org/onlinedocs/gcc/Gcov.html",
   "codeRepository": "https://gcc.gnu.org/git/gcc.git",
   "documentation": "https://gcc.gnu.org/onlinedocs/gcc/Gcov.html",
-  "keywords": ["GCC", "test coverage", "code coverage", "profiling"],
+  "keywords": ["code coverage"],
   "featureList": ["Measures program code coverage in conjunction with GCC"],
   "isAccessibleForFree": true,
   "applicationCategory": [

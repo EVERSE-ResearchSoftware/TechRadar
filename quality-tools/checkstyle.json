@@ -7,7 +7,7 @@
   "url": "https://checkstyle.sourceforge.io/",
   "codeRepository": "https://github.com/checkstyle/checkstyle",
   "documentation": "https://checkstyle.sourceforge.io/",
-  "keywords": ["Java", "coding standards", "static analysis", "code style"],
+  "keywords": ["linting", "static analysis"],
   "featureList": [
     "Checks configurable Java rules for naming, imports, Javadoc, formatting, class design, and coding practices",
     "Integrates with build tools and CI"

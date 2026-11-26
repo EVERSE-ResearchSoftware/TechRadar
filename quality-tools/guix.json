@@ -28,12 +28,7 @@
   "url": "https://guix.gnu.org/",
   "codeRepository": "https://git.guix.gnu.org/guix.git",
   "documentation": "https://guix.gnu.org/manual/en/html_node/",
-  "keywords": [
-    "package manager",
-    "reproducible environments",
-    "GNU Guile",
-    "system configuration"
-  ],
+  "keywords": ["package management"],
   "featureList": [
     "Manages packages independently for users without superuser privileges",
     "Creates reproducible shell environments, containers, and systems",

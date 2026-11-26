@@ -17,7 +17,7 @@
   "name": "cffinit",
   "url": "https://citation-file-format.github.io/cffinit",
   "codeRepository": "https://github.com/citation-file-format/cff-initializer-javascript",
-  "keywords": ["CITATION.cff", "citation metadata", "research software"],
+  "keywords": ["citation", "software metadata"],
   "featureList": ["Initializes CITATION.cff files with a web form"],
   "improvesQualityIndicator": [
     {

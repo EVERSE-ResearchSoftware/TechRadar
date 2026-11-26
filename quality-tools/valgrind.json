@@ -7,13 +7,7 @@
   "url": "https://valgrind.org/",
   "codeRepository": "https://sourceware.org/git/valgrind.git",
   "documentation": "https://valgrind.org/docs/manual/manual.html",
-  "keywords": [
-    "dynamic analysis",
-    "memory errors",
-    "thread errors",
-    "profiling",
-    "instrumentation"
-  ],
+  "keywords": ["dynamic analysis", "performance profiling"],
   "featureList": [
     "Detects memory-management and threading bugs",
     "Profiles programs",

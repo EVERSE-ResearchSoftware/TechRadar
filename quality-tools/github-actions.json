@@ -6,7 +6,7 @@
   "description": "CI/CD platform integrated with GitHub that automates research software testing, building, and deployment, improving software reliability and sustainability through automated quality checks.",
   "url": "https://github.com/features/actions",
   "documentation": "https://docs.github.com/actions",
-  "keywords": ["CI/CD", "workflow automation", "build", "test", "deploy"],
+  "keywords": ["continuous integration"],
   "featureList": [
     "Builds, tests, and deploys code from GitHub",
     "Runs workflows in response to GitHub events",

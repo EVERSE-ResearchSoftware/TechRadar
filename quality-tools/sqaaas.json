@@ -12,13 +12,7 @@
   "url": "https://sqaaas.eosc-synergy.eu/",
   "codeRepository": "https://github.com/EOSC-synergy/SQAaaS",
   "documentation": "https://github.com/EOSC-synergy/SQAaaS#readme",
-  "keywords": [
-    "software quality assurance",
-    "quality pipelines",
-    "API",
-    "web GUI",
-    "Kubernetes"
-  ],
+  "keywords": ["quality assessment", "continuous integration"],
   "featureList": [
     "Provides a web GUI and API server",
     "Uses Jenkins pipeline components and reporting plugins",

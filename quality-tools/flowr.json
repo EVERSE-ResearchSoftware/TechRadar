@@ -88,7 +88,7 @@
   "url": "https://github.com/flowr-analysis/flowr",
   "codeRepository": "https://github.com/flowr-analysis/flowr",
   "documentation": "https://flowr-analysis.github.io/flowr/",
-  "keywords": ["R", "static analysis", "dataflow", "program slicing"],
+  "keywords": ["static analysis"],
   "featureList": [
     "Analyze dependencies in R projects",
     "Perform forward and backward program slicing",

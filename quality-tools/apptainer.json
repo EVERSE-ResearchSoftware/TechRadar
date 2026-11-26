@@ -10,7 +10,7 @@
     "Sign and encrypt container images",
     "Support containerized workloads across systems, including GPU and MPI environments"
   ],
-  "keywords": ["containers", "HPC", "scientific computing", "reproducibility"],
+  "keywords": ["containerization"],
   "codeRepository": "https://github.com/apptainer/apptainer",
   "documentation": "https://apptainer.org/docs/user/latest/",
   "applicationCategory": {

@@ -57,10 +57,6 @@
   "url": "https://docs.github.com/en/code-security/dependabot",
   "codeRepository": "https://github.com/dependabot/dependabot-core",
   "documentation": "https://docs.github.com/en/code-security/dependabot",
-  "keywords": [
-    "dependency updates",
-    "supply-chain security",
-    "security updates"
-  ],
+  "keywords": ["dependency updates", "security scanning"],
   "featureList": ["Creates pull requests for dependency updates"]
 }

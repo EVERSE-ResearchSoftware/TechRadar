@@ -7,13 +7,7 @@
   "url": "https://github.com/astral-sh/uv",
   "codeRepository": "https://github.com/astral-sh/uv",
   "documentation": "https://docs.astral.sh/uv/",
-  "keywords": [
-    "Python package manager",
-    "project manager",
-    "dependency management",
-    "Python versions",
-    "Rust"
-  ],
+  "keywords": ["package management", "package publishing"],
   "featureList": [
     "Manages project dependencies, environments, lockfiles, and workspaces",
     "Runs scripts and installs Python package tools",

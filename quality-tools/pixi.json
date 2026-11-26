@@ -7,12 +7,7 @@
   "url": "https://pixi.prefix.dev/latest/",
   "codeRepository": "https://github.com/prefix-dev/pixi",
   "documentation": "https://pixi.prefix.dev/latest/",
-  "keywords": [
-    "package management",
-    "reproducible environments",
-    "lockfiles",
-    "task runner"
-  ],
+  "keywords": ["package management"],
   "featureList": [
     "Manages reproducible environments with lock files",
     "Supports multiple platforms and languages",

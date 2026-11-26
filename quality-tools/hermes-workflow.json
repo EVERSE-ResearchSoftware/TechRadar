@@ -28,12 +28,7 @@
   "url": "https://hermes.software-metadata.pub/en/latest/",
   "codeRepository": "https://github.com/hermes-hmc/hermes",
   "documentation": "https://hermes.software-metadata.pub/en/latest/",
-  "keywords": [
-    "research software",
-    "software publishing",
-    "metadata",
-    "continuous integration"
-  ],
+  "keywords": ["software metadata", "software archiving"],
   "featureList": [
     "Automates research software publication through CI workflows",
     "Harvests, collates, and prepares metadata for curation",

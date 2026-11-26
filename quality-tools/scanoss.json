@@ -17,7 +17,7 @@
   "name": "SCANOSS",
   "url": "https://www.scanoss.com/",
   "codeRepository": "https://github.com/scanoss/engine",
-  "keywords": ["open-source inventory", "source code", "software components"],
+  "keywords": ["licensing", "security scanning"],
   "featureList": ["Provides an open-source inventory engine"],
   "measuresQualityIndicator": [
     {

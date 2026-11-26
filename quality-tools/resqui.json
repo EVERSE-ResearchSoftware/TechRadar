@@ -7,12 +7,7 @@
   "url": "https://github.com/EVERSE-ResearchSoftware/QualityPipelines",
   "codeRepository": "https://github.com/EVERSE-ResearchSoftware/QualityPipelines",
   "documentation": "https://everse.software/QualityPipelines/",
-  "keywords": [
-    "research software",
-    "quality indicators",
-    "assessment",
-    "JSON-LD"
-  ],
+  "keywords": ["quality assessment"],
   "featureList": [
     "Analyzes a Git repository against configurable quality indicators",
     "Produces a JSON-LD assessment report",

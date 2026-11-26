@@ -18,13 +18,7 @@
   "url": "https://github.com/super-linter/super-linter",
   "codeRepository": "https://github.com/super-linter/super-linter",
   "documentation": "https://github.com/super-linter/super-linter#readme",
-  "keywords": [
-    "linters",
-    "code analyzers",
-    "code quality",
-    "GitHub Actions",
-    "source code"
-  ],
+  "keywords": ["linting", "continuous integration"],
   "featureList": [
     "Runs a collection of linters and code analyzers",
     "Validates and fixes source code",

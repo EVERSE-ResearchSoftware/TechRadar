@@ -7,7 +7,7 @@
   "url": "https://github.com/psf/black",
   "codeRepository": "https://github.com/psf/black",
   "documentation": "https://black.readthedocs.io/en/stable/",
-  "keywords": ["Python", "code formatter", "code style", "formatting"],
+  "keywords": ["code formatting"],
   "featureList": [
     "Formats Python code automatically",
     "Checks that reformatted code has an effectively equivalent AST"

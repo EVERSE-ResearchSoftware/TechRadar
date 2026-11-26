@@ -16,7 +16,7 @@
   "url": "https://gitlab.com/score-p/scorep",
   "codeRepository": "https://gitlab.com/score-p/scorep",
   "documentation": "https://www.vi-hps.org/projects/score-p/overview/overview.html",
-  "keywords": ["HPC", "performance measurement", "profiling", "event tracing"],
+  "keywords": ["performance profiling"],
   "featureList": [
     "Profiles and traces parallel applications",
     "Supports analysis with Scalasca, Vampir, and TAU"

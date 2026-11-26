@@ -23,13 +23,7 @@
   "name": "Travis CI",
   "url": "https://travis-ci.com/",
   "documentation": "https://docs.travis-ci.com/",
-  "keywords": [
-    "continuous integration",
-    "CI/CD",
-    "testing",
-    "deployment",
-    "build automation"
-  ],
+  "keywords": ["continuous integration"],
   "featureList": [
     "Builds testing and deployment pipelines",
     "Supports parallel and multi-environment builds"

@@ -18,7 +18,7 @@
   "url": "https://codemeta.github.io/codemeta-generator",
   "codeRepository": "https://github.com/codemeta/codemeta-generator",
   "documentation": "https://codemeta.github.io/codemeta-generator/",
-  "keywords": ["CodeMeta", "software metadata", "metadata generation", "JSON"],
+  "keywords": ["software metadata"],
   "featureList": [
     "Generates CodeMeta documents with a client-side web application"
   ],

@@ -7,7 +7,7 @@
   "url": "https://github.com/gitleaks/gitleaks",
   "codeRepository": "https://github.com/gitleaks/gitleaks",
   "documentation": "https://gitleaks.io/",
-  "keywords": ["secret scanning", "Git", "security", "CLI"],
+  "keywords": ["security scanning"],
   "featureList": ["Scans Git repositories, files, and directories for secrets"],
   "isAccessibleForFree": true,
   "license": "https://spdx.org/licenses/MIT",

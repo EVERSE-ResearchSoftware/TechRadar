@@ -13,7 +13,7 @@
   "url": "https://github.com/PyCQA/bandit",
   "codeRepository": "https://github.com/PyCQA/bandit",
   "documentation": "https://bandit.readthedocs.io/en/latest/",
-  "keywords": ["Python", "security", "static analysis", "AST"],
+  "keywords": ["security scanning", "static analysis"],
   "featureList": [
     "Scans Python code for common security issues",
     "Runs plugins against Python AST nodes",

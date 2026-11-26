@@ -18,7 +18,7 @@
   "name": "javadoc",
   "url": "https://www.oracle.com/java/technologies/javase/javadoc-tool.html",
   "documentation": "https://www.oracle.com/java/technologies/javase/javadoc-tool.html",
-  "keywords": ["Java", "API documentation", "HTML", "doc comments"],
+  "keywords": ["documentation generation"],
   "featureList": [
     "Generates HTML API documentation from source-code doc comments",
     "Supports custom doclets and taglets"

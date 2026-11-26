@@ -7,13 +7,7 @@
   "url": "https://tox.wiki/",
   "codeRepository": "https://github.com/tox-dev/tox",
   "documentation": "https://tox.wiki/en/latest/",
-  "keywords": [
-    "Python testing",
-    "virtual environments",
-    "build automation",
-    "continuous integration",
-    "CLI"
-  ],
+  "keywords": ["test framework"],
   "featureList": [
     "Checks package builds and installs across environments",
     "Runs tests in configured environments",

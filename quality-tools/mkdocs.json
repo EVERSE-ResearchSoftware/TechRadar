@@ -7,12 +7,7 @@
   "url": "https://www.mkdocs.org/",
   "codeRepository": "https://github.com/mkdocs/mkdocs",
   "documentation": "https://www.mkdocs.org/",
-  "keywords": [
-    "static site generator",
-    "project documentation",
-    "Markdown",
-    "Python"
-  ],
+  "keywords": ["documentation generation"],
   "featureList": [
     "Builds static HTML project documentation from Markdown",
     "Uses a YAML configuration file",

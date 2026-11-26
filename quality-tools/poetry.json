@@ -7,7 +7,7 @@
   "url": "https://python-poetry.org/",
   "codeRepository": "https://github.com/python-poetry/poetry",
   "documentation": "https://python-poetry.org/docs/",
-  "keywords": ["Python", "dependency management", "packaging", "lockfile"],
+  "keywords": ["package management", "package publishing"],
   "featureList": [
     "Manages Python project dependencies",
     "Provides lockfiles for repeatable installs",

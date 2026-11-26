@@ -16,13 +16,7 @@
   "url": "https://www.sphinx-doc.org",
   "codeRepository": "https://github.com/sphinx-doc/sphinx",
   "documentation": "https://www.sphinx-doc.org/en/master/",
-  "keywords": [
-    "documentation generator",
-    "reStructuredText",
-    "MyST Markdown",
-    "API documentation",
-    "HTML"
-  ],
+  "keywords": ["documentation generation"],
   "featureList": [
     "Builds documentation in formats including HTML, LaTeX, and ePub",
     "Supports cross-references within and across projects",
