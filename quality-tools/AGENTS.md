@@ -31,7 +31,7 @@ Schema: `tests/tools_validation_schema.json`, enforced by `python -m pytest test
   "description": "…", // what it does, and why a researcher cares
   "url": "https://github.com/psf/black",
   "featureList": ["Formats Python source code"],
-  "keywords": ["formatter", "Python"],
+  "keywords": ["code formatting"], // terms from the keyword list, see below
   "documentation": "https://black.readthedocs.io/",
   "codeRepository": "https://github.com/psf/black",
   "isAccessibleForFree": true,
@@ -48,8 +48,8 @@ Schema: `tests/tools_validation_schema.json`, enforced by `python -m pytest test
 **Required**: `@context`, `@id`, `name`, `description`, `license`, `url`,
 `applicationCategory`, `hasQualityDimension`.
 
-Optional comparison metadata consists of `codeRepository`, `documentation`, `keywords`,
-and optionally `featureList`. Add values only when supported by the tool's own
+Optional comparison metadata consists of `codeRepository`, `documentation`, `keywords`
+(from the keyword list, see [Keywords](#keywords)), and optionally `featureList`. Add values only when supported by the tool's own
 documentation or repository. Missing values are shown as unspecified rather than inferred.
 GitHub stars and last code update are retrieved live from `codeRepository` when available.
 
@@ -62,6 +62,24 @@ GitHub stars and last code update are retrieved live from `codeRepository` when 
 | `usedBy`                            | `ENVRI`, `ESCAPE`, `LS-RI`, `PaNOSC`, `SSHOC`, `EOSC-Life`                 |
 | `hasQualityDimension`               | `dim:*`, fetched live from the EVERSE dimensions API                       |
 | `measures/improvesQualityIndicator` | indicator URIs, fetched live from the EVERSE indicators API                |
+| `keywords`                          | terms in `definitions.keyword` of `tests/tools_validation_schema.json`     |
+
+### Keywords
+
+`keywords` is an optional array of 1–3 terms saying what the tool does. The allowed terms
+and their definitions are in `definitions.keyword` of `tests/tools_validation_schema.json`.
+Read the definitions before you choose; don't match on the term alone.
+
+- Reuse an existing term whenever one fits, even loosely. A slightly broad term beats a
+  new one.
+- Keywords don't repeat other fields: no languages (`appliesToProgrammingLanguage`), no
+  dimensions (`hasQualityDimension`), no usage mode (`howToUse`), no platform names.
+- If nothing fits, you may add a term, and only then: add the entry to
+  `definitions.keyword` (`const`, one-line `description`, `"$comment": "wikidata:Q…"` if a
+  matching item exists), and state in the PR why no existing term fits and which other
+  tools it applies to. Never add a term just to make a test pass, and never add one
+  silently. Tests fail until the term is on the list.
+- Don't rename or remove a term without updating every tool that uses it in the same PR.
 
 The schema sets `"additionalProperties": false`. A field the schema doesn't list will fail
 CI — that is the schema telling you to have a conversation, not a bug to route around.

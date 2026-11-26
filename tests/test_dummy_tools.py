@@ -116,9 +116,38 @@ def test_optional_comparison_metadata():
         "codeRepository": "https://github.com/example/tool",
         "documentation": "https://example.com/docs",
         "featureList": ["Reports metrics."],
-        "keywords": ["analysis", "research"],
+        "keywords": ["static analysis", "code metrics"],
     }
     validate(instance=tool, schema=schema)
+
+
+def test_keywords_from_list():
+    """Keywords taken from the keyword list pass validation."""
+    tool = {**valid_tool, "keywords": ["linting", "code formatting"]}
+    validate(instance=tool, schema=schema)
+
+
+@pytest.mark.parametrize("keywords", [
+    ["formatter"],               # not in the keyword list
+    ["Linting"],                 # terms are case-sensitive
+    "linting",                   # must be an array
+    [],                          # at least one term
+    ["linting", "linting"],      # no duplicates
+])
+def test_invalid_keywords(keywords):
+    """Keywords outside the list or in the wrong shape fail validation."""
+    tool = {**valid_tool, "keywords": keywords}
+    with pytest.raises(ValidationError):
+        validate(instance=tool, schema=schema)
+
+
+def test_keyword_list_is_well_formed():
+    """Every keyword entry has a unique term and a one-line description."""
+    entries = schema["definitions"]["keyword"]["oneOf"]
+    terms = [entry["const"] for entry in entries]
+    assert len(terms) == len(set(terms)), "duplicate term in the keyword list"
+    for entry in entries:
+        assert entry.get("description"), f"keyword '{entry['const']}' has no description"
 
 
 @pytest.mark.parametrize("tool", invalid_tools)

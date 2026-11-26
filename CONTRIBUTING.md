@@ -70,7 +70,8 @@ Aim for clarity, completeness, and evidence. Prefer concise, user-focused descri
 - **description:** State what the tool improves (e.g., maintainability, security), for whom, and how. Extra information is welcome but keep it focused.
 - **url:** Link to the official homepage or repository.
 - **Optional comparison metadata:** `codeRepository` and `documentation` (URLs),
-  `keywords`, and optionally `featureList` (strings). These fields can be added
+  `keywords` (terms from the keyword list, see [Keywords](#keywords)), and optionally
+  `featureList` (strings). These fields can be added
   incrementally when supported by the tool's official sources. GitHub stars and last code
   update are fetched from `codeRepository` rather than stored as values that would quickly
   become stale.
@@ -80,6 +81,23 @@ Aim for clarity, completeness, and evidence. Prefer concise, user-focused descri
 - **license:** Provide URL to the license file.
 - **howToUse:** List the means to use the tool using the following terminology: `online-service`, `command-line`, `CI/CD`, `library`.
 - **applicationCategory:** Specify the relevant research software tiers on which the tool operates: `rs:AnalysisCode`, `rs:PrototypeTool`, or `rs:ResearchInfrastructureSoftware`. For example, `AnalysisCode` means the tool is suitable to improve or assess the quality of software in that tier.
+- **keywords** (optional): 1 to 3 terms saying what the tool does, taken from the keyword list (see below).
+
+### Keywords
+
+Keywords come from a fixed list so that the same thing is always called the same way. The list, with a one-line definition of each term, is in [`tests/tools_validation_schema.json`](tests/tools_validation_schema.json) under `definitions.keyword`. Validation rejects any term that is not on it.
+
+- Pick the 1 to 3 terms that best describe what the tool does. Copy them exactly, they are case-sensitive.
+- Don't use keywords for programming languages (use `appliesToProgrammingLanguage`), quality dimensions (use `hasQualityDimension`), how the tool is used (use `howToUse`), or platform names such as GitHub or Zenodo.
+- Stick to the list whenever a term fits, even if it is a bit broader than you would like.
+
+**Adding a term.** If no term fits the tool, you can add one:
+
+1. Add an entry to `definitions.keyword` in `tests/tools_validation_schema.json`, with the term in `const` and a one-line `description`. Use lowercase unless the term is an acronym or proper name. If the concept has a Wikidata item, add its ID as `"$comment": "wikidata:Q…"`.
+2. In the pull request, explain why no existing term fits and which other catalogue tools the new term would apply to. A term that fits only one tool is rarely worth adding.
+3. Run `python -m pytest tests/`. The tests fail until the term is on the list.
+
+Curators decide whether a new term is accepted, and may ask you to use an existing one instead.
 
 <details>
    <summary><strong>Good example (illustrative)</strong></summary>

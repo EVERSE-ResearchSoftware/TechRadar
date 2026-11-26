@@ -49,7 +49,9 @@ Bias: minimalism and explicitness. Flat beats clever.
   not shuffle between builds — do not replace it with `Math.random()`.
 - **Vocabularies are fetched, not invented.** Quality dimensions and indicators come from
   the EVERSE indicators API. Never hard-code a new `dim:` or indicator URI to make a test
-  pass.
+  pass. The one local vocabulary is the keyword list in
+  `tests/tools_validation_schema.json`: use its terms, and extend it only with a
+  justification in the PR (see `quality-tools/AGENTS.md`).
 - **No secrets in the repo.** Nothing here needs a credential; if a task seems to, stop
   and ask.
 - **Ask when the requirement is unclear.** Guessing at metadata semantics produces
