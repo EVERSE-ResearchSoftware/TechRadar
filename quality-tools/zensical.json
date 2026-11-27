@@ -1,0 +1,33 @@
+{
+  "@context": "https://w3id.org/everse/rs#",
+  "@id": "https://w3id.org/everse/tools/zensical",
+  "@type": "schema:SoftwareApplication",
+  "name": "Zensical",
+  "description": "Static site generator for project documentation, built by the creators of Material for MkDocs, that turns Markdown files into a documentation website and can build existing MkDocs projects without changes, improving research software usability through clear documentation.",
+  "url": "https://zensical.org/",
+  "codeRepository": "https://github.com/zensical/zensical",
+  "documentation": "https://zensical.org/docs/",
+  "keywords": ["documentation generation"],
+  "featureList": [
+    "Builds static HTML project documentation from Markdown",
+    "Uses a TOML configuration file and also reads existing mkdocs.yml configurations",
+    "Provides a live-reloading development server",
+    "Provides a classic theme matching Material for MkDocs and replacements for common MkDocs plugins"
+  ],
+  "isAccessibleForFree": true,
+  "hasQualityDimension": [
+    { "@id": "dim:interaction_capability", "@type": "@id" },
+    { "@id": "dim:maintainability", "@type": "@id" }
+  ],
+  "howToUse": ["command-line", "CI/CD"],
+  "appliesToProgrammingLanguage": ["Python"],
+  "license": "https://spdx.org/licenses/MIT",
+  "applicationCategory": [
+    { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" },
+    { "@id": "rs:PrototypeTool", "@type": "@id" }
+  ],
+  "improvesQualityIndicator": {
+    "@id": "https://w3id.org/everse/i/indicators/software_has_documentation",
+    "@type": "@id"
+  }
+}
