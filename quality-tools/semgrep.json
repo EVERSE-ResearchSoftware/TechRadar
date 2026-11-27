@@ -1,0 +1,34 @@
+{
+  "@context": "https://w3id.org/everse/rs#",
+  "@id": "https://w3id.org/everse/tools/semgrep",
+  "@type": "SoftwareApplication",
+  "applicationCategory": {
+    "@id": "rs:AnalysisCode",
+    "@type": "@id"
+  },
+  "appliesToProgrammingLanguage": [
+    "C"
+  ],
+  "description": "Semgrep is an open-source, fast static analysis tool used to find bugs, security vulnerabilities, and enforce code standards across multiple programming languages.",
+  "hasQualityDimension": [
+    {
+      "@id": "dim:security",
+      "@type": "@id"
+    },
+    {
+      "@id": "dim:safety",
+      "@type": "@id"
+    }
+  ],
+  "measuresQualityIndicator": {
+    "@id": "https://w3id.org/everse/i/indicators/no_critical_vulnerability",
+    "@type": "@id"
+  },
+  "howToUse": [
+    "command-line"
+  ],
+  "isAccessibleForFree": true,
+  "license": "https://spdx.org/licenses/LGPL-2.1",
+  "name": "semgrep",
+  "url": "https://github.com/semgrep/semgrep"
+}
