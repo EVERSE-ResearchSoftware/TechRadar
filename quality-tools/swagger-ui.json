@@ -1,0 +1,30 @@
+{
+  "@context": "https://w3id.org/everse/rs#",
+  "@id": "https://w3id.org/everse/tools/swagger-ui",
+  "@type": "schema:SoftwareApplication",
+  "name": "Swagger UI",
+  "description": "Generates interactive web documentation from an OpenAPI (Swagger) description of a web API, so users of a research service can read about and try out each of its operations.",
+  "url": "https://swagger.io/tools/swagger-ui/",
+  "codeRepository": "https://github.com/swagger-api/swagger-ui",
+  "documentation": "https://swagger.io/docs/open-source-tools/swagger-ui/usage/installation/",
+  "keywords": ["documentation generation"],
+  "featureList": [
+    "Renders interactive API documentation from Swagger 2.0 and OpenAPI 3 definitions",
+    "Lets users try out each API operation from the documentation page",
+    "Distributed as npm packages, static HTML/CSS/JS files and a Docker image"
+  ],
+  "isAccessibleForFree": true,
+  "hasQualityDimension": [
+    { "@id": "dim:interaction_capability", "@type": "@id" },
+    { "@id": "dim:maintainability", "@type": "@id" }
+  ],
+  "howToUse": ["library"],
+  "license": "https://spdx.org/licenses/Apache-2.0",
+  "applicationCategory": [
+    { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" }
+  ],
+  "improvesQualityIndicator": {
+    "@id": "https://w3id.org/everse/i/indicators/software_has_documentation",
+    "@type": "@id"
+  }
+}
